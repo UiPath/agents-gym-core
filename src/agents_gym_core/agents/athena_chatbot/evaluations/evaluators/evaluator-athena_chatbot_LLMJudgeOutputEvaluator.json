@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "id": "athena_chatbot_LLMJudgeOutputEvaluator",
+    "description": "LLMJudgeOutputEvaluator for athena_chatbot agent",
+    "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+    "evaluatorConfig": {
+        "name": "LLMJudgeOutputEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "prompt": "As an expert evaluator, determine how well the ActualOutput fulfills the same intent as the ExpectedOutput. Score from 0-100.\n\nScoring criteria:\n1. **Correct mentor names**: Does the ActualOutput mention the same mentor(s) as the ExpectedOutput? This is the most important factor.\n2. **Correct action**: Does the ActualOutput take the same action (suggest mentors, ask for confirmation, indicate no matches, send confirmation)?\n3. **Correct boolean fields**: Do fields like out_shouldPostReplyOnSlack match?\n4. **Do NOT penalize** the ActualOutput for including additional helpful details (mentor roles, locations, specializations, formatting). Extra relevant information should not reduce the score.\n5. **Do NOT penalize** for differences in wording, formatting (markdown, bullet points), or verbosity as long as the core intent and mentor names match.\n\nProvide your score with a brief justification.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+        "model": "gpt-4o-2024-11-20",
+        "temperature": 0.0,
+        "maxTokens": null,
+        "targetOutputKey": "*"
+    }
+}

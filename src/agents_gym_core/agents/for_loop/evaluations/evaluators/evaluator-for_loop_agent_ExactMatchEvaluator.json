@@ -1,0 +1,14 @@
+{
+    "version": "1.0",
+    "id": "for_loop_agent_ExactMatchEvaluator",
+    "description": "ExactMatchEvaluator for the For Loop Agent",
+    "evaluatorTypeId": "uipath-exact-match",
+    "evaluatorConfig": {
+        "name": "ExactMatchEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "targetOutputKey": "*",
+        "caseSensitive": false,
+        "negated": false
+    }
+}

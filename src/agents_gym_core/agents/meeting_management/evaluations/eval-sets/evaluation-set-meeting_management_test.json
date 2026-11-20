@@ -1,0 +1,392 @@
+{
+  "version": "1.0",
+  "id": "c9bffd96-be5a-5bfa-9566-2ea430c146d1",
+  "name": "evaluation-set-meeting_management_test",
+  "evaluatorRefs": [
+    "meeting_management_LLMJudgePlatformFactualityEvaluator",
+    "meeting_management_MeetingManagementEqualsEvaluator",
+    "meeting_management_LLMJudgeNormalizedScoreEvaluator",
+    "meeting_management_ToolCallCountEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "meeting-management-conflict-test",
+      "name": "Conflict Test",
+      "inputs": {
+        "participants": [
+          "a@example.com",
+          "b@example.com"
+        ],
+        "meeting_details": "Weekly team meeting. Duration: 1 hour.",
+        "date": "2025-02-04 9:00 AM"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "Observations": "Meeting collision between the dates 2025-02-04T09:00:00 and 2025-02-04T10:00:00. No meeting scheduled."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "NoMeeting": true
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "Meeting collision between the dates 2025-02-04T09:00:00 and 2025-02-04T10:00:00. No meeting scheduled."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-no-conflicts-test-1",
+      "name": "No conflicts Test 1",
+      "inputs": {
+        "participants": [
+          "no_conflicts@example.com"
+        ],
+        "meeting_details": "Daily call with the team. Duration: 15 minutes.",
+        "date": "2025-02-04 9:35 AM"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "StartTime": "2025-02-04 09:35:00",
+            "EndTime": "2025-02-04 09:50:00",
+            "Observations": "No collisions found. Meeting scheduled successfully at 2025-02-04 09:35:00 for Daily call with the team."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "ExactStartTime": "2025-02-04 09:35:00",
+            "ExactEndTime": "2025-02-04 09:50:00"
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "No collisions found. Meeting scheduled successfully at 2025-02-04 09:35:00 for Daily call with the team."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-no-conflicts-test-2",
+      "name": "No conflicts Test 2",
+      "inputs": {
+        "participants": [
+          "a@example.com",
+          "b@example.com"
+        ],
+        "meeting_details": "Weekly team meeting. Duration: 30 minutes.",
+        "date": "2025-02-04 9:30 AM"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "StartTime": "2025-02-04 09:30:00",
+            "EndTime": "2025-02-04 10:00:00",
+            "Observations": "No collisions found. Meeting scheduled successfully at 2025-02-04 09:30:00 for Weekly team meeting."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "ExactStartTime": "2025-02-04 09:30:00",
+            "ExactEndTime": "2025-02-04 10:00:00"
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "No collisions found. Meeting scheduled successfully at 2025-02-04 09:30:00 for Weekly team meeting."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-no-conflicts-test-3",
+      "name": "No conflicts Test 3",
+      "inputs": {
+        "participants": [
+          "a@example.com",
+          "b@example.com"
+        ],
+        "meeting_details": "Weekly team meeting. Duration: 30 minutes.",
+        "date": "2025-02-04 09:30:00"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "StartTime": "2025-02-04 09:30:00",
+            "EndTime": "2025-02-04 10:00:00",
+            "Observations": "No collisions found. Meeting scheduled successfully at 2025-02-04 09:30:00 for Weekly team meeting."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "ExactStartTime": "2025-02-04 09:30:00",
+            "ExactEndTime": "2025-02-04 10:00:00"
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "No collisions found. Meeting scheduled successfully at 2025-02-04 09:30:00 for Weekly team meeting."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-outside-working-hours",
+      "name": "Outside of working hours",
+      "inputs": {
+        "participants": [
+          "a@example.com"
+        ],
+        "meeting_details": "Weekly team meeting. Duration: 1 hour.",
+        "date": "2025-02-04 20:00:00"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "StartTime": null,
+            "EndTime": null,
+            "Observations": "Meeting can't be scheduled outside of working hours. No meeting scheduled."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "NoMeeting": true
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "Meeting can't be scheduled outside of working hours. No meeting scheduled."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-conflict-multi-hour",
+      "name": "Conflict within multi-hour range",
+      "inputs": {
+        "participants": [
+          "strategy@example.com"
+        ],
+        "meeting_details": "Duration: 3 hours. Planning strategy for next quarter.",
+        "date": "2025-02-04 2:00 PM"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "Observations": "Meeting collision between the dates 2025-02-04T14:00:00 and 2025-02-04T17:00:00."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "NoMeeting": true
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "Meeting collision between the dates 2025-02-04T14:00:00 and 2025-02-04T17:00:00."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-ambiguous-time-format",
+      "name": "Ambiguous time format",
+      "inputs": {
+        "participants": [
+          "afternoon.team@example.com"
+        ],
+        "meeting_details": "Title: Afternoon catch-up meeting. Duration: 2 hours.",
+        "date": "2024-12-04 2 PM"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "StartTime": "2024-12-04 14:00 PM",
+            "EndTime": "2024-12-04 16:00 PM",
+            "Observations": "Meeting created successfully with start time 2024-12-04 14:00 PM and end time 2024-12-04 16:00 PM"
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "ExactStartTime": "2024-12-04 02:00 PM",
+            "ExactEndTime": "2024-12-04 04:00 PM"
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "Meeting created successfully"
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "meeting-management-weekend-scheduling",
+      "name": "Weekend meeting scheduling",
+      "inputs": {
+        "participants": [
+          "hr@example.com"
+        ],
+        "meeting_details": "Discuss the holiday schedule. Duration: 90 mins.",
+        "date": "2024-12-08 3:00 PM"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-meeting-management",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "meeting_management_LLMJudgePlatformFactualityEvaluator": {
+          "expectedOutput": {
+            "StartTime": null,
+            "EndTime": null,
+            "Observations": "Meeting can't be scheduled on weekends. No meeting scheduled."
+          }
+        },
+        "meeting_management_MeetingManagementEqualsEvaluator": {
+          "expectedOutput": {
+            "NoMeeting": true
+          }
+        },
+        "meeting_management_LLMJudgeNormalizedScoreEvaluator": {
+          "expectedOutput": "Meeting can't be scheduled on weekends. No meeting scheduled."
+        },
+        "meeting_management_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "AFE_ScheduleZoomWrapper": [
+              "=",
+              0
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

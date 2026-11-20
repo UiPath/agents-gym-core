@@ -1,0 +1,75 @@
+# @package _global_
+
+train:
+  version: train
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-sql_train.json
+
+test:
+  version: test
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-sql_test.json
+
+baseline:
+  version: baseline
+  agent:
+    system_prompt: core::prompts/baseline/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+
+baseline-train:
+  version: baseline-train
+  agent:
+    system_prompt: core::prompts/baseline/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-sql_train.json
+
+baseline-test:
+  version: baseline-test
+  agent:
+    system_prompt: core::prompts/baseline/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-sql_test.json
+
+# The ReAPO paper's prompts
+reapo__gpt-5:
+  version: reapo__gpt-5
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+gepa__gpt-5:
+  version: gepa__gpt-5
+  agent:
+    system_prompt: core::prompts/gepa__gpt-5/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+reapo__gpt-5-test:
+  version: reapo__gpt-5-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-sql_test.json
+gepa__gpt-5-test:
+  version: gepa__gpt-5-test
+  agent:
+    system_prompt: core::prompts/gepa__gpt-5/system_prompt.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-sql_test.json
+reapo__gpt-5__full-test:
+  version: reapo__gpt-5__full-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5__full/system_prompt.md
+    user_prompt: core::prompts/reapo__gpt-5__full/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-sql_test.json
+reapo__gpt-5__score-only-test:
+  version: reapo__gpt-5__score-only-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5__score-only/system_prompt.md
+    user_prompt: core::prompts/reapo__gpt-5__score-only/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-sql_test.json

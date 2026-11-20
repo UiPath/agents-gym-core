@@ -1,0 +1,1 @@
+Given the fields `claim`, `context`, and `passages`, produce a focused `summary` that refines the key supporting points extracted in the first summary. Include core evidence that directly supports or contradicts the claim, including relevant synonyms, aliases, or closely related entities. Exclude unrelated information to maximize retrieval precision.

@@ -1,0 +1,40 @@
+# Per-agent version overrides for the for_loop agent.
+
+base: {}
+
+# Tool removal versions
+missing_process_features_tool:
+  version: missing_process_features_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.for_loop.tools.save_to_cloud
+      - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+        name: "ProductDatabase"
+        description: "Use this tool to search for a specific product by name and retrieve its details"
+        file_paths: ["for_loop/documents/products2.json"]
+        max_items: 1
+        persist_directory: "db_cache/for_loop"
+
+missing_save_to_cloud_tool:
+  version: missing_save_to_cloud_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.for_loop.tools.process_features
+      - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+        name: "ProductDatabase"
+        description: "Use this tool to search for a specific product by name and retrieve its details"
+        file_paths: ["for_loop/documents/products2.json"]
+        max_items: 1
+        persist_directory: "db_cache/for_loop"
+
+missing_vector_database_tool:
+  version: missing_vector_database_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.for_loop.tools.process_features
+      - _target_: agents_gym_core.agents.for_loop.tools.save_to_cloud
+
+missing_all_tools:
+  version: missing_all_tools
+  agent:
+    tools: []

@@ -1,0 +1,61 @@
+name: hts_classifier_agent
+version: base
+metadata:
+  name: HTS Classifier Agent
+  version: 1.0.0
+  tags:
+  - fast-benchmark
+  - full-benchmark
+  - long_summary
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      description_of_product_or_good:
+        type: str
+        description: Description of the product / good
+      use_CROSS_tool_when_escalating:
+        type: bool
+        description: Whether to use the CROSS tool to gather past HTS rulings data
+          and present it to the validator as helper info when escalating
+      escalation_context_score_threshold:
+        type: float
+        description: This threshold score is different than the one for the context
+          and should be higher than that; escalation will occur if no documents are
+          retrieved from the context with a score higher than this one
+      testing:
+        type: bool
+        description: A switch indicating if test mode is on. When on, escalation,
+          even if needed, is mocked.
+  output_schema:
+    fields:
+      HTS_codes:
+        type: list
+        description: Array of top three relevant HTS codes applicable to the provided
+          good description
+      Top_HTS_code:
+        type: str
+        description: Most relevant HTS code
+      Escalation_details:
+        type: str
+        description: Reason for escalating / not escalating to HITL
+      debug_order_of_steps_followed:
+        type: str
+        description: Recount of exact order of steps followed as per the prompt
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-hts_classifier_agent.json
+  tools:
+  - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+    name: "HTS_2024_r_10"
+    description: "This context grounding index search tool retrieves information from a knowledge base using semantic similarity. Harmonized Tariff Schedule 2024 rev. 10 (an excerpt of its pages). Contains HTS codes for goods grouped by domains (chapters), categories and features."
+    file_paths:
+      - hts_classifier_agent/documents
+    vector_store_type: "faiss"
+    distance_metric: "l2"
+    embedding_chunk_size: 500
+    include_metadata: true
+    max_items: 5
+    persist_directory: "db_cache/hts_classifier_agent_excerpt"
+  - _target_: agents_gym_core.agents.hts_classifier_agent.tools.escalate_escalate_to_ask_for_hts
+  - _target_: agents_gym_core.agents.hts_classifier_agent.tools.GetCrossRulings

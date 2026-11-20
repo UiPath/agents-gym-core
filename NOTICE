@@ -1,0 +1,61 @@
+agents-gym-core
+Copyright (c) 2025 UiPath. Licensed under the MIT License (see LICENSE).
+
+This repository includes or adapts the third-party material below. Each part remains under
+its own licence. For the parts under the MIT License, the licence terms are those in LICENSE,
+with the copyright notice given below in place of UiPath's.
+
+GEPA artifact (https://github.com/gepa-ai/gepa-artifact)
+  Copyright (c) 2025 Lakshya A Agrawal. MIT License.
+  - gepa-artifact/ is a git submodule of that repository, under its own licence.
+  - src/agents_gym_core/prompt_optimization/gepa/proposer.py adapts the instruction-proposal
+    flow of gepa_artifact/gepa/instruction_proposal.py; gepa/__init__.py and gepa/state.py
+    follow its GEPA implementation.
+  - The MIPROv2, MIPROv2-ND, GEPA and GEPA-Merge prompts of the six public benchmarks (70 files
+    under src/agents_gym_core/agents/<benchmark>/prompts/{miprov2,miprov2-nd,gepa__gpt-4.1-mini,
+    gepa-merge__gpt-4.1-mini}/) are the optimized prompts provided by GEPA's authors.
+  - The PAPILLON evaluator written by src/agents_gym_core/agents/papillon/init.py takes its
+    judge signatures and LLMJudge module from gepa_artifact/benchmarks/papillon/papillon_utils.py.
+  - The HoVer evaluator written by src/agents_gym_core/agents/hover/init.py replicates
+    gepa_artifact.benchmarks.hover.hover_utils.discrete_retrieval_eval.
+  - The LiveBench-Math evaluator written by src/agents_gym_core/agents/livebench_math/init.py
+    adapts run_with_timeout of
+    gepa_artifact/benchmarks/livebench_math/livebenchmath_utils/AMPS_Hard/utils.py.
+
+DSPy (https://github.com/stanfordnlp/dspy)
+  Copyright (c) 2023 Stanford Future Data Systems. MIT License.
+  - The HotpotQA evaluator written by src/agents_gym_core/agents/hotpotqa/init.py
+    re-implements dspy.evaluate.answer_exact_match; the HoVer evaluator written by
+    src/agents_gym_core/agents/hover/init.py is adapted from dspy.evaluate.normalize_text.
+
+Chinook sample database (https://github.com/lerocha/chinook-database)
+  Copyright (c) 2008-2024 Luis Rocha. MIT License.
+  - src/agents_gym_core/agents/sql/documents/sql.db
+
+Harmonized Tariff Schedule of the United States (2024), Revision 10
+  U.S. International Trade Commission (https://hts.usitc.gov). A work of the U.S. Government,
+  not subject to copyright in the United States (17 U.S.C. 105).
+  - src/agents_gym_core/agents/hts_classifier_agent/documents/hts_2024_rev10_excerpt.json holds
+    the text of 221 pages of chapters 1, 5, 23, 32, 39, 40, 42, 44, 48, 54, 60, 73, 76, 82, 84,
+    85, 90, 95, 98 and 99, extracted from the USITC's chapter PDFs.
+
+LangChain (https://github.com/langchain-ai/langchain)
+  Copyright (c) LangChain, Inc. MIT License.
+  - src/agents_gym_core/models/chat/fireworks.py adapts bind_tools and _create_chat_result of
+    langchain-fireworks's ChatFireworks, with the fixes of langchain-ai/langchain PR #34343.
+
+Benchmark examples inside the optimized prompts
+  The few-shot demos in src/agents_gym_core/agents/<benchmark>/prompts/miprov2/*.json (40 in
+  10 files) quote training examples of their benchmarks, under the benchmarks' licences:
+  - HotpotQA and HoVer: questions, claims and Wikipedia abstracts. CC BY-SA 4.0.
+  - IFBench: prompts. ODC-BY 1.0.
+  - PUPA: user queries. MIT.
+  The AIME and LiveBench-Math demos quote no benchmark text: their predict.refs.json files name
+  the datapoint of each problem and solution, and gym init fills the text in from the downloaded
+  datasets. A few GEPA prompts (hotpotqa/prompts/{gepa__gpt-4.1-mini,gepa__qwen3.5-122b,
+  gepa__qwen3.5-9b}/, hover/prompts/gepa__gpt-5/, papillon/prompts/gepa__gpt-5/) also quote
+  individual HotpotQA questions, HoVer claims and PUPA queries, under the same licences.
+
+Apart from those quotations, the public benchmarks' datasets are not part of this repository: gym
+init downloads them, and IFBench's files come with the gepa-artifact submodule. Their sources and licences are listed
+in docs/REPRODUCING.md.

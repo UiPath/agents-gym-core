@@ -1,0 +1,14 @@
+{
+    "version": "1.0",
+    "id": "product_questions_agent_ContainsProductEvaluator",
+    "description": "ContainsProduct evaluator for product_questions_agent - checks if expected value appears in FinalResponse",
+    "evaluatorTypeId": "uipath-contains",
+    "evaluatorConfig": {
+        "name": "ContainsProductEvaluator",
+        "description": "Checks if the expected product attribute value is contained in the agent FinalResponse (case-insensitive)",
+        "defaultEvaluationCriteria": null,
+        "target_output_key": "FinalResponse",
+        "case_sensitive": false,
+        "negated": false
+    }
+}

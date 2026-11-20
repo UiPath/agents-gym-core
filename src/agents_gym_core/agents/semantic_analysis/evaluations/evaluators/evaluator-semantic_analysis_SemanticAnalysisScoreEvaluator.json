@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "semantic_analysis_SemanticAnalysisScoreEvaluator",
+    "description": "Deterministic composite evaluator for semantic analysis: keyPhrases (30%), overallSentiment (30%), sentimentBreakdown (40%)",
+    "evaluatorTypeId": "SemanticAnalysisScoreEvaluator",
+    "evaluatorSchema": "file://semantic_analysis_evaluators.py:SemanticAnalysisScoreEvaluator",
+    "evaluatorConfig": {
+        "name": "SemanticAnalysisScoreEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null
+    }
+}

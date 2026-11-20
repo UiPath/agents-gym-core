@@ -1,0 +1,37 @@
+name: product_recommendation
+version: base
+
+metadata:
+  name: "Product Recommendation"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      CustomPreferences:
+        type: str
+        description: A detailed description of the customer's preferences and constraints.
+      ProductContext:
+        type: str
+        description: Product context
+  output_schema:
+    fields:
+      Products:
+        type: list
+        description: List of recommended products, each with Name (str), Brand (str),
+          Price (float), Features (list of str), Reason (str), and Match (one of
+          "Perfect Match", "Strong Match", "Close Alternative") fields
+  tools:
+  - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+    name: "ProductDatabase"
+    description: "Search for products in the database. Returns matching product information including name, description, price, features, and brand."
+    file_paths: ["product_recommendation/documents/products.json"]
+    max_items: 3
+    persist_directory: "db_cache/product_recommendation"
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-default.json
+

@@ -1,0 +1,1 @@
+Given the multi-hop question and the first summary, generate a precise and focused query for the second hop of retrieval. The query should be clear, specific, and directly relevant to the information needed to answer the question. Avoid vague or overly broad queries. The goal is to retrieve the most relevant information for the next reasoning step.

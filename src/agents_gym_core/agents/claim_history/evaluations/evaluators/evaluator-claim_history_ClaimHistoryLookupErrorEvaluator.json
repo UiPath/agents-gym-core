@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "claim_history_ClaimHistoryLookupErrorEvaluator",
+    "description": "ClaimHistoryLookupErrorEvaluator for claim_history agent - deterministic error check",
+    "evaluatorTypeId": "ClaimHistoryLookupErrorEvaluator",
+    "evaluatorSchema": "file://claim_history_evaluators.py:ClaimHistoryLookupErrorEvaluator",
+    "evaluatorConfig": {
+        "name": "ClaimHistoryLookupErrorEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "salesforce_agent_LLMJudgeOutputEvaluator",
+  "description": "LLM Judge evaluator for salesforce agent",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "LLMJudgeOutputEvaluator",
+    "description": "Evaluates semantic similarity of salesforce agent outputs",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert evaluator for a Salesforce automation agent, compare the actual output with the expected output.\n\nExpected Output:\n{{ExpectedOutput}}\n\nActual Output:\n{{ActualOutput}}\n\nEvaluate if the actual output correctly indicates whether an Action Center task was created (action_center_task_created field).\n\nScore 1.0 if the action_center_task_created value matches the expected value.\nScore 0.0 if the action_center_task_created value does not match.\n\nProvide a brief explanation of your scoring.",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "*"
+  }
+}

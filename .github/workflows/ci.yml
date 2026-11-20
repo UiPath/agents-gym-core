@@ -1,0 +1,115 @@
+# Model checks use local stubs and no secrets. CI initializes AIME, LiveBench-Math, IFBench
+# and PUPA from pinned sources. HotpotQA / HoVer eval-set checks run when their local splits exist.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GIT_LFS_SKIP_SMUDGE: "1"   # gepa-artifact's 1.9 GB results tarball is not needed
+      HF_HUB_DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
+        with:
+          submodules: recursive
+          lfs: false
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e  # v6.8.0
+        with:
+          enable-cache: true
+          version: "0.13.4"
+          python-version: "3.13"
+
+      - name: Check dependency policy before installation
+        run: python scripts/check_dependency_policy.py
+
+      - name: Install
+        run: python scripts/check_dependency_policy.py --sync --extra dspy --extra dev
+
+      - name: Lint
+        run: |
+          uv run ruff check src tests scripts
+          uv run ruff format --check src tests scripts
+          shellcheck -x -s bash -S warning scripts/*.sh
+
+      - name: Type check
+        run: uv run pyright src tests scripts
+
+      - name: Generate public-benchmark splits (pinned revisions)
+        run: |
+          for agent in aime_2025_agent livebench_math ifbench papillon; do
+            uv run gym init "$agent"
+          done
+
+      - name: Tests
+        run: uv run pytest -q tests
+
+      - name: Core loop imports and types without DSPy
+        env:
+          AGENTS_GYM_SKIP_DOTENV: "1"
+          LITELLM_LOCAL_MODEL_COST_MAP: "True"
+          HF_HUB_OFFLINE: "1"
+          AWS_EC2_METADATA_DISABLED: "true"
+        run: |
+          python scripts/check_dependency_policy.py --sync --extra dev
+          uv run --no-sync python -c "import importlib.util; assert importlib.util.find_spec('dspy') is None"
+          uv run --no-sync python -c "import agents_gym_core.loops.loop_factory"
+          uv run --no-sync pyright src/agents_gym_core/loops
+
+  security-compatibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    env:
+      AGENTS_GYM_SKIP_DOTENV: "1"
+      LITELLM_LOCAL_MODEL_COST_MAP: "True"
+      HF_HUB_OFFLINE: "1"
+      HF_DATASETS_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      AWS_EC2_METADATA_DISABLED: "true"
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e
+        with:
+          enable-cache: true
+          version: "0.13.4"
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install reviewed dependencies
+        run: python scripts/check_dependency_policy.py --sync --extra dspy --extra dev
+
+      - name: Offline security and compatibility contracts
+        run: >-
+          uv run pytest -q
+          tests/test_dependency_policy.py
+          tests/test_dependency_audit_refresh.py
+          tests/test_tool_instantiation_security.py
+          tests/test_tool_description_override.py
+          tests/test_model_error_privacy.py
+          tests/test_mcp_file_security.py
+          tests/test_mcp_path_containment.py
+          tests/test_dspy_cache_security.py
+          tests/test_sdk_security_contracts.py
+          tests/test_bounded_excel_loader.py
+          tests/test_excel_profile.py
+          tests/test_core_vector_database_tool.py

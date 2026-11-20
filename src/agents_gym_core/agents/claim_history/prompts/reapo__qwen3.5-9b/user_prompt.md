@@ -1,0 +1,1 @@
+{DenialCode} {RemittanceCode}

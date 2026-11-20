@@ -1,0 +1,47 @@
+# @package _global_
+
+# Agent configuration
+# Version: base (default version)
+version: base
+
+# Metadata
+metadata:
+  name: "Athena Chatbot Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+  
+  # Input schema definition (inline in YAML)
+  input_schema:
+    fields:
+      USER_MESSAGE:
+        type: "str"
+        description: "The user's conversation history and messages, sent over slack, to the agent."
+  
+  # Output schema definition (inline in YAML)
+  output_schema:
+    fields:
+      out_agentReply:
+        type: "str"
+        description: "What would be your reply to the user over the slack?"
+      out_shouldPostReplyOnSlack:
+        type: "bool"
+        description: "If the agentReply is to be shared via slack or not. For example, if the agent reply is just an internal comment, it should be False. If it shareable reply, then True."
+  
+  # Evaluation sets (one or more files)
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-athena_chatbot.json
+  
+  tools:
+    - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+      name: "Athena_Mentors_VectorDatabase"
+      description: "Use this tool to find mentors based on specialization and timezone."
+      file_paths: ["athena_chatbot/documents/athena_mentors.csv"]
+      max_items: 3
+      persist_directory: "db_cache/athena_chatbot"
+    - _target_: agents_gym_core.agents.athena_chatbot.tools.tool_send_mentorship_confirmation

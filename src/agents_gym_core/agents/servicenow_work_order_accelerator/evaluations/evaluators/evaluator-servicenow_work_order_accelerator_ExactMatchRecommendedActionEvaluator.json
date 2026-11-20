@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator",
+    "description": "Normalized exact match on RecommendedAction field (case-insensitive, semicolon/comma equivalent)",
+    "evaluatorTypeId": "NormalizedExactMatchRecommendedActionEvaluator",
+    "evaluatorSchema": "file://servicenow_evaluators.py:NormalizedExactMatchRecommendedActionEvaluator",
+    "evaluatorConfig": {
+        "name": "NormalizedExactMatchRecommendedActionEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null
+    }
+}

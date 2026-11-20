@@ -1,0 +1,156 @@
+train:
+  version: train
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-train.json
+
+val:
+  version: val
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-val.json
+
+test:
+  version: test
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+gepa__gpt-4.1-mini:
+  version: gepa__gpt-4.1-mini
+  agent:
+    system_prompt: "core::prompts/gepa__gpt-4.1-mini/system_prompt.md"
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+
+gepa__gpt-4.1-mini-test:
+  version: gepa__gpt-4.1-mini-test
+  agent:
+    system_prompt: "core::prompts/gepa__gpt-4.1-mini/system_prompt.md"
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+gepa-merge__gpt-4.1-mini:
+  version: gepa-merge__gpt-4.1-mini
+  agent:
+    system_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/system_prompt.md"
+    user_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/user_prompt.md"
+
+gepa-merge__gpt-4.1-mini-test:
+  version: gepa-merge__gpt-4.1-mini-test
+  agent:
+    system_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/system_prompt.md"
+    user_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+baseline:
+  version: baseline
+  agent:
+    system_prompt: "core::prompts/baseline/system_prompt.md"
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+
+baseline-test:
+  version: baseline-test
+  agent:
+    system_prompt: "core::prompts/baseline/system_prompt.md"
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+miprov2-nd:
+  version: miprov2-nd
+  agent:
+    system_prompt: "core::prompts/miprov2-nd/system_prompt.md"
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+
+miprov2-nd-test:
+  version: miprov2-nd-test
+  agent:
+    system_prompt: "core::prompts/miprov2-nd/system_prompt.md"
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+miprov2-test:
+  version: miprov2-test
+  agent:
+    system_prompt: "core::prompts/miprov2-nd/system_prompt.md"
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_demos:
+      predict: "core::prompts/miprov2/predict.json"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+# Per-optimizer prompt sets: one <dir>-test version per prompts/<dir> (scripts/add_optimizer_versions.py)
+gepa__gpt-5-test:
+  version: gepa__gpt-5-test
+  agent:
+    system_prompt: core::prompts/gepa__gpt-5/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__gpt-4.1-mini-test:
+  version: reapo__gpt-4.1-mini-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-4.1-mini/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__gpt-5-test:
+  version: reapo__gpt-5-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__gpt-5__score-only-test:
+  version: reapo__gpt-5__score-only-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5__score-only/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__opus-4.6-test:
+  version: reapo__opus-4.6-test
+  agent:
+    system_prompt: core::prompts/reapo__opus-4.6/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__qwen3.5-9b-test:
+  version: reapo__qwen3.5-9b-test
+  agent:
+    system_prompt: core::prompts/reapo__qwen3.5-9b/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+gepa__qwen3.5-9b-test:
+  version: gepa__qwen3.5-9b-test
+  agent:
+    system_prompt: core::prompts/gepa__qwen3.5-9b/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__gpt-4.1-mini__macro-test:
+  version: reapo__gpt-4.1-mini__macro-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-4.1-mini__macro/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+reapo__gpt-5__macro-test:
+  version: reapo__gpt-5__macro-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5__macro/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json
+
+reapo__gpt-5__skill-trimmed-test:
+  version: reapo__gpt-5__skill-trimmed-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5__skill-trimmed/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math-test.json

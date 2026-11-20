@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "id": "calculator_ToolCallArgsEvaluator",
+    "description": "ToolCallArgsEvaluator for calculator agent",
+    "evaluatorTypeId": "uipath-tool-call-args",
+    "evaluatorConfig": {
+        "name": "ToolCallArgsEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false,
+        "subset": false
+    }
+}

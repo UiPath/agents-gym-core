@@ -1,0 +1,1395 @@
+{
+  "version": "1.0",
+  "id": "6ef19038-19d7-5f7f-8d44-5a3fde245e5c",
+  "name": "evaluation-set-customer_support_triage_agent_test",
+  "evaluatorRefs": [
+    "customer_support_triage_agent_LLMJudgeOutputEvaluator",
+    "customer_support_triage_agent_ExactMatchAgentEvaluator",
+    "customer_support_triage_agent_LLMJudgeResponseEvaluator",
+    "customer_support_triage_agent_ToolCallCountEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "cst-pq-002",
+      "name": "phone_price",
+      "inputs": {
+        "Request": "What is the price for Phone S20?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "To provide the price for Phone S20, I need to know the manufacturer of Phone S20."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "To provide the price for Phone S20, I need to know the manufacturer of Phone S20."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-003",
+      "name": "iphone_12_vs_12_pro",
+      "inputs": {
+        "Request": "Can you tell me the difference between iphone 12 and iphone 12 pro? I want to compare your models and see if I have other questions. ?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The iPhone 12 Pro offers several advantages over the iPhone 12: 1) Better camera system with telephoto lens and LiDAR scanner, 2) Premium stainless steel frame vs aluminum, 3) Brighter max screen brightness, 4) 6GB RAM vs 4GB RAM, 5) Larger storage options up to 512GB"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The iPhone 12 Pro offers several advantages over the iPhone 12: 1) Better camera system with telephoto lens and LiDAR scanner, 2) Premium stainless steel frame vs aluminum, 3) Brighter max screen brightness, 4) 6GB RAM vs 4GB RAM, 5) Larger storage options up to 512GB"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-006",
+      "name": "sony_wh_1000xm4_battery_life",
+      "inputs": {
+        "Request": "What's the battery life of the Sony WH-1000XM4?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The Sony WH-1000XM4 offers up to 30 hours of battery life with noise canceling on, and up to 38 hours with noise canceling off."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The Sony WH-1000XM4 offers up to 30 hours of battery life with noise canceling on, and up to 38 hours with noise canceling off."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-007",
+      "name": "ipad_pro_2021_charger",
+      "inputs": {
+        "Request": "Does the iPad Pro 2021 come with a charger?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "Yes, the iPad Pro 2021 comes with a 20W USB-C power adapter and a USB-C charging cable in the box."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "Yes, the iPad Pro 2021 comes with a 20W USB-C power adapter and a USB-C charging cable in the box."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-008",
+      "name": "canon_eos_r5_vs_r6",
+      "inputs": {
+        "Request": "What's the difference between Canon EOS R5 and R6?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The main differences are: 1) R5 has 45MP vs R6's 20MP sensor, 2) R5 shoots 8K video vs R6's 4K, 3) R5 has higher resolution EVF, 4) R5 has CFexpress + SD card slots vs R6's dual SD slots, 5) R5 is more expensive"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The main differences are: 1) R5 has 45MP vs R6's 20MP sensor, 2) R5 shoots 8K video vs R6's 4K, 3) R5 has higher resolution EVF, 4) R5 has CFexpress + SD card slots vs R6's dual SD slots, 5) R5 is more expensive"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-009",
+      "name": "nintendo_switch_oled_waterproof",
+      "inputs": {
+        "Request": "Is the Nintendo Switch OLED waterproof?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "No, the Nintendo Switch OLED is not waterproof and should be kept away from water to prevent damage."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "No, the Nintendo Switch OLED is not waterproof and should be kept away from water to prevent damage."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-001",
+      "name": "compact_camera_recommendation",
+      "inputs": {
+        "Request": "I need a compact camera with budget-friendly, portable"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"Canon PowerShot SX620 HS\", \"Price\": \"$199.00\"}, \"Alternatives\": [{\"Product\": \"Sony Cyber-shot DSC-W800\", \"Price\": \"$99.00\"}, {\"Product\": \"Nikon Coolpix B500\", \"Price\": \"$149.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"Canon PowerShot SX620 HS\", \"Price\": \"$199.00\"}, \"Alternatives\": [{\"Product\": \"Sony Cyber-shot DSC-W800\", \"Price\": \"$99.00\"}, {\"Product\": \"Nikon Coolpix B500\", \"Price\": \"$149.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-002",
+      "name": "smartphone_recommendation",
+      "inputs": {
+        "Request": "I need a smartphone with high performance, good camera"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"Samsung Galaxy S21\", \"Price\": \"$799.00\"}, \"Alternatives\": [{\"Product\": \"iPhone 12\", \"Price\": \"$899.00\"}, {\"Product\": \"Google Pixel 5\", \"Price\": \"$699.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"Samsung Galaxy S21\", \"Price\": \"$799.00\"}, \"Alternatives\": [{\"Product\": \"iPhone 12\", \"Price\": \"$899.00\"}, {\"Product\": \"Google Pixel 5\", \"Price\": \"$699.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-003",
+      "name": "gaming_laptop_recommendation",
+      "inputs": {
+        "Request": "I need a laptop with gaming, high performance"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"ASUS ROG Zephyrus G14\", \"Price\": \"$1,299.00\"}, \"Alternatives\": [{\"Product\": \"Razer Blade 15\", \"Price\": \"$1,699.00\"}, {\"Product\": \"MSI GS66 Stealth\", \"Price\": \"$1,499.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"ASUS ROG Zephyrus G14\", \"Price\": \"$1,299.00\"}, \"Alternatives\": [{\"Product\": \"Razer Blade 15\", \"Price\": \"$1,699.00\"}, {\"Product\": \"MSI GS66 Stealth\", \"Price\": \"$1,499.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-004",
+      "name": "wireless_headphones_recommendation",
+      "inputs": {
+        "Request": "I need a headphones with wireless, noise cancellation"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"Sony WH-1000XM4\", \"Price\": \"$349.00\"}, \"Alternatives\": [{\"Product\": \"Bose QuietComfort 45\", \"Price\": \"$329.00\"}, {\"Product\": \"Apple AirPods Pro\", \"Price\": \"$249.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"Sony WH-1000XM4\", \"Price\": \"$349.00\"}, \"Alternatives\": [{\"Product\": \"Bose QuietComfort 45\", \"Price\": \"$329.00\"}, {\"Product\": \"Apple AirPods Pro\", \"Price\": \"$249.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-006",
+      "name": "productivity_tablet_recommendation",
+      "inputs": {
+        "Request": "I need a tablet with productivity, stylus support"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"iPad Pro 11-inch\", \"Price\": \"$799.00\"}, \"Alternatives\": [{\"Product\": \"Samsung Galaxy Tab S7\", \"Price\": \"$649.00\"}, {\"Product\": \"Microsoft Surface Pro 7\", \"Price\": \"$749.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"iPad Pro 11-inch\", \"Price\": \"$799.00\"}, \"Alternatives\": [{\"Product\": \"Samsung Galaxy Tab S7\", \"Price\": \"$649.00\"}, {\"Product\": \"Microsoft Surface Pro 7\", \"Price\": \"$749.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-004",
+      "name": "Item_Malfunction",
+      "inputs": {
+        "Request": "I want to return item from order #78901, it doesn't work properly."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#78901 Processing Return Customer reported item malfunction"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#78901 Processing Return Customer reported item malfunction"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-009",
+      "name": "International_Return",
+      "inputs": {
+        "Request": "I need to return order #35791 to international address, what's the process?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#35791 Processing International Return Customer requires international return shipping label"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#35791 Processing International Return Customer requires international return shipping label"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-011",
+      "name": "Bulk_Order_Return",
+      "inputs": {
+        "Request": "I want to return all 5 items from order #27513, they don't match what I expected."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#27513 Processing Bulk Return Customer returning all 5 items from order"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#27513 Processing Bulk Return Customer returning all 5 items from order"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-di-002",
+      "name": "Dell_Laptop_Mismatch",
+      "inputs": {
+        "Request": "I ordered a Dell XPS 15 but received a Dell Inspiron. Please investigate this dispute."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent",
+            "Response": "{\"Supplier Email\": \"dell.support@example.com\", \"InvestigationResultString\": \"Dell XPS 15 and Dell Inspiron are different product lines\", \"MismatchedItemsFindingsString\": \"Dell XPS 15 is a premium product while Dell Inspiron is a mid-range product\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Dell XPS 15 has higher specifications and build quality than Dell Inspiron\", \"MismatchedParts\": \"processor, build material, display quality\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              1
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"Supplier Email\": \"dell.support@example.com\", \"InvestigationResultString\": \"Dell XPS 15 and Dell Inspiron are different product lines\", \"MismatchedItemsFindingsString\": \"Dell XPS 15 is a premium product while Dell Inspiron is a mid-range product\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Dell XPS 15 has higher specifications and build quality than Dell Inspiron\", \"MismatchedParts\": \"processor, build material, display quality\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-di-005",
+      "name": "Samsung_Phone_Dispute",
+      "inputs": {
+        "Request": "I received a Samsung S22 instead of Samsung S22 Ultra. Need to dispute this."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent",
+            "Response": "{\"Supplier Email\": \"mobileworld@example.com\", \"InvestigationResultString\": \"Samsung S22 and Samsung S22 Ultra are different models\", \"MismatchedItemsFindingsString\": \"Samsung S22 Ultra has additional features not present in Samsung S22\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Samsung S22 Ultra has S Pen support, larger screen, better cameras, and larger battery\", \"MismatchedParts\": \"display size, camera system, S Pen compatibility, battery capacity\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              1
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"Supplier Email\": \"mobileworld@example.com\", \"InvestigationResultString\": \"Samsung S22 and Samsung S22 Ultra are different models\", \"MismatchedItemsFindingsString\": \"Samsung S22 Ultra has additional features not present in Samsung S22\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Samsung S22 Ultra has S Pen support, larger screen, better cameras, and larger battery\", \"MismatchedParts\": \"display size, camera system, S Pen compatibility, battery capacity\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-003",
+      "name": "Corporate_Account_Request",
+      "inputs": {
+        "Request": "I've spent over $50,000 with your company and need to speak to someone about a corporate account."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent",
+            "Response": "Thank you for your significant business with us. Corporate account inquiries are handled by our dedicated business relationship team. I'll connect you with them right away."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "Thank you for your significant business with us. Corporate account inquiries are handled by our dedicated business relationship team. I'll connect you with them right away."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-004",
+      "name": "Staff_Complaint",
+      "inputs": {
+        "Request": "Your customer service rep was extremely rude to me yesterday. I want to file a formal complaint."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent",
+            "Response": "I apologize for your negative experience. Formal complaints about our staff are taken seriously and handled by our customer experience team. I'll escalate this to a manager who will assist you further."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "I apologize for your negative experience. Formal complaints about our staff are taken seriously and handled by our customer experience team. I'll escalate this to a manager who will assist you further."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-007",
+      "name": "MultipleAgents",
+      "inputs": {
+        "Request": "My laptop is not working as expected - I want a refund. Can you recommend the best laptop with 32GB RAM?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cst-di-006",
+      "name": "VagueDispute",
+      "inputs": {
+        "Request": "I have a problem with my purchase."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              1
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cst-rt-003",
+      "name": "Retry_Connection_Error",
+      "inputs": {
+        "Request": "What are the benefits of a Sony Alpha Camera?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The Sony Alpha Camera series offers full-frame sensors with excellent low-light performance. Most models have in-body image stabilization and can record 4K video. Their autofocus systems are known for reliability and speed, especially for eye-tracking."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The Sony Alpha Camera series offers full-frame sensors with excellent low-light performance. Most models have in-body image stabilization and can record 4K video. Their autofocus systems are known for reliability and speed, especially for eye-tracking."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rt-004",
+      "name": "Retry_Authentication_Error",
+      "inputs": {
+        "Request": "Tell me about the NVIDIA RTX 4090 capabilities"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The NVIDIA RTX 4090 is the flagship GPU with 24GB GDDR6X memory and support for DLSS 3.0 and ray tracing. It's ideal for 4K gaming and demanding creative workloads like 3D rendering and AI processing."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The NVIDIA RTX 4090 is the flagship GPU with 24GB GDDR6X memory and support for DLSS 3.0 and ray tracing. It's ideal for 4K gaming and demanding creative workloads like 3D rendering and AI processing."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rt-006",
+      "name": "Retry_Incomplete_Data",
+      "inputs": {
+        "Request": "What's special about the Bose QuietComfort Ultra headphones?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The Bose QuietComfort Ultra headphones feature advanced noise cancellation technology, spatial audio support, and up to 24 hours of battery life. They come with both touch controls and physical buttons, and support multipoint Bluetooth connection to pair with two devices simultaneously."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The Bose QuietComfort Ultra headphones feature advanced noise cancellation technology, spatial audio support, and up to 24 hours of battery life. They come with both touch controls and physical buttons, and support multipoint Bluetooth connection to pair with two devices simultaneously."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

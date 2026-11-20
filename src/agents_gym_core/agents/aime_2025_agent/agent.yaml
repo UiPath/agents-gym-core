@@ -1,0 +1,48 @@
+# @package _global_
+
+version: base
+
+metadata:
+  name: "AIME - Competition Math"
+  tags:
+    - full-benchmark
+
+init:
+  script: core::init.py
+  data_dirs:
+    - evaluations/eval-sets
+    - evaluations/evaluators
+  params:
+    seed: 0
+    # MIPROv2 demos whose benchmark text init fills in (utils/benchmark_demos.py)
+    demo_refs:
+      - prompts/miprov2/predict.refs.json
+
+loop: dspy-program:gepa_artifact.benchmarks.AIME.AIME_program.program_cot
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  input_schema:
+    fields:
+      problem:
+        type: "str"
+        description: "An AIME competition math problem"
+
+  output_schema:
+    fields:
+      reasoning:
+        type: "str"
+        description: "Step-by-step reasoning and solution approach"
+      answer:
+        type: "int"
+        description: "The final numeric answer (integer between 0 and 999)"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_train.json
+    - core::evaluations/eval-sets/evaluation-set-aime_val.json
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+  evaluator_weights:
+    aime_2025_ExactMatchEvaluator: 1

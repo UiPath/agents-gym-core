@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "product_recommendation_ToolCallCountEvaluator",
+    "description": "ToolCallCountEvaluator for product_recommendation agent - checks that ProductDatabase is called at least once",
+    "evaluatorTypeId": "uipath-tool-call-count",
+    "evaluatorConfig": {
+        "name": "ToolCallCountEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

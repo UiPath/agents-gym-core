@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "meeting_management_LLMJudgePlatformFactualityEvaluator",
+  "description": "LLM judge evaluator for meeting_management output factuality",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "LLMJudgePlatformFactualityMeetingManagement",
+    "description": "",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert evaluator, compare the expected and actual meeting management outputs. Focus only on the keys present in ExpectedOutput, allowing reasonable formatting differences while requiring semantic equivalence. Provide a score from 0-100 with a brief justification.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "*"
+  }
+}

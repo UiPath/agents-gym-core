@@ -1,0 +1,225 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "question": "What bank was founded by the great-great-great grandfather of the second Duke of Florence?",
+      "context": "The bank founded by the great-great-great grandfather of the second Duke of Florence is the Medici Bank, established by Giovanni di Bicci de' Medici.",
+      "passages": [
+        "Giovanni di Bicci de' Medici | Giovanni di Bicci de' Medici (c. 1360 \u2013 February 20/28, 1429) was an Italian banker, a member of Medici family of Florence, and the founder of the Medici Bank.  While other family members, such as Chiarissimo di Giambuono de' Medici, who served in the Signoria in 1201, and Salvestro de' Medici, who was implicated in the Ciompi Revolt of 1378, are historically significant, Giovanni's founding of the family bank truly began the family's rise to power in Florence.  He was the father of Cosimo de' Medici (\"Pater Patriae\"), grandfather of Piero di Cosimo de' Medici, great-grandfather of Lorenzo de' Medici (the Magnificent) and great-great-great-grandfather of Cosimo I de' Medici, Grand Duke of Tuscany.",
+        "Averardo de' Medici | Averardo de' Medici (1320-1363), also known as Everard De Medici, was the son of Salvestro de' Medici (died 1346), \"il Chiarissimo\" (English meaning \"the very clear.\")  and the father of three children: Giovanni, Francesco, and Antonia.  Giovanni di Bicci de' Medici would later become the first historically relevant member of Medici family of Florence and the eventual founder of the Medici bank.",
+        "Villa Medici at Cafaggiolo | The Villa Medicea di Cafaggiolo is a villa situated near the Tuscan town of Barberino di Mugello in the valley of the River Sieve, some 25\u00a0kilometres north of Florence, central Italy.  It was one of the oldest and most favoured of the Medici family estates, having been in the possession of the family since the 14th century, when it was owned by Averardo de' Medici.  Averardo's son, Giovanni di Bicci de' Medici, is considered to be the founder of the Medici dynasty.",
+        "Medici: Masters of Florence | Medici: Masters of Florence is an Italian-British television drama series about the Medici dynasty set in 15th-century Florence, starring Dustin Hoffman as Giovanni di Bicci de' Medici, Richard Madden as Cosimo de' Medici, and Stuart Martin as Lorenzo de' Medici (\"The Elder\").  The series was co-created by Frank Spotnitz (\"The X-Files\" and \"Man in the High Castle\") and Nicholas Meyer (\"\").  Sergio Mimica-Gezzan (\"The Pillars of the Earth\") directed all eight episodes.  Episodes 1 and 2 aired on Rai 1 (Italian TV) on 18 October 2016.  According to Italian ratings compiler Auditel, it attracted a record 7.6\u00a0million viewers.  The first season consists of eight episodes.",
+        "Neri di Bicci | Neri di Bicci (1419\u20131491) was an Italian painter of the Renaissance.  A prolific painter of mainly religious themes, he was active mainly in Florence and in the medium of tempera.  His father was Bicci di Lorenzo.  His grandfather, Lorenzo di Bicci was also a painter in Florence, a pupil of Spinello Aretino.",
+        "Cosimo de' Medici | Cosimo di Giovanni de' Medici (called 'the Elder' (Italian \"il Vecchio\") and posthumously \"Father of the Nation\" (Latin \"pater patriae\"); 27 September 1389 \u2013 1 August 1464) was an Italian banker and politician, the first of the Medici political dynasty, \"de facto\" rulers of Florence during much of the Italian Renaissance.  Despite his influence, his power was not absolute; Florence's legislative councils at times resisted his proposals, something which would not have been tolerated by the Visconti of Milan, for instance; throughout his life he was always \"primus inter pares\" (\"first among equals\").  His power derived from his wealth as a banker, and he was a great patron of learning, the arts and architecture.",
+        "Giovanni il Popolano | Giovanni de' Medici, in full Giovanni di Pierfrancesco de' Medici, later known as il Popolano (21 October 1467 \u2013 14 September 1498) was an Italian nobleman of the Medici House of Florence.  He was the son of Pierfrancesco di Lorenzo de' Medici, and therefore a member of a secondary branch of the family."
+      ],
+      "reasoning": "The question asks for the bank founded by the great-great-great-grandfather of the second Duke of Florence. Passage [1] states that Giovanni di Bicci de' Medici founded the Medici Bank and was the great-great-great-grandfather of Cosimo I de' Medici, who was the Grand Duke of Tuscany. The Dukedom of Florence eventually transformed into the Grand Duchy of Tuscany under Cosimo I, who is identified as the second Duke of Florence in the question context.\n\nThus, Giovanni di Bicci de' Medici, as the great-great-great-grandfather of the second Duke of Florence (Cosimo I de' Medici), founded the Medici Bank.",
+      "summary": "The Medici Bank was founded by Giovanni di Bicci de' Medici, the great-great-great-grandfather of the second Duke of Florence."
+    },
+    {
+      "augmented": true,
+      "question": "Who produces the Mexican telenovela that features \"Saturno\" as its main theme?",
+      "context": "The Mexican telenovela featuring \"Saturno\" as its main theme is \"Caer en tentaci\u00f3n,\" but the passages do not specify who produces it.",
+      "passages": [
+        "Caer en tentaci\u00f3n | Caer en tentaci\u00f3n is a Mexican telenovela produced by Giselle Gonz\u00e1lez for Televisa, and it started airing on Mexican broadcast channel Las Estrellas on September 18, 2017.  Based on the Argentine drama by Erika Halvorsen and Gonzalo Demar\u00eda, titled \"Amar despu\u00e9s de amar\".  The series stars Silvia Navarro, Gabriel Soto, Adriana Louvier, and Carlos Ferro.",
+        "Saturno (song) | \"Saturno\" is a song recorded by Spanish singer-songwriter Pablo Albor\u00e1n, serving as the lead single for his forthcoming third studio album.  The song was released worldwide on 8 September 2017.  The song is the main theme of the Mexican telenovela \"Caer en tentaci\u00f3n\".",
+        "Un rostro en mi pasado | Un rostro en mi pasado (English title: \"A face in my past\") is a Mexican telenovela produced by Ernesto Alonso for Televisa in 1990.  Based on the Mexican telenovela produced in 1960 \"Un rostro en el pasado\".",
+        "Se\u00f1ora tentaci\u00f3n | Se\u00f1ora tentaci\u00f3n, It is an American telenovela produced by Telemundo.  Was led by Luc\u00eda M\u00e9ndez and Danilo Santos with antagonistic action of Miguel \u00c1ngel Rodr\u00edguez.",
+        "En la boca del lobo | En la boca del lobo (English: \"Into the Wolf's Mouth\") is a Colombian telenovela produced by Sony Pictures Television and Teleset for RCN Televisi\u00f3n and UniM\u00e1s.  Based on the book \"En la boca del lobo: La historia jam\u00e1s contada del hombre que hizo caer el cartel de Cali\" from William C. Rempel.",
+        "Yo no creo en los hombres (2014 telenovela) | Yo no creo en los hombres (English: \"I Don't Trust Men Anymore\" or \"I Don't Believe In Men\") is a Mexican telenovela produced by Giselle Gonz\u00e1lez for Televisa.  It is based on \"Yo no creo en los hombres\" (1991), produced in M\u00e9xico.  Critically acclaimed, it was the most awarded novela of 2014 and is widely considered to be one of the best telenovelas of the decade.",
+        "Amor en custodia (Mexican telenovela) | Amor en Custodia is a Mexican television drama, inspired by the popular Argentine telenovela of the same name, and developed and produced by Emilia Lamothe.  \"Amor en Custodia\" focuses on and satirizes the lives of socialite teens and young adults growing up in Mexico city.  It deals with sexuality, drugs, money, jealousy and other issues."
+      ],
+      "reasoning": "The question asks who produces the Mexican telenovela that features \"Saturno\" as its main theme. From the context, we know that \"Saturno\" is the main theme song for the Mexican telenovela \"Caer en tentaci\u00f3n.\" Passage [2] confirms that \"Saturno\" serves as the main theme of \"Caer en tentaci\u00f3n.\" Passage [1] states that \"Caer en tentaci\u00f3n\" is produced by Giselle Gonz\u00e1lez for Televisa. Therefore, the producer of the Mexican telenovela with \"Saturno\" as its main theme is Giselle Gonz\u00e1lez.",
+      "summary": "The Mexican telenovela featuring \"Saturno\" as its main theme, \"Caer en tentaci\u00f3n,\" is produced by Giselle Gonz\u00e1lez for Televisa."
+    },
+    {
+      "id": "5a72877c5542991f9a20c4d0",
+      "question": "Home to the Major League Baseball San Francisco Giants, what is the current name of the park where the 2002 San Francisco Bowl took place?",
+      "answer": "AT&T Park",
+      "type": "bridge",
+      "level": "hard",
+      "supporting_facts": {
+        "title": [
+          "2002 San Francisco Bowl",
+          "AT&amp;T Park",
+          "AT&amp;T Park"
+        ],
+        "sent_id": [
+          0,
+          1,
+          2
+        ]
+      },
+      "context": {
+        "title": [
+          "1993 San Francisco Giants season",
+          "AT&amp;T Park",
+          "Pablo Sandoval",
+          "Kenny Greer",
+          "2007 Major League Baseball All-Star Game",
+          "San Jose Municipal Stadium",
+          "2010 San Francisco Giants season",
+          "2002 San Francisco Bowl",
+          "List of San Francisco Giants seasons",
+          "List of San Francisco Giants no-hitters"
+        ],
+        "sentences": [
+          [
+            "The 1993 San Francisco Giants season was the Giants' 111th season in Major League Baseball, their 36th season in San Francisco since their move from New York following the 1957 season, and their 34th at Candlestick Park.",
+            " In the offseason, Barry Bonds left the Pirates to sign a lucrative free agent contract worth a then-record $43.75 million over 6 years with the Giants, with whom his father spent the first 7 years of his career, and with whom his godfather Willie Mays played 22 of his 24 Major League seasons.",
+            " The deal was at that time the largest in baseball history, in terms of both total value and average annual salary.",
+            " To honor his father, Bonds switched his jersey number to 25 once he signed with the Giants, as it had been Bobby's number in San Francisco.",
+            " (His number during most of his stay with the Pirates, 24, was retired in honor of Mays anyway).",
+            " Bonds hit .336 in 1993, leading the league with 46 home runs and 123 RBI en route to his second consecutive MVP award, and third overall (of an eventual seven).",
+            " As good as the Giants were (winning 103 games), the Atlanta Braves won 104 in what some call the last great pennant race (due to the Wild Card being instituted the following season).",
+            " After going up by nine games August 11 with a 77-38 record, the Giants went 12-18 and found themselves three-and-a-half games behind, a 12.5-game swing, by September 15.",
+            " They then went on a 14-2 run, which left them one game behind the Braves with one game remaining, which they lost 12-1 to become the only National League team to win 100 or more games (103) and not make the playoffs in the divisional play era."
+          ],
+          [
+            "AT&T Park is a baseball park located in the South Beach neighborhood of San Francisco, California.",
+            " Since 2000, it has served as the home of the San Francisco Giants, the city's Major League Baseball (MLB) franchise.",
+            " Originally named Pacific Bell Park, then SBC Park in 2003 after SBC Communications acquired Pacific Bell, the stadium was ultimately christened AT&T Park in 2006, following SBC's buyout of AT&T.",
+            " The park stands along the San Francisco Bay, a segment of which is named McCovey Cove in honor of former Giants player Willie McCovey."
+          ],
+          [
+            "Pablo Emilio Juan Pedro Sandoval Jr. (born August 11, 1986) is a Venezuelan professional baseball third baseman for the San Francisco Giants of Major League Baseball (MLB).",
+            " He has played in Major League Baseball for the Giants and the Boston Red Sox.",
+            " He stands 5 ft tall and weighs 255 lb .",
+            " He previously played portions of three seasons for the Boston Red Sox and seven seasons for the San Francisco Giants.",
+            " Nicknamed \"Kung Fu Panda\", Sandoval is a two-time All-Star and has won three World Series championships with the Giants.",
+            " Sandoval hit three home runs in Game 1 of the 2012 World Series, becoming the fourth person to hit three home runs in a World Series game, and was named the World Series Most Valuable Player (MVP).",
+            " During the offseason, he plays for the Navegantes del Magallanes of the Venezuelan Professional Baseball League."
+          ],
+          [
+            "Kenneth William \"Kenny\" Greer is a retired Major League Baseball pitcher who played for the New York Mets in 1993 and the San Francisco Giants in 1995.",
+            " He was drafted by the New York Yankees in the 10th round of the 1988 Major League Baseball Draft and played for the Yankees minor league affiliates from 1988 to 1993 before being traded to the Mets in exchange for Frank Tanana on September 17, 1993.",
+            " 12 days later, Greer would make his debut on September 29 pitching an inning of relief in the process of earning his first and only win in his only appearance with the Mets.",
+            " He would then sign with the San Francisco Giants on November 29, 1994 and would appear in 8 games with the team during the 1995 season, pitching 12 innings with 2 losses and a 5.25 ERA.",
+            " After his stint with the Giants, Greer would play for the minor league affiliates for the Giants, Pittsburgh Pirates and Baltimore Orioles before retiring in 1997."
+          ],
+          [
+            "The 2007 Major League Baseball All-Star Game was the 78th midseason exhibition between the all-stars of the American League (AL) and the National League (NL), the two leagues comprising Major League Baseball.",
+            " The game was held on July 10, 2007, at AT&T Park, the home of the NL's San Francisco Giants.",
+            " It marked the third time that the Giants hosted the All Star Game since moving to San Francisco for the 1958 season.",
+            " The 1961 and 1984 All Star Games were played at the Giants former home Candlestick Park, and the fourth overall in the Bay Area, with the Giants bay area rivals the Oakland Athletics hosting once back in 1987, and the second straight held in an NL ballpark."
+          ],
+          [
+            "The San Jose Municipal Stadium, or Muni Stadium in common usage, is the home of the minor league baseball San Jose Giants, the Advanced A league affiliate of the San Francisco Giants located in San Jose, California.",
+            " The Giants play in the northern division of the California League.",
+            " The stadium is also home to the San Jose State University Spartans college baseball team for some regular season games (other regular season games are played across Alma Avenue at Blethen Field).",
+            " The local high school baseball divisions also use Municipal Stadium as their championship field.",
+            " The stadium also hosts concerts, weddings, dog shows, and many other local events.",
+            " In the past Muni Stadium has been the home field for the San Jose Owls, San Jose Red Sox, San Jose Pirates, San Jose Missions, the San Jose Bees, and the San Jose Expos."
+          ],
+          [
+            "The San Francisco Giants are a Major League Baseball team that play in the National League.",
+            " Their 2010 season marked their 128th year in Major League Baseball, their 53rd year in San Francisco since their move from New York following the 1957 season, and their 11th in AT&T Park.",
+            " The Giants won the National League West for the first time since the 2003 season and both the National League Division Series and National League Championship Series for the first time since the 2002 season.",
+            " They would go on to win the World Series, their first championship since moving to San Francisco in 1958."
+          ],
+          [
+            "The 2002 San Francisco Bowl was the inaugural edition of the post-season college football bowl game between the Virginia Tech Hokies and the Air Force Falcons at Pacific Bell Park in San Francisco, California on December 31, 2002.",
+            " The game was the final contest of the 2002 NCAA Division I-A football season for both teams, and ended in a 20\u201313 victory for Virginia Tech."
+          ],
+          [
+            "The San Francisco Giants are a professional baseball team based in San Francisco, California.",
+            " They have been a member of the National League (NL), as a part of Major League Baseball, since the team's inception in 1883.",
+            " They joined the NL West following the establishment of divisions within the league in 1969.",
+            " The Giants played 75 seasons in New York City, New York, as the New York Gothams and New York Giants, spending the majority of their seasons at the Polo Grounds in Upper Manhattan.",
+            " The Giants relocated to San Francisco in 1958, briefly playing at Seals Stadium.",
+            " After sharing Candlestick Park for 29 years with the San Francisco 49ers National Football League team, the Giants moved to their current home, AT&T Park, in 2000."
+          ],
+          [
+            "The San Francisco Giants are a Major League Baseball franchise based in San Francisco, California.",
+            " They play in the National League West division.",
+            " Also known in their early years as the \"New York Gothams\" (1883\u201384) and \"New York Giants\" (1885\u20131957), pitchers for the Giants have thrown 17 no-hitters in franchise history.",
+            " A no-hitter is officially recognized by Major League Baseball only \"when a pitcher (or pitchers) retires each batter on the opposing team during the entire course of a game, which consists of at least nine innings\".",
+            " No-hitters of less than nine complete innings were previously recognized by the league as official; however, several rule alterations in 1991 changed the rule to its current form.",
+            " A no-hitter is rare enough that one team in Major League Baseball has still never had a pitcher accomplish the feat, and teams may go decades without recording one.",
+            " A perfect game, a special subcategory of no-hitter, was finally thrown by Matt Cain on June 13, 2012.",
+            " As defined by Major League Baseball, \"in a perfect game, no batter reaches any base during the course of the game.\"",
+            " Previously, this feat came closest on July 4, 1908 when Hooks Wiltse was hit by a pitch with two outs in the ninth and a scoreless tie.",
+            " The plate umpire, Cy Rigler, claimed he should have called the previous pitch strike three, that would have ended the inning with a perfection.",
+            " Wiltse would go on to retire all three in the tenth to end the game after the Giants scored a run in the top of the tenth."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "5ac49bed5542997ea680ca9a",
+      "question": "Who was the director of the 1998 comedy film on which the 2016 Romanian comedy film, directed by Paul Negoescu, is loosely based?",
+      "answer": "Kirk Jones",
+      "type": "bridge",
+      "level": "medium",
+      "supporting_facts": {
+        "title": [
+          "Two Lottery Tickets",
+          "Waking Ned"
+        ],
+        "sent_id": [
+          0,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "Chasing Rainbows (2012 film)",
+          "The Snails' Senator",
+          "Bucharest Non Stop",
+          "Waking Ned",
+          "The Conjugal Bed (1993 film)",
+          "Ho Ho Ho (film)",
+          "Two Lottery Tickets",
+          "Titanic Waltz",
+          "A Woman for a Season",
+          "The Protar Affair"
+        ],
+        "sentences": [
+          [
+            "Chasing Rainbows (Romanian: \"\u0218i caii sunt verzi pe pere\u021bi\" ) is a 2012 Romanian comedy film directed by Dan Chisu."
+          ],
+          [
+            "The Snails' Senator (Romanian: \"Senatorul melcilor\" ) is a 1995 Romanian comedy film directed by Mircea Daneliuc.",
+            " It was entered into the 1995 Cannes Film Festival."
+          ],
+          [
+            "Bucharest Non Stop (Romanian: \"Bucure\u0219ti NonStop\" ) is a 2015 Romanian comedy film directed by the Romanian actor, director and film producer Dan Chi\u0219u ."
+          ],
+          [
+            "Waking Ned (titled Waking Ned Devine in North America) is a 1998 comedy film by English writer and director Kirk Jones.",
+            " It stars Ian Bannen, David Kelly, and Fionnula Flanagan.",
+            " Kelly was nominated for a Screen Actors' Guild award for his role as Michael O'Sullivan.",
+            " The film is set in Ireland but was filmed in the Isle of Man.",
+            " It was produced by Canal+ and the British studio Tomboy Films and distributed by the American company Fox Searchlight Pictures."
+          ],
+          [
+            "The Conjugal Bed (Romanian: \"Patul conjugal\" ) is a 1993 Romanian comedy film directed by Mircea Daneliuc.",
+            " It was entered into the 43rd Berlin International Film Festival.",
+            " The film was selected as the Romanian entry for the Best Foreign Language Film at the 66th Academy Awards, but was not accepted as a nominee."
+          ],
+          [
+            "Ho Ho Ho is a Romanian Christmas-themed family comedy film starring Romanian music and TV icon \u015etefan B\u0103nic\u0103, Jr., directed by Jesus del Cerro, and produced by MediaPro Pictures as the first Romanian comedy film about Christmas."
+          ],
+          [
+            "Two Loterry Tickets (Romanian: Dou\u0103 lozuri) is a 2016 Romanian comedy film directed by Paul Negoescu and loosely based on Waking Ned.",
+            " It is a story of a working man losing his lottery ticket that was for a huge prize goes through bizarre events and takes an another ticket and wins it.",
+            " The name of the film is based on Ion Luca Caragiale's short story \"Dou\u0103 loturi\"."
+          ],
+          [
+            "Titanic Waltz (Romanian: Titanic vals) is a 1964 Romanian comedy film directed by Paul C\u0103linescu and starring Grigore Vasiliu-Birlic, Silvia Fulda and Kity Gheorghiu-Musatescu.",
+            " It was based on a play of the same name by Tudor Mu\u0219atescu."
+          ],
+          [
+            "A Woman for a Season (Romanian: R\u0103ut\u0103ciosul adolescent ) is a 1969 Romanian comedy film directed by Gheorghe Vitanidis.",
+            " It was entered into the 6th Moscow International Film Festival where Irina Petrescu won the award for Best Actress.",
+            " The film was selected as the Romanian entry for the Best Foreign Language Film at the 42nd Academy Awards, but was not accepted as a nominee."
+          ],
+          [
+            "The Protar Affair (Romanian: \"Afacerea Protar\" ) is a 1956 Romanian comedy film directed by Haralambie Boros.",
+            " It was entered into the 1956 Cannes Film Festival."
+          ]
+        ]
+      }
+    }
+  ]
+}

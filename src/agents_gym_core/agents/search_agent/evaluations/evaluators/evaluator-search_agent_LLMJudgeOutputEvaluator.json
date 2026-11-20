@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "search_agent_LLMJudgeOutputEvaluator",
+  "description": "LLMJudgeOutputEvaluator for search_agent",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "Search Agent LLM Evaluator",
+    "description": "An evaluator that uses a LLM to score the factuality and completeness of search results",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert evaluator, analyze the semantic similarity and factual accuracy of these search results to determine a score from 0-100. Focus on comparing the actual output to the expected output, accounting for alternative valid expressions, synonyms, and reasonable variations in language while maintaining high standards for accuracy and completeness. The result field should contain the key information requested. Provide your score with a justification, explaining briefly and concisely why you gave that score.\n\nExpectedOutput:\n{{ExpectedOutput}}\n\nActualOutput:\n{{ActualOutput}}",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "result"
+  }
+}

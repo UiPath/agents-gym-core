@@ -1,0 +1,267 @@
+{
+    "version": "1.0",
+    "id": "ac5aecd3-62d4-4a54-a5c8-7dee135a33ee",
+    "name": "For Loop Agent Eval Set",
+    "evaluatorRefs": [
+        "for_loop_agent_ExactMatchEvaluator",
+        "for_loop_agent_LLMJudgeOutputEvaluator",
+        "for_loop_agent_ToolCallCountEvaluator",
+        "for_loop_agent_ToolCallOrderEvaluator"
+    ],
+    "evaluations": [
+        {
+            "id": "a0000000-0000-0000-0000-000000000001",
+            "name": "No Products",
+            "inputs": {
+                "Products": "(none)"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{}"}
+                }
+            }
+        },
+        {
+            "id": "a0000000-0000-0000-0000-000000000002",
+            "name": "1Product",
+            "inputs": {
+                "Products": "Apple MacBook Pro 16-inch"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 1],
+                        "process_features": ["=", 1],
+                        "save_to_cloud": ["=", 1]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "a0000000-0000-0000-0000-000000000003",
+            "name": "2Products",
+            "inputs": {
+                "Products": "Nintendo Switch OLED Model, Samsung Galaxy S21 Ultra"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\", \"Samsung Galaxy S21 Ultra\": \"Dynamic AMOLED 2X 108MP Camera 5G Capable 128GB Storage\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\", \"Samsung Galaxy S21 Ultra\": \"Dynamic AMOLED 2X 108MP Camera 5G Capable 128GB Storage\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 2],
+                        "process_features": ["=", 2],
+                        "save_to_cloud": ["=", 2]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "a0000000-0000-0000-0000-000000000004",
+            "name": "1 Valid Product, 1 Invalid Product",
+            "inputs": {
+                "Products": "Nintendo Switch OLED Model, Unknown Product"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\", \"Unknown Product\": \"Product not found\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\", \"Unknown Product\": \"Product not found\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 2],
+                        "process_features": ["=", 1],
+                        "save_to_cloud": ["=", 1]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "a0000000-0000-0000-0000-000000000005",
+            "name": "2Products Doubled",
+            "inputs": {
+                "Products": "Nintendo Switch OLED Model, Nintendo Switch OLED Model"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 2],
+                        "process_features": ["=", 2],
+                        "save_to_cloud": ["=", 2]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "f0096037-3d73-436c-baaa-271931163295",
+            "name": "3Products",
+            "inputs": {
+                "Products": "Apple MacBook Pro 16-inch, Samsung Galaxy Tab S9, NVIDIA GeForce RTX 4090"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\", \"Samsung Galaxy Tab S9\": \"12.4-inch AMOLED Display Snapdragon 8 Gen 2 256GB Storage S Pen Included\", \"NVIDIA GeForce RTX 4090\": \"24GB GDDR6X Ray Tracing DLSS 3.0\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\", \"Samsung Galaxy Tab S9\": \"12.4-inch AMOLED Display Snapdragon 8 Gen 2 256GB Storage S Pen Included\", \"NVIDIA GeForce RTX 4090\": \"24GB GDDR6X Ray Tracing DLSS 3.0\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 3],
+                        "process_features": ["=", 3],
+                        "save_to_cloud": ["=", 3]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "a0000000-0000-0000-0000-000000000007",
+            "name": "4Products",
+            "inputs": {
+                "Products": "Nintendo Switch OLED Model, Samsung Galaxy S21 Ultra, Apple MacBook Pro 16-inch, Samsung Galaxy Tab S9"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\", \"Samsung Galaxy S21 Ultra\": \"Dynamic AMOLED 2X 108MP Camera 5G Capable 128GB Storage\", \"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\", \"Samsung Galaxy Tab S9\": \"12.4-inch AMOLED Display Snapdragon 8 Gen 2 256GB Storage S Pen Included\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Nintendo Switch OLED Model\": \"7-inch OLED Screen Adjustable Stand Improved Audio\", \"Samsung Galaxy S21 Ultra\": \"Dynamic AMOLED 2X 108MP Camera 5G Capable 128GB Storage\", \"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\", \"Samsung Galaxy Tab S9\": \"12.4-inch AMOLED Display Snapdragon 8 Gen 2 256GB Storage S Pen Included\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 4],
+                        "process_features": ["=", 4],
+                        "save_to_cloud": ["=", 4]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "a0000000-0000-0000-0000-000000000008",
+            "name": "5Products",
+            "inputs": {
+                "Products": "Apple MacBook Pro 16-inch, Samsung Galaxy Tab S9, NVIDIA GeForce RTX 4090, Lenovo Legion 7i, Dell Alienware m15 R6"
+            },
+            "evaluationCriterias": {
+                "for_loop_agent_ExactMatchEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\", \"Samsung Galaxy Tab S9\": \"12.4-inch AMOLED Display Snapdragon 8 Gen 2 256GB Storage S Pen Included\", \"NVIDIA GeForce RTX 4090\": \"24GB GDDR6X Ray Tracing DLSS 3.0\", \"Lenovo Legion 7i\": \"Intel Core i7 16GB RAM 1TB SSD 15.6-inch FHD Display\", \"Dell Alienware m15 R6\": \"11th Generation Intel Core i7 GeForce RTX 3060 16GB RAM 1TB SSD\"}"}
+                },
+                "for_loop_agent_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {"FinalResponse": "{\"Apple MacBook Pro 16-inch\": \"M1 Pro Chip 16GB RAM 512GB SSD 16-inch Retina Display\", \"Samsung Galaxy Tab S9\": \"12.4-inch AMOLED Display Snapdragon 8 Gen 2 256GB Storage S Pen Included\", \"NVIDIA GeForce RTX 4090\": \"24GB GDDR6X Ray Tracing DLSS 3.0\", \"Lenovo Legion 7i\": \"Intel Core i7 16GB RAM 1TB SSD 15.6-inch FHD Display\", \"Dell Alienware m15 R6\": \"11th Generation Intel Core i7 GeForce RTX 3060 16GB RAM 1TB SSD\"}"}
+                },
+                "for_loop_agent_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "ProductDatabase": ["=", 5],
+                        "process_features": ["=", 5],
+                        "save_to_cloud": ["=", 5]
+                    }
+                },
+                "for_loop_agent_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud",
+                        "ProductDatabase",
+                        "process_features",
+                        "save_to_cloud"
+                    ]
+                }
+            }
+        }
+    ],
+    "modelSettings": [],
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-01T00:00:00.000Z"
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "id": "customer_support_triage_agent_ToolCallCountEvaluator",
+  "description": "Tool call count evaluator for customer_support_triage_agent",
+  "evaluatorTypeId": "uipath-tool-call-count",
+  "evaluatorConfig": {
+    "name": "ToolCallCountEvaluator",
+    "description": "Evaluates the number of tool calls made by the agent matches expected counts",
+    "defaultEvaluationCriteria": null,
+    "strict": false
+  }
+}

@@ -1,0 +1,1 @@
+{"version": "1.0", "id": "claim_history_ToolCallCountEvaluator", "description": "ToolCallCountEvaluator for claim_history agent", "evaluatorTypeId": "uipath-tool-call-count", "evaluatorConfig": {"name": "ToolCallCountEvaluator", "description": "", "defaultEvaluationCriteria": null, "strict": false}}

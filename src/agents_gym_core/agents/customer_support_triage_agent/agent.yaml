@@ -1,0 +1,46 @@
+# @package _global_
+
+version: base
+
+
+metadata:
+  name: "Customer Support Triage Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  input_schema:
+    fields:
+      Request:
+        type: "str"
+        description: "General input"
+
+  output_schema:
+    fields:
+      Response:
+        type: "str"
+        description: "The response to the user's query."
+      Agent:
+        type: "str"
+        description: "The name of the chosen agent."
+      Justification:
+        type: "str"
+        description: "Why a specific agent was chosen."
+      Confidence:
+        type: "float"
+        description: "Confidence from 0 to 1 based on the agent execution."
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-customer_support_triage_agent_train.json
+
+  tools:
+    - _target_: agents_gym_core.agents.customer_support_triage_agent.tools.Dispute_Investigation_Agent
+    - _target_: agents_gym_core.agents.customer_support_triage_agent.tools.Product_Recommendation_Agent
+    - _target_: agents_gym_core.agents.customer_support_triage_agent.tools.Product_Questions_Agent
+    - _target_: agents_gym_core.agents.customer_support_triage_agent.tools.Return_Processing_Agent
+    - _target_: agents_gym_core.agents.customer_support_triage_agent.tools.Escalation_Agent

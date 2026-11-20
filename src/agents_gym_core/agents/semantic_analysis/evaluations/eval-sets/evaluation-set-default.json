@@ -1,0 +1,430 @@
+{
+  "version": "1.0",
+  "id": "evaluation-set-semantic-analysis-default",
+  "fileName": "evaluation-set-default.json",
+  "name": "Evaluation set for Semantic Analysis Agent",
+  "batchSize": 10,
+  "timeoutMinutes": 5,
+  "agentId": "",
+  "partitionId": "",
+  "tenantId": "",
+  "evaluatorRefs": [
+    "semantic_analysis_LLMJudgeOutputEvaluator",
+    "semantic_analysis_SemanticAnalysisScoreEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "839f1361-1d18-4dcd-9dcd-ccca534b4743",
+      "name": "Eval1",
+      "inputs": {
+        "inputText": "The instructions were missing, and customer service was slow to respond. The features are decent for the price. The packaging was adequate, but the setup process was tedious."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": -59,
+            "overallSentimentLabel": "Negative",
+            "positiveStatements": 0,
+            "negativeStatements": 3,
+            "neutralStatements": 2,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"instructions were missing\", \"sentiment\": \"Negative\", \"confidence\": 0.75}, {\"phrase\": \"customer service was slow to respond\", \"sentiment\": \"Negative\", \"confidence\": 0.75}, {\"phrase\": \"features are decent for the price\", \"sentiment\": \"Neutral\", \"confidence\": 0.5}, {\"phrase\": \"packaging was adequate\", \"sentiment\": \"Neutral\", \"confidence\": 0.5}, {\"phrase\": \"setup process was tedious\", \"sentiment\": \"Negative\", \"confidence\": 0.7}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": -59,
+          "overallSentimentLabel": "Negative",
+          "positiveStatements": 0,
+          "negativeStatements": 3,
+          "neutralStatements": 2,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"instructions were missing\", \"sentiment\": \"Negative\", \"confidence\": 0.75}, {\"phrase\": \"customer service was slow to respond\", \"sentiment\": \"Negative\", \"confidence\": 0.75}, {\"phrase\": \"features are decent for the price\", \"sentiment\": \"Neutral\", \"confidence\": 0.5}, {\"phrase\": \"packaging was adequate\", \"sentiment\": \"Neutral\", \"confidence\": 0.5}, {\"phrase\": \"setup process was tedious\", \"sentiment\": \"Negative\", \"confidence\": 0.7}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "fc644cfb-82b0-4374-8944-9ab47b7dd80b",
+      "name": "Eval2",
+      "inputs": {
+        "inputText": "The delivery time was acceptable, and the product met expectations. However, the instructions were unclear. The packaging was secure, but there were no standout features."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": 0,
+            "overallSentimentLabel": "Neutral",
+            "positiveStatements": 2,
+            "negativeStatements": 2,
+            "neutralStatements": 1,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"delivery time was acceptable\", \"sentiment\": \"Neutral\", \"confidence\": 0.3}, {\"phrase\": \"product met expectations\", \"sentiment\": \"Positive\", \"confidence\": 0.5}, {\"phrase\": \"instructions were unclear\", \"sentiment\": \"Negative\", \"confidence\": 0.8}, {\"phrase\": \"packaging was secure\", \"sentiment\": \"Positive\", \"confidence\": 0.5}, {\"phrase\": \"no standout features\", \"sentiment\": \"Negative\", \"confidence\": 0.5}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": 0,
+          "overallSentimentLabel": "Neutral",
+          "positiveStatements": 2,
+          "negativeStatements": 2,
+          "neutralStatements": 1,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"delivery time was acceptable\", \"sentiment\": \"Neutral\", \"confidence\": 0.3}, {\"phrase\": \"product met expectations\", \"sentiment\": \"Positive\", \"confidence\": 0.5}, {\"phrase\": \"instructions were unclear\", \"sentiment\": \"Negative\", \"confidence\": 0.8}, {\"phrase\": \"packaging was secure\", \"sentiment\": \"Positive\", \"confidence\": 0.5}, {\"phrase\": \"no standout features\", \"sentiment\": \"Negative\", \"confidence\": 0.5}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "4f1c44bf-a9b7-4b8a-abdf-0ef986d73c93",
+      "name": "Eval3",
+      "inputs": {
+        "inputText": "The customer experience is delightful, and the product exceeded expectations. The team went above and beyond, and the website is user-friendly. However, the shipping fee is quite high."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": 59,
+            "overallSentimentLabel": "Positive",
+            "positiveStatements": 4,
+            "negativeStatements": 1,
+            "neutralStatements": 0,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"customer experience is delightful\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"product exceeded expectations\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"team went above and beyond\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"website is user-friendly\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"shipping fee is quite high\", \"sentiment\": \"Negative\", \"confidence\": 0.6}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": 59,
+          "overallSentimentLabel": "Positive",
+          "positiveStatements": 4,
+          "negativeStatements": 1,
+          "neutralStatements": 0,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"customer experience is delightful\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"product exceeded expectations\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"team went above and beyond\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"website is user-friendly\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"shipping fee is quite high\", \"sentiment\": \"Negative\", \"confidence\": 0.6}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "263348d9-2124-49dd-8f9c-11140f1eb24a",
+      "name": "Eval4",
+      "inputs": {
+        "inputText": "The interface is overly complex, making navigation difficult. I encountered frequent error messages and no clear instructions were provided. While the pricing is affordable, the documentation lacks detail."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": -66,
+            "overallSentimentLabel": "Negative",
+            "positiveStatements": 1,
+            "negativeStatements": 5,
+            "neutralStatements": 0,
+            "totalStatements": 6,
+            "keyPhrases": "[{\"phrase\": \"interface is overly complex\", \"sentiment\": \"Negative\", \"confidence\": 0.5}, {\"phrase\": \"navigation difficult\", \"sentiment\": \"Negative\", \"confidence\": 0.6}, {\"phrase\": \"frequent error messages\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"no clear instructions\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"pricing is affordable\", \"sentiment\": \"Positive\", \"confidence\": 0.6}, {\"phrase\": \"documentation lacks detail\", \"sentiment\": \"Negative\", \"confidence\": 0.7}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": -66,
+          "overallSentimentLabel": "Negative",
+          "positiveStatements": 1,
+          "negativeStatements": 5,
+          "neutralStatements": 0,
+          "totalStatements": 6,
+          "keyPhrases": "[{\"phrase\": \"interface is overly complex\", \"sentiment\": \"Negative\", \"confidence\": 0.5}, {\"phrase\": \"navigation difficult\", \"sentiment\": \"Negative\", \"confidence\": 0.6}, {\"phrase\": \"frequent error messages\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"no clear instructions\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"pricing is affordable\", \"sentiment\": \"Positive\", \"confidence\": 0.6}, {\"phrase\": \"documentation lacks detail\", \"sentiment\": \"Negative\", \"confidence\": 0.7}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "117e4176-1817-4ae2-8978-5a807f75e9bb",
+      "name": "Eval5",
+      "inputs": {
+        "inputText": "The app interface is intuitive and user-friendly, and the features are innovative. The performance is exceptional, and the support team responds quickly. The setup process is straightforward as well."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": 99,
+            "overallSentimentLabel": "Very Positive",
+            "positiveStatements": 5,
+            "negativeStatements": 0,
+            "neutralStatements": 0,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"intuitive and user-friendly\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"features are innovative\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"performance is exceptional\", \"sentiment\": \"Positive\", \"confidence\": 0.9}, {\"phrase\": \"support team responds quickly\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"setup process is straightforward\", \"sentiment\": \"Positive\", \"confidence\": 0.4}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": 99,
+          "overallSentimentLabel": "Very Positive",
+          "positiveStatements": 5,
+          "negativeStatements": 0,
+          "neutralStatements": 0,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"intuitive and user-friendly\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"features are innovative\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"performance is exceptional\", \"sentiment\": \"Positive\", \"confidence\": 0.9}, {\"phrase\": \"support team responds quickly\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"setup process is straightforward\", \"sentiment\": \"Positive\", \"confidence\": 0.4}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "3bd0db17-12d4-4844-a977-eb59bba6592c",
+      "name": "Eval6",
+      "inputs": {
+        "inputText": "The battery life is terrible, and the screen resolution is poor. Customer support was unhelpful, and the software crashes frequently. The design is average at best."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": -99,
+            "overallSentimentLabel": "Very Negative",
+            "positiveStatements": 0,
+            "negativeStatements": 5,
+            "neutralStatements": 0,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"battery life is terrible\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"screen resolution is poor\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"support was unhelpful\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"software crashes\", \"sentiment\": \"Negative\", \"confidence\": 0.8}, {\"phrase\": \"average at best\", \"sentiment\": \"Negative\", \"confidence\": 0.3}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": -99,
+          "overallSentimentLabel": "Very Negative",
+          "positiveStatements": 0,
+          "negativeStatements": 5,
+          "neutralStatements": 0,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"battery life is terrible\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"screen resolution is poor\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"support was unhelpful\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"software crashes\", \"sentiment\": \"Negative\", \"confidence\": 0.8}, {\"phrase\": \"average at best\", \"sentiment\": \"Negative\", \"confidence\": 0.3}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "a0ca7055-c09f-4e53-9fd2-ec35c072b58e",
+      "name": "Eval7",
+      "inputs": {
+        "inputText": "Customer support resolved my issue promptly, and the product is durable. However, the color options are limited. The price is average, and the delivery process was straightforward."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": 40,
+            "overallSentimentLabel": "Positive",
+            "positiveStatements": 3,
+            "negativeStatements": 1,
+            "neutralStatements": 1,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"resolved my issue promptly\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"product is durable\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"color options are limited\", \"sentiment\": \"Negative\", \"confidence\": 0.5}, {\"phrase\": \"price is average\", \"sentiment\": \"Neutral\", \"confidence\": 0.6}, {\"phrase\": \"delivery process was straightforward\", \"sentiment\": \"Positive\", \"confidence\": 0.6}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": 40,
+          "overallSentimentLabel": "Positive",
+          "positiveStatements": 3,
+          "negativeStatements": 1,
+          "neutralStatements": 1,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"resolved my issue promptly\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"product is durable\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"color options are limited\", \"sentiment\": \"Negative\", \"confidence\": 0.5}, {\"phrase\": \"price is average\", \"sentiment\": \"Neutral\", \"confidence\": 0.6}, {\"phrase\": \"delivery process was straightforward\", \"sentiment\": \"Positive\", \"confidence\": 0.6}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "a67f7f64-c72c-4833-be3d-d2b32eec9806",
+      "name": "Eval8",
+      "inputs": {
+        "inputText": "The return process was slow and frustrating, and customer service was unresponsive at times. Even the replacement item was defective. While it was easy to place the original order, and the pricing was fair, the overall experience left me disappointed."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": -33,
+            "overallSentimentLabel": "Negative",
+            "positiveStatements": 2,
+            "negativeStatements": 4,
+            "neutralStatements": 0,
+            "totalStatements": 6,
+            "keyPhrases": "[{\"phrase\": \"return process was slow and frustrating\", \"sentiment\": \"Negative\", \"confidence\": 0.8}, {\"phrase\": \"unresponsive\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"replacement item was defective\", \"sentiment\": \"Negative\", \"confidence\": 0.9}, {\"phrase\": \"easy to place\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"pricing was fair\", \"sentiment\": \"Positive\", \"confidence\": 0.5}, {\"phrase\": \"overall experience left me disappointed\", \"sentiment\": \"Negative\", \"confidence\": 0.8}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": -33,
+          "overallSentimentLabel": "Negative",
+          "positiveStatements": 2,
+          "negativeStatements": 4,
+          "neutralStatements": 0,
+          "totalStatements": 6,
+          "keyPhrases": "[{\"phrase\": \"return process was slow and frustrating\", \"sentiment\": \"Negative\", \"confidence\": 0.8}, {\"phrase\": \"unresponsive\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"replacement item was defective\", \"sentiment\": \"Negative\", \"confidence\": 0.9}, {\"phrase\": \"easy to place\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"pricing was fair\", \"sentiment\": \"Positive\", \"confidence\": 0.5}, {\"phrase\": \"overall experience left me disappointed\", \"sentiment\": \"Negative\", \"confidence\": 0.8}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "57a593dd-60d2-419f-ab35-36c887fce53b",
+      "name": "Eval9",
+      "inputs": {
+        "inputText": "The product quality is outstanding, and the customer service team was incredibly helpful in resolving my issue quickly. However, the shipping took much longer than expected, which was quite frustrating. Overall, I'm satisfied with my purchase and would recommend this company to others."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": 33,
+            "overallSentimentLabel": "Positive",
+            "positiveStatements": 4,
+            "negativeStatements": 2,
+            "neutralStatements": 0,
+            "totalStatements": 6,
+            "keyPhrases": "[{\"phrase\": \"product quality is outstanding\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"customer service team was incredibly helpful\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"shipping took much longer than expected\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"quite frustrating\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"satisfied with my purchase\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"recommend this company\", \"sentiment\": \"Positive\", \"confidence\": 0.7}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": 33,
+          "overallSentimentLabel": "Positive",
+          "positiveStatements": 4,
+          "negativeStatements": 2,
+          "neutralStatements": 0,
+          "totalStatements": 6,
+          "keyPhrases": "[{\"phrase\": \"product quality is outstanding\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"customer service team was incredibly helpful\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"shipping took much longer than expected\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"quite frustrating\", \"sentiment\": \"Negative\", \"confidence\": 0.7}, {\"phrase\": \"satisfied with my purchase\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"recommend this company\", \"sentiment\": \"Positive\", \"confidence\": 0.7}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "8c293dd7-6579-4e73-a24d-d3c70dc50dcc",
+      "name": "Eval10",
+      "inputs": {
+        "inputText": "The checkout process was quick and seamless, and the prices are very reasonable. They offer a wide selection of products. The website design is basic, and the delivery speed is acceptable."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "semantic_analysis_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "overallSentimentScore": 59,
+            "overallSentimentLabel": "Positive",
+            "positiveStatements": 3,
+            "negativeStatements": 0,
+            "neutralStatements": 2,
+            "totalStatements": 5,
+            "keyPhrases": "[{\"phrase\": \"checkout process was quick and seamless\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"prices are very reasonable\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"wide selection of products\", \"sentiment\": \"Positive\", \"confidence\": 0.6}, {\"phrase\": \"website design is basic\", \"sentiment\": \"Neutral\", \"confidence\": 0.6}, {\"phrase\": \"delivery speed is acceptable\", \"sentiment\": \"Neutral\", \"confidence\": 0.4}]",
+            "analysis": null
+          },
+          "expectedAgentBehavior": ""
+        },
+        "semantic_analysis_SemanticAnalysisScoreEvaluator": {
+          "overallSentimentScore": 59,
+          "overallSentimentLabel": "Positive",
+          "positiveStatements": 3,
+          "negativeStatements": 0,
+          "neutralStatements": 2,
+          "totalStatements": 5,
+          "keyPhrases": "[{\"phrase\": \"checkout process was quick and seamless\", \"sentiment\": \"Positive\", \"confidence\": 0.7}, {\"phrase\": \"prices are very reasonable\", \"sentiment\": \"Positive\", \"confidence\": 0.8}, {\"phrase\": \"wide selection of products\", \"sentiment\": \"Positive\", \"confidence\": 0.6}, {\"phrase\": \"website design is basic\", \"sentiment\": \"Neutral\", \"confidence\": 0.6}, {\"phrase\": \"delivery speed is acceptable\", \"sentiment\": \"Neutral\", \"confidence\": 0.4}]"
+        }
+      },
+      "evalSetId": "evaluation-set-semantic-analysis-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

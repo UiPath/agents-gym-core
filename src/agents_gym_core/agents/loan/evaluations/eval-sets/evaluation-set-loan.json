@@ -1,0 +1,1147 @@
+{
+  "version": "1.0",
+  "id": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+  "name": "Loan Eval Set",
+  "evaluatorRefs": [
+    "loan_ExactMatchEvaluator",
+    "loan_ToolCallOrderEvaluator",
+    "loan_ToolCallCountEvaluator",
+    "loan_ToolCallArgsEvaluator",
+    "loan_LLMJudgeOutputEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "abeebc70-0bd4-43f1-a8d8-a5bfe1ebb334",
+      "name": "CompleteJohnLoanApplicationScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $50,000 for 5 years. My email is john.doe@example.com, my name is John Doe, my address is 123 Main St, Anytown, USA, my annual income is $75,000, and I am 35 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should return a loan application process completed",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "john.doe@example.com",
+                "LoanAmount": 50000,
+                "LoanTerm": 5,
+                "Income": 75000,
+                "Age": 35
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 50000,
+                "BorrowerName": "John Doe",
+                "BorrowerAddress": "123 Main St, Anytown, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "John Doe",
+                "RecipientEmail": "john.doe@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from John Doe. 2. Applied for a loan of $50,000 for 5 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to john.doe@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "34cdbe12-0eb8-46cc-8735-13d5f394ee56",
+      "name": "CompleteJoeLoanApplicationScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $500,000 for 5 years. My email is joe.doe@example.com, my name is Joe Doe, my address is 123 Main St, Anytown, USA, my annual income is $735,000, and I am 55 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should return a loan application process completed",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "joe.doe@example.com",
+                "LoanAmount": 500000,
+                "LoanTerm": 5,
+                "Income": 735000,
+                "Age": 55
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 500000,
+                "BorrowerName": "Joe Doe",
+                "BorrowerAddress": "123 Main St, Anytown, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Joe Doe",
+                "RecipientEmail": "joe.doe@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Joe Doe. 2. Applied for a loan of $500,000 for 5 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to joe.doe@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "457f5adc-1a06-4f96-b2fe-b9599a02acf4",
+      "name": "CompleteBobLoanApplicationScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $100,000 for 5 years. My email is bob.smith@example.com, my name is Bob Smith, my annual income is $150,000, and I am 45 years old. My address is 123 Main St, Anytown, USA."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should return complete workflow executed successfully",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "bob.smith@example.com",
+                "LoanAmount": 100000,
+                "LoanTerm": 5,
+                "Income": 150000,
+                "Age": 45
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 100000,
+                "BorrowerName": "Bob Smith",
+                "BorrowerAddress": "123 Main St, Anytown, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Bob Smith",
+                "RecipientEmail": "bob.smith@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Bob Smith. 2. Applied for a loan of $100,000 for 5 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to bob.smith@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "90843f19-449f-4044-8fc2-eb4a29282de6",
+      "name": "TestMissingInformationScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan, my email is jane.doe@example.com"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Agent should escalate due to missing information",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The email lacked critical information required for loan application, including loan amount, loan term, name, address, income, and age. Only the email address was provided. An Action Center escalation task was created to request the missing information."
+          }
+        }
+      }
+    },
+    {
+      "id": "1507c9b8-f8c6-44e0-a0b6-f1a053d3c2eb",
+      "name": "TestInvalidAgeScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $5000 for 3 years. My email is anna@example.com, my name is Anna, my address is 123 Main St, Anytown, USA, my income is 500$, and I am 17 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should reject due to invalid age",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The loan application was rejected or escalated because the applicant's age (17) is below the minimum required age of 18 for a loan. An Action Center escalation task was created."
+          }
+        }
+      }
+    },
+    {
+      "id": "1bf26250-9937-4f96-beea-28d84e4c611b",
+      "name": "TestInvalidTermScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $5000 for 7 years. My email is anna@example.com, my name is Anna, my address is 123 Main St, Anytown, USA, my income is 500$, and I am 19 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should reject due to invalid term",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "anna@example.com",
+                "LoanAmount": 5000,
+                "LoanTerm": 7,
+                "Income": 500,
+                "Age": 19
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The loan application was submitted with an invalid term of 7 years. The tool returned an error that the term must be 1, 3, or 5 years. An Action Center escalation task was created to notify about the invalid loan term."
+          }
+        }
+      }
+    },
+    {
+      "id": "fdad32e3-aaa5-416c-9e6b-93a31fb09c56",
+      "name": "OneYearLoanScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $20,000 for 1 year. My email is sarah.quick@example.com, my name is Sarah Quick, my address is 567 Short St, Boston, USA, my annual income is $80,000, and I am 32 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should return short-term loan processed",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "sarah.quick@example.com",
+                "LoanAmount": 20000,
+                "LoanTerm": 1,
+                "Income": 80000,
+                "Age": 32
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 20000,
+                "BorrowerName": "Sarah Quick",
+                "BorrowerAddress": "567 Short St, Boston, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Sarah Quick",
+                "RecipientEmail": "sarah.quick@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Sarah Quick. 2. Applied for a loan of $20,000 for 1 year, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to sarah.quick@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "43a217fc-3576-48a2-9f63-e8dbc6e6a940",
+      "name": "MissingNameScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $30,000 for 3 years. My email is missing.name@example.com, my address is 789 Nameless Ave, Chicago, USA, my annual income is $70,000, and I am 40 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Agent should escalate due to missing name",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The email did not include the applicant's name, which is required for the loan application. An Action Center escalation task was created to request the missing name information."
+          }
+        }
+      }
+    },
+    {
+      "id": "d5b82a61-8504-4d43-a31e-6509fbf1ce4d",
+      "name": "MissingEmailScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $45,000 for 5 years. My name is Emily NoEmail, my address is 123 Email-less St, Denver, USA, my annual income is $65,000, and I am 29 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Agent should escalate due to missing email",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The email did not include a contact email address for the applicant. An Action Center escalation task was created to request the missing email information."
+          }
+        }
+      }
+    },
+    {
+      "id": "50e07ab7-1ea2-45a1-9a53-4b780c6b5c31",
+      "name": "HighIncomeLowLoanScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $10,000 for 3 years. My email is william.wealthy@example.com, my name is William Wealthy, my address is 888 Rich Ave, Manhattan, USA, my annual income is $500,000, and I am 48 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should process high-income small loan",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "william.wealthy@example.com",
+                "LoanAmount": 10000,
+                "LoanTerm": 3,
+                "Income": 500000,
+                "Age": 48
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 10000,
+                "BorrowerName": "William Wealthy",
+                "BorrowerAddress": "888 Rich Ave, Manhattan, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "William Wealthy",
+                "RecipientEmail": "william.wealthy@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from William Wealthy. 2. Applied for a loan of $10,000 for 3 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to william.wealthy@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "cdf9eeb5-a0fd-4cf8-bd41-46dc54860c6a",
+      "name": "LowIncomeLargeRatioLoanScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $40,000 for 5 years. My email is peter.stretch@example.com, my name is Peter Stretch, my address is 456 Tight Blvd, Phoenix, USA, my annual income is $45,000, and I am 36 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should process low-income high-ratio loan",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "peter.stretch@example.com",
+                "LoanAmount": 40000,
+                "LoanTerm": 5,
+                "Income": 45000,
+                "Age": 36
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 40000,
+                "BorrowerName": "Peter Stretch",
+                "BorrowerAddress": "456 Tight Blvd, Phoenix, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Peter Stretch",
+                "RecipientEmail": "peter.stretch@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Peter Stretch. 2. Applied for a loan of $40,000 for 5 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to peter.stretch@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "e96c7964-abdb-4985-b65f-7d399e1b300b",
+      "name": "SeniorApplicantScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $25,000 for 3 years. My email is martha.senior@example.com, my name is Martha Senior, my address is 123 Retirement Ln, Miami, USA, my annual income is $55,000, and I am 72 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should process senior applicant loan",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "martha.senior@example.com",
+                "LoanAmount": 25000,
+                "LoanTerm": 3,
+                "Income": 55000,
+                "Age": 72
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 25000,
+                "BorrowerName": "Martha Senior",
+                "BorrowerAddress": "123 Retirement Ln, Miami, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Martha Senior",
+                "RecipientEmail": "martha.senior@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Martha Senior. 2. Applied for a loan of $25,000 for 3 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to martha.senior@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "59875a71-4a33-4b85-a541-be21792b6868",
+      "name": "ExactlyMinimumAgeScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $15,000 for 3 years. My email is justin.young@example.com, my name is Justin Young, my address is 789 Youth St, Austin, USA, my annual income is $40,000, and I am 19 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should process minimum age applicant loan",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "justin.young@example.com",
+                "LoanAmount": 15000,
+                "LoanTerm": 3,
+                "Income": 40000,
+                "Age": 19
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 15000,
+                "BorrowerName": "Justin Young",
+                "BorrowerAddress": "789 Youth St, Austin, USA"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Justin Young",
+                "RecipientEmail": "justin.young@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Justin Young (age 19, minimum eligible age). 2. Applied for a loan of $15,000 for 3 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to justin.young@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "49c42a3f-a326-40a0-9247-04b7ad63492a",
+      "name": "InternationalAddressScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $60,000 for 5 years. My email is olivia.international@example.com, my name is Olivia International, my address is 42 Global Way, London, United Kingdom, my annual income is $90,000, and I am 33 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Tool LoanAgent_ApplyUiBankLoan should process international address application",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": false
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "LoanAgent_ApplyUiBankLoan",
+            "Google",
+            "LoanAgent_ModifyLoanContract",
+            "LoanAgent_SendSharepointDocumentViaDocuSign"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "LoanAgent_ApplyUiBankLoan": [
+              "=",
+              1
+            ],
+            "Google": [
+              "=",
+              1
+            ],
+            "LoanAgent_ModifyLoanContract": [
+              "=",
+              1
+            ],
+            "LoanAgent_SendSharepointDocumentViaDocuSign": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "LoanAgent_ApplyUiBankLoan",
+              "args": {
+                "RequestorEmailAddress": "olivia.international@example.com",
+                "LoanAmount": 60000,
+                "LoanTerm": 5,
+                "Income": 90000,
+                "Age": 33
+              }
+            },
+            {
+              "name": "LoanAgent_ModifyLoanContract",
+              "args": {
+                "SharepointFolderURL": "https://example.sharepoint.com/sites/loans/contracts",
+                "InterestRate": 4,
+                "LoanAmount": 60000,
+                "BorrowerName": "Olivia International",
+                "BorrowerAddress": "42 Global Way, London, United Kingdom"
+              }
+            },
+            {
+              "name": "LoanAgent_SendSharepointDocumentViaDocuSign",
+              "args": {
+                "SharepointFileURL": "https://example.sharepoint.com/sites/loans/contracts/New_doc.pdf",
+                "RecipientLegalName": "Olivia International",
+                "RecipientEmail": "olivia.international@example.com"
+              }
+            }
+          ]
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "1. Received loan application request from Olivia International with an international address (London, United Kingdom). 2. Applied for a loan of $60,000 for 5 years, approved at 4% APR. 3. Searched Google for current interest rates (National Bank benchmark at 6.5%). 4. Modified the loan contract with 4% interest rate since it is lower than the benchmark. 5. Sent the contract document via DocuSign to olivia.international@example.com."
+          }
+        }
+      }
+    },
+    {
+      "id": "c08ff982-0be3-421b-ba85-39d7d558c233",
+      "name": "MultipleRequestsInOneEmailScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for two loans: one of $30,000 for 3 years and another of $50,000 for 5 years. My email is robert.multiple@example.com, my name is Robert Multiple, my address is 555 Double St, Seattle, USA, my annual income is $120,000, and I am 41 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Agent should escalate due to multiple requests",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The email contained multiple loan requests (two separate loans), which cannot be processed automatically in a single request. An Action Center escalation task was created to clarify and separate the requests."
+          }
+        }
+      }
+    },
+    {
+      "id": "d8d1c5b9-275a-44cb-9e19-e98a69a1bebf",
+      "name": "SpecialCharactersInInputScenario",
+      "inputs": {
+        "EmailBody": "I would like to apply for a loan of $35,000 for 3 years. My email is xx_dudu!@$_xx@example.com, my name is Dudu, my address is 123 Symbol# St, L@$ Veg@$, USA, my annual income is $85,000, and I am 38 years old."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "Agent should escalate due to special characters in input",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "db08a55c-e699-4a34-afbf-d6c2626bd3df",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "loan_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "ActionCenterTaskCreated": true
+          }
+        },
+        "loan_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "EscalationTool"
+          ]
+        },
+        "loan_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "EscalationTool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "loan_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "ExecutionDetails": "The email address provided (xx_dudu!@$_xx@example.com) contains too many special characters before @ and unallowed special characters after @, making it invalid. An Action Center escalation task was created to request a valid email address."
+          }
+        }
+      }
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

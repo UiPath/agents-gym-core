@@ -1,0 +1,69 @@
+name: servicenow_work_order_accelerator
+version: base
+
+metadata:
+  name: "ServiceNow Work Order Accelerator"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      Description:
+        type: str
+        description: Description of the incident
+      Caller:
+        type: str
+        description: Caller of the incident
+      Urgency:
+        type: int
+        description: Urgency of the incident
+      Impact:
+        type: int
+        description: Impact of the incident
+  output_schema:
+    fields:
+      RecommendedAction:
+        type: str
+        description: Recommended action for the agent
+      IncidentNumber:
+        type: str
+        description: Incident number
+      Status:
+        type: str
+        description: Status of the incident
+  tools:
+  - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+    name: StandardOperatingProcedure
+    description: SOP containing 20 different common equipment issues and their root
+      causes
+    vector_store_type: chroma
+    file_paths:
+    - servicenow_work_order_accelerator/documents/StandardOperatingProcedure.pdf
+    max_items: 3
+    similarity_threshold: 0.0
+    persist_directory: db_cache/servicenow_work_order_accelerator_OpProcedure
+  - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+    name: ServiceNowAssignmentIndex
+    description: Retrieves the Assignment Group and Assigned To values for a certain
+      Recommended Action
+    vector_store_type: chroma
+    file_paths:
+    - servicenow_work_order_accelerator/documents/IncidentData.xlsx
+    max_items: 1
+    similarity_threshold: 0.0
+    splitting_method: single
+    persist_directory: db_cache/servicenow_work_order_accelerator_IncidentData
+  - _target_: agents_gym_core.agents.servicenow_work_order_accelerator.tools.Create_New_Incident
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-default.json
+
+  evaluator_weights:
+    servicenow_work_order_accelerator_LLMJudgeOutputEvaluator: 1.0
+    servicenow_work_order_accelerator_ToolCallCountEvaluator: 1.0
+    servicenow_work_order_accelerator_ToolCallOrderEvaluator: 1.0
+    servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator: 1.0
+

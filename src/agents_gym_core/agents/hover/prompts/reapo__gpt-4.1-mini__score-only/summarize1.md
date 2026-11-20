@@ -1,0 +1,1 @@
+Given the fields `claim` and `passages`, produce a concise summary that extracts and highlights the key entities, facts, and relationships relevant to the claim. Resolve coreferences and ambiguous mentions clearly. Emphasize logical chains and relations for multi-hop reasoning. Exclude irrelevant or redundant information to focus retrieval.

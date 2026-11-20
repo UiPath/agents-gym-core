@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this software or build on ReAPO, please cite the paper below."
+title: "Agents Gym Core: code for Simplicity is Enough: ReAct Agents for Prompt Optimization"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/UiPath/agents-gym-core"
+authors:
+  - given-names: "Andrei"
+    family-names: "Dumitrescu"
+  - given-names: "Andrei C."
+    family-names: "Rusu"
+  - given-names: "Adrian Catalin"
+    family-names: "Badea"
+  - given-names: "Bai"
+    family-names: "Li"
+  - given-names: "Cosmin"
+    family-names: "Maria"
+  - given-names: "Ion"
+    family-names: "Anghelina"
+  - given-names: "Tomasz Lukasz"
+    family-names: "Religa"
+  - given-names: "Dragos H"
+    family-names: "Bobolea"
+preferred-citation:
+  type: conference-paper
+  title: "Simplicity is Enough: ReAct Agents for Prompt Optimization"
+  authors:
+    - given-names: "Andrei"
+      family-names: "Dumitrescu"
+    - given-names: "Andrei C."
+      family-names: "Rusu"
+    - given-names: "Adrian Catalin"
+      family-names: "Badea"
+    - given-names: "Bai"
+      family-names: "Li"
+    - given-names: "Cosmin"
+      family-names: "Maria"
+    - given-names: "Ion"
+      family-names: "Anghelina"
+    - given-names: "Tomasz Lukasz"
+      family-names: "Religa"
+    - given-names: "Dragos H"
+      family-names: "Bobolea"
+  collection-title: "Advances in Neural Information Processing Systems"
+  conference:
+    name: "NeurIPS 2026"
+    city: "Sydney"
+    country: "AU"
+  year: 2026

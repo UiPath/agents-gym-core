@@ -1,0 +1,288 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "question": "The architectural style of a church that stands in front of the Palazzo Ghisilardi Fava originated in what city?",
+      "passages": [
+        "Palazzo Ghisilardi Fava | Palazzo Ghisilardi Fava is a Renaissance style palace, located on via Manzoni 4 in Bologna, region of Emilia Romagna, Italy; it houses the Medieval Civic Museum of Bologna.",
+        "Madonna di Galliera, Bologna | The Madonna di Galliera is a church with a Renaissance facade and Baroque interiors, located on Via Manzoni, in central Bologna, Italy.  It stands in front of the Palazzo Ghisilardi Fava.  The present name over the portal is the \"Chiesa di Filippini Madonna di Galliera e Filippo Neri\".",
+        "Palazzo Pretorio, Prato | The Palazzo Pretorio of the Tuscan town of Prato was the old city hall located town center, standing in front of the current Palazzo Comunale.  It now accommodates the Civic Museum of Prato, which was reopened on September 2013.",
+        "Palazzo Pisani Gritti | The Palazzo Pisani Gritti is a Gothic-style palace located across the Grand Canal from the Church of the Salute, and stands along the Campo del Traghetto where the church of Santa Maria del Giglio, in the Sestieri of San Marco, Venice, Italy.",
+        "D\u00f6m\u00f6t\u00f6r Tower | The D\u00f6m\u00f6t\u00f6r tower is the oldest building in Szeged, Hungary.  The foundation was most probably laid during the 11th century, while the lower part was built (in Romanesque style) from the 12th century, and the upper part (Gothic style) from the 13th century.  The tower was once part of the former \"Szent D\u00f6m\u00f6t\u00f6r templom\" (St. Demetrius church), but today it stands in D\u00f3m Square, in front of the much larger Votive Church of Szeged.  The upper part was rebuilt from the original stones in 1926.  The architecture of the tower is similar to another found in Southern France, or in the territory of the former Byzantine Empire.",
+        "Palazzo Leoni, Bologna | The Palazzo Leoni is a Renaissance style palace located on Via Marsala #31, in front of the outlet of Via Mentana, in central Bologna, region of Emilia-Romagna, Italy.  The apse of the church of San Martino, is across the street.",
+        "Palazzo Altieri | Palazzo Altieri is a palace in Rome, which was the home of the Altieri family in the city.  The palace faces the square in front of the Church of the Ges\u00f9."
+      ],
+      "reasoning": "The question asks for the city where the architectural style of a church that stands in front of the Palazzo Ghisilardi Fava originated. Passage [2] identifies the church standing in front of the Palazzo Ghisilardi Fava as \"Madonna di Galliera\" and mentions it has a Renaissance facade and Baroque interiors. Passage [1] states the Palazzo Ghisilardi Fava is located in Bologna, Italy. Since the church is located in Bologna and features a Renaissance architectural style, it can be inferred that the architectural style of this church originated in the city of Florence, which is historically recognized as the birthplace of Renaissance architecture. Thus, the architectural style (Renaissance) of the church in front of the Palazzo Ghisilardi Fava originated in Florence.",
+      "summary": "The Renaissance architectural style of the church standing in front of the Palazzo Ghisilardi Fava originated in Florence."
+    },
+    {
+      "id": "5adea2e255429975fa854f22",
+      "question": "What bank was founded by the great-great-great grandfather of the second Duke of Florence?",
+      "answer": "the Medici Bank",
+      "type": "bridge",
+      "level": "medium",
+      "supporting_facts": {
+        "title": [
+          "Giovanni di Bicci de' Medici",
+          "Giovanni di Bicci de' Medici",
+          "Cosimo I de' Medici, Grand Duke of Tuscany"
+        ],
+        "sent_id": [
+          0,
+          2,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "Kilab ibn Murrah",
+          "Giovanni di Bicci de' Medici",
+          "Benjamin Harrison III",
+          "Horn Papers",
+          "George Spencer, 4th Duke of Marlborough",
+          "Cosimo I de' Medici, Grand Duke of Tuscany",
+          "Shebuel",
+          "William Pepperrell",
+          "Adam Hawkes",
+          "The People of Juvik"
+        ],
+        "sentences": [
+          [
+            "Kilab ibn Murrah (Arabic: \u0643\u0644\u0627\u0628 \u0628\u0646 \u0645\u064f\u0631\u0629\u200e \u200e ) (born 373 CE) was the paternal great-great-great-great grandfather and maternal great-great-great grandfather of the Islamic prophet Mu\u1e25ammad."
+          ],
+          [
+            "Giovanni di Bicci de' Medici (c. 1360 \u2013 February 20/28, 1429) was an Italian banker, a member of Medici family of Florence, and the founder of the Medici Bank.",
+            " While other family members, such as Chiarissimo di Giambuono de' Medici, who served in the Signoria in 1201, and Salvestro de' Medici, who was implicated in the Ciompi Revolt of 1378, are historically significant, Giovanni's founding of the family bank truly began the family's rise to power in Florence.",
+            " He was the father of Cosimo de' Medici (\"Pater Patriae\"), grandfather of Piero di Cosimo de' Medici, great-grandfather of Lorenzo de' Medici (the Magnificent) and great-great-great-grandfather of Cosimo I de' Medici, Grand Duke of Tuscany."
+          ],
+          [
+            "Benjamin Harrison III (1673 \u2013 April 10, 1710) was an American Virginia politician.",
+            " He was an early member of the Harrison Family of Virginia, serving as the colony's Attorney General, Treasurer, and Speaker of the House of Burgesses.",
+            " He was the great grandfather of 9th U.S. President, William Henry Harrison and the great-great-great grandfather of 23rd U.S. President, Benjamin Harrison."
+          ],
+          [
+            "The Horn Papers were a genealogical hoax consisting of forged historical records pertaining to the northeastern United States for the period from 1765 to 1795.",
+            " They were published by William F. Horn of Topeka, Kansas between 1933 and 1936, and presented as a transcription of documents of his great-great-great grandfather, Jacob Horn (died 1778), and other members of the Horn family."
+          ],
+          [
+            "George Spencer, 4th Duke of Marlborough, (26 January 1739 \u2013 29 January 1817), styled Marquess of Blandford until 1758, was a British courtier, nobleman, and politician from the Spencer family.",
+            " He served as Lord Chamberlain between 1762 and 1763 and as Lord Privy Seal between 1763 and 1765.",
+            " He is the great-great-great grandfather of Sir Winston Churchill."
+          ],
+          [
+            "Cosimo I de' Medici (12 June 1519 \u2013 21 April 1574) was the second Duke of Florence from 1537 until 1569, when he became the first Grand Duke of Tuscany."
+          ],
+          [
+            "Shebuel (Hebrew: \u05e9\u05d1\u05d5\u05d0\u05dc\u200e \u200e ) was a descendant of Gershom, the son of Moses and Zipporah.",
+            " He, along with his kinsman Rehabiah a descendant of Eliezer, were described as chiefs and included in the Tribe of Levi.",
+            " Shebuel is also described as \"ruler of the treasures\".",
+            " His name means \"captive of God\" or \"returned of God\".",
+            " His patrilineal lineage can be traced back to Abraham, Isaac, and Jacob since Levi is both his great-great grandfather (through Jochebed) and great-great-great grandfather (through Amram).",
+            " He is also descended from Jethro and Jethro's ancestor Midian, son of Abraham and his second wife Keturah, through his paternal grandmother Zipporah."
+          ],
+          [
+            "Sir William Pepperrell, 1st Baronet (27 June 1696 \u2013 6 July 1759) was a merchant and soldier in Colonial Massachusetts.",
+            " He is widely remembered for organizing, financing, and leading the 1745 expedition that captured the French garrison at Fortress Louisbourg during King George's War.",
+            " During his day Pepperrell was called \"the hero of Louisburg,\" a victory celebrated in the name of Louisburg Square in Boston's Beacon Hill neighborhood.",
+            " He is the great-great-great grandfather of actor Robert Hardy."
+          ],
+          [
+            "Adam Hawkes (January 25 or 26, 1605 - March 13, 1672) was an English immigrant who was the original settler of what is now known as Saugus, Massachusetts, United States.",
+            " He is also great-great-great grandfather of second President of the United States John Adams."
+          ],
+          [
+            "The People of Juvik is a series of six historical novels by Norwegian author Olav Duun.",
+            " The books chronicle the lives of the Juvikings, an old Norwegian landowning peasant family living in the Namdal valley.",
+            " The series covers six or seven generations of Juvikings, starting with Per Anders Juvika, the last of the old style Juvikings, and ending with Per and Anders, the sons of Odin Setran, Per Anders' great-great-great grandfather.",
+            " The first novel, \"The Trough of the Wave\" (\"Juvikingar\" in Norwegian), starts out at Juvik, a fictional farm in the Namdal, but moves to Haaberg when Per Anders' son Per leaves his ancestral lands and buys his sister's late husband's farm.",
+            " The first three books follow the Juvikings from the 18th century to the late 19th; the final three follow the childhood, life and eventually death of Odin."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "5ae692e15542991bbc97613b",
+      "question": "When was the person born who The Loudest Voice in the Room is about?",
+      "answer": "May 15, 1940",
+      "type": "bridge",
+      "level": "medium",
+      "supporting_facts": {
+        "title": [
+          "The Loudest Voice in the Room",
+          "Roger Ailes"
+        ],
+        "sent_id": [
+          0,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "Gabriel Sherman",
+          "The Loudest Voice in the Room",
+          "Foreign-born Japanese",
+          "Edwin L. Mechem",
+          "Nabi Tajima",
+          "Ronald Brittain",
+          "Clarence Richard Silva",
+          "Mamzer",
+          "Roger Ailes",
+          "Les Irwin"
+        ],
+        "sentences": [
+          [
+            "Gabriel Sherman is an American author.",
+            " In 2014, he wrote a biography about Fox News Channel president Roger Ailes called \"The Loudest Voice in the Room: How the Brilliant, Bombastic Roger Ailes Built Fox News \u2013 and Divided a Country\", which debuted at #9 on The New York Times Bestseller list."
+          ],
+          [
+            "The Loudest Voice in the Room: How the Brilliant, Bombastic Roger Ailes Built Fox News - and Divided a Country is a 2014 biographical book about Fox News Channel president Roger Ailes written by Gabriel Sherman.",
+            " which debuted at #9 on The New York Times Bestseller list."
+          ],
+          [
+            "A foreign-born Japanese (\u5916\u56fd\u751f\u307e\u308c\u306e\u65e5\u672c\u4eba , gaikoku umare no nihonjin , literally \"Japanese person born in a foreign country\") is a Japanese person of foreign descent or heritage, who was born outside Japan and later acquired Japanese citizenship.",
+            " This category encompasses persons of both Japanese and non-Japanese descent.",
+            " The former subcategory is considered because of intricacies of national and international laws regarding the citizenship of newborn persons."
+          ],
+          [
+            "Edwin Leard Mechem (July 2, 1912November 27, 2002) was a prominent Republican politician from New Mexico.",
+            " He served as the 15th, 17th and 19th Governor of New Mexico and represented the state in the United States Senate.",
+            " Mechem was the first person born in the 20th century to become the state's governor, as well as the first person born in New Mexico after statehood to succeed to the office.",
+            " He later served as a Federal Judge."
+          ],
+          [
+            "Nabi Tajima (\u7530\u5cf6 \u30ca\u30d3 , Tajima Nabi , born 4 August 1900) is a Japanese supercentenarian.",
+            " At the age of , she is the world's oldest verified living person and the last surviving person born in the 19th century.",
+            " She is the oldest verified Japanese and Asian person ever."
+          ],
+          [
+            "Ronald Brittain, MBE (2 September 1899 \u2013 9 January 1981) was a well-known Regimental Sergeant Major (R.S.M.) in the British Army.",
+            " The Warrant Officer class 1, who was reported on widely in the newspapers of the day, featured in several British military training films during the Second World War.",
+            " He was said to have possibly the loudest voice in the British Army"
+          ],
+          [
+            "Clarence Richard Silva, popularly known as Larry Silva (born August 6, 1949), is a bishop of the Roman Catholic Church.",
+            " He is the fifth Bishop of Honolulu, appointed by Pope Benedict XVI on May 17, 2005, to oversee the Diocese of Honolulu.",
+            " Previous to his appointment to the epicopacy, he served as a diocesan priest and later vicar general of the Diocese of Oakland in California.",
+            " He is the first person born in Hawaii to lead the Roman Catholic community of the Hawaiian Islands.",
+            " He is also the second person of Portuguese ancestry to serve the community as its ordinary."
+          ],
+          [
+            "A mamzer (Hebrew: \u05de\u05de\u05d6\u05e8\u200e \u200e ) is a person born from certain forbidden relationships, or the descendant of such a person, in the Hebrew Bible and Jewish religious law.",
+            " A \"mamzer\" in modern Jewish culture is someone who is either born out of adultery by a married Jewish woman and a Jewish man who is not her husband, or born out of incest (as defined by the Bible), or someone who has a \"mamzer\" as a parent.",
+            " Mamzer status is not synonymous with illegitimacy, since it does not include children whose mothers were unmarried."
+          ],
+          [
+            "Roger Eugene Ailes (May 15, 1940 \u2013 May 18, 2017) was an American television executive and media consultant.",
+            " He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues.",
+            " Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign.",
+            " In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation."
+          ],
+          [
+            "Leslie Herbert \"Les\" Irwin, CBE (1 May 1898 \u2013 28 January 1985) was an Australian politician.",
+            " Born in Newcastle, New South Wales, he was educated at state schools and underwent military service 1916\u201330.",
+            " Upon the end of his service, he became a bank manager.",
+            " In 1963, he was selected as the Liberal candidate for the seat of Mitchell in the Australian House of Representatives.",
+            " He was the last person born in the nineteenth century, the last person born before Federation, and the last World War I veteran elected to the House.",
+            " He held Mitchell until his defeat in 1972.",
+            " Irwin died in 1985."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "5a76b342554299373536016b",
+      "question": "Franz Viehb\u00f6ck and Ulrich Walter, have which occupation in common?",
+      "answer": "engineer",
+      "type": "comparison",
+      "level": "easy",
+      "supporting_facts": {
+        "title": [
+          "Franz Viehb\u00f6ck",
+          "Ulrich Walter"
+        ],
+        "sent_id": [
+          0,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "Mesne profits",
+          "Valses nobles et sentimentales (Ravel)",
+          "Franz Viehb\u00f6ck",
+          "Moritz von Hirschfeld",
+          "Ulrich Walter",
+          "Franz Inc",
+          "Carl Mannich",
+          "Convention of Balta Liman",
+          "RuSHA trial",
+          "Woodham Walter Common SSSI"
+        ],
+        "sentences": [
+          [
+            "Mesne (pronounced \"mean\") profits are sums of money paid for the occupation of land to a person with right of immediate occupation, where no permission has been given for that occupation.",
+            " The concept is feudal in origin, and common in countries which rely on the English legal system (including many former British colonies).",
+            " The word is derived from the root word demesne."
+          ],
+          [
+            "The Valses nobles et sentimentales is a suite of waltzes composed by Maurice Ravel.",
+            " The piano version was published in 1911, and an orchestral version was published in 1912.",
+            " The title was chosen in homage to Franz Schubert, who had released collections of waltzes in 1823 entitled \"Valses nobles\" and \"Valses sentimentales\".",
+            " The piano edition is published with a quotation of Henri de R\u00e9gnier: \"\u2026le plaisir d\u00e9licieux et toujours nouveau d'une occupation inutile\" (the delicious and forever-new pleasure of a useless occupation)."
+          ],
+          [
+            "Franz Artur Viehb\u00f6ck (born August 24, 1960 in Vienna) is an Austrian electrical engineer, and was Austria's first cosmonaut.",
+            " He was titulated \"\u201eAustronaut\u201c\" by his country's media.",
+            " He visited the Mir space station in 1991 aboard Soyuz TM-13, returning aboard Soyuz TM-12 after spending just over a week in space."
+          ],
+          [
+            "Karl Ulrich Friedrich Wilhelm Moritz von Hirschfeld (4 July 1790 in Halberstadt \u2013 13 October 1859 in Coblenz), Prussian general, got his schooling in a military academy.",
+            " In 1806, he entered into his father's regiment and participated in the unhappy campaign of that year.",
+            " In 1809, he participated with his older brother Eugen in an uprising against the French occupation forces.",
+            " This ended in their fleeing to England in 1809.",
+            " Both joined the Spanish dragoons in their struggles against the French.",
+            " His brother was killed in battle in 1811.",
+            " Lieutenant Moritz received severe wounds two times in battle, and ended in French captivity.",
+            " He escaped in 1813, under very dangerous circumstances.",
+            " His 15 wounds made him barely recognizable when he received a medal for his actions.",
+            " In 1814 he participated in the campaign in France as a lieutenant colonel in the Spanish army."
+          ],
+          [
+            "Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut."
+          ],
+          [
+            "Franz Inc. was founded in 1984 as a vehicle to produce and sell Macsyma.",
+            " While that never developed into a business, the Company did sell Franz Lisp while a new Common Lisp implementation, Allegro Common Lisp, was developed, and is still sold to commercial and academic users today.",
+            " In 2005, Franz began a development program focused on Semantic Web technologies.",
+            " The resulting product, AllegroGraph, is a transactional, and scalable Graph Database product.",
+            " In early 2015, AllegroGraph v5 added n-Dimensional indexing capabilities which provides a novel mechanism for efficient storage and retrieval of multi-dimensional data, and spatial data in particular."
+          ],
+          [
+            "Carl Ulrich Franz Mannich (March 8, 1877 in Breslau \u2013 March 5, 1947 in Karlsruhe) was a German chemist.",
+            " From 1927 to 1943 he was professor for pharmaceutical chemistry at the University of Berlin.",
+            " His areas of expertise were keto bases, alcohol bases, derivatives of piperidine, papaverine, lactones and also Digitalis-glycosides."
+          ],
+          [
+            "The Convention of Balta Liman of 1 May 1849 was an agreement between the Russian Empire and the Ottomans regulating the political situation of the two Danubian Principalities (the basis of present-day Romania), signed during the aftermath of the Revolutions of 1848.",
+            " Moldavia, which had been placed under Russian occupation in late spring 1848 following a revolutionary attempt, and Wallachia, where a liberal Provisional Government had briefly assumed power before facing a common Ottoman-Russian reaction, were confirmed their previous status of Ottoman suzerainty and Russian protectorate (first established in 1831\u201332 by the \"Regulamentul Organic\").",
+            " Minor provisions were added, signifying a relative increase in Ottoman influence\u2014namely, \"hospodars\" were no longer elected by the local National Assemblies for life, and instead appointed by the Sublime Porte for seven-year terms.",
+            " A common military presence was maintained until 1851.",
+            " The document led to the appointment of Barbu Dimitrie \u015etirbei as hospodar of Wallachia and Grigore Alexandru Ghica as hospodar of Moldavia.",
+            " The Convention was rendered void by the Crimean War (during which the Principalities fell under Austrian occupation), and the statutory system itself was annulled by the 1856 Treaty of Paris."
+          ],
+          [
+            "The RuSHA trial against the SS racial policies of genocide (officially, United States of America vs. Ulrich Greifelt, et al) was the eighth of the twelve trials held in Nuremberg by the U.S. authorities for Nazi war crimes after the end of World War II.",
+            " These twelve trials were all held before U.S. military courts in their occupation zone in Germany, not before the International Military Tribunal, although they took place in the same rooms, at the Palace of Justice.",
+            " The twelve U.S. trials are collectively known as the \"Subsequent Nuremberg Trials\" or, more formally, as the \"Trials of War Criminals before the Nuremberg Military Tribunals\" (NMT)."
+          ],
+          [
+            "Woodham Walter Common SSSI is an 80 hectare biological Site of Special Scientific Interest (SSSI) in Danbury in Essex.",
+            " The site includes six nature reserves within the Danbury Ridge Nature Reserves, managed by the Essex Wildlife Trust.",
+            " These are Woodham Walter Common itself, Birch Wood, Pheasanthouse Wood, Poors' Piece, Scrubs Wood and a small area in Pheasanthouse Farm.",
+            " The largest part of the SSSI is the 32.3 hectare Woodham Walter Common, which is managed by the Wildlife Trust on behalf of Maldon District Council and Woodham Walter Parish Council."
+          ]
+        ]
+      }
+    }
+  ]
+}

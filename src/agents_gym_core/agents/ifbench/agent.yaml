@@ -1,0 +1,43 @@
+version: base
+
+metadata:
+  name: "IFBench - Instruction Following Benchmark"
+  tags:
+    - benchmark
+    - full-benchmark
+
+init:
+  script: core::init.py
+  params:
+    num_datapoints: 294
+    seed: 0
+
+loop: dspy-program:gepa_artifact.benchmarks.IFBench.ifbench_program.IFBenchCoT2StageProgram
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  signature_prompts:
+    generate_response_module: "core::prompts/generate_response.md"
+    ensure_correct_response_module: "core::prompts/ensure_correct_response.md"
+
+  input_schema:
+    fields:
+      prompt:
+        type: "str"
+        description: "The user query with instruction-following constraints"
+
+  output_schema:
+    fields:
+      response:
+        type: "str"
+        description: "The final response that follows all instructions"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-ifbench.json
+
+  evaluator_weights:
+    ifbench_IFBenchInstructionFollowingEvaluator: 1
+
+  tools: []

@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "product_questions_agent_EqualsEscalationEvaluator",
+    "description": "EqualsEscalation evaluator for product_questions_agent - checks if QuestionsToBeEscalated[0].Question matches expected text",
+    "evaluatorTypeId": "EqualsEscalationEvaluator",
+    "evaluatorSchema": "file://product_questions_agent_evaluators.py:EqualsEscalationEvaluator",
+    "evaluatorConfig": {
+        "name": "EqualsEscalationEvaluator",
+        "description": "Extracts QuestionsToBeEscalated[0].Question from agent output and compares with expected question text",
+        "defaultEvaluationCriteria": null
+    }
+}

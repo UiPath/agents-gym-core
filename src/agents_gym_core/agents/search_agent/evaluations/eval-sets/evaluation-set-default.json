@@ -1,0 +1,1221 @@
+{
+  "version": "1.0",
+  "id": "evaluation-set-search-default",
+  "fileName": "evaluation-set-default.json",
+  "name": "Evaluation set for Search Agent",
+  "batchSize": 10,
+  "timeoutMinutes": 5,
+  "agentId": "",
+  "partitionId": "",
+  "tenantId": "",
+  "evaluatorRefs": [
+    "search_agent_LLMJudgeOutputEvaluator",
+    "search_agent_SearchContainsEvaluator",
+    "search_agent_ToolCallCountEvaluator",
+    "search_agent_ToolCallOrderEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "21ce4383-4fa5-4c17-bbb7-0865ffda58d7",
+      "name": "TestCapitalCity",
+      "inputs": {
+        "query": "What is the capital of France?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Paris"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Paris"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "3911b02a-8d36-4cbd-95e7-88915c03801a",
+      "name": "TestElementSymbol",
+      "inputs": {
+        "query": "What is the chemical symbol for gold?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Au"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Au"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "2d5ab7fe-0fd8-4612-a0d8-8a6f460643d6",
+      "name": "TestBoilingPoint",
+      "inputs": {
+        "query": "What is the boiling point of water in Celsius?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "100 degrees Celsius"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "100",
+            "degrees",
+            "Celsius"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "ba976c45-bcd7-4527-b25c-5c00c0dbfc0a",
+      "name": "TestPlanetsCount",
+      "inputs": {
+        "query": "How many planets are in our solar system?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "8"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            [
+              "8",
+              "eight"
+            ]
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "15fc2d69-c7bf-434c-946b-3e0818ae3c59",
+      "name": "TestTallestMountain",
+      "inputs": {
+        "query": "What is the tallest mountain in the world?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Everest"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Everest",
+            "8,849"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "940b8849-2a15-4189-a6a3-3d15e1fde380",
+      "name": "TestUSAIndependenceYear",
+      "inputs": {
+        "query": "In which year did the United States declare independence?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "1776"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "1776"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "ab2db344-6ecf-4c80-839a-1aca2b335b36",
+      "name": "TestWWIIEndDate",
+      "inputs": {
+        "query": "When did World War II end?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "1945"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "1945",
+            "September"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "cbf318d2-e9a6-4c3d-baf2-258528ee324d",
+      "name": "TestFirstMoonLanding",
+      "inputs": {
+        "query": "Who was the first person to walk on the moon and when?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Neil Armstrong in July, 1969"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Neil Armstrong",
+            "1969",
+            "July"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "d938c278-6f59-4544-9e84-623c20fff263",
+      "name": "TestPhotosynethesisDefinition",
+      "inputs": {
+        "query": "What is photosynthesis?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Photosynthesis is the process by which plants convert light energy into chemical energy."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "plants",
+            "light",
+            "energy",
+            "carbon dioxide"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "38464b77-f3d5-493e-bbfd-1b47f4e9c989",
+      "name": "TestBlockchainDefinition",
+      "inputs": {
+        "query": "What is blockchain technology?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Blockchain technology is a decentralized system for recording and verifying transactions."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "decentralized",
+            "ledger",
+            "transactions"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "ca7fddce-fd2c-4acc-88c3-aceafa12b4ed",
+      "name": "TestCompareCPUGPU",
+      "inputs": {
+        "query": "Compare CPU and GPU: what are the main differences in their architecture and use cases?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "CPUs (Central Processing Units) have fewer cores optimized for sequential processing and handle general computing tasks. GPUs (Graphics Processing Units) have many smaller cores for parallel processing, making them ideal for graphics rendering and certain computational tasks like machine learning."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              ">=",
+              2
+            ],
+            "escalation_tool": [
+              "=",
+              1
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "escalation_tool",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "b098073b-94be-4a14-b5f3-daf907dbff20",
+      "name": "TestMultiFactQuestion",
+      "inputs": {
+        "query": "What is the population of Tokyo and what is its average annual temperature?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Tokyo has a population of 37.4 million people and an average annual temperature of 15.6°C (60.1°F)."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "population",
+            "Tokyo",
+            "temperature",
+            "million"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              ">=",
+              2
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "c355e741-5b28-4c7e-a9e5-2c4fb94881c5",
+      "name": "TestHistoricalFigureBiography",
+      "inputs": {
+        "query": "Who was Marie Curie and what were her major scientific contributions?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Marie Curie was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Marie Curie",
+            "radiation",
+            "polonium",
+            "radium",
+            "Nobel"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              ">=",
+              2
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "search_engine",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "148621cb-2e34-4776-a80f-f9c558e4a704",
+      "name": "TestObscureHistoricalFact",
+      "inputs": {
+        "query": "What was the historical significance of the obscure Treaty of Tordesillas?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The Treaty of Tordesillas was a 1494 agreement between Spain and Portugal that divided the newly discovered lands outside Europe between the two countries."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Spain",
+            "Portugal",
+            "divide",
+            "New World"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "escalation_tool": [
+              "=",
+              1
+            ],
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "escalation_tool",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "0778c774-53ad-412b-a30f-ef1f277fa91b",
+      "name": "TestComplexTechnicalQuestion",
+      "inputs": {
+        "query": "Explain in detail how CRISPR-Cas9 gene editing technology works at the molecular level."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "CRISPR-Cas9 is a gene editing technology that uses a guide RNA to target specific DNA sequences and the Cas9 enzyme to cut the DNA at that location."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "escalation_tool": [
+              "=",
+              1
+            ],
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "escalation_tool",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "5ce84ed6-9751-4b6e-a108-f2d8995a7bcb",
+      "name": "TestRareHistoricalEvent",
+      "inputs": {
+        "query": "What was the impact of the obscure historical Defenestration of Prague on European politics?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The Defenestration of Prague was a 1618 event in which members of the Bohemian Estates threw the governor of Bohemia out of a window, sparking the Thirty Years' War."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Prague",
+            "window",
+            "Thirty Years' War",
+            "Protestant",
+            "Catholic"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "escalation_tool": [
+              "=",
+              1
+            ],
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "escalation_tool",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "1f6a38d3-1726-4ab9-9710-dd09c8a4a7a0",
+      "name": "TestComplexComparison",
+      "inputs": {
+        "query": "Compare and contrast the complex molecular mechanisms of CRISPR-Cas9 versus TALENs for gene editing."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "CRISPR-Cas9 and TALENs are both gene editing technologies that use different mechanisms to target and cut specific DNA sequences."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "CRISPR",
+            "TALENs",
+            "gene",
+            "editing",
+            "DNA"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "escalation_tool": [
+              "=",
+              1
+            ],
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "escalation_tool",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "390dde5f-bcd2-499d-abbb-827b63ac9fd3",
+      "name": "TestUltraspecificTechnicalQuery",
+      "inputs": {
+        "query": "Explain the complex technical implementation of quantum error correction in superconducting qubit systems."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Quantum Error Correction works by using quantum entanglement and superposition to detect and correct errors. In QEC, quantum states are encoded across multiple qubits, creating a form of redundancy."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "quantum",
+            "error",
+            "correction",
+            "qubit",
+            "superconducting"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "escalation_tool": [
+              "=",
+              1
+            ],
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        },
+        "search_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "escalation_tool",
+            "search_engine"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "9e23211d-5772-4333-b8c2-997acbe9069d",
+      "name": "TestCompareEconomicSystems",
+      "inputs": {
+        "query": "Compare capitalism, socialism, and communism in terms of economic principles and real-world implementation."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Capitalism is an economic system based on private ownership of resources and the free market. Socialism is an economic system based on collective ownership of resources and a planned economy."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "capitalism",
+            "socialism",
+            "communism",
+            "economy",
+            "private",
+            "public",
+            "ownership"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              ">=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "25dd7341-2b58-4f19-903b-8b1a7839b76d",
+      "name": "TestComplexHealthQuery",
+      "inputs": {
+        "query": "What are the different types of diabetes, their causes, symptoms, and treatments?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "Diabetes is a chronic condition that affects the way your body uses and stores energy. There are several types of diabetes, including type 1, type 2, and gestational diabetes."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "Type 1",
+            "Type 2",
+            "gestational",
+            "insulin",
+            "blood sugar",
+            "glucose"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              ">=",
+              2
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "0afebd2f-0e06-4928-90b1-641ddad855a0",
+      "name": "TestMathematicalConstant",
+      "inputs": {
+        "query": "What is the value of pi to 10 decimal places?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "3.1415926535"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "3.1415926535"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "af8bc771-bf98-42c0-8a69-7a0f6f35d492",
+      "name": "TestPrimeNumbers",
+      "inputs": {
+        "query": "List the first 10 prime numbers."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "2",
+            "3",
+            "5",
+            "7",
+            "11",
+            "13",
+            "17",
+            "19",
+            "23",
+            "29"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "b79597c9-b371-4a8d-8288-93fff99c36bc",
+      "name": "TestPhysicsFormula",
+      "inputs": {
+        "query": "What is Einstein's famous equation relating mass and energy?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "E=mc²"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            [
+              "E=mc²",
+              "E = mc²"
+            ]
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "a1546a0f-02f8-438d-8cb3-0135859fb76f",
+      "name": "TestAreaOfCircle",
+      "inputs": {
+        "query": "What is the formula for calculating the area of a circle?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "A = πr²"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "πr²",
+            "pi",
+            "radius",
+            "squared"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "4b164754-c866-4eb4-806a-c89c9ddb367a",
+      "name": "TestPhotoelectricEffect",
+      "inputs": {
+        "query": "Explain the photoelectric effect and why it was important in physics."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The photoelectric effect is the emission of electrons from a material when light shines on it. It was important in physics because it showed that light can behave as both a wave and a particle."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "light",
+            "electrons",
+            "Einstein",
+            "quantum",
+            "photon"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "25ce0327-eb27-4d60-94aa-a89cd1bc8267",
+      "name": "TestWaterCycle",
+      "inputs": {
+        "query": "Describe the steps in the water cycle on Earth."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The water cycle on Earth involves evaporation, condensation, and precipitation."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "evaporation",
+            "condensation",
+            "precipitation"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "4a587717-806c-4984-a41c-4d18b6ed6dd1",
+      "name": "TestBakingBread",
+      "inputs": {
+        "query": "What are the basic ingredients and steps to make a simple bread?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "To make a simple bread, you need flour, water, yeast, salt, and optionally sugar or oil. Mix, knead, let rise, shape, and bake."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "flour",
+            "water",
+            "yeast",
+            "salt",
+            "knead",
+            "rise",
+            "bake"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "9697af01-1b85-4406-9dfc-4da7e1468338",
+      "name": "TestHTTPStatusCodes",
+      "inputs": {
+        "query": "What do the HTTP status codes 200, 404, and 500 mean?"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "search_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "200: OK, 404: Not Found, 500: Server Error"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "search_agent_SearchContainsEvaluator": {
+          "keywords": [
+            "200",
+            "OK",
+            "404",
+            "Not Found",
+            "500",
+            "Server Error"
+          ]
+        },
+        "search_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "search_engine": [
+              "=",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "evaluation-set-search-default",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

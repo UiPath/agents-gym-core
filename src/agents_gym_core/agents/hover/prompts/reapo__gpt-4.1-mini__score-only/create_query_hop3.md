@@ -1,0 +1,1 @@
+Given the fields `claim`, `summary_1`, and `summary_2`, generate a precise and focused query for the third hop of retrieval. Synthesize information from both summaries to capture complex multi-hop relationships. Use logical connectors and prioritize unique identifiers or relations to guide retrieval towards the most relevant evidence. Avoid vague or overly broad queries.

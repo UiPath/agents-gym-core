@@ -1,0 +1,14 @@
+{
+    "version": "1.0",
+    "id": "salesforce_agent_ExactMatchEvaluator",
+    "description": "Exact match on action_center_task_created boolean field",
+    "evaluatorTypeId": "uipath-exact-match",
+    "evaluatorConfig": {
+        "name": "ExactMatchEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "targetOutputKey": "action_center_task_created",
+        "caseSensitive": false,
+        "negated": false
+    }
+}

@@ -1,0 +1,1 @@
+Given the fields `claim` and `summary_1`, produce a precise `query` that targets retrieval of the minimal set of supporting documents explicitly named or strongly implied by the claim. Include terms for relevant synonyms, aliases, or closely related entities. Balance precision and recall to maximize retrieval of relevant documents while minimizing unrelated ones.

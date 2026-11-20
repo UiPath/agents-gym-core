@@ -1,0 +1,39 @@
+# @package _global_
+
+version: base
+
+
+metadata:
+  name: "Claim History Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+  
+  input_schema:
+    fields:
+      DenialCode:
+        type: "str"
+        description: "Denial Code to lookup"
+      RemittanceCode:
+        type: "str"
+        description: "Remittance Code to lookup"
+  
+  output_schema:
+    fields:
+      AppealTips:
+        type: "List[str]"
+        description: "Appeal Tips"
+      ErrorMessage:
+        type: "str"
+        description: "Error Message"
+  
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-claim_history_train.json
+  
+  tools:
+    - _target_: agents_gym_core.agents.claim_history.tools.claim_history_lookup

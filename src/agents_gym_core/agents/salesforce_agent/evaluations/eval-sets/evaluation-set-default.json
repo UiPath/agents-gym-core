@@ -1,0 +1,788 @@
+{
+  "version": "1.0",
+  "id": "evaluation-set-salesforce-agent-default",
+  "name": "Salesforce Agent Default Evaluation Set",
+  "evaluatorRefs": [
+    "salesforce_agent_LLMJudgeOutputEvaluator",
+    "salesforce_agent_ToolCallOrderEvaluator",
+    "salesforce_agent_ExactMatchEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "eval-sales-001",
+      "name": "TestCheckDuplicateContacts",
+      "inputs": {
+        "email_body": "Hi Sam, While reviewing contact records for ClearWater, I noticed potential duplicates for John Turner. Please retrieve all contact records under this account and remove any duplicates after confirming their validity. Let me know once this is done. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve contacts, and remove duplicate contact"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_contacts",
+            "remove_contact"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-002",
+      "name": "TestCheckLeadsForAccount",
+      "inputs": {
+        "email_body": "Hi Sam, I noticed some outdated lead records for ClearWater. Please retrieve all leads associated with this account and remove any that are no longer valid or active. Thanks for handling this cleanup. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve leads, and remove outdated lead"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_leads",
+            "remove_lead"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-003",
+      "name": "TestUpdateExistingOpportunity",
+      "inputs": {
+        "email_body": "Hi Sam, I'm working on an opportunity for Greenfield Technologies, but I'm missing the probability percentage. Please retrieve the opportunity and escalate to confirm this field before proceeding. Thanks for handling this. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve opportunities, perform escalation, and update opportunity"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_opportunities",
+            "perform_escalation",
+            "update_opportunity"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-004",
+      "name": "TestNewAccountCreation",
+      "inputs": {
+        "email_body": "Hi Sam, I'm trying to confirm if we already have BrightSphere Media in Salesforce. Please search for accounts with similar names, and if no match is found, escalate for full account details before creating it. Let me know what you find. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, perform escalation, and create account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "perform_escalation",
+            "create_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-005",
+      "name": "TestUpdateContactAndCreateOpportunity",
+      "inputs": {
+        "email_body": "Hi Sam, Before creating a new opportunity for TechEd Solutions, please retrieve and verify their existing contact records. If any contact exists for Matthew Baker, update him as their Operations Lead. Let's proceed to ask for additional information and then proceed with the opportunity creation once this is done. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve contacts, update contact, perform escalation, and create opportunity"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_contacts",
+            "update_contact",
+            "perform_escalation",
+            "create_opportunity"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-006",
+      "name": "TestUpdateAccountRevenue",
+      "inputs": {
+        "email_body": "Hi Sam, I just got updated financial details for EcoVolt. Please retrieve their account and update the annual revenue to $12,000,000. Let me know once this is done. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and update account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "update_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-007",
+      "name": "TestCheckAndUpdateOpportunity",
+      "inputs": {
+        "email_body": "Hi Sam, Please confirm if any opportunities exist for FusionHealth. If no opportunities exist escalate for additional information, then proceed to create a new one. If the opportunity already exists, update the tentative close date to December 20, 2024, and the value to $250,000. Let's confirm once this is all set. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve opportunities, and update opportunity"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_opportunities",
+            "update_opportunity"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-008",
+      "name": "TestCreateNewContactAndUpdateAccount",
+      "inputs": {
+        "email_body": "Hi Sam, I just had a great conversation with FusionHealth about automating their patient scheduling workflows. Please retrieve their account and check for any contact record. If no contact record is found, please contact them and ask for additional data then proceed to create a new contact. After finishing this, please update their account with employee count to 500 and annual revenue to 8000000. Thanks for handling this. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve contacts, perform escalation, create contact, and update account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_contacts",
+            "perform_escalation",
+            "create_contact",
+            "update_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-009",
+      "name": "TestCreateLeadWithEscalation",
+      "inputs": {
+        "email_body": "Hi Sam, I spoke with HarvestCo earlier, and I believe there's already a lead for Sam Harper in Salesforce. Please retrieve his record and verify if all necessary fields are up to date. If anything is missing, escalate for confirmation. Thanks for handling this. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve leads, perform escalation, and update lead"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_leads",
+            "perform_escalation",
+            "update_lead"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-010",
+      "name": "TestRemoveAccount",
+      "inputs": {
+        "email_body": "Hi Sam, We no longer do business with Acme Corporation. Please remove their account from Salesforce. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and remove account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "remove_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-011",
+      "name": "TestRemoveMissingAccount",
+      "inputs": {
+        "email_body": "Hi Sam, We lost the deal with RedFin Industries - unfortunately we have to remove their account. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and perform escalation since account is not found"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "perform_escalation"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-012",
+      "name": "TestRemoveContact",
+      "inputs": {
+        "email_body": "Hi Sam, We haven't engaged with GlobalDigitech Limited in a while. Please delete their contact from the system. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve contacts, and remove contact"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_contacts",
+            "remove_contact"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-013",
+      "name": "TestRemoveMissingContact",
+      "inputs": {
+        "email_body": "Hi Sam, We received no response from Happy Trails for a long time. Please check their contact in our the system and if we have not received any update from them, remove the contact. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve contacts"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_contacts"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-014",
+      "name": "TestMergeDuplicateAccounts",
+      "inputs": {
+        "email_body": "Hi Sam, During my review of the Salesforce records, I noticed that we have two separate accounts for BioPulse Solutions. Could you verify this and if it's true, call for an escalation to determine which records are valid? Then, let's consolidate them into one. Thanks, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, perform escalation, update account, and remove account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": true
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "perform_escalation",
+            "update_account",
+            "remove_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-015",
+      "name": "TestCatchAllLeads",
+      "inputs": {
+        "email_body": "Hi Sam, I have recently curated all potential leads for our next marketing campaign. Before I proceed, could you pull up all our current leads in Salesforce? I want to ensure we're not missing any prospects. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and retrieve leads"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_leads"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-016",
+      "name": "TestAccountCreationNoEscalation",
+      "inputs": {
+        "email_body": "Hi Sam, We recently onboarded a new customer, SwiftDelivery Inc., a quickly growing e-commerce company with revenue last year of $5.3M (with only 63 employees! Please go ahead and create a new account with this information. Appreciate it, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and create account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "create_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-017",
+      "name": "TestCreateNewLeadThenRemove",
+      "inputs": {
+        "email_body": "Hi Sam, Could you create a new lead under the name Mark Johnson for the company, PseudoTech? Once you have created the lead, please remove it immediately. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve leads, create lead, and remove lead"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_leads",
+            "create_lead",
+            "remove_lead"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-018",
+      "name": "TestRetrieveAndRemoveAllOpportunities",
+      "inputs": {
+        "email_body": "Hi Sam, We are conducting a system clean up and would like to remove all opportunities for the company, XYZ Solutions. Could you look up their records and perform this task? Thanks, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve opportunities, and remove multiple opportunities"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_opportunities",
+            "remove_opportunity",
+            "remove_opportunity"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-019",
+      "name": "TestRetrieveAllContacts",
+      "inputs": {
+        "email_body": "Hi Sam, Can you look up all contacts for the company PseudoTech? We don't currently have any business arrangements with them, but I would like to review all the details we have. Best, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and retrieve contacts"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_contacts"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-020",
+      "name": "TestNewAccountAndOpportunity",
+      "inputs": {
+        "email_body": "Hi Sam, We have a new account to add to Salesforce - EarthWear Co., a small sustainable fashion company with 17 staff. We also need to add an opportunity with them to automate their inventory, expected to close on January 19th."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, create account, retrieve opportunities, and create opportunity"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "create_account",
+            "retrieve_opportunities",
+            "create_opportunity"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-021",
+      "name": "TestTotalOpportunityValue",
+      "inputs": {
+        "email_body": "Hi Sam, What is the total value of all the opportunities with PseudoTech? Thanks, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts and retrieve opportunities"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_opportunities"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-022",
+      "name": "TestUpdateAccountAndCheckContacts",
+      "inputs": {
+        "email_body": "Hi Sam, Can we update the account type to Technology Partner for Greenfield Technologies? Also retrieve all their contacts for a quick audit. Thanks, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, update account, and retrieve contacts"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "update_account",
+            "retrieve_contacts"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-023",
+      "name": "TestUpdateAccountAndCreateContact",
+      "inputs": {
+        "email_body": "Hi Sam, PseudoTech just reported an increase in revenue to $7M. They've also put a new person, John Smith (john@pseudotech.example), in charge of our engagement. Could you update the account and add John as a contact? Thanks, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, update account, retrieve contacts, and create contact"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "update_account",
+            "retrieve_contacts",
+            "create_contact"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "eval-sales-024",
+      "name": "TestRemoveContactAndAccount",
+      "inputs": {
+        "email_body": "Hi Sam, GreenFarms LLC went out of business. Please remove their account, opportunities and contacts from Salesforce. Thanks, Jordan Lee"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "salesforce_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          },
+          "expectedAgentBehavior": "Agent should retrieve accounts, retrieve contacts, retrieve opportunities, remove contacts, and remove account"
+        },
+        "salesforce_agent_ExactMatchEvaluator": {
+          "expectedOutput": {
+            "action_center_task_created": false
+          }
+        },
+        "salesforce_agent_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "retrieve_accounts",
+            "retrieve_contacts",
+            "retrieve_opportunities",
+            "remove_contact",
+            "remove_contact",
+            "remove_account"
+          ]
+        }
+      },
+      "evalSetId": "evaluation-set-salesforce-agent-default",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "athena_chatbot_ExpectedMentorCheckEvaluator",
+    "description": "ExpectedMentorCheckEvaluator for athena_chatbot agent - deterministic mentor name check",
+    "evaluatorTypeId": "ExpectedMentorCheckEvaluator",
+    "evaluatorSchema": "file://athena_chatbot_evaluators.py:ExpectedMentorCheckEvaluator",
+    "evaluatorConfig": {
+        "name": "ExpectedMentorCheckEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null
+    }
+}

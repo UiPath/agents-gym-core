@@ -1,0 +1,422 @@
+{
+  "version": "1.0",
+  "id": "evaluation-set-hts_classifier_agent",
+  "name": "HTS Classifier Agent Eval Set",
+  "evaluatorRefs": [
+    "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator",
+    "hts_classifier_agent_HTSCodeMatchEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "1cc84e1a-f602-4a51-9f43-47d63cc8f48f",
+      "name": "Test no-escalation reason: Desk accessories",
+      "inputs": {
+        "description_of_product_or_good": "Desk accessories, medium density fiberboard, painted or stained, weight 0.06-5.5 kg, length 10-35 cm, width 4-43 cm, height 4.5-30 cm",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.38,
+        "testing": false
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.095Z",
+      "updatedAt": "2025-06-10T11:34:44.095Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was not required given that the context yielded results with a score exceeding the provided threshold."
+          }
+        }
+      }
+    },
+    {
+      "id": "4637d024-bcd4-4a72-973a-c22a23aa0acf",
+      "name": "Test no-escalation reason: Leather covers for telecommunication devices",
+      "inputs": {
+        "description_of_product_or_good": "Leather covers for telecommunication devices",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.35,
+        "testing": false
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.095Z",
+      "updatedAt": "2025-06-10T11:34:44.095Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was not required given that the context yielded results with a score exceeding the provided threshold."
+          }
+        }
+      }
+    },
+    {
+      "id": "559b7e92-6bcb-4a05-80cf-6f5eacbe4d5c",
+      "name": "Test no-escalation reason: Live horse, male",
+      "inputs": {
+        "description_of_product_or_good": "Live horse, male",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.4,
+        "testing": false
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.096Z",
+      "updatedAt": "2025-06-10T11:34:44.096Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was not required given that the context yielded results with a score exceeding the provided threshold."
+          }
+        }
+      }
+    },
+    {
+      "id": "3e70c02b-50ec-4e5b-8a16-d48b4d64f444",
+      "name": "Test escalation reason with CROSS: Freeze-dried tubifex worms for pet feed",
+      "inputs": {
+        "description_of_product_or_good": "Freeze-dried tubifex worms for pet feed, retail sale in induction-sealed plastic cans, net weight 23-43 g",
+        "use_CROSS_tool_when_escalating": true,
+        "escalation_context_score_threshold": 0.99,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.087Z",
+      "updatedAt": "2025-06-10T11:34:44.087Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was required due to no context results exceeding the provided score threshold. The CROSS tool was used."
+          }
+        }
+      }
+    },
+    {
+      "id": "d9a3f709-8b92-46ce-aa31-76ccc35dade1",
+      "name": "Test escalation reason with CROSS: Portable outdoor cooker kits",
+      "inputs": {
+        "description_of_product_or_good": "Portable outdoor cooker kits, burner and stand, steel and/or cast iron, adjustable pressure regulator/hose for natural gas or propane",
+        "use_CROSS_tool_when_escalating": true,
+        "escalation_context_score_threshold": 0.99,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.088Z",
+      "updatedAt": "2025-06-10T11:34:44.088Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was required due to no context results exceeding the provided score threshold. The CROSS tool was used."
+          }
+        }
+      }
+    },
+    {
+      "id": "6ceddf15-5447-4186-94fe-cd2b0298bd07",
+      "name": "Test escalation reason with CROSS: Children's acrylic paint sets",
+      "inputs": {
+        "description_of_product_or_good": "Children's acrylic paint sets with 6, 12, or 24 jars of different colors, each jar containing 5-23 ml, includes paint brush, retail sale",
+        "use_CROSS_tool_when_escalating": true,
+        "escalation_context_score_threshold": 0.99,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.089Z",
+      "updatedAt": "2025-06-10T11:34:44.089Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was required due to no context results exceeding the provided score threshold. The CROSS tool was used."
+          }
+        }
+      }
+    },
+    {
+      "id": "448c5b51-8949-4ac4-8a24-355291141790",
+      "name": "Test top HTS code: Mechanical parts for motor vehicles",
+      "inputs": {
+        "description_of_product_or_good": "Mechanical parts for motor vehicles, vulcanized rubber, guide or stopper for sunroof or sunshade, weight ≤ 4g",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.3,
+        "testing": false
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.090Z",
+      "updatedAt": "2025-06-10T11:34:44.090Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_HTSCodeMatchEvaluator": {
+          "expectedCode": "4016.99.6010"
+        }
+      }
+    },
+    {
+      "id": "5af6e817-d71f-4ae1-bb12-95700b440063",
+      "name": "Test top HTS code: Biodegradable sacks and bags",
+      "inputs": {
+        "description_of_product_or_good": "Biodegradable sacks and bags of plant-based materials including cornstarch, not containing polyethylene",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.3,
+        "testing": false
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.091Z",
+      "updatedAt": "2025-06-10T11:34:44.091Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_HTSCodeMatchEvaluator": {
+          "expectedCode": "3923.29.0000"
+        }
+      }
+    },
+    {
+      "id": "beba0531-1a8f-4dff-a730-838ef0b85472",
+      "name": "Test top HTS code: Woven fabric",
+      "inputs": {
+        "description_of_product_or_good": "Woven fabric of 100% textured polyester filaments, dyed, weight >170 g/m2, width ≤310 cm",
+        "use_CROSS_tool_when_escalating": true,
+        "escalation_context_score_threshold": 0.3,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.091Z",
+      "updatedAt": "2025-06-10T11:34:44.091Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_HTSCodeMatchEvaluator": {
+          "expectedCode": "5407.52.2060"
+        }
+      }
+    },
+    {
+      "id": "f4c8f315-9067-4635-877b-72463b5831c7",
+      "name": "Test top HTS code: Stuff sacks",
+      "inputs": {
+        "description_of_product_or_good": "Stuff sacks, textile surface, man-made fibers, cylindrical, single compartment, drawstring closure, strap, circumference 77.5-127.7 cm",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.3,
+        "testing": false
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.092Z",
+      "updatedAt": "2025-06-10T11:34:44.092Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_HTSCodeMatchEvaluator": {
+          "expectedCode": "4202.92.3131"
+        }
+      }
+    },
+    {
+      "id": "b215f952-6c3d-4904-99df-9be7a2180860",
+      "name": "Test top HTS code: Endless synchronous belts",
+      "inputs": {
+        "description_of_product_or_good": "Endless synchronous belts of vulcanized rubber, molded polyurethane, neoprene, or welded urethane, circumference 60-77 cm, width 2.5-4 cm, weight 0.18-0.45 kg",
+        "use_CROSS_tool_when_escalating": true,
+        "escalation_context_score_threshold": 0.3,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.092Z",
+      "updatedAt": "2025-06-10T11:34:44.092Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_HTSCodeMatchEvaluator": {
+          "expectedCode": "4010.35.9000"
+        }
+      }
+    },
+    {
+      "id": "6867e67d-3a38-49cb-b1e9-5e4ff3babd18",
+      "name": "Test top HTS code: Electronic calculators for desktop use",
+      "inputs": {
+        "description_of_product_or_good": "Electronic calculators for desktop use, solar-powered with battery backup, no engineering/trigonometric/scientific/construction functions, dimensions 11-25 cm length, 7-19.5 cm width, 1-5 cm height, weight 0.058-0.34 kg",
+        "use_CROSS_tool_when_escalating": true,
+        "escalation_context_score_threshold": 0.3,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.093Z",
+      "updatedAt": "2025-06-10T11:34:44.093Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_HTSCodeMatchEvaluator": {
+          "expectedCode": "8470.10.0040"
+        }
+      }
+    },
+    {
+      "id": "3f0b36a4-564f-49cd-9595-88a07b218d17",
+      "name": "Test escalation reason no CROSS: Polyester fabrics, warp knit, printed",
+      "inputs": {
+        "description_of_product_or_good": "Polyester fabrics, warp knit, printed, bonded to woven backing, weight 290-500 g/m², used for upholstery",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.99,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.098Z",
+      "updatedAt": "2025-06-10T11:34:44.098Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was required due to no context results exceeding the provided score threshold. The CROSS tool was not used, as requested."
+          }
+        }
+      }
+    },
+    {
+      "id": "bf26bd24-9a4f-4d75-91e4-3aadb34015b4",
+      "name": "Test escalation reason no CROSS: Optical telescope mirror segment support assemblies",
+      "inputs": {
+        "description_of_product_or_good": "Optical telescope mirror segment support assemblies, without mirrors",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.99,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.098Z",
+      "updatedAt": "2025-06-10T11:34:44.098Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was required due to no context results exceeding the provided score threshold. The CROSS tool was not used, as requested."
+          }
+        }
+      }
+    },
+    {
+      "id": "0460b5ac-6ec9-49c4-a8b9-529b8db0e382",
+      "name": "Test escalation reason no CROSS: Clamp edge components, aluminum",
+      "inputs": {
+        "description_of_product_or_good": "Clamp edge components, aluminum, injection molded clamp heads and levers, length 60-127 cm, extensions to 254 cm",
+        "use_CROSS_tool_when_escalating": false,
+        "escalation_context_score_threshold": 0.99,
+        "testing": true
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-hts_classifier_agent",
+      "createdAt": "2025-06-10T11:34:44.099Z",
+      "updatedAt": "2025-06-10T11:34:44.099Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "hts_classifier_agent_LLMJudgeEscalationDetailsEvaluator": {
+          "expectedOutput": {
+            "Escalation_details": "Escalation was required due to no context results exceeding the provided score threshold. The CROSS tool was not used, as requested."
+          }
+        }
+      }
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-06-10T11:34:44.086Z",
+  "updatedAt": "2025-06-10T11:34:44.086Z"
+}

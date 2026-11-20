@@ -1,0 +1,69 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "claim": "AirBaltic's has bases at Tallinn Airport and the airport that ceased operations in 2015, with the airport code of Ryanair: VNO, ICAO: EYVI.",
+      "summary_1": "AirBaltic has bases at Tallinn Airport and Vilnius Airport (IATA: VNO, ICAO: EYVI), but Vilnius Airport did not cease operations in 2015. The airport that ceased operations in 2015 mentioned in the passages is unrelated and has different codes. Therefore, the claim that airBaltic's base with code VNO/EYVI ceased operations in 2015 is false.",
+      "reasoning": "The claim states that AirBaltic has bases at Tallinn Airport and an airport with codes VNO (IATA) and EYVI (ICAO) which ceased operations in 2015. However, the summary clarifies that Vilnius Airport, which has those codes, did not cease operations in 2015. The airport that did cease operations in 2015 has different codes and is unrelated to AirBaltic's bases. Therefore, the claim that AirBaltic's base at the airport with codes VNO/EYVI ceased operations in 2015 is incorrect.",
+      "query": "Did Vilnius Airport (IATA: VNO, ICAO: EYVI) cease operations in 2015?"
+    },
+    {
+      "claim": "Nerva brothers Marcus Aurelius, and the person to the right of Antoninus Pius on the monument The Great Antonine Altar,  were co-emperors of Rome during the Nerva-Antonine dynasty.",
+      "supporting_facts": [
+        {
+          "key": "Nerva\u2013Antonine dynasty",
+          "value": 0
+        },
+        {
+          "key": "Nerva\u2013Antonine dynasty",
+          "value": 1
+        },
+        {
+          "key": "Lucius Verus",
+          "value": 0
+        },
+        {
+          "key": "Great Antonine Altar",
+          "value": 4
+        }
+      ],
+      "label": 1
+    },
+    {
+      "claim": "\"Hot Lead and Cold Feet\" was released before the film in which  Josh Flitter played \"The Iron Horse\".",
+      "supporting_facts": [
+        {
+          "key": "The Greatest Game Ever Played",
+          "value": 0
+        },
+        {
+          "key": "Hot Lead and Cold Feet",
+          "value": 0
+        },
+        {
+          "key": "Josh Flitter",
+          "value": 1
+        }
+      ],
+      "label": 0
+    },
+    {
+      "claim": "The Comedy of Errors was the Shakespeare play that the actress cast in the movie in which Rachelle Beinart performed stunt work. The actress trained in the Oxford University Dramatic Society.",
+      "supporting_facts": [
+        {
+          "key": "Rogue One",
+          "value": 4
+        },
+        {
+          "key": "Felicity Jones",
+          "value": 3
+        },
+        {
+          "key": "Rachelle Beinart",
+          "value": 1
+        }
+      ],
+      "label": 1
+    }
+  ]
+}

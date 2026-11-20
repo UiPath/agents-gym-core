@@ -1,0 +1,117 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "question": "are Machaeranthera and Prumnopitys both the plants?",
+      "summary_1": "Yes, both Machaeranthera and Prumnopitys are plants. Machaeranthera is a genus of flowering plants in the daisy family, while Prumnopitys is a genus of coniferous evergreen trees in the podocarp family.",
+      "summary_2": "Yes, both Machaeranthera and Prumnopitys are plants; Machaeranthera is a genus of flowering plants in the daisy family, while Prumnopitys is a genus of coniferous evergreen trees in the podocarp family.",
+      "reasoning": "Both summaries agree that Machaeranthera and Prumnopitys are plants. Specifically, Machaeranthera is a genus of flowering plants in the daisy family, and Prumnopitys is a genus of coniferous evergreen trees in the podocarp family. Since both belong to plant genera, the answer is yes.",
+      "answer": "yes"
+    },
+    {
+      "augmented": true,
+      "question": "The winner of the Mt. Baker Banked Slalom receives an ambroidered jacket made by a U.S.-based clothing company headquartered where?",
+      "summary_1": "The embroidered jacket awarded to the Mt. Baker Banked Slalom winner is made by Carhartt, a U.S.-based clothing company headquartered in Dearborn, Michigan.",
+      "summary_2": "The U.S.-based clothing company Carhartt, which makes the embroidered jacket awarded to the Mt. Baker Banked Slalom winner, is headquartered in Dearborn, Michigan.",
+      "reasoning": "Both summaries specify that the embroidered jacket given to the winner of the Mt. Baker Banked Slalom is made by Carhartt, a U.S.-based clothing company. They both clearly state that Carhartt is headquartered in Dearborn, Michigan. Therefore, the location of the headquarters can be confidently identified as Dearborn, Michigan.",
+      "answer": "Dearborn, Michigan"
+    },
+    {
+      "augmented": true,
+      "question": "Which is found in the tropics, Alphitonia or Asystasia?",
+      "summary_1": "Both Alphitonia and Asystasia are found in tropical regions according to the provided information.",
+      "summary_2": "Both Alphitonia and Asystasia are found in tropical regions, but only Asystasia is explicitly confirmed to be found in the tropics according to the passages provided.",
+      "reasoning": "Summary_1 states that both Alphitonia and Asystasia are found in tropical regions. Summary_2 also affirms both are found in tropical regions but emphasizes that only Asystasia is explicitly confirmed to be found in the tropics based on the passages provided. Since the question specifically asks which is found in the tropics, and summary_2 provides a more precise confirmation for Asystasia, the correct answer should be Asystasia.",
+      "answer": "Asystasia"
+    },
+    {
+      "id": "5a7e33205542995ed0d166ca",
+      "question": "Langston Hughes and Ann Beattie, are American, which occupation do they share?",
+      "answer": "novelist",
+      "type": "comparison",
+      "level": "easy",
+      "supporting_facts": {
+        "title": [
+          "Langston Hughes",
+          "Ann Beattie"
+        ],
+        "sent_id": [
+          0,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "Ann Beattie",
+          "Langston Hughes",
+          "Langston Hughes Medal",
+          "I, Too (Langston Hughes poem)",
+          "Let America be America Again",
+          "Robert Earl Jones",
+          "Langston Hughes Society",
+          "Black Nativity",
+          "Langston Hughes Performing Arts Center",
+          "Langston Hughes House"
+        ],
+        "sentences": [
+          [
+            "Ann Beattie (born September 8, 1947) is an American novelist and short story writer.",
+            " She has received an award for excellence from the American Academy and Institute of Arts and Letters and the PEN/Malamud Award for excellence in the short story form.",
+            " Her work has been compared to that of Alice Adams, J.D. Salinger, John Cheever, and John Updike.",
+            " She holds an undergraduate degree from American University and a master's degree from the University of Connecticut."
+          ],
+          [
+            "James Mercer Langston Hughes (February 1, 1902 \u2013 May 22, 1967) was an American poet, social activist, novelist, playwright, and columnist from Joplin, Missouri."
+          ],
+          [
+            "The Langston Hughes Medal has been awarded annually since 1978 to recognize an influential and distinguished writer associated with the African diaspora for their \"impressive works of poetry, fiction, drama, autobiography and critical essays that help to celebrate the memory and tradition of Langston Hughes\"."
+          ],
+          [
+            "I, Too is a poem written by Langston Hughes that demonstrates a yearning for equality through perseverance while disproving the idea that patriotism is limited by race.",
+            " It was first published in 1926, and published in \"The First Collection of Poems of Langston Hughes.\"",
+            " This poem, along with other works by Hughes, helped define the Harlem Renaissance, a period in the early 1920s and 30s of newfound cultural identity for blacks in America who had discovered the power of literature, art, music, and poetry as a means of personal and collective expression in the scope of civil rights."
+          ],
+          [
+            "\"Let America Be America Again\" is a poem written in 1935 by American poet Langston Hughes.",
+            " It was originally published in the July 1936 issue of \"Esquire Magazine\".",
+            " It was later republished in the 1937 to be read issue of \"Kansas Magazine\" and was revised and included in a small collection of Langston Hughes poems entitled \"A New Song\", published by the International Workers Order in 1938."
+          ],
+          [
+            "Robert Earl Jones (February 3, 1910 \u2013 September 7, 2006), sometimes credited as Earl Jones, was an American actor and prizefighter.",
+            " One of the first prominent African-American film stars, Jones was a living link with the Harlem renaissance of the 1920s and 1930s, having worked with Langston Hughes early in his career.",
+            " In New York in the 1930s Jones worked with young people on the Works Progress Administration, the largest New Deal agency, through which he met Langston Hughes, who cast him in his 1938 play, \"Don't You Want to Be Free?\"",
+            " .",
+            " Jones was best known for his leading roles in films such as \"Lying Lips\" (1939) and later in his career for supporting roles in films such as \"The Sting\" (1973), \"Trading Places\" (1983), \"The Cotton Club\" (1984) and \"Witness\" (1985).",
+            " Jones was the father of actor James Earl Jones."
+          ],
+          [
+            "The Langston Hughes Society is a United States-based literary society concerned with the work of African American poet Langston Hughes.",
+            " The society was the first national organisation to be dedicated to the work of an African American writer.",
+            " Founded after the poet's death and in the wake of the Langston Hughes Study conference of 1981 by Hughes' literary assistant George Houston Bass, the society's official publication is the \"Langston Hughes Review\", published by Institute for African American Studies at The University of Georgia.",
+            " The organisation also presents the \"Langston Hughes Award\" annually."
+          ],
+          [
+            "Black Nativity is a retelling of the classic Nativity story with an entirely black cast.",
+            " Traditional Christmas carols are sung in gospel style, with a few songs created specifically for the show.",
+            " Originally written by Langston Hughes, the show was first performed Off-Broadway on December 11, 1961, and was one of the first plays written by an African American to be staged there.",
+            " The show had a successful tour of Europe in 1962, one of its appearances being at the Spoleto Festival of Two Worlds in Italy.",
+            " \"Black Nativity\" has been performed annually in Boston, Massachusetts at various locations, such as: the Elma Lewis School of Fine Arts, Boston Opera House, Tremont Temple, Roxbury Community College, Northeastern's Blackman Auditorium, and presently at Emerson College's Paramount Theater since 1969 & is considered the longest-running production of Langston Hughes' \"Black Nativity.\"",
+            " The original 160 singers were arranged by age group and vocal range, with an assortment of soloists, along with the narrator, and Mary and Joseph, who are both mute, as well as musicians & ASL interpreters."
+          ],
+          [
+            "Langston Hughes Performing Arts Institute (LHPAI) is an arts venue in Seattle, Washington, USA, operated by City of Seattle Office of Arts and Culture and named after African-American writer Langston Hughes.",
+            " The building has Seattle landmark status.",
+            " Dating from 1915, it was originally a synagogue, designed by B. Marcus Priteca for the Orthodox Jewish congregation Chevra Bikur Cholim, now Bikur Cholim Machzikay Hadath.",
+            " As of 2009, it will soon undergo a US$2.5 million upgrade, including its second round of seismic retrofitting."
+          ],
+          [
+            "Langston Hughes House is a historic home located in Harlem, Manhattan, New York City.",
+            " It is an Italianate style dwelling built in 1869.",
+            " It is a three story with basement, rowhouse faced in brownstone and measuring 20 feet wide and 45 feet deep.",
+            " Noted African American poet and author Langston Hughes (1902-1967) occupied the top floor as his workroom from 1947 to 1967."
+          ]
+        ]
+      }
+    }
+  ]
+}

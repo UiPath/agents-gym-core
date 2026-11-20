@@ -1,0 +1,3 @@
+<prompt>
+{systemPrompt}
+</prompt>

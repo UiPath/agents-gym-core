@@ -1,0 +1,2475 @@
+{
+  "aime_2025_agent": {
+    "base": {
+      "evaluation_set": [
+        "aime-train-001",
+        "aime-train-002",
+        "aime-train-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "318656a491d87375dc44959393a7ae75ae734d124fad4cdc1736718fb03c0d07",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "gepa__gpt-4.1-mini": {
+      "evaluation_set": [
+        "aime-train-001",
+        "aime-train-002",
+        "aime-train-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "ed5206908961bf2d9c1f4ced50129395971f6684ea36504eff510991e598783d",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "gepa__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "ed5206908961bf2d9c1f4ced50129395971f6684ea36504eff510991e598783d",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "1af01db015870a7fc68dcc3af741cbb5867087b4fa0ccaa8fc316da2df415f7d",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "gepa__qwen3.5-122b-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6a791ce876f6531c19255bd28f529768c4ef65971755a8528f9b6948dfa1cc35",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "gepa__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "bdce5397b25a05f5d8bd7d2fa80aa5f4d3c8f5ebd0456ecd5a60c08cdfeaa523",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "miprov2-nd": {
+      "evaluation_set": [
+        "aime-train-001",
+        "aime-train-002",
+        "aime-train-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b0bc71043bbe9f8d5c2e2a78b8b7be44e8dc5914b24c23dffaf55665c45bdfbf",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "miprov2-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b0bc71043bbe9f8d5c2e2a78b8b7be44e8dc5914b24c23dffaf55665c45bdfbf",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "miprov2-nd-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b0bc71043bbe9f8d5c2e2a78b8b7be44e8dc5914b24c23dffaf55665c45bdfbf",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "aime-train-001",
+        "aime-train-002",
+        "aime-train-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "1958ae5bb3bb732516cd7cd13ff9c3c3dc2c1e2cd1486bd14b532323f03a0c63",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "1958ae5bb3bb732516cd7cd13ff9c3c3dc2c1e2cd1486bd14b532323f03a0c63",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "aime-train-001",
+        "aime-train-002",
+        "aime-train-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "1958ae5bb3bb732516cd7cd13ff9c3c3dc2c1e2cd1486bd14b532323f03a0c63",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "reapo__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "e0ce05889454afd433aa41bed2f949bf3385b5955f245e20cf955f15446634ed",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "318656a491d87375dc44959393a7ae75ae734d124fad4cdc1736718fb03c0d07",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "reapo__opus-4.6-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "3432ed403090e41cdca0f921d74e00f63b4ab068280892a6f26a29c951c63f80",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "reapo__qwen3.5-122b-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2d874c4917a71a1f31a354e6cffcef64f551a5984f90e654b1d286993021011e",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "reapo__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "d98329c26214a055db98837e9f04d4230b044c245b7778036625d07aa469459f",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "test": {
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "318656a491d87375dc44959393a7ae75ae734d124fad4cdc1736718fb03c0d07",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "train": {
+      "evaluation_set": [
+        "aime-train-001",
+        "aime-train-002",
+        "aime-train-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "318656a491d87375dc44959393a7ae75ae734d124fad4cdc1736718fb03c0d07",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "val": {
+      "evaluation_set": [
+        "aime-val-001",
+        "aime-val-002",
+        "aime-val-003"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "318656a491d87375dc44959393a7ae75ae734d124fad4cdc1736718fb03c0d07",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea"
+    },
+    "reapo__gpt-5__skill-trimmed-test": {
+      "system_prompt": "c5bf604352c3ac34bbc583d7f84d561071797921d2d3330169458ead5aa2b625",
+      "user_prompt": "b3e27e83bd384d4aeafc31dc7257a5e4e5fbbe25a1f9628e31ec06cb786008ea",
+      "signature_prompts": {},
+      "evaluation_set": [
+        "aime-2025-001",
+        "aime-2025-002",
+        "aime-2025-003"
+      ]
+    }
+  },
+  "claim_history": {
+    "base": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5B",
+        "ClaimHistoryLookupTest-CO-16-M56",
+        "ClaimHistoryLookupTest-TO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "d96c90ba57d87a98e08bf815ebce47a09d66d724b481dd4bf7b9354a913f2ce1",
+      "user_prompt": "d7cd784c9f30d5dfc9d895502b171d697660ac6ae64d7941d9b55123bff0f3f9"
+    },
+    "reapo__gpt-5__transfer-test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "d96c90ba57d87a98e08bf815ebce47a09d66d724b481dd4bf7b9354a913f2ce1",
+      "user_prompt": "d7cd784c9f30d5dfc9d895502b171d697660ac6ae64d7941d9b55123bff0f3f9"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5B",
+        "ClaimHistoryLookupTest-CO-16-M56",
+        "ClaimHistoryLookupTest-TO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2b051e5a56374d6d25f56b8050eb106ec8d26a33e34689be1bcee711824cce99",
+      "user_prompt": "21db15d0f25a23c9a5a55469838a4d7b8d7f31cb5df6b4a07ad4bcbed7bcf869"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2b051e5a56374d6d25f56b8050eb106ec8d26a33e34689be1bcee711824cce99",
+      "user_prompt": "21db15d0f25a23c9a5a55469838a4d7b8d7f31cb5df6b4a07ad4bcbed7bcf869"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5B",
+        "ClaimHistoryLookupTest-CO-16-M56",
+        "ClaimHistoryLookupTest-TO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2b051e5a56374d6d25f56b8050eb106ec8d26a33e34689be1bcee711824cce99",
+      "user_prompt": "21db15d0f25a23c9a5a55469838a4d7b8d7f31cb5df6b4a07ad4bcbed7bcf869"
+    },
+    "reapo__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "e7ee5a64299448ad562bb610d1b70cd0e234cafc3a79ffea19487017382732b0",
+      "user_prompt": "21db15d0f25a23c9a5a55469838a4d7b8d7f31cb5df6b4a07ad4bcbed7bcf869"
+    },
+    "reapo__gpt-5__full-test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "9afd6206a7ab2c3d711f82213f1ddfd43765620f752588531f08f4fa7bc4ef74",
+      "user_prompt": "9ae7b451c37ad8494f55064c74c4883c834f451e351128c6b3c4762d672a5d66"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "03f0ac19fe062f528415b26e019a28c0a70ba1025bb9f2e5b210a8ac68e6f031",
+      "user_prompt": "85298d86d8fb3165b562b5edb2ad9c8db40ca4d42ad62b3c8621e52a246ad49e"
+    },
+    "test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "d96c90ba57d87a98e08bf815ebce47a09d66d724b481dd4bf7b9354a913f2ce1",
+      "user_prompt": "d7cd784c9f30d5dfc9d895502b171d697660ac6ae64d7941d9b55123bff0f3f9"
+    },
+    "train": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5B",
+        "ClaimHistoryLookupTest-CO-16-M56",
+        "ClaimHistoryLookupTest-TO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "d96c90ba57d87a98e08bf815ebce47a09d66d724b481dd4bf7b9354a913f2ce1",
+      "user_prompt": "d7cd784c9f30d5dfc9d895502b171d697660ac6ae64d7941d9b55123bff0f3f9"
+    },
+    "gepa__gpt-5": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5B",
+        "ClaimHistoryLookupTest-CO-16-M56",
+        "ClaimHistoryLookupTest-TO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "f0f8a0053879c1552b760025a480a87b4bcdd37faaa0ad3749f73c448dd5f87f",
+      "user_prompt": "21db15d0f25a23c9a5a55469838a4d7b8d7f31cb5df6b4a07ad4bcbed7bcf869"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "f0f8a0053879c1552b760025a480a87b4bcdd37faaa0ad3749f73c448dd5f87f",
+      "user_prompt": "21db15d0f25a23c9a5a55469838a4d7b8d7f31cb5df6b4a07ad4bcbed7bcf869"
+    },
+    "reapo__gpt-5": {
+      "system_prompt": "d96c90ba57d87a98e08bf815ebce47a09d66d724b481dd4bf7b9354a913f2ce1",
+      "user_prompt": "d7cd784c9f30d5dfc9d895502b171d697660ac6ae64d7941d9b55123bff0f3f9",
+      "signature_prompts": {},
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5B",
+        "ClaimHistoryLookupTest-CO-16-M56",
+        "ClaimHistoryLookupTest-TO-19-M51"
+      ]
+    },
+    "reapo__gpt-5-test": {
+      "system_prompt": "d96c90ba57d87a98e08bf815ebce47a09d66d724b481dd4bf7b9354a913f2ce1",
+      "user_prompt": "d7cd784c9f30d5dfc9d895502b171d697660ac6ae64d7941d9b55123bff0f3f9",
+      "signature_prompts": {},
+      "evaluation_set": [
+        "ClaimHistoryLookupTest-CO-19-M5E",
+        "ClaimHistoryLookupTest-CO-99-M51",
+        "ClaimHistoryLookupTest-CO-19-M51"
+      ]
+    }
+  },
+  "customer_support_triage_agent": {
+    "base": {
+      "evaluation_set": [
+        "laptop_warranty_period",
+        "samsung_galaxy_s21_charging_options",
+        "dell_xps_13_windows_11_compatibility"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "laptop_warranty_period",
+        "samsung_galaxy_s21_charging_options",
+        "dell_xps_13_windows_11_compatibility"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "phone_price",
+        "iphone_12_vs_12_pro",
+        "sony_wh_1000xm4_battery_life"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "laptop_warranty_period",
+        "samsung_galaxy_s21_charging_options",
+        "dell_xps_13_windows_11_compatibility"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "reapo__gpt-5__full-test": {
+      "evaluation_set": [
+        "phone_price",
+        "iphone_12_vs_12_pro",
+        "sony_wh_1000xm4_battery_life"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "89bdda5d0b3ec2c9b820e80429e4bc6b5b1fd54a280c35dad8ac54f4cffd0eb9",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "phone_price",
+        "iphone_12_vs_12_pro",
+        "sony_wh_1000xm4_battery_life"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "928b7a552bc539f1eccdc4c887659a89bf2cde2c2f83a2b62781f0ea5f29ba28",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "test": {
+      "evaluation_set": [
+        "phone_price",
+        "iphone_12_vs_12_pro",
+        "sony_wh_1000xm4_battery_life"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "train": {
+      "evaluation_set": [
+        "laptop_warranty_period",
+        "samsung_galaxy_s21_charging_options",
+        "dell_xps_13_windows_11_compatibility"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "gepa__gpt-5": {
+      "evaluation_set": [
+        "laptop_warranty_period",
+        "samsung_galaxy_s21_charging_options",
+        "dell_xps_13_windows_11_compatibility"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "phone_price",
+        "iphone_12_vs_12_pro",
+        "sony_wh_1000xm4_battery_life"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "reapo__gpt-5": {
+      "evaluation_set": [
+        "laptop_warranty_period",
+        "samsung_galaxy_s21_charging_options",
+        "dell_xps_13_windows_11_compatibility"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "phone_price",
+        "iphone_12_vs_12_pro",
+        "sony_wh_1000xm4_battery_life"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6d035176e22d5af4db3f63cfdc2bb4d68fcdb8eb9e2a99fc1f42339f07a74460",
+      "user_prompt": "d71110d0f8abae23fed793047ef6d839d2e7dac98ad8ae95aa2f5b1410652b44"
+    }
+  },
+  "hotpotqa": {
+    "base": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "8ac66363821b65e66cbb469088c8bffdf03b3de938e6b156673229d418ec8e76",
+        "final_answer": "7ef63b5c79833dcef0ce62d7ea84a3603d20ec03d63761e659a9d017132a16c6",
+        "summarize1": "9173e89878f716c4117560209537acc93e3e153a471d7c98b808eeffcba7bc7e",
+        "summarize2": "45ba9d3755cf7723423188491605ceec4ff86e6971969a67e228535f72c2dc80"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__gpt-4.1-mini": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "4e173084f78978cb19886b6d8d17f6523682dc4198c30b06965751321d9b1cf2",
+        "final_answer": "74d21f837d8f03907b8e9da9c23f64af679351bfa5e532e42bbef6744b637d33",
+        "summarize1": "5fa3d4cfd91ad4d11f7ec4841c9d4d3047ca535e9fd3fd60cf4b8666d03b787b",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa-merge__gpt-4.1-mini": {
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9",
+      "signature_prompts": {
+        "create_query_hop2": "1d38982d0c099c869fcd3a3dc8a701275ebe2b923f4c2685cf8f1573a49d9dc1",
+        "final_answer": "3045a6321af15179a50fee15c03703e89fd1f51e61078ce447d23f362ebb8a53",
+        "summarize1": "0c498b2e8e4cfd1aa9930f74532f2d7a39d239425f6c28b8a2a969890833f1ad",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ]
+    },
+    "gepa-merge__gpt-4.1-mini-test": {
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9",
+      "signature_prompts": {
+        "create_query_hop2": "1d38982d0c099c869fcd3a3dc8a701275ebe2b923f4c2685cf8f1573a49d9dc1",
+        "final_answer": "3045a6321af15179a50fee15c03703e89fd1f51e61078ce447d23f362ebb8a53",
+        "summarize1": "0c498b2e8e4cfd1aa9930f74532f2d7a39d239425f6c28b8a2a969890833f1ad",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ]
+    },
+    "gepa__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "4e173084f78978cb19886b6d8d17f6523682dc4198c30b06965751321d9b1cf2",
+        "final_answer": "74d21f837d8f03907b8e9da9c23f64af679351bfa5e532e42bbef6744b637d33",
+        "summarize1": "5fa3d4cfd91ad4d11f7ec4841c9d4d3047ca535e9fd3fd60cf4b8666d03b787b",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f28bf29dd6dcaef68c8e0fa33b00aa23567b321610afb006008f73bfd2d52024",
+        "final_answer": "60edfbd0fd276d23955b1362ebd37da1eaaf1fb01d00168e7812e99d633d9458",
+        "summarize1": "8395735c40845c07b048de68fcfc79960a2d2e3e2b942c138c925f968f6b2de9",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__qwen3.5-122b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "2f68e93c2ea7cd98fdf6ce76e0b909b75de014dc049522699c3fabeb14cb6295",
+        "final_answer": "cf5af429a6822e2154d6e03020a71c68ff6d5ac995b9752ec1848d5409ef8f81",
+        "summarize1": "787bbd41c851f08432c2ac9617d76145a66293530446ab8d51eda8f9d4058162",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "b3403b1a84d5a41255a70db57410dea0f54fd8040dcedeb7385a67686050193a",
+        "final_answer": "454ff1d4013946fcbd86d4af02fb85ad642deba5aaa9cbfd33504a627f1e86d8",
+        "summarize1": "94ce75fa6675d8243df620fb9b9c062d1fe6ea5a1a2c2f4899fc45ce740667f4",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "miprov2-nd": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "72757fe849f7e7aecfbea5fe11e36b9c11b1fd7a12293a80a6996318aa8a958a",
+        "final_answer": "dfb58bc7f6d72339f405e1f8e63b164430d2194b278ab9d5f8f06fdf3e2a0945",
+        "summarize1": "0d896ffee4c0955f31787132b9baeaf4c509d2384ed5def33e797ae2921f6e88",
+        "summarize2": "b9006186fed3fb74ee86e14679f8708a3f1cd3029fd3dc50b349127d17690b1d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "miprov2-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "72757fe849f7e7aecfbea5fe11e36b9c11b1fd7a12293a80a6996318aa8a958a",
+        "final_answer": "dfb58bc7f6d72339f405e1f8e63b164430d2194b278ab9d5f8f06fdf3e2a0945",
+        "summarize1": "0d896ffee4c0955f31787132b9baeaf4c509d2384ed5def33e797ae2921f6e88",
+        "summarize2": "b9006186fed3fb74ee86e14679f8708a3f1cd3029fd3dc50b349127d17690b1d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "miprov2-nd-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "72757fe849f7e7aecfbea5fe11e36b9c11b1fd7a12293a80a6996318aa8a958a",
+        "final_answer": "dfb58bc7f6d72339f405e1f8e63b164430d2194b278ab9d5f8f06fdf3e2a0945",
+        "summarize1": "0d896ffee4c0955f31787132b9baeaf4c509d2384ed5def33e797ae2921f6e88",
+        "summarize2": "b9006186fed3fb74ee86e14679f8708a3f1cd3029fd3dc50b349127d17690b1d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f28bf29dd6dcaef68c8e0fa33b00aa23567b321610afb006008f73bfd2d52024",
+        "final_answer": "402efa954cb606ad959ee9d09fcbafe684af95775e006f955b96ee9eab8defba",
+        "summarize1": "78ac972188b7c539c64d5c30d74c37a1151a582d452a0e696d5a865ac41aa7b5",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f28bf29dd6dcaef68c8e0fa33b00aa23567b321610afb006008f73bfd2d52024",
+        "final_answer": "402efa954cb606ad959ee9d09fcbafe684af95775e006f955b96ee9eab8defba",
+        "summarize1": "78ac972188b7c539c64d5c30d74c37a1151a582d452a0e696d5a865ac41aa7b5",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f28bf29dd6dcaef68c8e0fa33b00aa23567b321610afb006008f73bfd2d52024",
+        "final_answer": "402efa954cb606ad959ee9d09fcbafe684af95775e006f955b96ee9eab8defba",
+        "summarize1": "78ac972188b7c539c64d5c30d74c37a1151a582d452a0e696d5a865ac41aa7b5",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "baseline-val": {
+      "evaluation_set": [
+        "val-000",
+        "val-001",
+        "val-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f28bf29dd6dcaef68c8e0fa33b00aa23567b321610afb006008f73bfd2d52024",
+        "final_answer": "402efa954cb606ad959ee9d09fcbafe684af95775e006f955b96ee9eab8defba",
+        "summarize1": "78ac972188b7c539c64d5c30d74c37a1151a582d452a0e696d5a865ac41aa7b5",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "27ddc1d73e0341090313b244d94e881b931c9847b8bd17fad48f5b0febb40db4",
+        "final_answer": "ac4a05a41f4832f0d28e1752aefbb100d5323775efd719e96dc95401b8e4b7b1",
+        "summarize1": "7b62fb8d0bc9e7525397ee3b77cb8fab4e8c3b9691630f1d0ec3be5ee132e5cd",
+        "summarize2": "b6137efe610cea3caacf0e20068668dd2f924e02ae9c0f2029898871d3183f14"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-4.1-mini__macro-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "a05277a7575dca41a0d38d18c769d20967ea024b38e3707f401d8748fb50f867",
+        "final_answer": "f6ef7d9ec107385d3602fb7b050a151efa3943b3745c37621fa2850726935afe",
+        "summarize1": "bd1cb224050f65e1285a75177dca61796e61baeb6f8c86157dfb405041c2dfde",
+        "summarize2": "9c0a204cd5cdb9583dd5f38678c308a446267f9c3b61391983637b8627717f71"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "8ac66363821b65e66cbb469088c8bffdf03b3de938e6b156673229d418ec8e76",
+        "final_answer": "7ef63b5c79833dcef0ce62d7ea84a3603d20ec03d63761e659a9d017132a16c6",
+        "summarize1": "9173e89878f716c4117560209537acc93e3e153a471d7c98b808eeffcba7bc7e",
+        "summarize2": "45ba9d3755cf7723423188491605ceec4ff86e6971969a67e228535f72c2dc80"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5__skill-trimmed-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f28bf29dd6dcaef68c8e0fa33b00aa23567b321610afb006008f73bfd2d52024",
+        "final_answer": "ef4a4b983148d249a0f63ac560285976d61b89ada8b8c7a18b56daf1a87b7262",
+        "summarize1": "78ac972188b7c539c64d5c30d74c37a1151a582d452a0e696d5a865ac41aa7b5",
+        "summarize2": "ac6fb07fafe40d23385847dfb855937ce6bc451f4b4dcfa0b372ebcebbf06316"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5__macro-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "2d8c4d1c90a8492118c4882574c1c5071e09034062d12bf73ba1be8dc8d8e124",
+        "final_answer": "eb761cea80c282f7b7a874c8faf349d446492a7ce91bcdb59be563a1620c8cc0",
+        "summarize1": "27f0065bc5bc836af601624fc21a87f07cb3f28431663a95a0bd7033a63e8e85",
+        "summarize2": "f5833968ce884307295e6f09b77d7e4007832660c29e4f36a90d5e8df72d027b"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "cdbe168cf47c03db8395e40d19705512f59676ae7ff683ae45b6372e544cbe01",
+        "final_answer": "61240c488016430d9c8c006cef50347bafeaf42e5f51ab6d4558188c50fc72d2",
+        "summarize1": "65072f63462f4879fb3de623157c8b69341e108408f6cffbc37af6f8fd13fafd",
+        "summarize2": "28b54c7efb9253b0f7371ba64b96558000c7dfb371d2bd25faaecfff50be7401"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__opus-4.6-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "b561be646279f71d511a3d14bc1fbe86a5b82c7ef40f4f94a8db88b4d6ab489b",
+        "final_answer": "8551c27d6ae6ac80a7b2b15b7f33c0dfc1ccb5dbe5766f02e0c691bc560435a3",
+        "summarize1": "0443484cb89fa2e299d4f1250138546e0ef6e9cc5fa9d729f2f450c8033878ff",
+        "summarize2": "44a461bee1b164eb2c8f4e42df52eb84e055b90456817ce9a591110a37627e54"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__qwen3.5-122b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "1b72c00e55191ea61f9774de4d8b1064a72469e4b545c44a01a8ef6cf60fd557",
+        "final_answer": "379f701d3404b2e91e6e54ce08c647646899b4fd3dde2958577e813650c8e676",
+        "summarize1": "71d3cf04834ca5c4480e81165918fcbedb673144f1523877ab5d9b1146a65b67",
+        "summarize2": "1b545b5ee2244fb9c3e638753ec36c17a9f4ccd63842695f5551c148dd6cfea4"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "5c8ebf0e60c5d030aad3b86316c8696b80dfd2715acfd44ff2e58897e35e45e9",
+        "final_answer": "e20412da50b24bebee0f21e328b38b1dde002b7ded955a1753e3899a3fcf6282",
+        "summarize1": "4174965f97e6f0ceb384cdd8318bd8410dbd7de55a58fc862fcbf4a37bc041d4",
+        "summarize2": "e675d34501537dabd2906aea4ef0c830f8db0e64756f2dbe4e679454a227e133"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "8ac66363821b65e66cbb469088c8bffdf03b3de938e6b156673229d418ec8e76",
+        "final_answer": "7ef63b5c79833dcef0ce62d7ea84a3603d20ec03d63761e659a9d017132a16c6",
+        "summarize1": "9173e89878f716c4117560209537acc93e3e153a471d7c98b808eeffcba7bc7e",
+        "summarize2": "45ba9d3755cf7723423188491605ceec4ff86e6971969a67e228535f72c2dc80"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "train": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "8ac66363821b65e66cbb469088c8bffdf03b3de938e6b156673229d418ec8e76",
+        "final_answer": "7ef63b5c79833dcef0ce62d7ea84a3603d20ec03d63761e659a9d017132a16c6",
+        "summarize1": "9173e89878f716c4117560209537acc93e3e153a471d7c98b808eeffcba7bc7e",
+        "summarize2": "45ba9d3755cf7723423188491605ceec4ff86e6971969a67e228535f72c2dc80"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "val": {
+      "evaluation_set": [
+        "val-000",
+        "val-001",
+        "val-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "8ac66363821b65e66cbb469088c8bffdf03b3de938e6b156673229d418ec8e76",
+        "final_answer": "7ef63b5c79833dcef0ce62d7ea84a3603d20ec03d63761e659a9d017132a16c6",
+        "summarize1": "9173e89878f716c4117560209537acc93e3e153a471d7c98b808eeffcba7bc7e",
+        "summarize2": "45ba9d3755cf7723423188491605ceec4ff86e6971969a67e228535f72c2dc80"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    }
+  },
+  "hover": {
+    "base": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "c64a287bc1e46c3be892a1252173895cc8dad99950d6c2f61627bb6e2b854984",
+        "create_query_hop3": "53bc936a64107d9bcc9497495dffd0eead2533c5a8a5868de580d05bcc2bfd3d",
+        "summarize1": "b8459297ce219233bd84b5253c971b40633e8de469a9686b61b0f618e15e3b19",
+        "summarize2": "f24692052b565f46968e9d82de9efe7bd89c93f77811103d79692ad5c9cd7fc9"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "gepa__gpt-4.1-mini": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "0788488fb49aba592a212e769e8193ddba565899f8ff20fd2cd0fea3cfcf49a8",
+        "create_query_hop3": "6513bd2f315e6d195acc1dd73aa53b1b0416e0d5ad9a424adbedccfcdbf9985d",
+        "summarize1": "90324f85ce61526022f3096609109d74b183e7ebaf816c5013aa6256db29ddbc",
+        "summarize2": "ff124aa3e4d1e5bd2aaa932100347afd0aa7012d4dfb9907ba1519c2b59cf178"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "gepa-merge__gpt-4.1-mini": {
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235",
+      "signature_prompts": {
+        "create_query_hop2": "5a6cc12ff86d4f1cecaf2a846aabce6bf072a6f0bd55411d53e7b4525bdf22b5",
+        "create_query_hop3": "9484239b6f64ba535ee435720caea3dd04dc471de4888a3f9cd131d4fe88f8cd",
+        "summarize1": "8eb2b0b9e8068f8b4d1df5a4b5021664d594c7c2f6bb5973a2667da4bb2b71df",
+        "summarize2": "0b2c6bb4b4f31eedd7b94fbc44d50c0c3059e50a99b4208d38130a0e865e70a9"
+      },
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ]
+    },
+    "gepa-merge__gpt-4.1-mini-test": {
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235",
+      "signature_prompts": {
+        "create_query_hop2": "5a6cc12ff86d4f1cecaf2a846aabce6bf072a6f0bd55411d53e7b4525bdf22b5",
+        "create_query_hop3": "9484239b6f64ba535ee435720caea3dd04dc471de4888a3f9cd131d4fe88f8cd",
+        "summarize1": "8eb2b0b9e8068f8b4d1df5a4b5021664d594c7c2f6bb5973a2667da4bb2b71df",
+        "summarize2": "0b2c6bb4b4f31eedd7b94fbc44d50c0c3059e50a99b4208d38130a0e865e70a9"
+      },
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ]
+    },
+    "gepa__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "0788488fb49aba592a212e769e8193ddba565899f8ff20fd2cd0fea3cfcf49a8",
+        "create_query_hop3": "6513bd2f315e6d195acc1dd73aa53b1b0416e0d5ad9a424adbedccfcdbf9985d",
+        "summarize1": "90324f85ce61526022f3096609109d74b183e7ebaf816c5013aa6256db29ddbc",
+        "summarize2": "ff124aa3e4d1e5bd2aaa932100347afd0aa7012d4dfb9907ba1519c2b59cf178"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "43b7dfcd595c0d7465db22152ebd042c71805e5fc3047163ab946efcf94fdd58",
+        "create_query_hop3": "962110c412212292e83e6de0de73d2f3752030b328721cfce750810ad6062bfd",
+        "summarize1": "243f65655946dc29a84c6ae6660df7c1ac835d1724059eea205d8585c6a08e70",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "gepa__qwen3.5-122b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "906d9f737103c726d63007730732c3721a1be5e3a6e16d1775dd6f764c621d3f",
+        "create_query_hop3": "dbbbbb877d405db9a880564edb9013dcc9e9ded1b237cbbf097f545fcb623880",
+        "summarize1": "b7ae24f5d51053a9cbe8ef93abbbb4f5967a19b65f5cfa348c661093b52284e5",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "gepa__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f68bc8bdb61293f79c21caccd919a28d6f841716518ecd24c6c5672d439f792b",
+        "create_query_hop3": "eaefa6185c34cc0813b9a49f22b3b95c4ddc2452b67c4033f00c898cf9573020",
+        "summarize1": "959f71b885681f24136bf6b97a937cbd87931b0fe1b201189825ed1f98009f46",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "miprov2-nd": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f60523bcf24832a1265f3d7545592f92625d6082417a6f9f53d4c859352b9068",
+        "create_query_hop3": "8921d0db8e1808cf65f1f1884543d82f354423687ae16e6d93b85a5d7483da7f",
+        "summarize1": "3267bdcbf904301ac5ee263b39cc5b82be442eca97e29ee6f7b8344dc91e9cbb",
+        "summarize2": "2c9d8d78a2bed17c8377636062d4ba3a49aaefa495fa271b7feb8c7975375694"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "miprov2-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f60523bcf24832a1265f3d7545592f92625d6082417a6f9f53d4c859352b9068",
+        "create_query_hop3": "8921d0db8e1808cf65f1f1884543d82f354423687ae16e6d93b85a5d7483da7f",
+        "summarize1": "3267bdcbf904301ac5ee263b39cc5b82be442eca97e29ee6f7b8344dc91e9cbb",
+        "summarize2": "2c9d8d78a2bed17c8377636062d4ba3a49aaefa495fa271b7feb8c7975375694"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "miprov2-nd-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f60523bcf24832a1265f3d7545592f92625d6082417a6f9f53d4c859352b9068",
+        "create_query_hop3": "8921d0db8e1808cf65f1f1884543d82f354423687ae16e6d93b85a5d7483da7f",
+        "summarize1": "3267bdcbf904301ac5ee263b39cc5b82be442eca97e29ee6f7b8344dc91e9cbb",
+        "summarize2": "2c9d8d78a2bed17c8377636062d4ba3a49aaefa495fa271b7feb8c7975375694"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "43b7dfcd595c0d7465db22152ebd042c71805e5fc3047163ab946efcf94fdd58",
+        "create_query_hop3": "6513bd2f315e6d195acc1dd73aa53b1b0416e0d5ad9a424adbedccfcdbf9985d",
+        "summarize1": "8eb2b0b9e8068f8b4d1df5a4b5021664d594c7c2f6bb5973a2667da4bb2b71df",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "43b7dfcd595c0d7465db22152ebd042c71805e5fc3047163ab946efcf94fdd58",
+        "create_query_hop3": "6513bd2f315e6d195acc1dd73aa53b1b0416e0d5ad9a424adbedccfcdbf9985d",
+        "summarize1": "8eb2b0b9e8068f8b4d1df5a4b5021664d594c7c2f6bb5973a2667da4bb2b71df",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "43b7dfcd595c0d7465db22152ebd042c71805e5fc3047163ab946efcf94fdd58",
+        "create_query_hop3": "6513bd2f315e6d195acc1dd73aa53b1b0416e0d5ad9a424adbedccfcdbf9985d",
+        "summarize1": "8eb2b0b9e8068f8b4d1df5a4b5021664d594c7c2f6bb5973a2667da4bb2b71df",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "baseline-val": {
+      "evaluation_set": [
+        "val-000",
+        "val-001",
+        "val-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "43b7dfcd595c0d7465db22152ebd042c71805e5fc3047163ab946efcf94fdd58",
+        "create_query_hop3": "6513bd2f315e6d195acc1dd73aa53b1b0416e0d5ad9a424adbedccfcdbf9985d",
+        "summarize1": "8eb2b0b9e8068f8b4d1df5a4b5021664d594c7c2f6bb5973a2667da4bb2b71df",
+        "summarize2": "ee3c55ba7646d0e593914c42d97f1ad5f9a8726fecfd9e2186baf4dccc1ec9a7"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "c27151c9705141de204796af51b22ae7407bc073fc48923394fb9b5553c61127",
+        "create_query_hop3": "aff90f0ae77f6baa6f44da9134f7a33b449af9ce8921149c544f41a1494fdb5a",
+        "summarize1": "77957a987881ada75ca9705e58ea7ce1dabf0fdb7b7f162f51c310abf19a8098",
+        "summarize2": "5e338a1fd61bd53664be316bf22bc389c17fe7bd3f3c8a7deebfe80977998d91"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-4.1-mini__macro-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "915c1fa3d6cefea05af45a3ad860021445147ffd984238d52fbe676ea2b0015c",
+        "create_query_hop3": "7b653d5f63b7b0832b6137bde0261450488a4e13664db801497f3be252167770",
+        "summarize1": "56d7a66aa3aa88e1ffc307156082fc9bcc57a79c575042d0529005b74f9ca051",
+        "summarize2": "1f93aed8a85873498da163b2d6fb2fea13ead61d150eec92f4e0f9e5e2540e50"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-4.1-mini__score-only-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "0370a38403b188f2fb46c2bf4a6e261322b6f058e137a4553953eb8a7f9c1bad",
+        "create_query_hop3": "911ee86e07e5bdf38d093ede19f5bdbeb41aa298c60be72bf63282d3b53cfb38",
+        "summarize1": "9571169f16525ca08224b796f9fbf2ec25c9671508ec89446e5a676143b1d828",
+        "summarize2": "c373148b0e47440f2113391ecc62cebb1285bc84fca0aca057d6d4e406c7d1b6"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "c64a287bc1e46c3be892a1252173895cc8dad99950d6c2f61627bb6e2b854984",
+        "create_query_hop3": "53bc936a64107d9bcc9497495dffd0eead2533c5a8a5868de580d05bcc2bfd3d",
+        "summarize1": "b8459297ce219233bd84b5253c971b40633e8de469a9686b61b0f618e15e3b19",
+        "summarize2": "f24692052b565f46968e9d82de9efe7bd89c93f77811103d79692ad5c9cd7fc9"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-5__skill-trimmed-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "f77f573d73dd79acbe486ff6c58789dae71a881696b7b0dd52c1907e36c979d3",
+        "create_query_hop3": "291d3aa3aa161909a1b8db525348be778cd8f2f8116d92978d293937dce2d274",
+        "summarize1": "9986ce9b2b804337de67ac5370ddc53f4ab268fc2b6c274a4446d73695b9158e",
+        "summarize2": "9a6a3c3b40a9e959f4ace6d490243d6ee804463ccd60aff535181cbd9ee47546"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-5__macro-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "457539f2d314ad9b548862ef4783ac73465a0c2750dec53d119088d6a3e278c2",
+        "create_query_hop3": "c0e15051175f591483f34d5e86bdd3e3e4d6608f6e55e54bf34e0639a72790e2",
+        "summarize1": "8148c48be6c12944bfb9d4fc6671b1239f7152ab7638e7a27f5cd394d25fc91f",
+        "summarize2": "d419addf51cdb9ab0e5b7edb986afcdfd3b588ced93dd1a3a408757df14ec900"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "5280ebfd1a87c2f04175cf3684e2616a14b625caef801073a7d0b07dca0416ee",
+        "create_query_hop3": "beaeb62e49baa522b33d74d37c660ddb18b9367e06c5387233d86e66e331e26a",
+        "summarize1": "33cbd5f8a718abe082dbf53c001ea8584a0080f89261ca6e6c9e8ecd344c1329",
+        "summarize2": "5defd0e529cd51dafeb0d6ea3019a9e9c1cd013a0132fa9041019464015576df"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__opus-4.6-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "dc62fe99cde12320ee478429d8cfe6490669cf21b68e7e7fe377373a104e256d",
+        "create_query_hop3": "70038a770cd90dc99c546d50dd6db9493723e6340979e35a786d3fc87b8e80df",
+        "summarize1": "585742e03670e0a1c72669f2639ab993b67b28d89a371b46dbda827e93e17447",
+        "summarize2": "cdb5327d13974630e28f0219ce2e48a36e8fbca990c6995377ac10eb93cd053e"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__qwen3.5-122b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "16bd64426e2bdbf2e51685d680118be53bd7d989b3b3d8ac4d92d7da6f6d6f27",
+        "create_query_hop3": "35e89ce7f968f5840f423a6ee11a564fc3f297fb179c748ec48b1e57676efa08",
+        "summarize1": "44daa5c59846ffff9317cc8482c953dfcaabe89d6916578a29585450b06655a7",
+        "summarize2": "7140f95c401e42fe51b3cf2c9ccd8e03a87b6489d73db6d90508113151af30b0"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "reapo__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "57f45487deff13f3d075d6eb4afe44202c8e9d8202d1e2ed558dc713b771af7a",
+        "create_query_hop3": "54c7d5d615d4fdfc61b551ed078d6b271c1ed234c86f274914f7c63cd89710d6",
+        "summarize1": "6941e28b9feddca7e4333b037412a39d54042e607171bfa8ddaa98f3b699d34b",
+        "summarize2": "19a3f81d1aa680e3c8db8f78d2150dac112cfec5958129d21566d6ae2d625fac"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "test": {
+      "evaluation_set": [
+        "test-000",
+        "test-001",
+        "test-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "c64a287bc1e46c3be892a1252173895cc8dad99950d6c2f61627bb6e2b854984",
+        "create_query_hop3": "53bc936a64107d9bcc9497495dffd0eead2533c5a8a5868de580d05bcc2bfd3d",
+        "summarize1": "b8459297ce219233bd84b5253c971b40633e8de469a9686b61b0f618e15e3b19",
+        "summarize2": "f24692052b565f46968e9d82de9efe7bd89c93f77811103d79692ad5c9cd7fc9"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "train": {
+      "evaluation_set": [
+        "train-000",
+        "train-001",
+        "train-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "c64a287bc1e46c3be892a1252173895cc8dad99950d6c2f61627bb6e2b854984",
+        "create_query_hop3": "53bc936a64107d9bcc9497495dffd0eead2533c5a8a5868de580d05bcc2bfd3d",
+        "summarize1": "b8459297ce219233bd84b5253c971b40633e8de469a9686b61b0f618e15e3b19",
+        "summarize2": "f24692052b565f46968e9d82de9efe7bd89c93f77811103d79692ad5c9cd7fc9"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    },
+    "val": {
+      "evaluation_set": [
+        "val-000",
+        "val-001",
+        "val-002"
+      ],
+      "signature_prompts": {
+        "create_query_hop2": "c64a287bc1e46c3be892a1252173895cc8dad99950d6c2f61627bb6e2b854984",
+        "create_query_hop3": "53bc936a64107d9bcc9497495dffd0eead2533c5a8a5868de580d05bcc2bfd3d",
+        "summarize1": "b8459297ce219233bd84b5253c971b40633e8de469a9686b61b0f618e15e3b19",
+        "summarize2": "f24692052b565f46968e9d82de9efe7bd89c93f77811103d79692ad5c9cd7fc9"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "296fb763444db9a419f869e2f0329151b6743a2ea7f9c568f7485b14a4b36235"
+    }
+  },
+  "ifbench": {
+    "base": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "c23395fe6054c002882b6ea6c8bb483295b5be9b3d402c7022c8d367584d5669",
+        "generate_response_module": "b33a577958cde0465b3ee8103eb6909a7e94244c018a8a427f09fbe91acb910e"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "gepa__gpt-4.1-mini": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "6c5391a6ea094608168391f91ee2007bf7221f35e13446726d5f39a7afc0400d",
+        "generate_response_module": "e2476e93b61b13e3a38efe86181e94d227005f0b9a7abb6ad1f5b4052082546d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "gepa-merge__gpt-4.1-mini": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "2368cd38bd5ac986d293afb1d77c87cc11ef703d453badfc2446655cd64a91b0",
+        "generate_response_module": "8daf9a2334ff415e2d2ac122ca524fb1e49183abe426ecbb5c97fda9d28dfa4c"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "gepa-merge__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "2368cd38bd5ac986d293afb1d77c87cc11ef703d453badfc2446655cd64a91b0",
+        "generate_response_module": "8daf9a2334ff415e2d2ac122ca524fb1e49183abe426ecbb5c97fda9d28dfa4c"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "gepa__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "6c5391a6ea094608168391f91ee2007bf7221f35e13446726d5f39a7afc0400d",
+        "generate_response_module": "e2476e93b61b13e3a38efe86181e94d227005f0b9a7abb6ad1f5b4052082546d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "62f090d79451b6aef04151441756f47fa9f69f056000b8a48a914844fe89a66d",
+        "generate_response_module": "ae8d958d66c5ef63c1e70a57ee2847e727f28b3cfaa23d521905730f739e7602"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "miprov2-nd": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "58530d849bd9a5e1c85eb3c063d01bb6ac996d4a17fceac1e212c59a4492f827",
+        "generate_response_module": "8ae9cd255f489c19708ff07844f0ac4b16806f9eeb243ebdff1d4774374ee86d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "miprov2-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "58530d849bd9a5e1c85eb3c063d01bb6ac996d4a17fceac1e212c59a4492f827",
+        "generate_response_module": "8ae9cd255f489c19708ff07844f0ac4b16806f9eeb243ebdff1d4774374ee86d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "miprov2-nd-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "58530d849bd9a5e1c85eb3c063d01bb6ac996d4a17fceac1e212c59a4492f827",
+        "generate_response_module": "8ae9cd255f489c19708ff07844f0ac4b16806f9eeb243ebdff1d4774374ee86d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "9f0bfae5c5190426330dbca4ec136ccbb1ac79a9b1163439a3a3ed14af7ee0f3",
+        "generate_response_module": "03d6fa0c46cd6c151e86db7f124792074d2a78a3a8bee6dc21d5e6c1c34a4314"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "9f0bfae5c5190426330dbca4ec136ccbb1ac79a9b1163439a3a3ed14af7ee0f3",
+        "generate_response_module": "03d6fa0c46cd6c151e86db7f124792074d2a78a3a8bee6dc21d5e6c1c34a4314"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "41597cf32f8aa5cc743752f2038f9c58579486af82cab7563c89a265f5a9c499",
+        "generate_response_module": "b39c66cf7f47be779c690d5860dae577d76ef656a525e3ca4c676b0f30b4d7e4"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-4.1-mini__macro-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "913c1fa80cee5835f1a96d1e5d6010995230ba7d1b37a283fde69b5e69c5caba",
+        "generate_response_module": "182ecb02a8c95c8988c2e764b3290cf18d472dd939b146039b73c5f412e53e77"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-4.1-mini__score-only-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "d2d006605c3666949adafe6004940cfe6e5eca5a3835b19c8330267674d1d6d4",
+        "generate_response_module": "503ae365cbd64352f2de734ce8f43fed87e646635c186a869c924b2a9899f2ea"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "c23395fe6054c002882b6ea6c8bb483295b5be9b3d402c7022c8d367584d5669",
+        "generate_response_module": "b33a577958cde0465b3ee8103eb6909a7e94244c018a8a427f09fbe91acb910e"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-5__skill-trimmed-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "5c55f52709bcb6780b88f695578c1f9e00612ec16917dc2102093a2b4f4323d3",
+        "generate_response_module": "f9871e0d79a48959b2377baac5f02e4d56295509143ba7bb27067e133a13c9e5"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-5__macro-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "1fac1ee7fa1aebc8cfa8c5c5f5b7060bef991b9f5f83da4d5b18eb195a7b6c01",
+        "generate_response_module": "e9d089dee1fce374d6f742713b01f1bef5de787c96172a79c18c3149e41944b1"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "8fa17ea6e18bad355aa4a9c687709caf0844d2847b4d1d2475b4ac7402f5b516",
+        "generate_response_module": "cf36efe3b2a1338dc351a930d214d7cf40d19a939eb3ed1af437cabdf1993087"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "reapo__opus-4.6-test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "70295f548aeae80dd53a40ac386ae0a7f5371d644afc429c148ebf83c3011dad",
+        "generate_response_module": "ea3dd7a7c58eec15ca9186ae1cebce69a152f78b5f6f42a8777864d91f9aea1f"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "test": {
+      "evaluation_set": [
+        "ifbench-0",
+        "ifbench-1",
+        "ifbench-2"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "c23395fe6054c002882b6ea6c8bb483295b5be9b3d402c7022c8d367584d5669",
+        "generate_response_module": "b33a577958cde0465b3ee8103eb6909a7e94244c018a8a427f09fbe91acb910e"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "train": {
+      "evaluation_set": [
+        "ifbench-10896",
+        "ifbench-13845",
+        "ifbench-8076"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "c23395fe6054c002882b6ea6c8bb483295b5be9b3d402c7022c8d367584d5669",
+        "generate_response_module": "b33a577958cde0465b3ee8103eb6909a7e94244c018a8a427f09fbe91acb910e"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    },
+    "val": {
+      "evaluation_set": [
+        "ifbench-17867",
+        "ifbench-10667",
+        "ifbench-16482"
+      ],
+      "signature_prompts": {
+        "ensure_correct_response_module": "c23395fe6054c002882b6ea6c8bb483295b5be9b3d402c7022c8d367584d5669",
+        "generate_response_module": "b33a577958cde0465b3ee8103eb6909a7e94244c018a8a427f09fbe91acb910e"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "95d585479f95b713da436dcb6d6f08d7e4e93e0fe6aadcedb8eeaac5c24bb2ce"
+    }
+  },
+  "livebench_math": {
+    "base": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b179ef7afb7d1b7a57ada881d1fa58430883e207e27b8a1c24778c97e990ffde",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__gpt-4.1-mini": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5533f42d8b92959366c9eca62c80b91ce2ab07a51adcc92715168fb061640a0c",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa-merge__gpt-4.1-mini": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "9ec379b349f454f6661d1687fc22f2324f77c24a52040179982b77be2a97cac0",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa-merge__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "9ec379b349f454f6661d1687fc22f2324f77c24a52040179982b77be2a97cac0",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5533f42d8b92959366c9eca62c80b91ce2ab07a51adcc92715168fb061640a0c",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "9459c06a1fd9765e7fe16e3d5f6a8e6a5f05f9956db0e64b7c43848b88b43a8a",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "gepa__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "d417bf433b8b1cec837012b131f55b30cfed2f751c0512a39dd37c653fe39368",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "miprov2-nd": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "94eebef72ead10a9d29dd400a79e0cc56f4cbd1b855829105bf832774d183391",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "miprov2-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "94eebef72ead10a9d29dd400a79e0cc56f4cbd1b855829105bf832774d183391",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "miprov2-nd-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "94eebef72ead10a9d29dd400a79e0cc56f4cbd1b855829105bf832774d183391",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "63afcfd27d32c49b47d04bf9cabc4d14752e47449ca67e23f650d1dd2ecbebb6",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "63afcfd27d32c49b47d04bf9cabc4d14752e47449ca67e23f650d1dd2ecbebb6",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "24f01395345ba569f05fa838ea0b97eca89d8b2c26d90304c90b5b2a16b6067d",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-4.1-mini__macro-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "9e4ef91eaed8d06d3b2428adac7ee45a6dc846ebb1df370f606b4b51eb104817",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b179ef7afb7d1b7a57ada881d1fa58430883e207e27b8a1c24778c97e990ffde",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5__macro-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "77c1d31e97b7fb92708b2d9126395034cb4f8a11df19cabe3bbef4139e296045",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "98ef583e50c1cb19c3eebbd6facf12b82e97d87f52ea2ccb0c974dbfa0552dc4",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__opus-4.6-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "09b30a274b2719f92c2c9224163140aac36e87571bc3f1e3bd140bfaa9575d29",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "3ac0bc001e838581fe0b81ec5e36470585e701c345b8259d7693b0bd91b3ded9",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "test": {
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b179ef7afb7d1b7a57ada881d1fa58430883e207e27b8a1c24778c97e990ffde",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "train": {
+      "evaluation_set": [
+        "livebench-math-07a0d7af7b149f35d0441e3b732fc4706ac286fca96748d7c3e4ceb95af46558",
+        "livebench-math-6b236c5d2b140ad4f5f89a7bab66558f544ca5dbc56712657c189ea0d3596c19",
+        "livebench-math-4439fa758426ff54a785798dec38b0fda2ff3b9cb836696f5f9f0fb7791ae2c2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b179ef7afb7d1b7a57ada881d1fa58430883e207e27b8a1c24778c97e990ffde",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "val": {
+      "evaluation_set": [
+        "livebench-math-017a695f2234c3e36c6fc73d6764b0f713ec9bdedb07f021d63f59a5d2c07181",
+        "livebench-math-ce3ea859fc950bc8fe9b762bcdffd4e6d56e92d22c8962f9e9d2fc69833d687d",
+        "livebench-math-436ff4f4532ba4a733cbd9a02589b932e9675e79e35e1a193088b50dbee87e7e"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "b179ef7afb7d1b7a57ada881d1fa58430883e207e27b8a1c24778c97e990ffde",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9"
+    },
+    "reapo__gpt-5__skill-trimmed-test": {
+      "system_prompt": "63afcfd27d32c49b47d04bf9cabc4d14752e47449ca67e23f650d1dd2ecbebb6",
+      "user_prompt": "bf085a6e12c9d0e23a9dd157df084f933b2ef021caba82def1494bfb84a723c9",
+      "signature_prompts": {},
+      "evaluation_set": [
+        "livebench-math-f4fdca7e355eaf9362449ebf7df78a366e239091bdb4c4a34b9dfcf9882f23de",
+        "livebench-math-fc903ff1f1f66a6096c9dea58c278b48f54c80a606b65f82af1730559d73755f",
+        "livebench-math-a3042049ff38a26d648871118b2e6411e0df7fd80e18ae27a6488453702e7f70"
+      ]
+    }
+  },
+  "meeting_management": {
+    "base": {
+      "evaluation_set": [
+        "No conflicts Test 4",
+        "Weekend Meeting Test",
+        "Not valid email"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5313d9f68676caaee32d973394eff3e6c5e60b2b8165b0416f9e70a3b97a7ef5",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "No conflicts Test 4",
+        "Weekend Meeting Test",
+        "Not valid email"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "373f4b82e169fb82364adfa2350d9e20fad3b2b59dacb6540fe41afc36a4e103",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "Conflict Test",
+        "No conflicts Test 1",
+        "No conflicts Test 2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "373f4b82e169fb82364adfa2350d9e20fad3b2b59dacb6540fe41afc36a4e103",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "No conflicts Test 4",
+        "Weekend Meeting Test",
+        "Not valid email"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "373f4b82e169fb82364adfa2350d9e20fad3b2b59dacb6540fe41afc36a4e103",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "reapo__gpt-5__full-test": {
+      "evaluation_set": [
+        "Conflict Test",
+        "No conflicts Test 1",
+        "No conflicts Test 2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2658c90d64f19e772ee6c07f153bd089ed223826e7ecf569efb71cf1c1318281",
+      "user_prompt": "edb0fa16075ca441306afa24bbedee26f332db7b80c0916cf60d3d9e69cc6f12"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "Conflict Test",
+        "No conflicts Test 1",
+        "No conflicts Test 2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "7b6b784dcba4612144118470d61c356db4303c58bcbeeb0bfe971c35b20e1a97",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "test": {
+      "evaluation_set": [
+        "Conflict Test",
+        "No conflicts Test 1",
+        "No conflicts Test 2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5313d9f68676caaee32d973394eff3e6c5e60b2b8165b0416f9e70a3b97a7ef5",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "train": {
+      "evaluation_set": [
+        "No conflicts Test 4",
+        "Weekend Meeting Test",
+        "Not valid email"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5313d9f68676caaee32d973394eff3e6c5e60b2b8165b0416f9e70a3b97a7ef5",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "gepa__gpt-5": {
+      "evaluation_set": [
+        "No conflicts Test 4",
+        "Weekend Meeting Test",
+        "Not valid email"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "231e283eefbc0a013ce500173f12494914ec3137ef7f3d533b6ca160ae3bb4fc",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "Conflict Test",
+        "No conflicts Test 1",
+        "No conflicts Test 2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "231e283eefbc0a013ce500173f12494914ec3137ef7f3d533b6ca160ae3bb4fc",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "reapo__gpt-5": {
+      "evaluation_set": [
+        "No conflicts Test 4",
+        "Weekend Meeting Test",
+        "Not valid email"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5313d9f68676caaee32d973394eff3e6c5e60b2b8165b0416f9e70a3b97a7ef5",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "Conflict Test",
+        "No conflicts Test 1",
+        "No conflicts Test 2"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "5313d9f68676caaee32d973394eff3e6c5e60b2b8165b0416f9e70a3b97a7ef5",
+      "user_prompt": "fb3da2e4d36bbf45dbfa4c598764e739b15d6f7a2c7ad41880f3e84e710a6151"
+    }
+  },
+  "papillon": {
+    "base": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "e7119ddd4e20752550a6abd7338bc0c11fc734b8e3a911847d7f92c624726b62",
+        "respond_to_query": "19ded70d343d61434c745e5907d86123228f653382a8c5ef1a542e22a03fc987"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "dev": {
+      "evaluation_set": [
+        "PUPA-0500",
+        "PUPA-0501",
+        "PUPA-0502"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "e7119ddd4e20752550a6abd7338bc0c11fc734b8e3a911847d7f92c624726b62",
+        "respond_to_query": "19ded70d343d61434c745e5907d86123228f653382a8c5ef1a542e22a03fc987"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "gepa__gpt-4.1-mini": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "cea5ac21aecabd6953ccec297f774ae2e861b970443e1b3069e71f414ce5d645",
+        "respond_to_query": "dffd8cfdfeb244a57bd17db37a599345bc9a3a59e240443aeca8ad9da1ea0e0d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "gepa-merge__gpt-4.1-mini": {
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418",
+      "signature_prompts": {
+        "craft_redacted_request": "5b7c9814dbb7a16537328fb5bfe267ee455aaa1d3dfcf6b345a92386de24449c",
+        "respond_to_query": "dffd8cfdfeb244a57bd17db37a599345bc9a3a59e240443aeca8ad9da1ea0e0d"
+      },
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ]
+    },
+    "gepa-merge__gpt-4.1-mini-test": {
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418",
+      "signature_prompts": {
+        "craft_redacted_request": "5b7c9814dbb7a16537328fb5bfe267ee455aaa1d3dfcf6b345a92386de24449c",
+        "respond_to_query": "dffd8cfdfeb244a57bd17db37a599345bc9a3a59e240443aeca8ad9da1ea0e0d"
+      },
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ]
+    },
+    "gepa__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "cea5ac21aecabd6953ccec297f774ae2e861b970443e1b3069e71f414ce5d645",
+        "respond_to_query": "dffd8cfdfeb244a57bd17db37a599345bc9a3a59e240443aeca8ad9da1ea0e0d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "6b498c1afa8291db8c6888d504aa6c3f3b588800bd8de16034322c7c6bd388a8",
+        "respond_to_query": "b8b8ed705d8f743a623a983a42b22e9126b119cf07fa6eb8b5efafe5eb537f2f"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "miprov2-nd": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "5ef3cc4f569887dcf7d44e0b18b5e7f0a24203de7bc6d93d9343b35d54d5d32d",
+        "respond_to_query": "8bd1beb7bde09d0bf37cd44adf3df60ed61308256b4691901e6eaa639d648dae"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "miprov2-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "5ef3cc4f569887dcf7d44e0b18b5e7f0a24203de7bc6d93d9343b35d54d5d32d",
+        "respond_to_query": "8bd1beb7bde09d0bf37cd44adf3df60ed61308256b4691901e6eaa639d648dae"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "miprov2-nd-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "5ef3cc4f569887dcf7d44e0b18b5e7f0a24203de7bc6d93d9343b35d54d5d32d",
+        "respond_to_query": "8bd1beb7bde09d0bf37cd44adf3df60ed61308256b4691901e6eaa639d648dae"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "8fc7053bc26b7f73a17dc5df00fa70f07f5105ba6914062e99cc73637b67095e",
+        "respond_to_query": "dffd8cfdfeb244a57bd17db37a599345bc9a3a59e240443aeca8ad9da1ea0e0d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "8fc7053bc26b7f73a17dc5df00fa70f07f5105ba6914062e99cc73637b67095e",
+        "respond_to_query": "dffd8cfdfeb244a57bd17db37a599345bc9a3a59e240443aeca8ad9da1ea0e0d"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "reapo__gpt-4.1-mini-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "8aaa8e261e065d5bd0dfbcde9c020df422de9d56c68d7c4f7df296ba41032157",
+        "respond_to_query": "b0148653626c8161c0bf590bf185038ac98333f49b32555b9b293b2f5cee1461"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "e7119ddd4e20752550a6abd7338bc0c11fc734b8e3a911847d7f92c624726b62",
+        "respond_to_query": "19ded70d343d61434c745e5907d86123228f653382a8c5ef1a542e22a03fc987"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "reapo__opus-4.6-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "d274b5dd01e55af8005a524bec3f226bea11ca50ae18ef3decc962315a9acb6e",
+        "respond_to_query": "e96d26f12cc363983a1531ed44ae8e7ecc8d52e892182ca420cf6a7a9a2b0448"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "e7119ddd4e20752550a6abd7338bc0c11fc734b8e3a911847d7f92c624726b62",
+        "respond_to_query": "19ded70d343d61434c745e5907d86123228f653382a8c5ef1a542e22a03fc987"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "train": {
+      "evaluation_set": [
+        "PUPA-1000",
+        "PUPA-1001",
+        "PUPA-1002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "e7119ddd4e20752550a6abd7338bc0c11fc734b8e3a911847d7f92c624726b62",
+        "respond_to_query": "19ded70d343d61434c745e5907d86123228f653382a8c5ef1a542e22a03fc987"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "val": {
+      "evaluation_set": [
+        "PUPA-0500",
+        "PUPA-0501",
+        "PUPA-0502"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "e7119ddd4e20752550a6abd7338bc0c11fc734b8e3a911847d7f92c624726b62",
+        "respond_to_query": "19ded70d343d61434c745e5907d86123228f653382a8c5ef1a542e22a03fc987"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "reapo__gpt-4.1-mini__aggregate-only-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "8b7e882e3f3d28c797dde61d45718ebd6b3b1d8168427738b6e7fd6f4bde4388",
+        "respond_to_query": "c56d5caff1160e295c1d3c4983196593175a2c798405207b5871781eb0de0a91"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    },
+    "reapo__gpt-5__aggregate-only-test": {
+      "evaluation_set": [
+        "PUPA-0000",
+        "PUPA-0001",
+        "PUPA-0002"
+      ],
+      "signature_prompts": {
+        "craft_redacted_request": "3a5809b78405d76fbe17fcc083f1c585f4cadbabcb24360183df3a94e14652e5",
+        "respond_to_query": "e1e9a98dadc55ddbd1aa16a9250ba4f0e8cd3286182d3f9ebd6b5137ad101fdb"
+      },
+      "system_prompt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "user_prompt": "5cc90ff8a6479f9f5fa9fe148a51b0db35314315a230c4c2352b07e4efad6418"
+    }
+  },
+  "product_questions_agent": {
+    "base": {
+      "evaluation_set": [
+        "MacBook Pro Price",
+        "Pixel 8 Pro Display",
+        "Surface Laptop Studio Price"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "4e0ab3c734ed38d5eb8a790e6564a6a01a284d68bd9bb233bde5ddb9c9f5285b",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "reapo__gpt-5__transfer-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "4e0ab3c734ed38d5eb8a790e6564a6a01a284d68bd9bb233bde5ddb9c9f5285b",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "MacBook Pro Price",
+        "Pixel 8 Pro Display",
+        "Surface Laptop Studio Price"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "af4a3be8eadfc09f48e9ec4cb5c53ad0f6917c270f2149bdc7714e99c1233350",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "af4a3be8eadfc09f48e9ec4cb5c53ad0f6917c270f2149bdc7714e99c1233350",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "MacBook Pro Price",
+        "Pixel 8 Pro Display",
+        "Surface Laptop Studio Price"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "af4a3be8eadfc09f48e9ec4cb5c53ad0f6917c270f2149bdc7714e99c1233350",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "reapo__qwen3.5-9b-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "fdb35e30d9f2337868fe33afd7a94b1e598bfe7858f070b483fd1bc8b7cc2b43",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "reapo__gpt-5__full-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "0b941606be924b9fe5b00928b2206783667d5f18b6fc0d613af7f7eee407f962",
+      "user_prompt": "bd196cddbe0f90a0567984fe238349cfb47dbcf9e3f62acab1273db4b53599f8"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "a25be71f01beb23a4407d8424cc0ca90d83c355b79882f65afe7392db5dbb3e7",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "4e0ab3c734ed38d5eb8a790e6564a6a01a284d68bd9bb233bde5ddb9c9f5285b",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "train": {
+      "evaluation_set": [
+        "MacBook Pro Price",
+        "Pixel 8 Pro Display",
+        "Surface Laptop Studio Price"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "4e0ab3c734ed38d5eb8a790e6564a6a01a284d68bd9bb233bde5ddb9c9f5285b",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "gepa__gpt-5": {
+      "evaluation_set": [
+        "MacBook Pro Price",
+        "Pixel 8 Pro Display",
+        "Surface Laptop Studio Price"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "75d9c89e0f6e46ec911e908aae29138c54c7dad11bda9010e75d92ac5aeca062",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "75d9c89e0f6e46ec911e908aae29138c54c7dad11bda9010e75d92ac5aeca062",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "reapo__gpt-5": {
+      "evaluation_set": [
+        "MacBook Pro Price",
+        "Pixel 8 Pro Display",
+        "Surface Laptop Studio Price"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "4e0ab3c734ed38d5eb8a790e6564a6a01a284d68bd9bb233bde5ddb9c9f5285b",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "Galaxy Tab S9 Price",
+        "MacBook Pro RAM",
+        "Dell XPS 13 Display"
+      ],
+      "signature_prompts": {},
+      "system_prompt": "4e0ab3c734ed38d5eb8a790e6564a6a01a284d68bd9bb233bde5ddb9c9f5285b",
+      "user_prompt": "9e006aad4d30d886474ccb72ebd47eb16eb8edf38d9a2e21438bedadf8dea940"
+    }
+  },
+  "sql": {
+    "base": {
+      "evaluation_set": [
+        "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+        "SELECT: Get the name of the track with the highest unit price.",
+        "SELECT: Get the name of the genre with GenreId 3."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6aa2a4a60df20402944c17c0c4f062aa6c1f07e68afc6422f575113992ec64d9",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "baseline": {
+      "evaluation_set": [
+        "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+        "SELECT: Get the name of the track with the highest unit price.",
+        "SELECT: Get the name of the genre with GenreId 3."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2fdb8d50062866d161540bee72f37ac50b243e3ad1864a43d5e3f9237317515d",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "baseline-test": {
+      "evaluation_set": [
+        "SELECT: List the title of the most recently added album in the database.",
+        "SELECT: Find the name of the artist with the ArtistId of 1.",
+        "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2fdb8d50062866d161540bee72f37ac50b243e3ad1864a43d5e3f9237317515d",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "baseline-train": {
+      "evaluation_set": [
+        "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+        "SELECT: Get the name of the track with the highest unit price.",
+        "SELECT: Get the name of the genre with GenreId 3."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "2fdb8d50062866d161540bee72f37ac50b243e3ad1864a43d5e3f9237317515d",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "reapo__gpt-5__full-test": {
+      "evaluation_set": [
+        "SELECT: List the title of the most recently added album in the database.",
+        "SELECT: Find the name of the artist with the ArtistId of 1.",
+        "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "31b7c5f06d3f4189e8edad88800274e21ea921faa12e722d146b4bcd33e46d04",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "reapo__gpt-5__score-only-test": {
+      "evaluation_set": [
+        "SELECT: List the title of the most recently added album in the database.",
+        "SELECT: Find the name of the artist with the ArtistId of 1.",
+        "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "bffa78d48b15610099922887100ba4afd2ec9a39e3dcb6f886750f066c69bd97",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "test": {
+      "evaluation_set": [
+        "SELECT: List the title of the most recently added album in the database.",
+        "SELECT: Find the name of the artist with the ArtistId of 1.",
+        "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6aa2a4a60df20402944c17c0c4f062aa6c1f07e68afc6422f575113992ec64d9",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "train": {
+      "evaluation_set": [
+        "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+        "SELECT: Get the name of the track with the highest unit price.",
+        "SELECT: Get the name of the genre with GenreId 3."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6aa2a4a60df20402944c17c0c4f062aa6c1f07e68afc6422f575113992ec64d9",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "gepa__gpt-5": {
+      "evaluation_set": [
+        "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+        "SELECT: Get the name of the track with the highest unit price.",
+        "SELECT: Get the name of the genre with GenreId 3."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "dec294ce431842b40eebc258487276440c035c58439f3f2a4777285e44616867",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "gepa__gpt-5-test": {
+      "evaluation_set": [
+        "SELECT: List the title of the most recently added album in the database.",
+        "SELECT: Find the name of the artist with the ArtistId of 1.",
+        "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "dec294ce431842b40eebc258487276440c035c58439f3f2a4777285e44616867",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "reapo__gpt-5": {
+      "evaluation_set": [
+        "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+        "SELECT: Get the name of the track with the highest unit price.",
+        "SELECT: Get the name of the genre with GenreId 3."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6aa2a4a60df20402944c17c0c4f062aa6c1f07e68afc6422f575113992ec64d9",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    },
+    "reapo__gpt-5-test": {
+      "evaluation_set": [
+        "SELECT: List the title of the most recently added album in the database.",
+        "SELECT: Find the name of the artist with the ArtistId of 1.",
+        "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      ],
+      "signature_prompts": {},
+      "system_prompt": "6aa2a4a60df20402944c17c0c4f062aa6c1f07e68afc6422f575113992ec64d9",
+      "user_prompt": "1b45598f9ff887df5f9ab1d2b1a02d387cc4691e07564b74c5364fe0dd2a1927"
+    }
+  }
+}

@@ -1,0 +1,331 @@
+{
+    "version": "1.0",
+    "id": "81b54b9f-6892-4bff-b2ec-d45d0cb8d7c8",
+    "name": "Calculator Eval Set - Small",
+    "evaluatorRefs": [
+        "calculator_ExactMatchEvaluator",
+        "calculator_ToolCallOrderEvaluator",
+        "calculator_ToolCallCountEvaluator",
+        "calculator_ToolCallArgsEvaluator",
+        "calculator_LLMJudgeOutputEvaluator"
+    ],
+    
+    "evaluations": [
+        {
+            "id": "5dd7bfaf-21f8-43f5-9992-f1d16fb6bae7",
+            "name": "TestSimpleAddition",
+            "inputs": {
+                "expression": "how much is 2 + 5"
+            },
+            "simulationInstructions": "",
+            "expectedAgentBehavior": "",
+            "simulateInput": false,
+            "inputGenerationInstructions": "",
+            "simulateTools": false,
+            "toolsToSimulate": [],
+            "evalSetId": "81b54b9f-6892-4bff-b2ec-d45d0cb8d7c8",
+            "createdAt": "2025-01-01T00:00:00.000Z",
+            "updatedAt": "2025-01-01T00:00:00.000Z",
+            "source": "manual",
+            "evaluationCriterias": {
+                "calculator_ExactMatchEvaluator": {
+                    "expectedOutput": {
+                        "answer": 7
+                    }
+                },
+                "calculator_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "add": [
+                            "=",
+                            1
+                        ],
+                        "multiply": [
+                            "=",
+                            0
+                        ]
+                    }
+                },
+                "calculator_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "add"
+                    ]
+                },
+                "calculator_ToolCallArgsEvaluator": {
+                    "toolCalls": [
+                        {
+                            "name": "add",
+                            "args": {
+                                "a": 2,
+                                "b": 5
+                            }
+                        }
+                    ]
+                },
+                "calculator_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {
+                        "answer": 7
+                    }
+                }
+            }
+        },
+        {
+            "id": "facb52fe-cc10-49cf-97a0-455941da7515",
+            "name": "TestSimpleMultiplication",
+            "inputs": {
+                "expression": "how much is 2 * 5"
+            },
+            "expectedOutput": {},
+            "simulationInstructions": "",
+            "expectedAgentBehavior": "",
+            "simulateInput": false,
+            "inputGenerationInstructions": "",
+            "simulateTools": false,
+            "toolsToSimulate": [],
+            "evalSetId": "81b54b9f-6892-4bff-b2ec-d45d0cb8d7c8",
+            "createdAt": "2025-01-01T00:00:00.000Z",
+            "updatedAt": "2025-01-01T00:00:00.000Z",
+            "source": "manual",
+            "evaluationCriterias": {
+                "calculator_ExactMatchEvaluator": {
+                    "expectedOutput": {
+                        "answer": 10
+                    }
+                },
+                "calculator_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "add": [
+                            "=",
+                            0
+                        ],
+                        "multiply": [
+                            "=",
+                            1
+                        ]
+                    }
+                },
+                "calculator_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "multiply"
+                    ]
+                },
+                "calculator_ToolCallArgsEvaluator": {
+                    "toolCalls": [
+                        {
+                            "name": "multiply",
+                            "args": {
+                                "a": 2,
+                                "b": 5
+                            }
+                        }
+                    ]
+                },
+                "calculator_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {
+                        "answer": 10
+                    }
+                }
+            }
+        },
+        {
+            "id": "1df6ccc1-253b-4fd4-bbd8-1bd2e5a4f3c7",
+            "name": "TestSimpleSubtraction",
+            "inputs": {
+                "expression": "how much is 5 - 2"
+            },
+            "expectedOutput": {},
+            "simulationInstructions": "",
+            "expectedAgentBehavior": "",
+            "simulateInput": false,
+            "inputGenerationInstructions": "",
+            "simulateTools": false,
+            "toolsToSimulate": [],
+            "evalSetId": "81b54b9f-6892-4bff-b2ec-d45d0cb8d7c8",
+            "createdAt": "2025-01-01T00:00:00.000Z",
+            "updatedAt": "2025-01-01T00:00:00.000Z",
+            "source": "manual",
+            "evaluationCriterias": {
+                "calculator_ExactMatchEvaluator": {
+                    "expectedOutput": {
+                        "answer": 3
+                    }
+                },
+                "calculator_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "add": [
+                            "=",
+                            1
+                        ],
+                        "multiply": [
+                            "=",
+                            0
+                        ]
+                    }
+                },
+                "calculator_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "add"
+                    ]
+                },
+                "calculator_ToolCallArgsEvaluator": {
+                    "toolCalls": [
+                        {
+                            "name": "add",
+                            "args": {
+                                "a": 5,
+                                "b": -2
+                            }
+                        }
+                    ]
+                },
+                "calculator_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {
+                        "answer": 3
+                    }
+                }
+            }
+        },
+        {
+            "id": "4a30a6bb-9995-473b-b19d-52cb21b89145",
+            "name": "TestCompoundOperation1",
+            "inputs": {
+                "expression": "how much is 2 + 2 * 5"
+            },
+            "expectedOutput": {},
+            "simulationInstructions": "",
+            "expectedAgentBehavior": "",
+            "simulateInput": false,
+            "inputGenerationInstructions": "",
+            "simulateTools": false,
+            "toolsToSimulate": [],
+            "evalSetId": "81b54b9f-6892-4bff-b2ec-d45d0cb8d7c8",
+            "createdAt": "2025-01-01T00:00:00.000Z",
+            "updatedAt": "2025-01-01T00:00:00.000Z",
+            "source": "manual",
+            "evaluationCriterias": {
+                "calculator_ExactMatchEvaluator": {
+                    "expectedOutput": {
+                        "answer": 12
+                    }
+                },
+                "calculator_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "add": [
+                            "=",
+                            1
+                        ],
+                        "multiply": [
+                            "=",
+                            1
+                        ]
+                    }
+                },
+                "calculator_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "multiply",
+                        "add"
+                    ]
+                },
+                "calculator_ToolCallArgsEvaluator": {
+                    "toolCalls": [
+                        {
+                            "name": "multiply",
+                            "args": {
+                                "a": 2,
+                                "b": 5
+                            }
+                        },
+                        {
+                            "name": "add",
+                            "args": {
+                                "a": 2,
+                                "b": 10
+                            }
+                        }
+                    ]
+                },
+                "calculator_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {
+                        "answer": 12
+                    }
+                }
+            }
+        },
+        {
+            "id": "f422dce1-2277-4751-b434-c0890c785fb3",
+            "name": "TestCompoundOperation2",
+            "inputs": {
+                "expression": "how much is 3 * 5 + 2 * 5"
+            },
+            "expectedOutput": {},
+            "simulationInstructions": "",
+            "expectedAgentBehavior": "",
+            "simulateInput": false,
+            "inputGenerationInstructions": "",
+            "simulateTools": false,
+            "toolsToSimulate": [],
+            "evalSetId": "81b54b9f-6892-4bff-b2ec-d45d0cb8d7c8",
+            "createdAt": "2025-01-01T00:00:00.000Z",
+            "updatedAt": "2025-01-01T00:00:00.000Z",
+            "source": "manual",
+            "evaluationCriterias": {
+                "calculator_ExactMatchEvaluator": {
+                    "expectedOutput": {
+                        "answer": 25
+                    }
+                },
+                "calculator_ToolCallCountEvaluator": {
+                    "toolCallsCount": {
+                        "add": [
+                            "=",
+                            1
+                        ],
+                        "multiply": [
+                            "=",
+                            2
+                        ]
+                    }
+                },
+                "calculator_ToolCallOrderEvaluator": {
+                    "toolCallsOrder": [
+                        "multiply",
+                        "multiply",
+                        "add"
+                    ]
+                },
+                "calculator_ToolCallArgsEvaluator": {
+                    "toolCalls": [
+                        {
+                            "name": "multiply",
+                            "args": {
+                                "a": 3,
+                                "b": 5
+                            }
+                        },
+                        {
+                            "name": "multiply",
+                            "args": {
+                                "a": 2,
+                                "b": 5
+                            }
+                        },
+                        {
+                            "name": "add",
+                            "args": {
+                                "a": 15,
+                                "b": 10
+                            }
+                        }
+                    ]
+                },
+                "calculator_LLMJudgeOutputEvaluator": {
+                    "expectedOutput": {
+                        "answer": 25
+                    }
+                }
+            }
+        }
+    ],
+    "modelSettings": [],
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-01T00:00:00.000Z"
+}

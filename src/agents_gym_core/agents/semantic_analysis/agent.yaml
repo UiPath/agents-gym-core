@@ -1,0 +1,49 @@
+name: semantic_analysis
+version: base
+
+metadata:
+  name: "Semantic Analysis"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      inputText:
+        type: str
+        description: The text to be analyzed for sentiment, including polarity, key
+          influencing phrases, undertones, and contextual factors.
+  output_schema:
+    fields:
+      overallSentimentScore:
+        type: int
+        description: The normalized sentiment score, ranging from -99 to 99.
+      overallSentimentLabel:
+        type: str
+        description: The sentiment label (e.g., Very Negative, Negative, Slightly
+          Negative, Neutral, Slightly Positive, Positive, Very Positive).
+      positiveStatements:
+        type: int
+        description: Count of statements classified as positive.
+      negativeStatements:
+        type: int
+        description: Count of statements classified as negative.
+      neutralStatements:
+        type: int
+        description: Count of statements classified as neutral.
+      totalStatements:
+        type: int
+        description: Total number of statements analyzed.
+      keyPhrases:
+        type: str
+        description: JSON array of key phrases with their sentiment and confidence.
+      analysis:
+        type: str | None
+        description: A detailed narrative explaining the sentiment assessment.
+  tools: []
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-default.json
+

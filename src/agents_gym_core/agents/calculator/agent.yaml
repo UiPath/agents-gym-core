@@ -1,0 +1,52 @@
+# @package _global_
+
+# Agent configuration
+# Version: base (default version)
+version: base
+
+# Metadata
+metadata:
+  name: "Calculator Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+  
+  # Input schema definition (inline in YAML)
+  input_schema:
+    fields:
+      expression:
+        type: "str"
+        description: "Mathematical expression to evaluate"
+  
+  # Output schema definition (inline in YAML)
+  output_schema:
+    fields:
+      answer:
+        type: "int"
+        description: "The calculated result"
+  
+  # Evaluation sets (one or more files)
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-calculator.json
+
+  # Weights for evaluators (evaluator_id -> weight). Default weight is 1 if not specified.
+  evaluator_weights:
+    calculator_ExactMatchEvaluator: 1
+    calculator_LLMJudgeOutputEvaluator: 0
+    calculator_ToolCallArgsEvaluator: 1
+    calculator_ToolCallCountEvaluator: 1
+    calculator_ToolCallOrderEvaluator: 1
+
+  tools:
+    - _target_: agents_gym_core.agents.calculator.tools.add
+    - _target_: agents_gym_core.agents.calculator.tools.multiply
+    - _target_: agents_gym_core.common_tools.EscalationTool
+      name: "escalation"
+      description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+      assign_to: "agent@example.com"
+      return_message: "The missing number is 17. Continue with the evaluation."

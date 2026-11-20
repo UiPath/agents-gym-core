@@ -1,0 +1,53 @@
+# @package _global_
+
+# Agent configuration
+# Version: base (default version)
+version: base
+
+# Metadata
+metadata:
+  name: "For loop agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+  
+  # Input schema definition (inline in YAML)
+  input_schema:
+    fields:
+      Products:
+        type: "str"
+        description: "List of products to be processed by the agent"
+  
+  # Output schema definition (inline in YAML)
+  output_schema:
+    fields:
+      FinalResponse:
+        type: "str"
+        description: "Final response from the agent"
+  
+  # Evaluation sets (one or more files)
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-for_loop.json
+
+  evaluator_weights:
+    for_loop_agent_LLMJudgeOutputEvaluator: 1.0
+    for_loop_agent_ExactMatchEvaluator: 0.0
+    for_loop_agent_ToolCallCountEvaluator: 1.0
+    for_loop_agent_ToolCallOrderEvaluator: 1.0
+
+  # Tools configuration
+  tools:
+    - _target_: agents_gym_core.agents.for_loop.tools.process_features
+    - _target_: agents_gym_core.agents.for_loop.tools.save_to_cloud
+    - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+      name: "ProductDatabase"
+      description: "Use this tool to search for a specific product by name and retrieve its details"
+      file_paths: ["for_loop/documents/products2.json"]
+      max_items: 1
+      persist_directory: "db_cache/for_loop"
+

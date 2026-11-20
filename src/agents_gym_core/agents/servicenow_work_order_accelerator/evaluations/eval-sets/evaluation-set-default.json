@@ -1,0 +1,1142 @@
+{
+  "version": "1.0",
+  "id": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+  "fileName": "evaluation-set-default.json",
+  "name": "Evaluation set for ServiceNow Work Order Accelerator Agent",
+  "batchSize": 10,
+  "timeoutMinutes": 5,
+  "agentId": "",
+  "partitionId": "",
+  "tenantId": "",
+  "evaluatorRefs": [
+    "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator",
+    "servicenow_work_order_accelerator_ToolCallCountEvaluator",
+    "servicenow_work_order_accelerator_ToolCallOrderEvaluator",
+    "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "79ed274e-f83c-4ec9-aa4a-d5ace14f06c8",
+      "name": "boiler_pressure_valve_failure_scale_buildup",
+      "inputs": {
+        "Description": "Users are having issues with Boiler pressure issues  Pressure valve failure / Scale buildup",
+        "Caller": "Jane Doe",
+        "Urgency": 1,
+        "Impact": 1
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Inspect/replace valve, descale boiler",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Inspect/replace valve, descale boiler"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "3b3aca39-923e-409d-bead-eaa80c790bc3",
+      "name": "overheating_motor_bearing_wear_misalignment",
+      "inputs": {
+        "Description": "Users are having issues with Overheating motor due to Bearing wear / Misalignment",
+        "Caller": "Emily Johnson",
+        "Urgency": 2,
+        "Impact": 1
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Lubricate/align motor",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Lubricate/align motor"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "6723f85b-4f8a-4bec-a45b-3bea76d7b00e",
+      "name": "conveyor_jam_foreign_object_belt_misalignment",
+      "inputs": {
+        "Description": "Users are having issues with Conveyor jam due to Foreign object / Belt misalignment",
+        "Caller": "Sarah Wilson",
+        "Urgency": 3,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Remove obstruction, adjust belt",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Remove obstruction, adjust belt"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "fb3f9716-c2b9-43bd-8c67-f897a90b6f6b",
+      "name": "generator_failure_fuel_contamination_battery",
+      "inputs": {
+        "Description": "Users are having issues with Generator failure due to Fuel contamination / Battery failure",
+        "Caller": "Daniel Walker",
+        "Urgency": 1,
+        "Impact": 3
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Drain fuel, replace battery",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Drain fuel, replace battery"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "09298a6b-18c2-4f60-b596-f5d1df05f1c1",
+      "name": "electrical_fault_loose_connections_short_circuit",
+      "inputs": {
+        "Description": "Users are having issues with Electrical fault due to Loose connections / Short circuit",
+        "Caller": "Michael Brown",
+        "Urgency": 1,
+        "Impact": 3
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Inspect wiring, test voltage",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Inspect wiring, test voltage"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "276a4ea3-6015-42e9-b043-0c13966ac23a",
+      "name": "structural_fatigue_vibration_corrosion",
+      "inputs": {
+        "Description": "Users are having issues with Structural fatigue due to Vibration stress / Corrosion",
+        "Caller": "Jennifer Scott",
+        "Urgency": 1,
+        "Impact": 3
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Reinforce structure, apply anti-corrosion coating",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Reinforce structure, apply anti-corrosion coating"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "540550cb-baa4-414d-b017-4b1ac10a5d6f",
+      "name": "bearing_failure_excessive_load_insufficient_lubrication",
+      "inputs": {
+        "Description": "Users are having issues with Bearing failure due to Excessive load / Insufficient lubrication",
+        "Caller": "Elizabeth Young",
+        "Urgency": 1,
+        "Impact": 3
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Reduce load, lubricate bearings",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Reduce load, lubricate bearings"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "ddbd66bb-baa1-4b33-8e32-132ce2680819",
+      "name": "hydraulic_system_failure_low_fluid_contamination",
+      "inputs": {
+        "Description": "Users are having issues with Hydraulic system failure due to Low fluid levels / Contaminated fluid",
+        "Caller": "James Miller",
+        "Urgency": 2,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Refill fluid, check for leaks, replace filter",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Refill fluid, check for leaks, replace filter"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "87a181b9-4122-4290-b539-e13da931a71c",
+      "name": "cooling_system_failure_low_coolant_radiator_blockage",
+      "inputs": {
+        "Description": "Users are having issues with Cooling system failure due to Low coolant levels / Radiator blockage",
+        "Caller": "Robert Clark",
+        "Urgency": 3,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Refill coolant, clear blockage",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Refill coolant, clear blockage"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "d2ca1364-f674-4010-bf5f-dd210295cc2b",
+      "name": "gearbox_malfunction_worn_gears_lack_lubrication",
+      "inputs": {
+        "Description": "Users are having issues with Gearbox malfunction due to Worn gears / Lack of lubrication",
+        "Caller": "Jessica Garcia",
+        "Urgency": 1,
+        "Impact": 3
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Replace gears, lubricate components",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Replace gears, lubricate components"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "2f82ec2b-5b38-4010-b687-0fdbe0c6c524",
+      "name": "belt_slippage_tension_loss_worn_belt",
+      "inputs": {
+        "Description": "Users are having issues with Belt slippage due to Tension loss / Worn-out belt",
+        "Caller": "Karen Lewis",
+        "Urgency": 2,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Adjust/replace belt",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Adjust/replace belt"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "3cf0117b-5064-4ce6-bb7b-33c88d6e2680",
+      "name": "steam_trap_failure_clogged_drain_worn_parts",
+      "inputs": {
+        "Description": "Users are having issues with Steam trap failure due to Clogged drain / Worn internal parts",
+        "Caller": "Matthew Allen",
+        "Urgency": 2,
+        "Impact": 1
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Clean drain, replace internal components",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Clean drain, replace internal components"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "8655e988-501b-4e19-90f3-3c78faaf9ab1",
+      "name": "pump_failure_clogged_filter_worn_impeller",
+      "inputs": {
+        "Description": "Users are having issues with Pump failure due to Clogged filter / Worn impeller",
+        "Caller": "John Smith",
+        "Urgency": 2,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Clean/replace filter, check impeller",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Clean/replace filter, check impeller"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "af15940d-12d6-47d2-a2a7-f3c36e94800b",
+      "name": "fan_motor_failure_loose_belt_winding",
+      "inputs": {
+        "Description": "Users are having issues with Fan motor failure due to Loose belt / Motor winding issue",
+        "Caller": "Linda Rodriguez",
+        "Urgency": 2,
+        "Impact": 1
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Adjust/replace belt, test motor windings",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Adjust/replace belt, test motor windings"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "7f350129-3a73-4605-b51e-a70b5e1a9e63",
+      "name": "valve_leakage_worn_seal_improper_seating",
+      "inputs": {
+        "Description": "Users are having issues with Valve leakage due to Worn seal / Improper seating",
+        "Caller": "Nancy Hall",
+        "Urgency": 2,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Replace seal, realign valve",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Replace seal, realign valve"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "39f193dd-fb13-4963-9875-0b68ebefb269",
+      "name": "compressor_overheating_blocked_intake_thermostat",
+      "inputs": {
+        "Description": "Users are having issues with Compressor overheating due to Blocked air intake / Faulty thermostat",
+        "Caller": "David Martinez",
+        "Urgency": 2,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Clean intake, check thermostat functionality",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Clean intake, check thermostat functionality"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "faf1b243-689e-4ed3-aff9-036de86fb42f",
+      "name": "pneumatic_system_malfunction_air_leaks_valve",
+      "inputs": {
+        "Description": "Users are having issues with Pneumatic system malfunction due to Air leaks / Faulty solenoid valve",
+        "Caller": "Charles King",
+        "Urgency": 2,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Detect and fix leaks, replace valve",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Detect and fix leaks, replace valve"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "f7bd52e4-7d9e-4056-b802-3c03734616aa",
+      "name": "sensor_malfunction_calibration_wiring",
+      "inputs": {
+        "Description": "Users are having issues with Sensor malfunction due to Calibration drift / Wiring issues",
+        "Caller": "Steven Adams",
+        "Urgency": 2,
+        "Impact": 1
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Recalibrate sensor, inspect wiring",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Recalibrate sensor, inspect wiring"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "e168a606-f0e9-4084-bd93-aeff70498eb7",
+      "name": "clutch_failure_friction_plate_misalignment",
+      "inputs": {
+        "Description": "Users are having issues with Clutch failure due to Friction plate wear / Misalignment",
+        "Caller": "Laura Baker",
+        "Urgency": 3,
+        "Impact": 2
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Replace friction plate, realign clutch",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Replace friction plate, realign clutch"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "id": "fcc3dcf7-4bf3-4575-9d56-a527154c4f64",
+      "name": "elevator_malfunction_brake_cable",
+      "inputs": {
+        "Description": "Users are having issues with Elevator malfunction due to Brake failure / Cable wear",
+        "Caller": "Paul Gonzalez",
+        "Urgency": 1,
+        "Impact": 3
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "servicenow_work_order_accelerator_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "RecommendedAction": "Inspect brakes, replace worn cables",
+            "IncidentNumber": "9564aa11-8937-4a9c-9c65-00dbc6840a9d",
+            "Status": "Succeeded"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "servicenow_work_order_accelerator_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "StandardOperatingProcedure": [
+              "=",
+              1
+            ],
+            "ServiceNowAssignmentIndex": [
+              "=",
+              1
+            ],
+            "Create_New_Incident": [
+              "=",
+              1
+            ]
+          }
+        },
+        "servicenow_work_order_accelerator_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "StandardOperatingProcedure",
+            "ServiceNowAssignmentIndex",
+            "Create_New_Incident"
+          ]
+        },
+        "servicenow_work_order_accelerator_ExactMatchRecommendedActionEvaluator": {
+          "expectedRecommendedAction": "Inspect brakes, replace worn cables"
+        }
+      },
+      "evalSetId": "de62eb72-7997-4088-b7f8-90a9e806d66c",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "partitionId": "",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

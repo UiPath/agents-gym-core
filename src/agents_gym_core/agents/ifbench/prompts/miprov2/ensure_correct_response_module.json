@@ -1,0 +1,47 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "query": "Can you provide the social media handles of Harry Potter? Your answer must contain exactly 8 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2 Finish your response with this exact phrase That's my answer.. No other words should follow this phrase.",
+      "response": "* Twitter: [@wizardingworld](https://twitter.com/wizardingworld)\n* Instagram: [@wizardingworld](https://www.instagram.com/wizardingworld/)\n* Facebook: [Wizarding World](https://www.facebook.com/wizardingworld)\n* YouTube: [Wizarding World](https://www.youtube.com/c/WizardingWorld)\n* Twitter: [@harrypotterfilm](https://twitter.com/harrypotterfilm)\n* Instagram: [@harrypotterfilm](https://www.instagram.com/harrypotterfilm/)\n* Facebook: [Harry Potter](https://www.facebook.com/harrypotter)\n* TikTok: [@wizardingworld](https://www.tiktok.com/@wizardingworld)\n\nThat's my answer..",
+      "reasoning": "The request is for the social media handles of Harry Potter, formatted as exactly eight bullet points using markdown bullet points, and the response must end with the exact phrase \"That's my answer.\" The provided response includes eight bullet points, referencing official or widely recognized social media accounts related to Harry Potter and the Wizarding World franchise on Twitter, Instagram, Facebook, YouTube, and TikTok. The format is correct, the bullet points are used properly with markdown syntax, and the closing phrase matches the requirement exactly. Therefore, the response meets all given constraints.",
+      "final_response": "* Twitter: [@wizardingworld](https://twitter.com/wizardingworld)\n* Instagram: [@wizardingworld](https://www.instagram.com/wizardingworld/)\n* Facebook: [Wizarding World](https://www.facebook.com/wizardingworld)\n* YouTube: [Wizarding World](https://www.youtube.com/c/WizardingWorld)\n* Twitter: [@harrypotterfilm](https://twitter.com/harrypotterfilm)\n* Instagram: [@harrypotterfilm](https://www.instagram.com/harrypotterfilm/)\n* Facebook: [Harry Potter](https://www.facebook.com/harrypotter)\n* TikTok: [@wizardingworld](https://www.tiktok.com/@wizardingworld)\n\nThat's my answer.."
+    },
+    {
+      "augmented": true,
+      "query": "What is the average cost of housing in each state? Your entire response should be in English, and in all capital letters.",
+      "response": "THE AVERAGE HOUSING COST IN EACH STATE (APPROXIMATE) IS AS FOLLOWS:\n\nALABAMA - $170,000  \nALASKA - $330,000  \nARIZONA - $350,000  \nARKANSAS - $160,000  \nCALIFORNIA - $750,000  \nCOLORADO - $480,000  \nCONNECTICUT - $380,000  \nDELAWARE - $330,000  \nFLORIDA - $350,000  \nGEORGIA - $320,000  \nHAWAII - $800,000  \nIDAHO - $350,000  \nILLINOIS - $270,000  \nINDIANA - $160,000  \nIOWA - $170,000  \nKANSAS - $180,000  \nKENTUCKY - $160,000  \nLOUISIANA - $180,000  \nMAINE - $280,000  \nMARYLAND - $430,000  \nMASSACHUSETTS - $650,000  \nMICHIGAN - $190,000  \nMINNESOTA - $300,000  \nMISSISSIPPI - $140,000  \nMISSOURI - $210,000  \nMONTANA - $370,000  \nNEBRASKA - $190,000  \nNEVADA - $400,000  \nNEW HAMPSHIRE - $350,000  \nNEW JERSEY - $450,000  \nNEW MEXICO - $280,000  \nNEW YORK - $620,000  \nNORTH CAROLINA - $300,000  \nNORTH DAKOTA - $220,000  \nOHIO - $160,000  \nOKLAHOMA - $170,000  \nOREGON - $450,000  \nPENNSYLVANIA - $230,000  \nRHODE ISLAND - $380,000  \nSOUTH CAROLINA - $270,000  \nSOUTH DAKOTA - $220,000  \nTENNESSEE - $280,000  \nTEXAS - $320,000  \nUTAH - $400,000  \nVERMONT - $290,000  \nVIRGINIA - $420,000  \nWASHINGTON - $600,000  \nWEST VIRGINIA - $130,000  \nWISCONSIN - $240,000  \nWYOMING - $280,000  \n\nTHESE FIGURES ARE ESTIMATES AND CAN FLUCTUATE BASED ON LOCAL MARKET CHANGES.",
+      "reasoning": "THE RESPONSE PROVIDES AN APPROXIMATE AVERAGE HOUSING COST FOR EACH U.S. STATE AS REQUESTED, AND IT IS ENTIRELY IN ENGLISH AND ALL CAPITAL LETTERS, COMPLYING WITH THE USER'S INSTRUCTIONS. THE DATA SEEMS PLAUSIBLE AND COVERS ALL STATES, WITH A NOTE ABOUT FLUCTUATION DUE TO MARKET CHANGES, WHICH IS REASONABLE. THUS, THE RESPONSE IS CORRECT AND COMPLETE BASED ON THE QUERY.",
+      "final_response": "THE AVERAGE HOUSING COST IN EACH STATE (APPROXIMATE) IS AS FOLLOWS:\n\nALABAMA - $170,000  \nALASKA - $330,000  \nARIZONA - $350,000  \nARKANSAS - $160,000  \nCALIFORNIA - $750,000  \nCOLORADO - $480,000  \nCONNECTICUT - $380,000  \nDELAWARE - $330,000  \nFLORIDA - $350,000  \nGEORGIA - $320,000  \nHAWAII - $800,000  \nIDAHO - $350,000  \nILLINOIS - $270,000  \nINDIANA - $160,000  \nIOWA - $170,000  \nKANSAS - $180,000  \nKENTUCKY - $160,000  \nLOUISIANA - $180,000  \nMAINE - $280,000  \nMARYLAND - $430,000  \nMASSACHUSETTS - $650,000  \nMICHIGAN - $190,000  \nMINNESOTA - $300,000  \nMISSISSIPPI - $140,000  \nMISSOURI - $210,000  \nMONTANA - $370,000  \nNEBRASKA - $190,000  \nNEVADA - $400,000  \nNEW HAMPSHIRE - $350,000  \nNEW JERSEY - $450,000  \nNEW MEXICO - $280,000  \nNEW YORK - $620,000  \nNORTH CAROLINA - $300,000  \nNORTH DAKOTA - $220,000  \nOHIO - $160,000  \nOKLAHOMA - $170,000  \nOREGON - $450,000  \nPENNSYLVANIA - $230,000  \nRHODE ISLAND - $380,000  \nSOUTH CAROLINA - $270,000  \nSOUTH DAKOTA - $220,000  \nTENNESSEE - $280,000  \nTEXAS - $320,000  \nUTAH - $400,000  \nVERMONT - $290,000  \nVIRGINIA - $420,000  \nWASHINGTON - $600,000  \nWEST VIRGINIA - $130,000  \nWISCONSIN - $240,000  \nWYOMING - $280,000  \n\nTHESE FIGURES ARE ESTIMATES AND CAN FLUCTUATE BASED ON LOCAL MARKET CHANGES."
+    },
+    {
+      "augmented": true,
+      "query": "A young artist named Mia designs modern and abstract quilts. She plans to make a large quilt that consists of smaller square patches. Each square patch features a unique geometric pattern that Mia designs herself. She decides to make the quilt 7 squares wide and 9 squares long. Each square patch measures 12 inches on each side. If Mia charges $15 per square patch for her designs, how much will she earn from selling the entire quilt? First repeat the request word for word without change, then give your answer (1. do not say any words or characters before repeating the request; 2. the request you need to repeat does not include this sentence)",
+      "response": "A young artist named Mia designs modern and abstract quilts. She plans to make a large quilt that consists of smaller square patches. Each square patch features a unique geometric pattern that Mia designs herself. She decides to make the quilt 7 squares wide and 9 squares long. Each square patch measures 12 inches on each side. If Mia charges $15 per square patch for her designs, how much will she earn from selling the entire quilt? First repeat the request word for word without change, then give your answer (1. do not say any words or characters before repeating the request; 2. the request you need to repeat does not include this sentence)\n\nMia will earn $945 from selling the entire quilt.",
+      "reasoning": "The quilt is 7 squares wide and 9 squares long, so the total number of square patches is 7 \u00d7 9 = 63. Mia charges $15 per square patch, so her total earnings from selling the entire quilt will be 63 \u00d7 $15 = $945.",
+      "final_response": "A young artist named Mia designs modern and abstract quilts. She plans to make a large quilt that consists of smaller square patches. Each square patch features a unique geometric pattern that Mia designs herself. She decides to make the quilt 7 squares wide and 9 squares long. Each square patch measures 12 inches on each side. If Mia charges $15 per square patch for her designs, how much will she earn from selling the entire quilt? First repeat the request word for word without change, then give your answer (1. do not say any words or characters before repeating the request; 2. the request you need to repeat does not include this sentence)\n\nMia will earn $945 from selling the entire quilt."
+    },
+    {
+      "prompt": "What are Microsoft's policies on user privacy and data protection? In your response, the word penalty should appear less than 2 times. Finish your response with this exact phrase That's all I have to say.. No other words should follow this phrase.",
+      "instruction_id": [
+        "keywords:frequency",
+        "startend:end_checker"
+      ],
+      "kwargs": [
+        {
+          "keyword": "penalty",
+          "frequency": 2,
+          "relation": "less than"
+        },
+        {
+          "end_phrase": "That's all I have to say."
+        }
+      ],
+      "instruction_id_list": [
+        "keywords:frequency",
+        "startend:end_checker"
+      ],
+      "key": 14630
+    }
+  ]
+}

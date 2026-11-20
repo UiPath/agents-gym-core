@@ -1,0 +1,2043 @@
+{
+  "version": "1.0",
+  "id": "95940258-f305-56af-9544-02a19ca5f8c5",
+  "name": "evaluation-set-customer_support_triage_agent_train",
+  "evaluatorRefs": [
+    "customer_support_triage_agent_LLMJudgeOutputEvaluator",
+    "customer_support_triage_agent_ExactMatchAgentEvaluator",
+    "customer_support_triage_agent_LLMJudgeResponseEvaluator",
+    "customer_support_triage_agent_ToolCallCountEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "cst-pq-001",
+      "name": "laptop_warranty_period",
+      "inputs": {
+        "Request": "What is the warranty period for Lenovo ThinkPad X1 Carbon?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The warranty period for Lenovo ThinkPad X1 Carbon is 2 years."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The warranty period for Lenovo ThinkPad X1 Carbon is 2 years."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-004",
+      "name": "samsung_galaxy_s21_charging_options",
+      "inputs": {
+        "Request": "What are the charging options for the Samsung Galaxy S21?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The Samsung Galaxy S21 supports 25W fast wired charging, 15W wireless charging, and 4.5W reverse wireless charging."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The Samsung Galaxy S21 supports 25W fast wired charging, 15W wireless charging, and 4.5W reverse wireless charging."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-005",
+      "name": "dell_xps_13_windows_11_compatibility",
+      "inputs": {
+        "Request": "Is the Dell XPS 13 compatible with Windows 11?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "Yes, the Dell XPS 13 is fully compatible with Windows 11 and comes with Windows 11 pre-installed on newer models."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "Yes, the Dell XPS 13 is fully compatible with Windows 11 and comes with Windows 11 pre-installed on newer models."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-010",
+      "name": "gopro_hero_10_memory_cards",
+      "inputs": {
+        "Request": "What type of memory cards does the GoPro Hero 10 accept?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The GoPro Hero 10 accepts microSD, microSDHC, and microSDXC cards with a minimum class rating of UHS-I V30."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The GoPro Hero 10 accepts microSD, microSDHC, and microSDXC cards with a minimum class rating of UHS-I V30."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-011",
+      "name": "microsoft_surface_laptop_4_touchscreen",
+      "inputs": {
+        "Request": "Does the Microsoft Surface Laptop 4 have a touchscreen?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "Yes, all Microsoft Surface Laptop 4 models come with a 13.5-inch or 15-inch PixelSense touchscreen display."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "Yes, all Microsoft Surface Laptop 4 models come with a 13.5-inch or 15-inch PixelSense touchscreen display."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pq-012",
+      "name": "nikon_p1000_maximum_zoom",
+      "inputs": {
+        "Request": "What's the maximum zoom on the Nikon P1000?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The Nikon P1000 features a 125x optical zoom range, equivalent to 24-3000mm in 35mm format, making it one of the highest zoom ranges available in a compact camera."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              1
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The Nikon P1000 features a 125x optical zoom range, equivalent to 24-3000mm in 35mm format, making it one of the highest zoom ranges available in a compact camera."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-005",
+      "name": "fitness_smartwatch_recommendation",
+      "inputs": {
+        "Request": "I need a smartwatch with fitness tracking, long battery life"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"Garmin Forerunner 245\", \"Price\": \"$299.00\"}, \"Alternatives\": [{\"Product\": \"Fitbit Versa 3\", \"Price\": \"$229.00\"}, {\"Product\": \"Apple Watch SE\", \"Price\": \"$279.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"Garmin Forerunner 245\", \"Price\": \"$299.00\"}, \"Alternatives\": [{\"Product\": \"Fitbit Versa 3\", \"Price\": \"$229.00\"}, {\"Product\": \"Apple Watch SE\", \"Price\": \"$279.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-007",
+      "name": "smart_tv_recommendation",
+      "inputs": {
+        "Request": "I need a tv with 4K, smart features"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"LG OLED C1 Series 65-inch\", \"Price\": \"$1,799.00\"}, \"Alternatives\": [{\"Product\": \"Samsung QN90A Neo QLED 55-inch\", \"Price\": \"$1,299.00\"}, {\"Product\": \"Sony X90J 65-inch\", \"Price\": \"$1,199.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"LG OLED C1 Series 65-inch\", \"Price\": \"$1,799.00\"}, \"Alternatives\": [{\"Product\": \"Samsung QN90A Neo QLED 55-inch\", \"Price\": \"$1,299.00\"}, {\"Product\": \"Sony X90J 65-inch\", \"Price\": \"$1,199.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-008",
+      "name": "wireless_printer_recommendation",
+      "inputs": {
+        "Request": "I need a printer with wireless, all-in-one"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"HP OfficeJet Pro 9015e\", \"Price\": \"$229.00\"}, \"Alternatives\": [{\"Product\": \"Canon PIXMA TR8620\", \"Price\": \"$179.00\"}, {\"Product\": \"Epson WorkForce Pro WF-4830\", \"Price\": \"$199.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"HP OfficeJet Pro 9015e\", \"Price\": \"$229.00\"}, \"Alternatives\": [{\"Product\": \"Canon PIXMA TR8620\", \"Price\": \"$179.00\"}, {\"Product\": \"Epson WorkForce Pro WF-4830\", \"Price\": \"$199.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-009",
+      "name": "portable_speaker_recommendation",
+      "inputs": {
+        "Request": "I need a bluetooth speaker with portable, waterproof"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"JBL Flip 5\", \"Price\": \"$119.00\"}, \"Alternatives\": [{\"Product\": \"Ultimate Ears BOOM 3\", \"Price\": \"$149.00\"}, {\"Product\": \"Bose SoundLink Flex\", \"Price\": \"$149.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"JBL Flip 5\", \"Price\": \"$119.00\"}, \"Alternatives\": [{\"Product\": \"Ultimate Ears BOOM 3\", \"Price\": \"$149.00\"}, {\"Product\": \"Bose SoundLink Flex\", \"Price\": \"$149.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-010",
+      "name": "gaming_monitor_recommendation",
+      "inputs": {
+        "Request": "I need a monitor with gaming, high refresh rate"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"LG 27GL850-B 27-inch\", \"Price\": \"$449.00\"}, \"Alternatives\": [{\"Product\": \"ASUS TUF Gaming VG27AQ 27-inch\", \"Price\": \"$379.00\"}, {\"Product\": \"Samsung Odyssey G7 32-inch\", \"Price\": \"$699.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"LG 27GL850-B 27-inch\", \"Price\": \"$449.00\"}, \"Alternatives\": [{\"Product\": \"ASUS TUF Gaming VG27AQ 27-inch\", \"Price\": \"$379.00\"}, {\"Product\": \"Samsung Odyssey G7 32-inch\", \"Price\": \"$699.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-011",
+      "name": "robot_vacuum_recommendation",
+      "inputs": {
+        "Request": "I need a vacuum cleaner with robot, smart mapping"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"iRobot Roomba j7+\", \"Price\": \"$799.00\"}, \"Alternatives\": [{\"Product\": \"Roborock S7\", \"Price\": \"$649.00\"}, {\"Product\": \"Shark IQ Robot XL\", \"Price\": \"$599.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"iRobot Roomba j7+\", \"Price\": \"$799.00\"}, \"Alternatives\": [{\"Product\": \"Roborock S7\", \"Price\": \"$649.00\"}, {\"Product\": \"Shark IQ Robot XL\", \"Price\": \"$599.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-pr-012",
+      "name": "coffee_maker_recommendation",
+      "inputs": {
+        "Request": "I need a coffee maker with programmable, large capacity"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent",
+            "Response": "{\"TopMatch\": {\"Product\": \"Cuisinart DCC-3200P1\", \"Price\": \"$99.00\"}, \"Alternatives\": [{\"Product\": \"Ninja CE251 Programmable Brewer\", \"Price\": \"$79.00\"}, {\"Product\": \"Hamilton Beach 12-Cup\", \"Price\": \"$59.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Recommendation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              1
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"TopMatch\": {\"Product\": \"Cuisinart DCC-3200P1\", \"Price\": \"$99.00\"}, \"Alternatives\": [{\"Product\": \"Ninja CE251 Programmable Brewer\", \"Price\": \"$79.00\"}, {\"Product\": \"Hamilton Beach 12-Cup\", \"Price\": \"$59.00\"}]}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-001",
+      "name": "Wrong_Item_in_Order",
+      "inputs": {
+        "Request": "I received the wrong item in Order #12345, please fix this."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#12345 Processing Return Customer received wrong item"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#12345 Processing Return Customer received wrong item"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-002",
+      "name": "Damaged_Item_in_Order",
+      "inputs": {
+        "Request": "I received a damaged item with Order #98765, need a replacement."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#98765 Processing Replacement Customer received damaged item"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#98765 Processing Replacement Customer received damaged item"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-003",
+      "name": "Order_Not_Received",
+      "inputs": {
+        "Request": "My order #54321 never arrived, I'd like a refund please."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#54321 Processing Refund Customer never received order"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#54321 Processing Refund Customer never received order"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-005",
+      "name": "Wrong_Size_Exchange",
+      "inputs": {
+        "Request": "Need to exchange size M for size L on order #24680."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#24680 Processing Exchange Customer needs different size"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#24680 Processing Exchange Customer needs different size"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-006",
+      "name": "Missing_Parts",
+      "inputs": {
+        "Request": "Order #13579 has missing parts, please help."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#13579 Processing Parts Replacement Customer reported missing parts"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#13579 Processing Parts Replacement Customer reported missing parts"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-007",
+      "name": "Color_Preference_Return",
+      "inputs": {
+        "Request": "I didn't like the color of item in order #86420, want to return."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#86420 Processing Return Customer dissatisfied with color"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#86420 Processing Return Customer dissatisfied with color"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-008",
+      "name": "Wrong_Address_Reship",
+      "inputs": {
+        "Request": "Wrong address on order #97531, need item reshipped."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#97531 Processing Reship Order delivered to wrong address"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#97531 Processing Reship Order delivered to wrong address"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-010",
+      "name": "Late_Return_Request",
+      "inputs": {
+        "Request": "I bought this 40 days ago with order #46802, is it too late to return?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#46802 Review Exception Return Customer requesting return beyond standard return window"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#46802 Review Exception Return Customer requesting return beyond standard return window"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rp-012",
+      "name": "Partial_Order_Return",
+      "inputs": {
+        "Request": "For order #19284, I'd like to keep the headphones but return the case."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent",
+            "Response": "#19284 Partial Partial Return Customer keeping headphones but returning case"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Return_Processing_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              1
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "#19284 Partial Partial Return Customer keeping headphones but returning case"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-di-001",
+      "name": "Phone_Replacement_Dispute",
+      "inputs": {
+        "Request": "Dispute the following: can Phone X be replaced by Phone Y?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent",
+            "Response": "{\"Supplier Email\": \"a@example.com\", \"InvestigationResultString\": \"Phone X and Phone Y are mismatched\", \"MismatchedItemsFindingsString\": \"Phone X and Phone Y have different specifications\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Phone X and Phone Y have different screen sizes\", \"MismatchedParts\": \"screen size\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              1
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"Supplier Email\": \"a@example.com\", \"InvestigationResultString\": \"Phone X and Phone Y are mismatched\", \"MismatchedItemsFindingsString\": \"Phone X and Phone Y have different specifications\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Phone X and Phone Y have different screen sizes\", \"MismatchedParts\": \"screen size\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-di-003",
+      "name": "iPhone_Model_Dispute",
+      "inputs": {
+        "Request": "I ordered an iPhone 13 Pro but received an iPhone 13. I want to dispute this."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent",
+            "Response": "{\"Supplier Email\": \"apple.reseller@example.com\", \"InvestigationResultString\": \"iPhone 13 Pro and iPhone 13 are different models\", \"MismatchedItemsFindingsString\": \"iPhone 13 Pro has additional features not present in iPhone 13\", \"MismatchedItemsFindings\": {\"Reasoning\": \"iPhone 13 Pro has ProMotion display, telephoto camera, and more RAM\", \"MismatchedParts\": \"display refresh rate, camera system, RAM\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              1
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"Supplier Email\": \"apple.reseller@example.com\", \"InvestigationResultString\": \"iPhone 13 Pro and iPhone 13 are different models\", \"MismatchedItemsFindingsString\": \"iPhone 13 Pro has additional features not present in iPhone 13\", \"MismatchedItemsFindings\": {\"Reasoning\": \"iPhone 13 Pro has ProMotion display, telephoto camera, and more RAM\", \"MismatchedParts\": \"display refresh rate, camera system, RAM\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-di-004",
+      "name": "Nike_Shoes_Dispute",
+      "inputs": {
+        "Request": "Please investigate this dispute: I ordered Nike Air Max but received Nike Revolution shoes."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent",
+            "Response": "{\"Supplier Email\": \"sportsshop@example.com\", \"InvestigationResultString\": \"Nike Air Max and Nike Revolution are different shoe models\", \"MismatchedItemsFindingsString\": \"Nike Air Max is a premium model with different technology than Nike Revolution\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Nike Air Max uses Air cushioning technology while Nike Revolution uses different foam\", \"MismatchedParts\": \"cushioning technology, price point, design\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Dispute_Investigation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              1
+            ],
+            "Escalation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "{\"Supplier Email\": \"sportsshop@example.com\", \"InvestigationResultString\": \"Nike Air Max and Nike Revolution are different shoe models\", \"MismatchedItemsFindingsString\": \"Nike Air Max is a premium model with different technology than Nike Revolution\", \"MismatchedItemsFindings\": {\"Reasoning\": \"Nike Air Max uses Air cushioning technology while Nike Revolution uses different foam\", \"MismatchedParts\": \"cushioning technology, price point, design\", \"ValidReplacement\": false}}"
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-001",
+      "name": "Billing_Double_Charge",
+      "inputs": {
+        "Request": "I've been double-charged for my last three orders and need this fixed immediately."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent",
+            "Response": "I understand you're concerned about being double-charged. This billing issue requires special attention from our finance team. I'll connect you with a specialist who can help resolve this issue."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "I understand you're concerned about being double-charged. This billing issue requires special attention from our finance team. I'll connect you with a specialist who can help resolve this issue."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-002",
+      "name": "Account_Security_Breach",
+      "inputs": {
+        "Request": "Someone hacked my account and changed my delivery address. I need help securing my account."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent",
+            "Response": "I'm sorry to hear your account may have been compromised. Account security issues require verification steps that must be handled by our security team. I'll escalate this to a specialist immediately."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "I'm sorry to hear your account may have been compromised. Account security issues require verification steps that must be handled by our security team. I'll escalate this to a specialist immediately."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-005",
+      "name": "Legal_Inquiry",
+      "inputs": {
+        "Request": "I'm a lawyer representing a client in a product liability case involving your product."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent",
+            "Response": "Thank you for contacting us regarding a legal matter. All legal inquiries are handled by our legal department. I'll connect you with the appropriate representative."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "Thank you for contacting us regarding a legal matter. All legal inquiries are handled by our legal department. I'll connect you with the appropriate representative."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-es-006",
+      "name": "TalkToHuman",
+      "inputs": {
+        "Request": "I need to talk to somebody about the website."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cst-es-008",
+      "name": "Contradiction",
+      "inputs": {
+        "Request": "I would like a refund for my laptop. But, please do not refund me."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cst-es-009",
+      "name": "Complex",
+      "inputs": {
+        "Request": "I ordered a Nikon CoolPix B700 but received a Canon PowerShot SX540 HS instead. I found that I like the Canon more, but it's $50 more expensive. Can I keep it and pay the difference? Also, can you recommend a good case for it?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Escalation_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              0
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ],
+            "Escalation_Agent": [
+              "=",
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cst-rt-001",
+      "name": "Retry_Generic_Error",
+      "inputs": {
+        "Request": "What is the battery life of the MacBook Pro M2?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The MacBook Pro M2 offers up to 22 hours of battery life, the longest of any Mac ever. This includes up to 22 hours of Apple TV app movie playback and up to 18 hours of wireless web browsing."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The MacBook Pro M2 offers up to 22 hours of battery life, the longest of any Mac ever. This includes up to 22 hours of Apple TV app movie playback and up to 18 hours of wireless web browsing."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rt-002",
+      "name": "Retry_Timeout_Error",
+      "inputs": {
+        "Request": "What features does the Samsung Neo QLED TV have?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The Samsung Neo QLED TV supports HDR10+ and comes with a built-in smart hub that allows you to access streaming services without additional devices. It also features Quantum Matrix Technology for enhanced contrast and brightness control."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The Samsung Neo QLED TV supports HDR10+ and comes with a built-in smart hub that allows you to access streaming services without additional devices. It also features Quantum Matrix Technology for enhanced contrast and brightness control."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    },
+    {
+      "id": "cst-rt-005",
+      "name": "Retry_Rate_Limit_Error",
+      "inputs": {
+        "Request": "What are the key features of the iPad Pro 2023?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "cst-eval-001",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "customer_support_triage_agent_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent",
+            "Response": "The iPad Pro 2023 features the M2 chip, providing excellent performance for creative professionals. It supports the Apple Pencil 2 with hover functionality and comes with a Liquid Retina XDR display in the 12.9-inch model for superior color accuracy and HDR content viewing."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ExactMatchAgentEvaluator": {
+          "expectedOutput": {
+            "Agent": "Product_Questions_Agent"
+          },
+          "expectedAgentBehavior": ""
+        },
+        "customer_support_triage_agent_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Product_Questions_Agent": [
+              "=",
+              2
+            ],
+            "Product_Recommendation_Agent": [
+              "=",
+              0
+            ],
+            "Return_Processing_Agent": [
+              "=",
+              0
+            ],
+            "Dispute_Investigation_Agent": [
+              "=",
+              0
+            ]
+          }
+        },
+        "customer_support_triage_agent_LLMJudgeResponseEvaluator": {
+          "expectedOutput": {
+            "Response": "The iPad Pro 2023 features the M2 chip, providing excellent performance for creative professionals. It supports the Apple Pencil 2 with hover functionality and comes with a Liquid Retina XDR display in the 12.9-inch model for superior color accuracy and HDR content viewing."
+          },
+          "expectedAgentBehavior": ""
+        }
+      }
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

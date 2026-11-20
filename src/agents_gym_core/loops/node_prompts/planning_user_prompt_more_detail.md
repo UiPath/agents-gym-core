@@ -1,0 +1,12 @@
+<core-instructions>
+{systemPrompt}
+</core-instructions>
+<user-request>
+{userPrompt}
+</user-request>
+<model_name>
+{model_name}
+</model_name>
+<available_tools>
+{tools}
+</available_tools>

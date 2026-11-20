@@ -1,0 +1,56 @@
+# @package _global_
+
+# Agent configuration
+# Version: base (default version)
+version: base
+
+# Metadata
+metadata:
+  name: "Loan Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  # Input schema definition (inline in YAML)
+  input_schema:
+    fields:
+      EmailBody:
+        type: "str"
+        description: "The body of the request email"
+
+  # Output schema definition (inline in YAML)
+  output_schema:
+    fields:
+      ExecutionDetails:
+        type: "str"
+        description: "The execution details"
+      ActionCenterTaskCreated:
+        type: "bool"
+        description: "True if an Action Center task is created, otherwise False"
+        default: false
+      ActionCenterTaskURL:
+        type: "str | None"
+        description: "The URL of the Action Center task if it is created, otherwise set it to None"
+        default: null
+
+  # Evaluation sets (one or more files)
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-loan.json
+
+  # Tools configuration
+  tools:
+    - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ApplyUiBankLoan
+    - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ModifyLoanContract
+    - _target_: agents_gym_core.agents.loan.tools.LoanAgent_SendSharepointDocumentViaDocuSign
+    - _target_: agents_gym_core.agents.loan.tools.Google
+    - _target_: agents_gym_core.common_tools.EscalationTool
+      name: "EscalationTool"
+      description: "Create an Action Center task"
+      assign_to: "random@example.com"
+      return_message: 'The escalation was successful. A task has been created for this query: "{query}". Task URL: https://example.com/actioncenter/tasks/1001. Call the end execution tool.'
+

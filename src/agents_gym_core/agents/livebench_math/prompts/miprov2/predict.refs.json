@@ -1,0 +1,52 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "question": {
+        "$datapoint": "livebench-math-9e109f50f21f8561b050c7c0e700a21974cb066c9ed268cb595cdb2dda145441",
+        "$path": [
+          "inputs",
+          "question"
+        ]
+      },
+      "reasoning": "We are asked to find the greatest common divisor (GCD) of the set \\(\\{-1052, -\\frac{5315}{7}, 849\\}\\).\n\nStep 1: Convert all numbers to integers or an equivalent form to find GCD.  \nThe set is \\(\\{-1052, -\\frac{5315}{7}, 849\\}\\).\n\nCalculate \\(-\\frac{5315}{7}\\):  \n\\[\n\\frac{5315}{7} = 759.2857\\ldots\n\\]\nBut since 5315 \u00f7 7 is actually exact:\n\\[\n\\frac{5315}{7} = 759.2857...?\n\\]\nCheck 7 \u00d7 759 = 5313, 7 \u00d7 760 = 5320, so 5315 is not divisible by 7 exactly.\n\nCalculate 5315 \u00f7 7:\n\\[\n7 \\times 759 = 5313, \\quad 5315 - 5313 = 2\n\\]\nSo \\(5315/7 = 759 + \\frac{2}{7}\\), which is not an integer.\n\nTherefore, \\(-\\frac{5315}{7}\\) is not an integer. To find the greatest common divisor meaningfully, the GCD is typically defined for integers. We can find the GCD of these numbers multiplied by the denominator 7 to make them all integers.\n\nMultiply each number by 7:  \n- \\(7 \\times (-1052) = -7364\\)  \n- \\(7 \\times \\left(-\\frac{5315}{7}\\right) = -5315\\)  \n- \\(7 \\times 849 = 5943\\)\n\nNow find \\(\\gcd(-7364, -5315, 5943)\\).\n\nStep 2: Ignore signs when finding GCD:  \nCalculate \\(\\gcd(7364, 5315, 5943)\\).\n\nStep 3: Find \\(\\gcd(7364, 5315)\\).\n\nUse the Euclidean algorithm:  \n\\(7364 - 5315 = 2049\\)  \n\\(\\gcd(5315, 2049)\\).\n\nNow:\n\\(5315 = 2 \\times 2049 + 1217\\)  \n\\(\\gcd(2049, 1217)\\).\n\nNext:  \n\\(2049 - 1217 = 832\\)  \n\\(\\gcd(1217, 832)\\).\n\nNow:  \n\\(1217 - 832 = 385\\)  \n\\(\\gcd(832, 385)\\).\n\nNext step:  \n\\(832 - 2 \\times 385 = 62\\)  \n\\(\\gcd(385, 62)\\).\n\nNow:  \n\\(385 - 6 \\times 62 = 13\\)  \n\\(\\gcd(62, 13)\\).\n\nNow:  \n\\(62 - 4 \\times 13 = 10\\)  \n\\(\\gcd(13, 10)\\).\n\nNext:  \n\\(13 - 10 = 3\\)  \n\\(\\gcd(10, 3)\\).\n\nNow:  \n\\(10 - 3 \\times 3 = 1\\)  \n\\(\\gcd(3, 1)\\).\n\nFinally:  \n\\(\\gcd(3,1) = 1\\).\n\nSo \\(\\gcd(7364, 5315) = 1\\).\n\nStep 4: Find \\(\\gcd(1, 5943) = 1\\).\n\nTherefore, the greatest common divisor of the three numbers 7364, 5315, and 5943 is 1.\n\nStep 5: Since we multiplied all original numbers by 7, the greatest common divisor of the original numbers will be \\(1/7\\) because:\n\\[\n\\gcd(a, b, c) = \\frac{1}{7} \\times \\gcd(7a, 7b, 7c)\n\\]\n\nSince \\(\\gcd(7a,7b,7c) = 1\\), then the \\(\\gcd(a,b,c) = \\frac{1}{7}.\\)\n\nTherefore:\n\\[\n\\boxed{\\frac{1}{7}}.\n\\]",
+      "answer": "\\boxed{\\frac{1}{7}}"
+    },
+    {
+      "augmented": true,
+      "question": {
+        "$datapoint": "livebench-math-268674b22729dc42a7408372d3f94c8a587ac01171fb9164f2a5ebd589a2b4b9",
+        "$path": [
+          "inputs",
+          "question"
+        ]
+      },
+      "reasoning": "The area of a triangle is given by \\(\\frac{1}{2} \\times \\text{base} \\times \\text{height}\\). \n\nThe base is increased by 20%, so the new base is \\(1.20\\) times the original base. \n\nThe height is decreased by 15%, so the new height is \\(0.85\\) times the original height.\n\nThe new area is therefore:\n\n\\[\n\\frac{1}{2} \\times (1.20 \\times \\text{base}) \\times (0.85 \\times \\text{height}) = \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\times (1.20 \\times 0.85) = \\text{original area} \\times 1.02\n\\]\n\nThat means the area increases by 2%.",
+      "answer": "DDDDD"
+    },
+    {
+      "augmented": true,
+      "question": {
+        "$datapoint": "livebench-math-02a28b14de488f6d16a9e58b14e51bedaa5012fe26b513908f2309009e1db764",
+        "$path": [
+          "inputs",
+          "question"
+        ]
+      },
+      "reasoning": "The angle \u03b8 between two lines with slopes \\(m_1\\) and \\(m_2\\) is given by the formula:\n\\[\n\\tan \\theta = \\left|\\frac{m_1 - m_2}{1 + m_1 m_2}\\right|\n\\]\nGiven \\(m_1 = 2\\) and \\(m_2 = \\frac{1}{3}\\):\n\\[\n\\tan \\theta = \\left|\\frac{2 - \\frac{1}{3}}{1 + 2 \\cdot \\frac{1}{3}}\\right| = \\left|\\frac{\\frac{6}{3} - \\frac{1}{3}}{1 + \\frac{2}{3}}\\right| = \\frac{\\frac{5}{3}}{\\frac{5}{3}} = 1\n\\]\nThus, \\(\\tan \\theta = 1\\) which means \\(\\theta = 45^\\circ\\).\n\nSince the angle is acute, and \\(45^\\circ\\) is one of the choices, the answer is 45 degrees.",
+      "answer": "CCCCC"
+    },
+    {
+      "augmented": true,
+      "question": {
+        "$datapoint": "livebench-math-544ed42d0f9c313161f8c7c4c034f59fd94f55865d24d06666487568cd645dec",
+        "$path": [
+          "inputs",
+          "question"
+        ]
+      },
+      "reasoning": "The geometric mean of a set of numbers \\(a_1, a_2, \\ldots, a_n\\) is given by \\(\\sqrt[n]{a_1 \\cdot a_2 \\cdot \\ldots \\cdot a_n}\\).\n\nGiven the numbers: \\(-729, 343, -2\\).\n\nStep 1: Compute the product:\n\\[\n(-729) \\times 343 \\times (-2)\n\\]\n\nCalculate:\n\\[\n-729 \\times 343 = -729 \\times (300 + 43) = -729 \\times 300 - 729 \\times 43 = -218700 - 31347 = -250,047\n\\]\n\nThen multiply by \\(-2\\):\n\\[\n-250,047 \\times (-2) = 500,094\n\\]\n\nStep 2: Find the geometric mean:\n\\[\n\\sqrt[3]{500,094}\n\\]\n\nSince \\( \\sqrt[3]{x} = \\) the cube root of \\(x\\).\n\nWe check if 500,094 is a perfect cube or can be simplified:\n\nLet\u2019s factor 500,094:\n\nAlternatively, since \\(-729 = -9^3\\), 343 = 7^3, and \\(-2\\) is \\(-2^1\\), the product is:\n\n\\[\n(-9)^3 \\times 7^3 \\times (-2) = (-9)^3 \\times 7^3 \\times (-2)\n\\]\n\nNote that \\(-2\\) is just \\(-2\\), not a cube.\n\nBut rearranged:\n\n\\[\n(-9)^3 \\times 7^3 = (-9 \\times 7)^3 = (-63)^3\n\\]\n\nIncluding the \\(-2\\) gives:\n\n\\[\n(-63)^3 \\times (-2) = (-63)^3 \\times (-2) = ?\n\\]\n\nActually, this is wrong because the exponents don't add unless the bases are the same. So, the earlier approach is invalid.\n\nBetter to factor the product directly:\n\n\\[\n(-729) = -1 \\times 3^6 \\quad \\text{(since } 729 = 3^6)\n\\]\n\\[\n343 = 7^3\n\\]\n\\[\n-2 = -1 \\times 2^1\n\\]\n\nSo the product is:\n\n\\[\n(-1 \\times 3^6) \\times (7^3) \\times (-1 \\times 2) = (-1) \\times 3^6 \\times 7^3 \\times (-1) \\times 2 = (-1)(-1) \\times 2 \\times 3^6 \\times 7^3 = 1 \\times 2 \\times 3^6 \\times 7^3 = 2 \\times 3^6 \\times 7^3\n\\]\n\nNow we want to compute the cube root of:\n\n\\[\n2 \\times 3^6 \\times 7^3\n\\]\n\nRewrite powers of 3:\n\n\\[\n3^6 = (3^3)^2 = 27^2\n\\]\n\nSo,\n\n\\[\n\\sqrt[3]{2 \\times 3^6 \\times 7^3} = \\sqrt[3]{2 \\times (3^3)^2 \\times 7^3} = \\sqrt[3]{2 \\times 27^2 \\times 343}\n\\]\n\nNote that:\n\n\\[\n7^3 = 343\n\\]\n\nSince cube root is multiplicative:\n\n\\[\n= \\sqrt[3]{2} \\times \\sqrt[3]{27^2} \\times \\sqrt[3]{343}\n\\]\n\n\\[\n\\sqrt[3]{27^2} = 27^{2/3} = 27^{1} \\times 27^{-1/3} = 27^{2/3}\n\\]\n\nBetter to just write as:\n\n\\[\n\\sqrt[3]{27^2} = (\\sqrt[3]{27})^2 = 3^2 = 9\n\\]\n\nSince \\(\\sqrt[3]{27} = 3\\).\n\nSimilarly, \\(\\sqrt[3]{343} = 7\\).\n\nHence,\n\n\\[\n\\sqrt[3]{2 \\times 3^6 \\times 7^3} = \\sqrt[3]{2} \\times 9 \\times 7 = 63 \\times \\sqrt[3]{2}.\n\\]\n\nSo the geometric mean is:\n\n\\[\n\\boxed{63 \\sqrt[3]{2}}.\n\\]\n\nThis is a positive real number.",
+      "answer": "\\(\\boxed{63 \\sqrt[3]{2}}\\)"
+    }
+  ]
+}

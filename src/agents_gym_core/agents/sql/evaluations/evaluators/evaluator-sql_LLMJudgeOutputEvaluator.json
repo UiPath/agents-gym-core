@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "sql_LLMJudgeOutputEvaluator",
+  "description": "LLM Judge evaluator for SQL agent",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "LLMJudgeOutputEvaluator",
+    "description": "Evaluates semantic similarity of SQL query results",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert SQL evaluator, analyze the semantic similarity of the actual SQL query result to the expected result. Score from 0-100 (where 0 means completely different and 100 means identical/equivalent in meaning).\n\nFocus on:\n1. Comparing the actual result to the expected result - content matters more than formatting\n2. Check if all expected data points are present in the actual output\n3. Verify no incorrect data is present in the actual output\n4. Account for reasonable variations in phrasing (e.g., \"Greatest Hits\" vs \"The album is Greatest Hits\")\n\nProvide your score with a brief justification.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "*"
+  }
+}

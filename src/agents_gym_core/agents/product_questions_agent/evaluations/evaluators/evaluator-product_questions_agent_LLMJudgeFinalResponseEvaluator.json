@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "id": "product_questions_agent_LLMJudgeFinalResponseEvaluator",
+    "description": "LLMJudgeFinalResponse evaluator for product_questions_agent - evaluates factuality of FinalResponse",
+    "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+    "evaluatorConfig": {
+        "name": "LLMJudgeFinalResponseEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "prompt": "You are an expert judge evaluating the factual accuracy of language model outputs. You will be given two pieces of text:\n1. A \"Golden Reference\" that contains the ground truth information.\n2. An \"Output\" that needs to be evaluated for factual accuracy compared to the Golden Reference.\nYour task is to carefully compare the Output to the Golden Reference and assign a BINARY score:\n- 100 means the Output satisfies the core expectation described in the Golden Reference. Focus on whether the key factual claim is correct. Minor wording differences, additional details, or stylistic variations are acceptable as long as the core fact is present and correct.\n- 0 means the Output fails the core expectation: the key fact is wrong, missing, or the Output is completely unrelated to the Golden Reference.\nWhen in doubt, if the core factual claim matches the Golden Reference expectation, assign 100.\nTo submit your evaluation, use the provided tool.\nNever answer using text. Only use the tool to submit your score.\n\n<golden-reference>\n{{ExpectedOutput}}\n</golden-reference>\n<output>\n{{ActualOutput}}\n</output>",
+        "model": "gpt-4o-2024-11-20",
+        "temperature": 0.0,
+        "maxTokens": null,
+        "targetOutputKey": "FinalResponse"
+    }
+}

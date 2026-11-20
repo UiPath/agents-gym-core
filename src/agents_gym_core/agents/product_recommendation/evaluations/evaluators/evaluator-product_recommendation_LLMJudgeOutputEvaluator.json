@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "id": "product_recommendation_LLMJudgeOutputEvaluator",
+    "description": "LLMJudgeOutputEvaluator for product_recommendation",
+    "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+    "evaluatorConfig": {
+        "name": "LLMJudgeOutputEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "prompt": "You are an expert judge evaluating the factual accuracy of language model outputs. You will be given two pieces of text:\n1. A \"Golden Reference\" that contains the ground truth information.\n2. An \"Output\" that needs to be evaluated for factual accuracy compared to the Golden Reference.\nYour task is to carefully compare the Output to the Golden Reference and assign a BINARY score:\n- 100 means the Output satisfies the core expectation described in the Golden Reference. Focus on whether the primary/best-matching product recommendation is correct. Additional products that don't perfectly meet all criteria are acceptable as long as the primary recommendation is right. Minor differences in secondary details are tolerable.\n- 0 means the Output fails the core expectation: the primary recommendation is wrong, the key product is missing, or the Output is completely unrelated to the Golden Reference.\nWhen in doubt, if the primary recommendation matches the Golden Reference expectation, assign 100.\nTo submit your evaluation, use the provided tool.\nNever answer using text. Only use the tool to submit your score.\n\n<golden-reference>\n{{ExpectedOutput}}\n</golden-reference>\n<output>\n{{ActualOutput}}\n</output>",
+        "model": "gpt-4o-2024-11-20",
+        "temperature": 0.0,
+        "maxTokens": null,
+        "targetOutputKey": "*"
+    }
+}

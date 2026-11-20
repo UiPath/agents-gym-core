@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "id": "semantic_analysis_LLMJudgeOutputEvaluator",
+    "description": "LLMJudgeOutputEvaluator for semantic_analysis agent",
+    "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+    "evaluatorConfig": {
+        "name": "LLMJudgeOutputEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "prompt": "As an expert evaluator for sentiment analysis, analyze the semantic similarity of these JSON contents to determine a score from 0-100. Focus on comparing the actual output to the expected output for: 1) Overall sentiment score and label, 2) Sentiment breakdown (positive, negative, neutral statement counts), 3) Key phrases with their sentiment and confidence. Account for reasonable variations while maintaining high standards for accuracy. Provide your score with a justification.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+        "model": "gpt-4o-2024-11-20",
+        "temperature": 0.0,
+        "maxTokens": null,
+        "targetOutputKey": "*"
+    }
+}

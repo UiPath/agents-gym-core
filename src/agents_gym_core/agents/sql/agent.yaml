@@ -1,0 +1,33 @@
+name: sql
+version: base
+
+
+metadata:
+  name: "SQL Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+    - long_summary
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      query:
+        type: str
+        description: The natural language query to translate to SQL
+  output_schema:
+    fields:
+      result:
+        type: str
+        description: The result of the SQL query execution
+  tools:
+  - _target_: agents_gym_core.agents.sql.tools.create_sql_db_list_tables_tool
+  - _target_: agents_gym_core.agents.sql.tools.create_sql_db_schema_tool
+  - _target_: agents_gym_core.agents.sql.tools.create_sql_db_query_checker_tool
+  - _target_: agents_gym_core.agents.sql.tools.create_sql_db_query_tool
+  - _target_: agents_gym_core.agents.sql.tools.create_check_result_tool
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-sql_train.json
+

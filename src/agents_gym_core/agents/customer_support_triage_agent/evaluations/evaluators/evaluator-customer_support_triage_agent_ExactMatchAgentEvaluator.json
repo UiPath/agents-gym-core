@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "id": "customer_support_triage_agent_ExactMatchAgentEvaluator",
+  "description": "Exact match evaluator for Agent field in customer_support_triage_agent",
+  "evaluatorTypeId": "uipath-exact-match",
+  "evaluatorConfig": {
+    "name": "ExactMatchAgentEvaluator",
+    "description": "Evaluates if the Agent field exactly matches the expected agent name",
+    "defaultEvaluationCriteria": null,
+    "targetOutputKey": "Agent",
+    "caseSensitive": false,
+    "negated": false
+  }
+}

@@ -1,0 +1,50 @@
+version: base
+
+metadata:
+  name: "PAPILLON - Privacy-Preserving Delegation"
+  tags:
+    - benchmark
+    - full-benchmark
+
+init:
+  script: core::init.py
+  data_dirs:
+    - evaluations/eval-sets
+    - evaluations/evaluators
+  params:
+    num_datapoints: 221
+    seed: 0
+
+loop: dspy-program:gepa_artifact.benchmarks.papillon.papillon_program.PAPILLON
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  # One instruction file per DSPy predictor; update_prompt's prompt_type names the predictor.
+  signature_prompts:
+    craft_redacted_request: "core::prompts/craft_redacted_request.md"
+    respond_to_query: "core::prompts/respond_to_query.md"
+
+  input_schema:
+    fields:
+      user_query:
+        type: "str"
+        description: "The user's original query, which may contain PII"
+
+  output_schema:
+    fields:
+      response:
+        type: "str"
+        description: "The final response to the user query"
+      llm_request:
+        type: "str"
+        description: "The redacted request sent to the untrusted LLM (used for PII leakage evaluation)"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+  evaluator_weights:
+    papillon_PapillonEvaluator: 1
+
+  tools: []

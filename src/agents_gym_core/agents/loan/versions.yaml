@@ -1,0 +1,45 @@
+# Per-agent version overrides for the loan agent.
+
+base: {}
+
+worst_sys_prompt:
+  version: worst_sys_prompt
+  agent:
+    system_prompt: "You are a loan agent."
+
+
+# Tool removal versions
+missing_LoanAgent_ApplyUiBankLoan_tool:
+  version: missing_LoanAgent_ApplyUiBankLoan_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ModifyLoanContract
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_SendSharepointDocumentViaDocuSign
+      - _target_: agents_gym_core.agents.loan.tools.Google
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "EscalationTool"
+        description: "Create an Action Center task"
+        assign_to: "random@example.com"
+        return_message: 'The escalation was successful. A task has been created for this query: "{query}". Task URL: https://example.com/actioncenter/tasks/1001. Call the end execution tool.'
+
+missing_Google_tool:
+  version: missing_Google_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ApplyUiBankLoan
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ModifyLoanContract
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_SendSharepointDocumentViaDocuSign
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "EscalationTool"
+        description: "Create an Action Center task"
+        assign_to: "random@example.com"
+        return_message: 'The escalation was successful. A task has been created for this query: "{query}". Task URL: https://example.com/actioncenter/tasks/1001. Call the end execution tool.'
+
+missing_EscalationTool_tool:
+  version: missing_EscalationTool_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ApplyUiBankLoan
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_ModifyLoanContract
+      - _target_: agents_gym_core.agents.loan.tools.LoanAgent_SendSharepointDocumentViaDocuSign
+      - _target_: agents_gym_core.agents.loan.tools.Google

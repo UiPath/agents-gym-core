@@ -1,0 +1,778 @@
+{
+  "version": "1.0",
+  "id": "9ca2abd0-600f-5dc6-ae92-b02ee2fa6926",
+  "name": "evaluation-set-product_questions_agent_train",
+  "evaluatorRefs": [
+    "product_questions_agent_ContainsProductEvaluator",
+    "product_questions_agent_EqualsEscalationEvaluator",
+    "product_questions_agent_LLMJudgeFinalResponseEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "DeterministicTest1",
+      "name": "MacBook Pro Price",
+      "inputs": {
+        "CustomerQuery": "What is the price of the Apple MacBook Pro 16-inch?",
+        "ProductName": "MacBook Pro",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "2499.99"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest5",
+      "name": "Pixel 8 Pro Display",
+      "inputs": {
+        "CustomerQuery": "What is the display size in inches of the Google Pixel 8 Pro?",
+        "ProductName": "Pixel 8 Pro",
+        "ProductManufacturer": "Google"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "6.7"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest8",
+      "name": "Surface Laptop Studio Price",
+      "inputs": {
+        "CustomerQuery": "What is the price of the Microsoft Surface Laptop Studio?",
+        "ProductName": "Surface Laptop Studio",
+        "ProductManufacturer": "Microsoft"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "1599.99"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest10",
+      "name": "HP Spectre x360 14 Price",
+      "inputs": {
+        "CustomerQuery": "What is the price of the HP Spectre x360 14?",
+        "ProductName": "Spectre x360 14",
+        "ProductManufacturer": "HP"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "1699.99"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest11",
+      "name": "Canon EOS R6 Sensor",
+      "inputs": {
+        "CustomerQuery": "What type of sensor does the Canon EOS R6 have?",
+        "ProductName": "EOS R6 camera",
+        "ProductManufacturer": "Canon"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "20MP Full-Frame Sensor"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_MacBookPro_RAM",
+      "name": "MacBook Pro 16-inch RAM (Deterministic)",
+      "inputs": {
+        "CustomerQuery": "How much RAM does the MacBook Pro 16-inch have?",
+        "ProductName": "MacBook Pro 16-inch",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "16GB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_MXMaster3S_Connectivity",
+      "name": "Logitech MX Master 3S Connectivity",
+      "inputs": {
+        "CustomerQuery": "What connectivity options does the Logitech MX Master 3S have?",
+        "ProductName": "MX Master 3S",
+        "ProductManufacturer": "Logitech"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Bluetooth & USB-C"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_RTX4090_VRAM",
+      "name": "RTX 4090 VRAM",
+      "inputs": {
+        "CustomerQuery": "How much VRAM does the NVIDIA GeForce RTX 4090 have?",
+        "ProductName": "GeForce RTX 4090",
+        "ProductManufacturer": "NVIDIA"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "24GB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SurfaceLaptopStudio_Display",
+      "name": "Surface Laptop Studio Screen Size",
+      "inputs": {
+        "CustomerQuery": "What is the screen size of the Microsoft Surface Laptop Studio, in inches?",
+        "ProductName": "Surface Laptop Studio",
+        "ProductManufacturer": "Microsoft"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "14.4"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_iPadPro_Chip",
+      "name": "iPad Pro 12.9-inch Chip",
+      "inputs": {
+        "CustomerQuery": "What chip does the iPad Pro 12.9-inch use?",
+        "ProductName": "iPad Pro 12.9-inch",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "M2 Chip"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_RazerBlade_RAM",
+      "name": "Razer Blade 15 Advanced RAM",
+      "inputs": {
+        "CustomerQuery": "How much RAM does the Razer Blade 15 Advanced have?",
+        "ProductName": "Blade 15 Advanced",
+        "ProductManufacturer": "Razer"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "32GB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_CanonEOSR6_Sensor",
+      "name": "Canon EOS R6 Sensor Resolution (Deterministic)",
+      "inputs": {
+        "CustomerQuery": "What is the sensor resolution of the Canon EOS R6?",
+        "ProductName": "EOS R6",
+        "ProductManufacturer": "Canon"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "20MP Full-Frame Sensor"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_BoseQC_Battery",
+      "name": "Bose QuietComfort Earbuds II Battery",
+      "inputs": {
+        "CustomerQuery": "What is the battery life of the Bose QuietComfort Earbuds II, in hours?",
+        "ProductName": "QuietComfort Earbuds II",
+        "ProductManufacturer": "Bose"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "6"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_Pixel8Pro_Display",
+      "name": "Pixel 8 Pro Screen Size (Deterministic)",
+      "inputs": {
+        "CustomerQuery": "What is the screen size of the Google Pixel 8 Pro, in inches?",
+        "ProductName": "Pixel 8 Pro",
+        "ProductManufacturer": "Google"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "6.7"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SonyA7IV_Video",
+      "name": "Sony Alpha A7 IV Video",
+      "inputs": {
+        "CustomerQuery": "What video capabilities does the Sony Alpha A7 IV have?",
+        "ProductName": "Alpha A7 IV",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "4K"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_CorsairK95_MacroKeys",
+      "name": "Corsair K95 RGB Platinum Macro Keys",
+      "inputs": {
+        "CustomerQuery": "How many macro keys does the Corsair K95 RGB Platinum Keyboard have?",
+        "ProductName": "K95 RGB Platinum Keyboard",
+        "ProductManufacturer": "Corsair"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "6"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_OdysseyNeoG9_Display",
+      "name": "Samsung Odyssey Neo G9 Screen Size",
+      "inputs": {
+        "CustomerQuery": "What is the screen size of the Samsung Odyssey Neo G9, in inches?",
+        "ProductName": "Odyssey Neo G9 Monitor",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "49"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_LGGram_Processor",
+      "name": "LG Gram 17 Processor",
+      "inputs": {
+        "CustomerQuery": "What processor does the LG Gram 17 use?",
+        "ProductName": "Gram 17",
+        "ProductManufacturer": "LG"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Intel Evo i7"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_iPhone13Pro_Chip",
+      "name": "iPhone 13 Pro Chip",
+      "inputs": {
+        "CustomerQuery": "What chip does the iPhone 13 Pro use?",
+        "ProductName": "iPhone 13 Pro",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "A15 Bionic Chip"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SwitchOLED_Display",
+      "name": "Nintendo Switch OLED Screen Size",
+      "inputs": {
+        "CustomerQuery": "What is the screen size of the Nintendo Switch OLED, in inches?",
+        "ProductName": "Switch OLED Model",
+        "ProductManufacturer": "Nintendo"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "7"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_NighthawkAX12_WiFi",
+      "name": "Netgear Nighthawk AX12 WiFi",
+      "inputs": {
+        "CustomerQuery": "What WiFi technology does the Netgear Nighthawk AX12 use?",
+        "ProductName": "Nighthawk AX12",
+        "ProductManufacturer": "Netgear"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Wi-Fi 6"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_PS5_Storage",
+      "name": "PlayStation 5 Storage Type",
+      "inputs": {
+        "CustomerQuery": "What is the storage type of the PlayStation 5?",
+        "ProductName": "PlayStation 5",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Ultra-High-Speed SSD"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_CanonPIXMA_PrintSize",
+      "name": "Canon PIXMA iP8720 Print Size",
+      "inputs": {
+        "CustomerQuery": "What is the maximum print size of the Canon PIXMA iP8720?",
+        "ProductName": "PIXMA iP8720",
+        "ProductManufacturer": "Canon"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "13\" x 19\""
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SamsungT7_ReadSpeed",
+      "name": "Samsung T7 Portable SSD Read Speed",
+      "inputs": {
+        "CustomerQuery": "What is the read speed of the Samsung T7 Portable SSD, in MB/s?",
+        "ProductName": "T7 Portable SSD",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "1050"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_BoseRevolvePlus_Battery",
+      "name": "Bose SoundLink Revolve+ II Battery",
+      "inputs": {
+        "CustomerQuery": "What is the battery life of the Bose SoundLink Revolve+ II, in hours?",
+        "ProductName": "SoundLink Revolve+ II",
+        "ProductManufacturer": "Bose"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "16"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "InvalidProduct1",
+      "name": "Escalation - Pixel 9 Pro Not Found",
+      "inputs": {
+        "CustomerQuery": "What is the price of Google Pixel 9 Pro?",
+        "ProductName": "Google Pixel 9 Pro",
+        "ProductManufacturer": "Google"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_EqualsEscalationEvaluator": {
+          "expectedQuestion": "What is the price of Google Pixel 9 Pro?"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "InvalidProduct2",
+      "name": "Escalation - LG TV Evo V3 Not Found",
+      "inputs": {
+        "CustomerQuery": "What is the price of the LG TV Evo V3?",
+        "ProductName": "LG TV Evo V3",
+        "ProductManufacturer": "LG"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_EqualsEscalationEvaluator": {
+          "expectedQuestion": "What is the price of the LG TV Evo V3?"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "MissingProduct",
+      "name": "Escalation - Missing Product Name",
+      "inputs": {
+        "CustomerQuery": "What is the price of the ?",
+        "ProductName": "LG TV Evo V3",
+        "ProductManufacturer": "LG"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_EqualsEscalationEvaluator": {
+          "expectedQuestion": "What is the price of the ?"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test1",
+      "name": "MacBook Pro Price (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the price of the Apple MacBook Pro 16-inch?",
+        "ProductName": "MacBook Pro",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Final Response says that the product has 2499.99 as price tag. Score should be 100."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test2",
+      "name": "HP Spectre x360 Convertible (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Is the HP Spectre x360 14 a convertible laptop?",
+        "ProductName": "Spectre x360",
+        "ProductManufacturer": "HP"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The HP Spectre x360 14 is a convertible laptop with a touchscreen display."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test4",
+      "name": "MacBook Pro RAM (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Does the Apple MacBook Pro 16-inch have 16GB of RAM?",
+        "ProductName": "MacBook Pro 16-inch",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Final Response says that the product has 16GB of RAM."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test5",
+      "name": "Dell XPS 13 Display (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the display size of the Dell XPS 13?",
+        "ProductName": "XPS 13",
+        "ProductManufacturer": "Dell"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Final Response says that the product has 13.4 inches."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test6",
+      "name": "Pixel 8 Pro Display (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the display size of the Google Pixel 8 Pro?",
+        "ProductName": "Pixel 8 Pro",
+        "ProductManufacturer": "Google"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Final Response says that the product has active 6.7-inch OLED Display."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test9",
+      "name": "Sony WH-1000XM5 Battery (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the battery life of the Sony WH-1000XM5?",
+        "ProductName": "WH-1000XM5",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product battery lasts 30 hours."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test10",
+      "name": "Sony WH-1000XM5 Noise Cancellation (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Does the Sony WH-1000XM5 have noise cancellation?",
+        "ProductName": "Headset WH-1000XM5",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product has active noise cancellation."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test11",
+      "name": "Dell XPS 13 RAM (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the RAM size for the Dell XPS 13?",
+        "ProductName": "XPS 13 laptop",
+        "ProductManufacturer": "Dell"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product has 16 GB of RAM."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test13",
+      "name": "Sony Alpha A7 IV Resolution (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the resolution of the Sony Alpha A7 IV camera?",
+        "ProductName": "Alpha A7 IV",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The Sony Alpha A7 IV offers a resolution of 33MP, perfect for high-quality photography."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test15",
+      "name": "HP Spectre x360 14 Price (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the price of the HP Spectre x360 14?",
+        "ProductName": "Spectre x360 14",
+        "ProductManufacturer": "HP"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product price is 1699.99."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test17",
+      "name": "iPad Pro M2 Chip (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Does the Apple iPad Pro 12.9-inch use the M2 chip?",
+        "ProductName": "iPad Pro 12.9-inch",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Yes, the Apple iPad Pro 12.9-inch uses the advanced M2 chip for better performance."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-15T00:00:00.000Z",
+  "updatedAt": "2025-01-15T00:00:00.000Z"
+}

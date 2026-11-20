@@ -1,0 +1,1990 @@
+{
+  "version": "1.0",
+  "id": "sql_agent_eval_set",
+  "name": "SQL Agent Evaluation Set",
+  "evaluatorRefs": [
+    "sql_LLMJudgeOutputEvaluator",
+    "sql_ToolCallOutputEvaluator",
+    "sql_ToolCallOrderEvaluator",
+    "sql_ToolCallCountEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "SELECT_Find_the_customer_with_the_email_address_leonekohl",
+      "name": "SELECT: Find the customer with the email address 'leonekohler@surfeu.de'.",
+      "inputs": {
+        "query": "Find the customer with the email address 'leonekohler@surfeu.de'."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer with the email 'leonekohler@surfeu.de' is Leonie Köhler."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Leonie', 'Köhler')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_title_of_the_most_recently_added_album_in",
+      "name": "SELECT: List the title of the most recently added album in the database.",
+      "inputs": {
+        "query": "List the title of the most recently added album in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most recently added album is 'Koyaanisqatsi (Soundtrack from the Motion Picture)'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Koyaanisqatsi (Soundtrack from the Motion Picture)',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_artist_with_the_ArtistId_of_1",
+      "name": "SELECT: Find the name of the artist with the ArtistId of 1.",
+      "inputs": {
+        "query": "Find the name of the artist with the ArtistId of 1."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with ArtistId 1 is AC/DC."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('AC/DC',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_full_name_email_CustomerId5",
+      "name": "SELECT: Retrieve the full name (first and last) and email of the customer with CustomerId 5.",
+      "inputs": {
+        "query": "Retrieve the full name (first and last) and email of the customer with CustomerId 5."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer with CustomerId 5 is František Wichterlová and their email is frantisekw@jetbrains.com."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('František Wichterlová', 'frantisekw@jetbrains.com')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_track_with_the_highest_unit_pr",
+      "name": "SELECT: Get the name of the track with the highest unit price.",
+      "inputs": {
+        "query": "Get the name of the track with the highest unit price."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the highest unit price is 'Battlestar Galactica: The Story So Far'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Battlestar Galactica: The Story So Far',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_invoice_total_for_the_invoice_with_Invoic",
+      "name": "SELECT: Find the invoice total for the invoice with InvoiceId 10.",
+      "inputs": {
+        "query": "Find the invoice total for the invoice with InvoiceId 10."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The total for the invoice with InvoiceId 10 is 5.94."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(5.94,)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_name_of_the_first_employee_whose_title_is",
+      "name": "SELECT: List the name of the first employee whose title is 'General Manager'.",
+      "inputs": {
+        "query": "List the name of the first employee whose title is 'General Manager'."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The first employee with the title 'General Manager' is Andrew Adams."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Andrew', 'Adams')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_genre_with_GenreId_3",
+      "name": "SELECT: Get the name of the genre with GenreId 3.",
+      "inputs": {
+        "query": "Get the name of the genre with GenreId 3."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The genre with GenreId 3 is Metal."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Metal',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_and_unit_price_of_the_most_expensive",
+      "name": "SELECT: Find the name and unit price of the most expensive track.",
+      "inputs": {
+        "query": "Find the name and unit price of the most expensive track."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most expensive track is 'Battlestar Galactica: The Story So Far' with a unit price of 1.99."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Battlestar Galactica: The Story So Far', 1.99)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_name_of_the_first_playlist_in_the_databas",
+      "name": "SELECT: List the name of the first playlist in the database.",
+      "inputs": {
+        "query": "List the name of the first playlist in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The first playlist in the database is named 'Music'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Music',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_title_of_the_album_with_the_highest_AlbumI",
+      "name": "SELECT: Get the title of the album with the highest AlbumId.",
+      "inputs": {
+        "query": "Get the title of the album with the highest AlbumId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The album with the highest AlbumId is 'Koyaanisqatsi (Soundtrack from the Motion Picture)'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Koyaanisqatsi (Soundtrack from the Motion Picture)',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_artist_with_the_highest_Artis",
+      "name": "SELECT: Find the name of the artist with the highest ArtistId.",
+      "inputs": {
+        "query": "Find the name of the artist with the highest ArtistId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with the highest ArtistId is Philip Glass Ensemble."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Philip Glass Ensemble',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_full_name_email_lowest_CustomerId",
+      "name": "SELECT: Retrieve the full name (first and last) and email of the customer with the lowest CustomerId.",
+      "inputs": {
+        "query": "Retrieve the full name (first and last) and email of the customer with the lowest CustomerId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer with the lowest CustomerId is Luís Gonçalves, and their email is luisg@embraer.com.br."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Luís Gonçalves', 'luisg@embraer.com.br')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_track_with_the_shortest_durat",
+      "name": "SELECT: Find the name of the track with the shortest duration.",
+      "inputs": {
+        "query": "Find the name of the track with the shortest duration."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the shortest duration is 'É Uma Partida De Futebol'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('É Uma Partida De Futebol',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_invoice_total_for_the_most_recent_invoice",
+      "name": "SELECT: Get the invoice total for the most recent invoice.",
+      "inputs": {
+        "query": "Get the invoice total for the most recent invoice."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The total for the most recent invoice is 1.99."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(1.99,)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_first_employee_hired_base",
+      "name": "SELECT: Retrieve the name of the first employee hired based on their HireDate.",
+      "inputs": {
+        "query": "Retrieve the name of the first employee hired based on their HireDate."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The first employee hired is Jane Peacock."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Jane', 'Peacock')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_genre_with_the_lowest_GenreId",
+      "name": "SELECT: Get the name of the genre with the lowest GenreId.",
+      "inputs": {
+        "query": "Get the name of the genre with the lowest GenreId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The genre with the lowest GenreId is Rock."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Rock',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_and_unit_price_of_the_track_with_the",
+      "name": "SELECT: Get the name and unit price of the track with the highest bytes size.",
+      "inputs": {
+        "query": "Get the name and unit price of the track with the highest bytes size."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the highest bytes size is 'Through a Looking Glass' and its unit price is 1.99."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Through a Looking Glass', 1.99)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_playlist_with_the_lowest",
+      "name": "SELECT: Retrieve the name of the playlist with the lowest PlaylistId.",
+      "inputs": {
+        "query": "Retrieve the name of the playlist with the lowest PlaylistId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The playlist with the lowest PlaylistId is 'Music'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Music',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_customer_with_the_longest_email_address",
+      "name": "SELECT: Find the customer with the longest email address.",
+      "inputs": {
+        "query": "Find the customer with the longest email address."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer with the longest email address is Roberto Almeida, and their email is roberto.almeida@riotur.gov.br."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Roberto', 'Almeida', 'roberto.almeida@riotur.gov.br')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_title_of_the_album_with_the_lowest_AlbumId",
+      "name": "SELECT: Get the title of the album with the lowest AlbumId.",
+      "inputs": {
+        "query": "Get the title of the album with the lowest AlbumId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The album with the lowest AlbumId is 'For Those About To Rock We Salute You'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('For Those About To Rock We Salute You',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_artist_with_the_second_highest_ArtistId",
+      "name": "SELECT: Find the artist with the second highest ArtistId.",
+      "inputs": {
+        "query": "Find the artist with the second highest ArtistId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with the second highest ArtistId is Nash Ensemble."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Nash Ensemble',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_first_name_last_name_and_email_of_the",
+      "name": "SELECT: Retrieve the first name, last name, and email of the employee with EmployeeId 2.",
+      "inputs": {
+        "query": "Retrieve the first name, last name, and email of the employee with EmployeeId 2."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The employee with EmployeeId 2 is Nancy Edwards, and their email is nancy@chinookcorp.com."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Nancy', 'Edwards', 'nancy@chinookcorp.com')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_track_with_the_longest_name",
+      "name": "SELECT: List the track with the longest name.",
+      "inputs": {
+        "query": "List the track with the longest name."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the longest name is 'Homecoming / The Death Of St. Jimmy / East 12th St. / Nobody Likes You / Rock And Roll Girlfriend / We're Coming Home Again'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(\"Homecoming / The Death Of St. Jimmy / East 12th St. / Nobody Likes You / Rock And Roll Girlfriend / We're Coming Home Again\",)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_invoice_total_for_the_invoice_placed_on_t",
+      "name": "SELECT: Find the invoice total for the invoice placed on the earliest date.",
+      "inputs": {
+        "query": "Find the invoice total for the invoice placed on the earliest date."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The total for the earliest invoice is 1.98."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(1.98,)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_genre_with_the_most_track",
+      "name": "SELECT: Retrieve the name of the genre with the most tracks associated with it.",
+      "inputs": {
+        "query": "Retrieve the name of the genre with the most tracks associated with it."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The genre with the most tracks associated with it is Rock."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Rock',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_artist_with_the_most_albums_in",
+      "name": "SELECT: Get the name of the artist with the most albums in the database.",
+      "inputs": {
+        "query": "Get the name of the artist with the most albums in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with the most albums in the database is Iron Maiden."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Iron Maiden',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_track_with_the_highest_unit_p",
+      "name": "SELECT: Find the name of the track with the highest unit price among tracks in the 'Alternative' genre.",
+      "inputs": {
+        "query": "Find the name of the track with the highest unit price among tracks in the 'Alternative' genre."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the highest unit price in the 'Alternative' genre is 'War Pigs'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('War Pigs',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_customer_who_has_spent_th",
+      "name": "SELECT: Retrieve the name of the customer who has spent the most money on invoices.",
+      "inputs": {
+        "query": "Retrieve the name of the customer who has spent the most money on invoices."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer who has spent the most money on invoices is Helena Holý."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Helena', 'Holý')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_employee_who_was_hired_most_re",
+      "name": "SELECT: Get the name of the employee who was hired most recently.",
+      "inputs": {
+        "query": "Get the name of the employee who was hired most recently."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The employee who was hired most recently is Laura Callahan."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Laura', 'Callahan')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_invoice_total_for_the_invoice_with_the_hi",
+      "name": "SELECT: Find the invoice total for the invoice with the highest InvoiceId.",
+      "inputs": {
+        "query": "Find the invoice total for the invoice with the highest InvoiceId."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The total for the invoice with the highest InvoiceId is 1.99."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(1.99,)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_track_with_the_lowest_number_of_bytes",
+      "name": "SELECT: List the track with the lowest number of bytes.",
+      "inputs": {
+        "query": "List the track with the lowest number of bytes."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the lowest number of bytes is 'É Uma Partida De Futebol'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('É Uma Partida De Futebol',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_customer_with_the_least_tracks_purchased",
+      "name": "SELECT: Find the customer with the least tracks purchased (based on InvoiceLine).",
+      "inputs": {
+        "query": "Find the customer with the least tracks purchased (based on InvoiceLine)."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer with the least tracks purchased is Puja Srivastava."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Puja', 'Srivastava')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_most_popular_track_based",
+      "name": "SELECT: Retrieve the name of the most popular track (based on quantity sold in InvoiceLine). In case two tracks has the same quantity sold, return the first track sorted by lexicographic order on name.",
+      "inputs": {
+        "query": "Retrieve the name of the most popular track (based on quantity sold in InvoiceLine). In case two tracks has the same quantity sold, return the first track sorted by lexicographic order on name."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most popular track based on quantity sold is 'A Cor Do Sol'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('A Cor Do Sol',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_full_name_of_the_employee_with_the_least_p",
+      "name": "SELECT: Get the full name of the employee with the least phone number length.",
+      "inputs": {
+        "query": "Get the full name of the employee with the least phone number length."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The employee with the least phone number lenght is Steve Johnson."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Steve', 'Johnson')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_track_with_the_longest_duration_in_millis",
+      "name": "SELECT: Find the track with the longest duration in milliseconds.",
+      "inputs": {
+        "query": "Find the track with the longest duration in milliseconds."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the longest duration is 'Occupation / Precipice'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Occupation / Precipice',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_playlist_with_the_most_tr",
+      "name": "SELECT: Retrieve the name of the playlist with the most tracks.",
+      "inputs": {
+        "query": "Retrieve the name of the playlist with the most tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The playlist with the most tracks is 'Music'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Music',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_album_with_the_highest_number",
+      "name": "SELECT: Get the name of the album with the highest number of tracks.",
+      "inputs": {
+        "query": "Get the name of the album with the highest number of tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The album with the highest number of tracks is 'Greatest Hits'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Greatest Hits',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_first_name_and_last_name_of_the_employees",
+      "name": "SELECT: List the first name and last name of the employees who reports to EmployeeId 2.",
+      "inputs": {
+        "query": "List the first name and last name of the employees who reports to EmployeeId 2."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The employees who report to EmployeeId 2 are Jane Peacock, Margaret Park and Steve Johnson."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Jane', 'Peacock'), ('Margaret', 'Park'), ('Steve', 'Johnson')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_track_with_the_lowest_unit_pr",
+      "name": "SELECT: Find the name of the track with the lowest unit price.",
+      "inputs": {
+        "query": "Find the name of the track with the lowest unit price."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the lowest unit price is 'For Those About To Rock (We Salute You)'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('For Those About To Rock (We Salute You)',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_artist_with_the_fewest_tr",
+      "name": "SELECT: Retrieve the name of the artist with the fewest tracks in the database. In case multiple artists has the same number of tracks, pick the first one based on the artist name sorted lexicographically",
+      "inputs": {
+        "query": "Retrieve the name of the artist with the fewest tracks in the database. In case multiple artists has the same number of tracks, pick the first one based on the artist name sorted lexicographically"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with the fewest tracks in the database is Aaron Copland & London Symphony Orchestra."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Aaron Copland & London Symphony Orchestra',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_most_expensive_album_in_terms_of_total_tra",
+      "name": "SELECT: Get the most expensive album in terms of total track prices.",
+      "inputs": {
+        "query": "Get the most expensive album in terms of total track prices."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most expensive album in terms of total track prices is 'Greatest Hits'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Greatest Hits',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_track_with_the_highest_quanti",
+      "name": "SELECT: Find the name of the track with the highest quantity sold in InvoiceLine. In case multiple artists has the same number of tracks, pick the first one based on the track name sorted lexicographically",
+      "inputs": {
+        "query": "Find the name of the track with the highest quantity sold in InvoiceLine. In case multiple artists has the same number of tracks, pick the first one based on the track name sorted lexicographically"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the highest quantity sold is 'A Cor Do Sol'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('A Cor Do Sol',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_genre_with_the_most_albums_rel",
+      "name": "SELECT: Get the name of the genre with the most albums released.",
+      "inputs": {
+        "query": "Get the name of the genre with the most albums released."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The genre with the most albums released is 'Rock'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Rock',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_artist_who_has_released_the_m",
+      "name": "SELECT: Find the name of the artist who has released the most albums.",
+      "inputs": {
+        "query": "Find the name of the artist who has released the most albums."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist who has released the most albums is Iron Maiden."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Iron Maiden',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_most_recently_added_track",
+      "name": "SELECT: Retrieve the name of the most recently added track.",
+      "inputs": {
+        "query": "Retrieve the name of the most recently added track."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most recently added track is 'Koyaanisqatsi'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Koyaanisqatsi',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_and_unit_price_of_the_least_expensive",
+      "name": "SELECT: Get the name and unit price of the least expensive track. In case multiple artists has the same number of tracks, pick the first one based on the track name sorted lexicographically",
+      "inputs": {
+        "query": "Get the name and unit price of the least expensive track. In case multiple artists has the same number of tracks, pick the first one based on the track name sorted lexicographically"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The least expensive track is '40' priced at 0.99."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('\"40\"', 0.99)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_name_of_the_track_with_the_highest_number",
+      "name": "SELECT: List the name of the track with the highest number of bytes in the database.",
+      "inputs": {
+        "query": "List the name of the track with the highest number of bytes in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the highest number of bytes is 'Through a Looking Glass'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Through a Looking Glass',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_album_with_the_most_tracks_by_number_of_t",
+      "name": "SELECT: Find the album with the most tracks by number of tracks.",
+      "inputs": {
+        "query": "Find the album with the most tracks by number of tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The album with the most tracks is 'Greatest Hits'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Greatest Hits',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_customer_with_the_highest",
+      "name": "SELECT: Retrieve the name of the customer with the highest amount spent on invoices.",
+      "inputs": {
+        "query": "Retrieve the name of the customer with the highest amount spent on invoices."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The customer who spent the most on invoices is Helena Holý."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Helena', 'Holý')]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_title_of_the_first_album_ever_released",
+      "name": "SELECT: Find the title of the first album ever released.",
+      "inputs": {
+        "query": "Find the title of the first album ever released."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The first album ever released is 'For Those About To Rock We Salute You'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('For Those About To Rock We Salute You',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_genre_with_the_fewest_tra",
+      "name": "SELECT: Retrieve the name of the genre with the fewest tracks associated with it.",
+      "inputs": {
+        "query": "Retrieve the name of the genre with the fewest tracks associated with it."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The genre with the fewest tracks associated with it is 'Opera'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Opera',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_most_expensive_track_based_on",
+      "name": "SELECT: Get the name of the most expensive track based on unit price. In case multiple artists has the same number of tracks, pick the last one based on the track name sorted lexicographically",
+      "inputs": {
+        "query": "Get the name of the most expensive track based on unit price. In case multiple artists has the same number of tracks, pick the last one based on the track name sorted lexicographically"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most expensive track based on unit price is 'Women's Appreciation'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(\"Women's Appreciation\",)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_name_of_the_playlist_with_the_least_numbe",
+      "name": "SELECT: Find the name of the playlist with the least number of tracks.",
+      "inputs": {
+        "query": "Find the name of the playlist with the least number of tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The playlist with the least number of tracks is 'Movies'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Movies',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_name_of_the_artist_who_has_the_most_track",
+      "name": "SELECT: List the name of the artist who has the most tracks in the database.",
+      "inputs": {
+        "query": "List the name of the artist who has the most tracks in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with the most tracks in the database is Iron Maiden."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Iron Maiden', 213)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_invoice_total_for_the_second_most_recent",
+      "name": "SELECT: Find the invoice total for the second most recent invoice.",
+      "inputs": {
+        "query": "Find the invoice total for the second most recent invoice."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The total for the second most recent invoice is 13.86."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[(13.86,)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_genre_with_the_highest_nu",
+      "name": "SELECT: Retrieve the name of the genre with the highest number of tracks.",
+      "inputs": {
+        "query": "Retrieve the name of the genre with the highest number of tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The genre with the highest number of tracks is 'Rock'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Rock',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_album_with_the_most_tracks",
+      "name": "SELECT: Find the album with the most tracks.",
+      "inputs": {
+        "query": "Find the album with the most tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The album with the most tracks is 'Greatest Hits'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Greatest Hits', 57)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_most_popular_genre_based_on_th",
+      "name": "SELECT: Get the name of the most popular genre based on the total number of tracks.",
+      "inputs": {
+        "query": "Get the name of the most popular genre based on the total number of tracks."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The most popular genre based on the total number of tracks is 'Rock'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Rock',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_artist_with_the_most_trac",
+      "name": "SELECT: Retrieve the name of the artist with the most tracks associated.",
+      "inputs": {
+        "query": "Retrieve the name of the artist with the most tracks associated."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The artist with the most tracks associated is Iron Maiden."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Iron Maiden',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Find_the_track_with_the_most_bytes_in_the_database",
+      "name": "SELECT: Find the track with the most bytes in the database.",
+      "inputs": {
+        "query": "Find the track with the most bytes in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the most bytes in the database is 'Through a Looking Glass'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Through a Looking Glass',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Get_the_name_of_the_album_with_the_most_tracks_sol",
+      "name": "SELECT: Get the name of the album with the most tracks sold (based on InvoiceLine).",
+      "inputs": {
+        "query": "Get the name of the album with the most tracks sold (based on InvoiceLine)."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The album with the most tracks sold is 'Minha Historia'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('Minha Historia',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_Retrieve_the_name_of_the_track_with_the_most_times",
+      "name": "SELECT: Retrieve the name of the track with the most times purchased. In case multiple tracks are selected, choose the first based on lexicographic order on track name",
+      "inputs": {
+        "query": "Retrieve the name of the track with the most times purchased. In case multiple tracks are selected, choose the first based on lexicographic order on track name"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The track with the most times purchased is 'A Cor Do Sol'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('A Cor Do Sol',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "SELECT_List_the_name_of_the_first_album_released_in_the_R",
+      "name": "SELECT: List the name of the first album released in the 'Rock' genre.",
+      "inputs": {
+        "query": "List the name of the first album released in the 'Rock' genre."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The first album released in the 'Rock' genre is 'For Those About To Rock We Salute You'."
+          }
+        },
+        "sql_ToolCallOutputEvaluator": {
+          "toolOutputs": [
+            {
+              "name": "sql_db_query",
+              "output": "[('For Those About To Rock We Salute You',)]"
+            }
+          ]
+        },
+        "sql_ToolCallOrderEvaluator": null,
+        "sql_ToolCallCountEvaluator": null
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "TABLE_INFO_List_all_the_tables_in_the_database",
+      "name": "TABLE_INFO: List all the tables in the database.",
+      "inputs": {
+        "query": "List all the tables in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The tables in the database are: 'Album', 'Artist', 'Customer', 'Employee', 'Genre', 'Invoice', 'InvoiceLine', 'MediaType', 'Playlist', 'PlaylistTrack', and 'Track'."
+          }
+        }
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "TABLE_INFO_List_all_indexes_in_the_database",
+      "name": "TABLE_INFO: List all indexes in the database.",
+      "inputs": {
+        "query": "List all indexes in the database."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The indexes in the database are 'sqlite_autoindex_PlaylistTrack_1', 'IFK_AlbumArtistId', 'IFK_CustomerSupportRepId', 'IFK_EmployeeReportsTo', 'IFK_InvoiceCustomerId', 'IFK_InvoiceLineInvoiceId', 'IFK_InvoiceLineTrackId', 'IFK_PlaylistTrackTrackId', 'IFK_TrackAlbumId', IFK_TrackGenreId' and 'IFK_TrackMediaTypeId'."
+          }
+        }
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "TABLE_INFO_Find_the_tables_that_have_the_Email_column",
+      "name": "TABLE_INFO: Find the tables that have the 'Email' column.",
+      "inputs": {
+        "query": "Find the tables that have the 'Email' column."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The tables that contain the 'Email' column are 'Customer' and 'Employee'."
+          }
+        }
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "PRAGMA_Get_the_columns_for_the_Album_table",
+      "name": "PRAGMA: Get the columns for the 'Album' table.",
+      "inputs": {
+        "query": "Get the columns for the 'Album' table."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The 'Album' table has columns: 'AlbumId', 'Title' and 'ArtistId'."
+          }
+        },
+        "sql_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "sql_db_schema"
+          ]
+        },
+        "sql_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "sql_db_schema": [
+              "==",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "PRAGMA_Get_the_foreign_key_relationships_in_the_InvoiceLi",
+      "name": "PRAGMA: Get the foreign key relationships in the 'InvoiceLine' table.",
+      "inputs": {
+        "query": "Get the foreign key relationships in the 'InvoiceLine' table."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "sql_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "result": "The 'InvoiceLine' table has two foreign key relationships: one with the 'Invoice' table on 'InvoiceId', and another with the 'Track' table on 'TrackId'."
+          }
+        },
+        "sql_ToolCallOrderEvaluator": {
+          "toolCallsOrder": [
+            "sql_db_schema"
+          ]
+        },
+        "sql_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "sql_db_schema": [
+              "==",
+              1
+            ]
+          }
+        }
+      },
+      "evalSetId": "sql_agent_eval_set",
+      "createdAt": "2026-02-12T00:00:00.000Z",
+      "updatedAt": "2026-02-12T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    }
+  ]
+}

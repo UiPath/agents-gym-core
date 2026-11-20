@@ -1,0 +1,1027 @@
+[
+    {
+        "Name": "Apple MacBook Pro 16-inch",
+        "Description": "A high-performance laptop designed for professionals, featuring the M1 Pro chip and a stunning Retina display.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "M1 Pro Chip",
+                "16GB RAM",
+                "512GB SSD",
+                "16-inch Retina Display"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Dell XPS 13",
+        "Description": "A sleek and powerful ultrabook with a stunning InfinityEdge display and high-end performance for productivity.",
+        "Attributes": {
+            "Price": 1299.99,
+            "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "1TB SSD",
+                "13.4-inch InfinityEdge Display"
+            ],
+            "Brand": "Dell"
+        }
+    },
+    {
+        "Name": "Samsung Galaxy Tab S9",
+        "Description": "A premium tablet with an AMOLED display, ideal for multitasking, creativity, and entertainment.",
+        "Attributes": {
+            "Price": 799.99,
+            "Features": [
+                "12.4-inch AMOLED Display",
+                "Snapdragon 8 Gen 2",
+                "256GB Storage",
+                "S Pen Included"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "Sony WH-1000XM5",
+        "Description": "Industry-leading noise-cancelling headphones with premium sound quality and all-day comfort.",
+        "Attributes": {
+            "Price": 399.99,
+            "Features": [
+                "Active Noise Cancellation",
+                "Bluetooth 5.2",
+                "30 Hours Battery Life"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "HP Spectre x360 14",
+        "Description": "A versatile 2-in-1 convertible laptop designed for creative professionals and multitaskers.",
+        "Attributes": {
+            "Price": 1699.99,
+            "Features": [
+                "Intel Evo i7",
+                "16GB RAM",
+                "1TB SSD",
+                "Convertible Touchscreen"
+            ],
+            "Brand": "HP"
+        }
+    },
+    {
+        "Name": "Logitech MX Master 3S",
+        "Description": "An ergonomic and precise mouse with advanced scrolling and customization options for professionals.",
+        "Attributes": {
+            "Price": 99.99,
+            "Features": [
+                "Ergonomic Design",
+                "Bluetooth & USB-C",
+                "MagSpeed Scrolling"
+            ],
+            "Brand": "Logitech"
+        }
+    },
+    {
+        "Name": "NVIDIA GeForce RTX 4090",
+        "Description": "The most powerful GPU available, delivering unmatched gaming and creative performance.",
+        "Attributes": {
+            "Price": 1599.99,
+            "Features": [
+                "24GB GDDR6X",
+                "Ray Tracing",
+                "DLSS 3.0"
+            ],
+            "Brand": "NVIDIA"
+        }
+    },
+    {
+        "Name": "Microsoft Surface Laptop Studio",
+        "Description": "A versatile laptop with an innovative design for creative professionals and power users.",
+        "Attributes": {
+            "Price": 1599.99,
+            "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "512GB SSD",
+                "14.4-inch Touch Display"
+            ],
+            "Brand": "Microsoft"
+        }
+    },
+    {
+        "Name": "Apple iPad Pro 12.9-inch",
+        "Description": "A powerful and versatile tablet with the M2 chip, ideal for professionals and creatives.",
+        "Attributes": {
+            "Price": 1099.99,
+            "Features": [
+                "M2 Chip",
+                "Liquid Retina XDR Display",
+                "128GB Storage"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Razer Blade 15 Advanced",
+        "Description": "A premium gaming laptop with high-end specs and a sleek, portable design.",
+        "Attributes": {
+            "Price": 2599.99,
+            "Features": [
+                "Intel Core i9",
+                "32GB RAM",
+                "1TB SSD",
+                "15.6-inch QHD 240Hz Display"
+            ],
+            "Brand": "Razer"
+        }
+    },
+    {
+        "Name": "Canon EOS R6",
+        "Description": "A professional-grade mirrorless camera with advanced features for photography and videography.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "20MP Full-Frame Sensor",
+                "4K Video",
+                "Wi-Fi & Bluetooth"
+            ],
+            "Brand": "Canon"
+        }
+    },
+    {
+        "Name": "Bose QuietComfort Earbuds II",
+        "Description": "Premium noise-cancelling earbuds with exceptional sound quality and comfortable fit.",
+        "Attributes": {
+            "Price": 299.99,
+            "Features": [
+                "Noise Cancelling",
+                "Bluetooth 5.3",
+                "6 Hours Battery Life"
+            ],
+            "Brand": "Bose"
+        }
+    },
+    {
+        "Name": "Google Pixel 8 Pro",
+        "Description": "A flagship smartphone with an advanced camera system and the latest Tensor processor.",
+        "Attributes": {
+            "Price": 999.99,
+            "Features": [
+                "6.7-inch OLED Display",
+                "Tensor G3 Processor",
+                "256GB Storage"
+            ],
+            "Brand": "Google"
+        }
+    },
+    {
+        "Name": "Sony Alpha A7 IV",
+        "Description": "A cutting-edge full-frame camera perfect for both professional photographers and videographers.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "33MP Full-Frame Sensor",
+                "4K Video",
+                "5-Axis Stabilization"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "Corsair K95 RGB Platinum Keyboard",
+        "Description": "A premium mechanical keyboard with RGB lighting and macro functionality for gamers and professionals.",
+        "Attributes": {
+            "Price": 199.99,
+            "Features": [
+                "Mechanical Keys",
+                "RGB Lighting",
+                "6 Macro Keys"
+            ],
+            "Brand": "Corsair"
+        }
+    },
+    {
+        "Name": "DJI Mini 4 Pro",
+        "Description": "A compact and lightweight drone with 4K video capabilities and advanced obstacle avoidance.",
+        "Attributes": {
+            "Price": 759.99,
+            "Features": [
+                "4K HDR Video",
+                "12km Transmission",
+                "Obstacle Avoidance"
+            ],
+            "Brand": "DJI"
+        }
+    },
+    {
+        "Name": "Anker PowerCore 26800",
+        "Description": "A high-capacity power bank with fast-charging technology for on-the-go device charging.",
+        "Attributes": {
+            "Price": 79.99,
+            "Features": [
+                "26,800mAh Capacity",
+                "3 USB Ports",
+                "Quick Charge 3.0"
+            ],
+            "Brand": "Anker"
+        }
+    },
+    {
+        "Name": "Samsung Odyssey Neo G9 Monitor",
+        "Description": "An ultra-wide curved gaming monitor with quantum technology for an immersive experience.",
+        "Attributes": {
+            "Price": 2299.99,
+            "Features": [
+                "49-inch Curved Display",
+                "Quantum Mini LED",
+                "240Hz Refresh Rate"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "LG Gram 17",
+        "Description": "A lightweight and ultra-portable laptop with a large display and excellent battery life.",
+        "Attributes": {
+            "Price": 1799.99,
+            "Features": [
+                "Intel Evo i7",
+                "16GB RAM",
+                "1TB SSD",
+                "17-inch Display"
+            ],
+            "Brand": "LG"
+        }
+    },
+    {
+        "Name": "Apple MacBook Pro 16-inch",
+        "Description": "A high-performance laptop designed for professionals, featuring the M1 Pro chip and a stunning Retina display.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "M1 Pro Chip",
+                "16GB RAM",
+                "512GB SSD",
+                "16-inch Retina Display"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Dell XPS 13",
+        "Description": "A sleek and powerful ultrabook with a stunning InfinityEdge display and high-end performance for productivity.",
+        "Attributes": {
+            "Price": 1299.99,
+            "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "1TB SSD",
+                "13.4-inch InfinityEdge Display"
+            ],
+            "Brand": "Dell"
+        }
+    },
+    {
+        "Name": "Samsung Galaxy Tab S9",
+        "Description": "A premium tablet with an AMOLED display, ideal for multitasking, creativity, and entertainment.",
+        "Attributes": {
+            "Price": 799.99,
+            "Features": [
+                "12.4-inch AMOLED Display",
+                "Snapdragon 8 Gen 2",
+                "256GB Storage",
+                "S Pen Included"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "Sony WH-1000XM5",
+        "Description": "Industry-leading noise-cancelling headphones with premium sound quality and all-day comfort.",
+        "Attributes": {
+            "Price": 399.99,
+            "Features": [
+                "Active Noise Cancellation",
+                "Bluetooth 5.2",
+                "30 Hours Battery Life"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "HP Spectre x360 14",
+        "Description": "A versatile 2-in-1 convertible laptop designed for creative professionals and multitaskers.",
+        "Attributes": {
+            "Price": 1699.99,
+            "Features": [
+                "Intel Evo i7",
+                "16GB RAM",
+                "1TB SSD",
+                "Convertible Touchscreen"
+            ],
+            "Brand": "HP"
+        }
+    },
+    {
+        "Name": "Logitech MX Master 3S",
+        "Description": "An ergonomic and precise mouse with advanced scrolling and customization options for professionals.",
+        "Attributes": {
+            "Price": 99.99,
+            "Features": [
+                "Ergonomic Design",
+                "Bluetooth & USB-C",
+                "MagSpeed Scrolling"
+            ],
+            "Brand": "Logitech"
+        }
+    },
+    {
+        "Name": "NVIDIA GeForce RTX 4090",
+        "Description": "The most powerful GPU available, delivering unmatched gaming and creative performance.",
+        "Attributes": {
+            "Price": 1599.99,
+            "Features": [
+                "24GB GDDR6X",
+                "Ray Tracing",
+                "DLSS 3.0"
+            ],
+            "Brand": "NVIDIA"
+        }
+    },
+    {
+        "Name": "Microsoft Surface Laptop Studio",
+        "Description": "A versatile laptop with an innovative design for creative professionals and power users.",
+        "Attributes": {
+            "Price": 1599.99,
+            "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "512GB SSD",
+                "14.4-inch Touch Display"
+            ],
+            "Brand": "Microsoft"
+        }
+    },
+    {
+        "Name": "Apple iPad Pro 12.9-inch",
+        "Description": "A powerful and versatile tablet with the M2 chip, ideal for professionals and creatives.",
+        "Attributes": {
+            "Price": 1099.99,
+            "Features": [
+                "M2 Chip",
+                "Liquid Retina XDR Display",
+                "128GB Storage"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Razer Blade 15 Advanced",
+        "Description": "A premium gaming laptop with high-end specs and a sleek, portable design.",
+        "Attributes": {
+            "Price": 2599.99,
+            "Features": [
+                "Intel Core i9",
+                "32GB RAM",
+                "1TB SSD",
+                "15.6-inch QHD 240Hz Display"
+            ],
+            "Brand": "Razer"
+        }
+    },
+    {
+        "Name": "Canon EOS R6",
+        "Description": "A professional-grade mirrorless camera with advanced features for photography and videography.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "20MP Full-Frame Sensor",
+                "4K Video",
+                "Wi-Fi & Bluetooth"
+            ],
+            "Brand": "Canon"
+        }
+    },
+    {
+        "Name": "Bose QuietComfort Earbuds II",
+        "Description": "Premium noise-cancelling earbuds with exceptional sound quality and comfortable fit.",
+        "Attributes": {
+            "Price": 299.99,
+            "Features": [
+                "Noise Cancelling",
+                "Bluetooth 5.3",
+                "6 Hours Battery Life"
+            ],
+            "Brand": "Bose"
+        }
+    },
+    {
+        "Name": "Google Pixel 8 Pro",
+        "Description": "A flagship smartphone with an advanced camera system and the latest Tensor processor.",
+        "Attributes": {
+            "Price": 999.99,
+            "Features": [
+                "6.7-inch OLED Display",
+                "Tensor G3 Processor",
+                "256GB Storage"
+            ],
+            "Brand": "Google"
+        }
+    },
+    {
+        "Name": "Sony Alpha A7 IV",
+        "Description": "A cutting-edge full-frame camera perfect for both professional photographers and videographers.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "33MP Full-Frame Sensor",
+                "4K Video",
+                "5-Axis Stabilization"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "Corsair K95 RGB Platinum Keyboard",
+        "Description": "A premium mechanical keyboard with RGB lighting and macro functionality for gamers and professionals.",
+        "Attributes": {
+            "Price": 199.99,
+            "Features": [
+                "Mechanical Keys",
+                "RGB Lighting",
+                "6 Macro Keys"
+            ],
+            "Brand": "Corsair"
+        }
+    },
+    {
+        "Name": "DJI Mini 4 Pro",
+        "Description": "A compact and lightweight drone with 4K video capabilities and advanced obstacle avoidance.",
+        "Attributes": {
+            "Price": 759.99,
+            "Features": [
+                "4K HDR Video",
+                "12km Transmission",
+                "Obstacle Avoidance"
+            ],
+            "Brand": "DJI"
+        }
+    },
+    {
+        "Name": "Anker PowerCore 26800",
+        "Description": "A high-capacity power bank with fast-charging technology for on-the-go device charging.",
+        "Attributes": {
+            "Price": 79.99,
+            "Features": [
+                "26,800mAh Capacity",
+                "3 USB Ports",
+                "Quick Charge 3.0"
+            ],
+            "Brand": "Anker"
+        }
+    },
+    {
+        "Name": "Samsung Odyssey Neo G9 Monitor",
+        "Description": "An ultra-wide curved gaming monitor with quantum technology for an immersive experience.",
+        "Attributes": {
+            "Price": 2299.99,
+            "Features": [
+                "49-inch Curved Display",
+                "Quantum Mini LED",
+                "240Hz Refresh Rate"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "LG Gram 17",
+        "Description": "A lightweight and ultra-portable laptop with a large display and excellent battery life.",
+        "Attributes": {
+            "Price": 1799.99,
+            "Features": [
+                "Intel Evo i7",
+                "16GB RAM",
+                "1TB SSD",
+                "17-inch Display"
+            ],
+            "Brand": "LG"
+        }
+    },
+    {
+        "Name": "Apple iPhone 13 Pro",
+        "Description": "The latest Apple flagship smartphone with an advanced A15 chip and ProMotion technology.",
+        "Attributes": {
+            "Price": 999.99,
+            "Features": [
+                "A15 Bionic Chip",
+                "ProMotion Technology",
+                "128GB Storage",
+                "5G Capable"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Nintendo Switch OLED Model",
+        "Description": "Nintendo's latest version of the Switch gaming console featuring a vivid OLED screen.",
+        "Attributes": {
+            "Price": 349.99,
+            "Features": [
+                "7-inch OLED Screen",
+                "Adjustable Stand",
+                "Improved Audio"
+            ],
+            "Brand": "Nintendo"
+        }
+    },
+    {
+        "Name": "Amazon Echo Dot (4th Generation)",
+        "Description": "Smart speaker with Alexa, perfect for controlling smart home devices or playing music.",
+        "Attributes": {
+            "Price": 49.99,
+            "Features": [
+                "Voice Controlled",
+                "Compact Design",
+                "Improved Speaker Quality"
+            ],
+            "Brand": "Amazon"
+        }
+    },
+    {
+        "Name": "Samsung Galaxy S21 Ultra",
+        "Description": "Samsung's most powerful smartphone with an impressive camera system and a large display.",
+        "Attributes": {
+            "Price": 1199.99,
+            "Features": [
+                "Dynamic AMOLED 2X",
+                "108MP Camera",
+                "5G Capable",
+                "128GB Storage"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "Netgear Nighthawk AX12",
+        "Description": "Next-generation Wi-Fi 6 router for ultra-fast, reliable and secure home internet.",
+        "Attributes": {
+            "Price": 299.99,
+            "Features": [
+                "Wi-Fi 6 Technology",
+                "12-Stream AX6000",
+                "5G Ethernet Ports"
+            ],
+            "Brand": "Netgear"
+        }
+    },
+    {
+        "Name": "Microsoft Xbox Series X",
+        "Description": "Microsoft's latest console with powerful hardware for high-frame-rate gameplay.",
+        "Attributes": {
+            "Price": 499.99,
+            "Features": [
+                "8K HDR",
+                "120 Frames per Second",
+                "1TB Custom SSD"
+            ],
+            "Brand": "Microsoft"
+        }
+    },
+    {
+        "Name": "Apple Watch Series 7",
+        "Description": "The latest iteration of Apple's iconic smartwatch with new advanced fitness tracking features.",
+        "Attributes": {
+            "Price": 399.99,
+            "Features": [
+                "Always-On Retina Display",
+                "ECG App",
+                "Blood Oxygen App"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Google Nest Hub Max",
+        "Description": "Google's smart home display for controlling all your smart devices and streaming content.",
+        "Attributes": {
+            "Price": 229.99,
+            "Features": [
+                "10-inch HD Screen",
+                "Stereo Speakers",
+                "Built-in Nest Cam"
+            ],
+            "Brand": "Google"
+        }
+    },
+    {
+        "Name": "Sony PlayStation 5",
+        "Description": "Sony's latest gaming console with support for 4K gaming and high-speed SSD storage.",
+        "Attributes": {
+            "Price": 499.99,
+            "Features": [
+                "4K Gaming",
+                "Ultra-High-Speed SSD",
+                "Haptic Feedback"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "Oculus Quest 2",
+        "Description": "An all-in-one VR system for gaming and immersive experience.",
+        "Attributes": {
+            "Price": 299.99,
+            "Features": [
+                "All-in-One VR",
+                "Next-Level Hardware,",
+                "Easy Setup"
+            ],
+            "Brand": "Oculus"
+        }
+    },
+    {
+        "Name": "Lenovo Legion 7i",
+        "Description": "A high-performance gaming laptop with advanced cooling system.",
+        "Attributes": {
+            "Price": 1699.99,
+            "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "1TB SSD",
+                "15.6-inch FHD Display"
+            ],
+            "Brand": "Lenovo"
+        }
+    },
+    {
+        "Name": "Asus ROG Strix G17",
+        "Description": "Powered by the latest AMD Ryzen and NVIDIA GeForce, it delivers high performance gaming.",
+        "Attributes": {
+            "Price": 1599.99,
+            "Features": [
+                "AMD Ryzen 9",
+                "16 GB RAM",
+                "1TB SSD",
+                "17.3 inch FHD Display"
+            ],
+            "Brand": "ASUS"
+        }
+    },
+    {
+        "Name": "Canon PIXMA iP8720",
+        "Description": "An excellent printer for photographers, it delivers outstanding quality prints.",
+        "Attributes": {
+            "Price": 249.99,
+            "Features": [
+                "13” x 19” Printing",
+                "Six-Color Ink System",
+                "Wireless Printing"
+            ],
+            "Brand": "Canon"
+        }
+    },
+    {
+        "Name": "Apple AirPods Pro",
+        "Description": "The premium earbuds with active noise cancellation feature.",
+        "Attributes": {
+            "Price": 249.99,
+            "Features": [
+                "Active Noise Cancellation",
+                "Transparency Mode",
+                "Customizable Fit"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Logitech G920 Driving Force",
+        "Description": "A premium racing wheel designed for the latest racing games.",
+        "Attributes": {
+            "Price": 399.99,
+            "Features": [
+                "Force Feedback",
+                "Quality Construction",
+                "Responsive Pedal Set"
+            ],
+            "Brand": "Logitech"
+        }
+    },
+    {
+        "Name": "Samsung T7 Portable SSD",
+        "Description": "A Compact and light, pocket-sized SSD with fast transfer speeds.",
+        "Attributes": {
+            "Price": 169.99,
+            "Features": [
+                "1050MB/s Read Speed",
+                "1000MB/s Write Speed",
+                "Compact Design"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "Apple TV 4K",
+        "Description": "A streaming box that delivers the best of TV, movies and more in brilliant 4K HDR quality.",
+        "Attributes": {
+            "Price": 179.99,
+            "Features": [
+                "4K HDR",
+                "Dolby Atmos",
+                "A12 Bionic"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Google Pixel Buds A-Series",
+        "Description": "Google's wireless earbuds that deliver clear, full, and natural sound.",
+        "Attributes": {
+            "Price": 99.00,
+            "Features": [
+                "Custom-designed 12mm dynamic drivers",
+                "Adaptive Sound",
+                "Hands-free Google Assistant"
+            ],
+            "Brand": "Google"
+        }
+    },
+    {
+        "Name": "Microsoft Surface Go 3",
+        "Description": "Compact yet versatile 2-in-1 laptop for every day work and play.",
+        "Attributes": {
+            "Price": 399.99,
+            "Features": [
+                "Intel Pentium Gold",
+                "8GB RAM",
+                "64GB eMMC",
+                "10.5-inch Touch Display"
+            ],
+            "Brand": "Microsoft"
+        }
+    },
+    {
+        "Name": "DJI Mavic Air 2",
+        "Description": "A compact drone that offers high-grade imaging, intuitive yet advanced flight performance.",
+        "Attributes": {
+            "Price": 799.00,
+            "Features": [
+                "48MP Photo",
+                "4K/60fps Video",
+                "34-min Flight Time"
+            ],
+            "Brand": "DJI"
+        }
+    },
+    {
+        "Name": "Samsung Frame TV",
+        "Description": "A unique TV that transforms into a piece of elegantly framed art when you’re not viewing.",
+        "Attributes": {
+            "Price": 1299.99,
+            "Features": [
+                "Art Mode",
+                "QLED Technology",
+                "Customizable Frames"
+            ],
+            "Brand": "Samsung"
+        }
+    },
+    {
+        "Name": "Bose SoundLink Revolve+ II",
+        "Description": "A portable, battery-powered Bluetooth speaker that deliver true 360° sound.",
+        "Attributes": {
+            "Price": 299.99,
+            "Features": [
+                "360° Sound",
+                "Durable Design",
+                "16 Hours Battery Life"
+            ],
+            "Brand": "Bose"
+        }
+    },
+    {
+        "Name": "Philips Hue Lightstrip Plus",
+        "Description": "Intelligent lighting product that offer the flexibility to create the perfect ambience.",
+        "Attributes": {
+            "Price": 79.99,
+            "Features": [
+                "Extendable",
+                "Millions of Colors",
+                "App Control"
+            ],
+            "Brand": "Philips"
+        }
+    },
+    {
+        "Name": "Roku Ultra Streaming Player",
+        "Description": "A powerful and feature-packed media streamer for 4K HDR TVs.",
+        "Attributes": {
+            "Price": 99.99,
+            "Features": [
+                "4K/HD/HDR Streaming",
+                "Dolby Vision",
+                "Voice Remote with Buttons"
+            ],
+            "Brand": "Roku"
+        }
+    },
+    {
+        "Name": "Fitbit Versa 3",
+        "Description": "A versatile smartwatch with advanced health tracking features.",
+        "Attributes": {
+            "Price": 229.95,
+            "Features": [
+                "GPS Built-in ",
+                "Track Heart Rate",
+                "Sleep & Swim Tracking"
+            ],
+            "Brand": "Fitbit"
+        }
+    },
+    {
+        "Name": "AMD Ryzen 9 5950X",
+        "Description": "A powerful processor that delivers exceptional performance for gamers and creators.",
+        "Attributes": {
+            "Price": 799.00,
+            "Features": [
+                "16 cores",
+                "32 threads",
+                "4.9 GHz Max Boost"
+            ],
+            "Brand": "AMD"
+        }
+    },
+    {
+        "Name": "JBL Flip 5",
+        "Description": "A Bluetooth speaker that offers powerful sound and long-lasting battery.",
+        "Attributes": {
+            "Price": 119.95,
+            "Features": [
+                "12 Hours of Playtime",
+                "IPX7 Waterproof",
+                "PartyBoost"
+            ],
+            "Brand": "JBL"
+        }
+    },
+    {
+        "Name": "Garmin Forerunner 945",
+        "Description": "A premium GPS smartwatch that offers running and triathlon features.",
+        "Attributes": {
+            "Price": 599.99,
+            "Features": [
+                "Full-color Maps",
+                "Music Streaming",
+                "Performance Monitoring"
+            ],
+            "Brand": "Garmin"
+        }
+    },
+    {
+        "Name": "WD Black SN850 NVMe SSD",
+        "Description": "A top-tier internal NVMe SSD for gaming, offering fast speed.",
+        "Attributes": {
+            "Price": 139.99,
+            "Features": [
+                "7000MB/s Read",
+                "5300MB/s Write",
+                "1TB Capacity"
+            ],
+            "Brand": "WD"
+        }
+    },
+    {
+        "Name": "ASUS ROG Zephyrus G15",
+        "Description": "A powerful yet slim gaming laptop featuring AMD Ryzen processing and NVIDIA GeForce RTX graphics.",
+        "Attributes": {
+            "Price": 2499.99,
+            "Features": [
+                "AMD Ryzen 9",
+                "NVIDIA RTX 3080",
+                "1TB SSD",
+                "15.6-inch 300Hz Display"
+            ],
+            "Brand": "ASUS"
+        }
+    },
+    {
+        "Name": "Sony WH-1000XM4",
+        "Description": "One of the best noise-canceling headphones, offering stellar sound quality and advanced features.",
+        "Attributes": {
+            "Price": 349.99,
+            "Features": [
+                "Noise-canceling",
+                "30 hours battery life",
+                "Multi-device pairing"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "Garmin Fenix 7S",
+        "Description": "A rugged multisport GPS watch built for outdoor adventures with extensive health tracking features.",
+        "Attributes": {
+            "Price": 699.99,
+            "Features": [
+                "Robust ABC Sensors",
+                "Multi-GNSS Support",
+                "Advanced Health Monitoring"
+            ],
+            "Brand": "Garmin"
+        }
+    },
+    {
+        "Name": "Microsoft Surface Pro 8",
+        "Description": "The next generation 2-in-1 laptop tablet from Microsoft with enhanced performance and features.",
+        "Attributes": {
+            "Price": 1199.99,
+            "Features": [
+                "13-inch PixelSense Display",
+                "Intel Iris Xe Graphics",
+                "16GB RAM",
+                "512GB SSD"
+            ],
+            "Brand": "Microsoft"
+        }
+    },
+    {
+        "Name": "GoPro Hero10 Black",
+        "Description": "GoPro's best action camera to date, featuring stunning 5.3K video and 23MP photos.",
+        "Attributes": {
+            "Price": 499.99,
+            "Features": [
+                "5.3K Video",
+                "23MP Photos",
+                "Hypersmooth 4.0"
+            ],
+            "Brand": "GoPro"
+        }
+    },
+    {
+        "Name": "Ring Video Doorbell Pro 2",
+        "Description": "A premium doorbell with improved 3D Motion Detection and Bird’s Eye View for even more effective home security.",
+        "Attributes": {
+            "Price": 249.99,
+            "Features": [
+                "3D Motion Detection",
+                "Bird’s Eye View",
+                "HD Video",
+                "Two-Way Talk"
+            ],
+            "Brand": "Ring"
+        }
+    },
+    {
+        "Name": "Apple iMac 24-inch (M1, 2021)",
+        "Description": "Apple's latest all-in-one desktop that delivers a revolutionary performance with M1 chip.",
+        "Attributes": {
+            "Price": 1299.99,
+            "Features": [
+                "M1 Chip",
+                "4.5K Retina Display",
+                "8GB Unified Memory",
+                "256GB SSD"
+            ],
+            "Brand": "Apple"
+        }
+    },
+    {
+        "Name": "Sony A80J OLED TV",
+        "Description": "A superb 4K OLED TV from Sony, offering rich visuals, impressive sound and Google TV interface.",
+        "Attributes": {
+            "Price": 1799.99,
+            "Features": [
+                "OLED Display",
+                "4K resolution",
+                "120Hz Refresh Rate"
+            ],
+            "Brand": "Sony"
+        }
+    },
+    {
+        "Name": "Bose SoundLink Colour II",
+        "Description": "A portable waterproof Bluetooth speaker from Bose, delivering a bold sound wherever you go.",
+        "Attributes": {
+            "Price": 129.99,
+            "Features": [
+                "8 Hours of Playtime",
+                "Water Resistant",
+                "Wireless Bluetooth Pairing"
+            ],
+            "Brand": "Bose"
+        }
+    },
+    {
+        "Name": "Dell Alienware m15 R6",
+        "Description": "Dell's flagship gaming laptop with a slim design and powerful specs.",
+        "Attributes": {
+            "Price": 2199.99,
+            "Features": [
+                "11th Generation Intel Core i7",
+                "GeForce RTX 3060",
+                "16GB RAM",
+                "1TB SSD"
+            ],
+            "Brand": "Dell"
+        }
+    }
+]

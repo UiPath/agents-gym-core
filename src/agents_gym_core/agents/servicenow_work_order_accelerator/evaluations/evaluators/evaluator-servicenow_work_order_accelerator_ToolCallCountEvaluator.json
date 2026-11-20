@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "servicenow_work_order_accelerator_ToolCallCountEvaluator",
+    "description": "ToolCallCountEvaluator for servicenow_work_order_accelerator agent",
+    "evaluatorTypeId": "uipath-tool-call-count",
+    "evaluatorConfig": {
+        "name": "ToolCallCountEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

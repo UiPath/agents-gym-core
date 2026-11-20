@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "id": "product_recommendation_ProductMatchEvaluator",
+    "description": "ProductMatchEvaluator for product_recommendation agent - checks what fraction of expected products appear in actual output",
+    "evaluatorTypeId": "ProductMatchEvaluator",
+    "evaluatorSchema": "file://product_recommendation_evaluators.py:ProductMatchEvaluator",
+    "evaluatorConfig": {
+        "name": "ProductMatchEvaluator",
+        "description": "Checks what fraction of expected products (by Name, Brand, Price, Features, Match) appear in the agent output",
+        "defaultEvaluationCriteria": null,
+        "target_output_key": "Products"
+    }
+}

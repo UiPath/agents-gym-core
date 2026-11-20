@@ -1,0 +1,73 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "problem": {
+        "$datapoint": "aime-2022-2024-025",
+        "$path": [
+          "inputs",
+          "problem"
+        ]
+      },
+      "reasoning": "Given the equation:\n\\[\n\\log_{20x}(22x) = \\log_{2x}(202x)\n\\]\n\nLet:\n\\[\ny = \\log_{20x}(22x) = \\log_{2x}(202x)\n\\]\n\nRewriting the logarithms:\n\\[\n(20x)^y = 22x \\quad \\text{and} \\quad (2x)^y = 202x\n\\]\n\nUsing the first:\n\\[\n(20x)^y = 22x \\implies 20^y x^y = 22x\n\\]\n\nSimilarly, second:\n\\[\n(2x)^y = 202x \\implies 2^y x^y = 202x\n\\]\n\nFrom each, divide both sides by \\(x\\):\n\\[\n20^y x^{y - 1} = 22, \\quad 2^y x^{y - 1} = 202\n\\]\n\nDenote:\n\\[\nX = x^{y-1}\n\\]\n\nThen:\n\\[\n20^y X = 22 \\quad (1), \\quad 2^y X = 202 \\quad (2)\n\\]\n\nDivide (1) by (2):\n\\[\n\\frac{20^y}{2^y} = \\frac{22}{202} = \\frac{11}{101}\n\\]\n\nNote that:\n\\[\n\\frac{20^y}{2^y} = \\left(\\frac{20}{2}\\right)^y = 10^y\n\\]\n\nSo:\n\\[\n10^y = \\frac{11}{101}\n\\]\n\nTaking \\(\\log_{10}\\) on both sides:\n\\[\ny = \\log_{10} \\left(\\frac{11}{101}\\right)\n\\]\n\nTherefore:\n\\[\n\\log_{20x}(22x) = y = \\log_{10}\\left(\\frac{11}{101}\\right)\n\\]\n\nThe problem says the value \\(\\log_{20x}(22x) = \\log_{10}(\\frac{m}{n})\\), with \\(m,n\\) relatively prime positive integers. So:\n\\[\n\\frac{m}{n} = \\frac{11}{101}\n\\]\n\nThus:\n\\[\nm = 11, \\quad n = 101\n\\]\n\nSum:\n\\[\nm + n = 11 + 101 = 112\n\\]\n\nFinally, check if \\(x \\neq \\frac{1}{20}\\) or \\(\\frac{1}{2}\\) holds. We can find \\(x\\) from one of the equations.\n\nFrom (2):\n\\[\n2^y X = 202 \\implies X = \\frac{202}{2^y}\n\\]\n\nRecall:\n\\[\nX = x^{y-1}\n\\]\n\nSo:\n\\[\nx^{y-1} = \\frac{202}{2^y}\n\\]\n\nTaking \\(\\log_{10}\\):\n\\[\n(y-1) \\log_{10} x = \\log_{10} 202 - y \\log_{10} 2\n\\]\n\nSince \\(y = \\log_{10} \\frac{11}{101} = \\log_{10} 11 - \\log_{10} 101\\), this is not equal to \\(0\\) or \\(1\\), so \\(x\\) is well-defined and not equal to the forbidden values.\n\nHence, the solution satisfies the problem.",
+      "answer": "112"
+    },
+    {
+      "problem": {
+        "$datapoint": "aime-2022-2024-037",
+        "$path": [
+          "inputs",
+          "problem"
+        ]
+      },
+      "solution": {
+        "$datapoint": "aime-2022-2024-037",
+        "$path": [
+          "evaluationCriterias",
+          "aime_2025_ExactMatchEvaluator",
+          "expectedOutput",
+          "reasoning"
+        ]
+      },
+      "answer": "349"
+    },
+    {
+      "problem": {
+        "$datapoint": "aime-2022-2024-052",
+        "$path": [
+          "inputs",
+          "problem"
+        ]
+      },
+      "solution": {
+        "$datapoint": "aime-2022-2024-052",
+        "$path": [
+          "evaluationCriterias",
+          "aime_2025_ExactMatchEvaluator",
+          "expectedOutput",
+          "reasoning"
+        ]
+      },
+      "answer": "363"
+    },
+    {
+      "problem": {
+        "$datapoint": "aime-2022-2024-086",
+        "$path": [
+          "inputs",
+          "problem"
+        ]
+      },
+      "solution": {
+        "$datapoint": "aime-2022-2024-086",
+        "$path": [
+          "evaluationCriterias",
+          "aime_2025_ExactMatchEvaluator",
+          "expectedOutput",
+          "reasoning"
+        ]
+      },
+      "answer": "080"
+    }
+  ]
+}

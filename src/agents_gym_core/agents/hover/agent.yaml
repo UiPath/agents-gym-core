@@ -1,0 +1,48 @@
+# @package _global_
+
+version: base
+
+metadata:
+  name: "HoVer Multi-Hop Retrieval"
+  tags:
+    - full-benchmark
+
+# init.py builds GEPA's train/val/test splits from the HoVer release on GitHub.
+init:
+  script: core::init.py
+  data_dirs:
+    - evaluations/eval-sets
+    - evaluations/evaluators
+  params:
+    seed: 0
+
+loop: dspy-program:gepa_artifact.benchmarks.hover.hover_program.HoverMultiHop
+
+agent:
+  user_prompt: "core::prompts/user_prompt.md"
+
+  signature_prompts:
+    summarize1: "core::prompts/summarize1.md"
+    summarize2: "core::prompts/summarize2.md"
+    create_query_hop2: "core::prompts/create_query_hop2.md"
+    create_query_hop3: "core::prompts/create_query_hop3.md"
+
+  input_schema:
+    fields:
+      claim:
+        type: "str"
+        description: "A factual claim requiring multi-hop evidence retrieval"
+
+  output_schema:
+    fields:
+      retrieved_docs:
+        type: "List[str]"
+        description: "All retrieved document passages from the 3-hop BM25 search"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_train.json
+    - core::evaluations/eval-sets/evaluation-set-hover_val.json
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+  evaluator_weights:
+    hover_RetrievalAccuracyEvaluator: 1

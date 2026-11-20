@@ -1,0 +1,310 @@
+# @package _global_
+#
+# GEPA's splits: train 150, val 300, test 300. The base version (agent.yaml) loads all three;
+# these versions load one, e.g.
+#   uv run gym eval --agents hover:test
+
+train:
+  version: train
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_train.json
+
+val:
+  version: val
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_val.json
+
+test:
+  version: test
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+gepa__gpt-4.1-mini:
+  version: gepa__gpt-4.1-mini
+  agent:
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/gepa__gpt-4.1-mini/summarize1.md"
+      summarize2: "core::prompts/gepa__gpt-4.1-mini/summarize2.md"
+      create_query_hop2: "core::prompts/gepa__gpt-4.1-mini/create_query_hop2.md"
+      create_query_hop3: "core::prompts/gepa__gpt-4.1-mini/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_train.json
+      - core::evaluations/eval-sets/evaluation-set-hover_val.json
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+gepa__gpt-4.1-mini-test:
+  version: gepa__gpt-4.1-mini-test
+  agent:
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/gepa__gpt-4.1-mini/summarize1.md"
+      summarize2: "core::prompts/gepa__gpt-4.1-mini/summarize2.md"
+      create_query_hop2: "core::prompts/gepa__gpt-4.1-mini/create_query_hop2.md"
+      create_query_hop3: "core::prompts/gepa__gpt-4.1-mini/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+gepa-merge__gpt-4.1-mini:
+  version: gepa-merge__gpt-4.1-mini
+  agent:
+    user_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/gepa-merge__gpt-4.1-mini/summarize1.md"
+      summarize2: "core::prompts/gepa-merge__gpt-4.1-mini/summarize2.md"
+      create_query_hop2: "core::prompts/gepa-merge__gpt-4.1-mini/create_query_hop2.md"
+      create_query_hop3: "core::prompts/gepa-merge__gpt-4.1-mini/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_train.json
+      - core::evaluations/eval-sets/evaluation-set-hover_val.json
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+gepa-merge__gpt-4.1-mini-test:
+  version: gepa-merge__gpt-4.1-mini-test
+  agent:
+    user_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/gepa-merge__gpt-4.1-mini/summarize1.md"
+      summarize2: "core::prompts/gepa-merge__gpt-4.1-mini/summarize2.md"
+      create_query_hop2: "core::prompts/gepa-merge__gpt-4.1-mini/create_query_hop2.md"
+      create_query_hop3: "core::prompts/gepa-merge__gpt-4.1-mini/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+baseline:
+  version: baseline
+  agent:
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/baseline/summarize1.md"
+      summarize2: "core::prompts/baseline/summarize2.md"
+      create_query_hop2: "core::prompts/baseline/create_query_hop2.md"
+      create_query_hop3: "core::prompts/baseline/create_query_hop3.md"
+
+baseline-train:
+  version: baseline-train
+  agent:
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/baseline/summarize1.md"
+      summarize2: "core::prompts/baseline/summarize2.md"
+      create_query_hop2: "core::prompts/baseline/create_query_hop2.md"
+      create_query_hop3: "core::prompts/baseline/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_train.json
+
+baseline-val:
+  version: baseline-val
+  agent:
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/baseline/summarize1.md"
+      summarize2: "core::prompts/baseline/summarize2.md"
+      create_query_hop2: "core::prompts/baseline/create_query_hop2.md"
+      create_query_hop3: "core::prompts/baseline/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_val.json
+
+baseline-test:
+  version: baseline-test
+  agent:
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/baseline/summarize1.md"
+      summarize2: "core::prompts/baseline/summarize2.md"
+      create_query_hop2: "core::prompts/baseline/create_query_hop2.md"
+      create_query_hop3: "core::prompts/baseline/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+miprov2-nd:
+  version: miprov2-nd
+  agent:
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/miprov2-nd/summarize1.md"
+      summarize2: "core::prompts/miprov2-nd/summarize2.md"
+      create_query_hop2: "core::prompts/miprov2-nd/create_query_hop2.md"
+      create_query_hop3: "core::prompts/miprov2-nd/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_train.json
+      - core::evaluations/eval-sets/evaluation-set-hover_val.json
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+miprov2-nd-test:
+  version: miprov2-nd-test
+  agent:
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/miprov2-nd/summarize1.md"
+      summarize2: "core::prompts/miprov2-nd/summarize2.md"
+      create_query_hop2: "core::prompts/miprov2-nd/create_query_hop2.md"
+      create_query_hop3: "core::prompts/miprov2-nd/create_query_hop3.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+miprov2-test:
+  version: miprov2-test
+  agent:
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_prompts:
+      summarize1: "core::prompts/miprov2-nd/summarize1.md"
+      summarize2: "core::prompts/miprov2-nd/summarize2.md"
+      create_query_hop2: "core::prompts/miprov2-nd/create_query_hop2.md"
+      create_query_hop3: "core::prompts/miprov2-nd/create_query_hop3.md"
+    signature_demos:
+      summarize1: "core::prompts/miprov2/summarize1.json"
+      summarize2: "core::prompts/miprov2/summarize2.json"
+      create_query_hop2: "core::prompts/miprov2/create_query_hop2.json"
+      create_query_hop3: "core::prompts/miprov2/create_query_hop3.json"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+gepa__gpt-5-test:
+  version: gepa__gpt-5-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1:        "core::prompts/gepa__gpt-5/summarize1_predict.md"
+      summarize2:        "core::prompts/gepa__gpt-5/summarize2_predict.md"
+      create_query_hop2: "core::prompts/gepa__gpt-5/create_query_hop2_predict.md"
+      create_query_hop3: "core::prompts/gepa__gpt-5/create_query_hop3_predict.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-hover_test.json
+
+# Per-optimizer prompt sets: one <dir>-test version per prompts/<dir> (scripts/add_optimizer_versions.py)
+reapo__gpt-4.1-mini-test:
+  version: reapo__gpt-4.1-mini-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-4.1-mini/summarize1.md
+      summarize2: core::prompts/reapo__gpt-4.1-mini/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-4.1-mini/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-4.1-mini/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__gpt-4.1-mini__macro-test:
+  version: reapo__gpt-4.1-mini__macro-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-4.1-mini__macro/summarize1.md
+      summarize2: core::prompts/reapo__gpt-4.1-mini__macro/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-4.1-mini__macro/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-4.1-mini__macro/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__gpt-4.1-mini__score-only-test:
+  version: reapo__gpt-4.1-mini__score-only-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-4.1-mini__score-only/summarize1.md
+      summarize2: core::prompts/reapo__gpt-4.1-mini__score-only/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-4.1-mini__score-only/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-4.1-mini__score-only/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__gpt-5-test:
+  version: reapo__gpt-5-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-5/summarize1.md
+      summarize2: core::prompts/reapo__gpt-5/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-5/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-5/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__gpt-5__skill-trimmed-test:
+  version: reapo__gpt-5__skill-trimmed-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-5__skill-trimmed/summarize1.md
+      summarize2: core::prompts/reapo__gpt-5__skill-trimmed/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-5__skill-trimmed/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-5__skill-trimmed/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__gpt-5__macro-test:
+  version: reapo__gpt-5__macro-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-5__macro/summarize1.md
+      summarize2: core::prompts/reapo__gpt-5__macro/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-5__macro/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-5__macro/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__gpt-5__score-only-test:
+  version: reapo__gpt-5__score-only-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__gpt-5__score-only/summarize1.md
+      summarize2: core::prompts/reapo__gpt-5__score-only/summarize2.md
+      create_query_hop2: core::prompts/reapo__gpt-5__score-only/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__gpt-5__score-only/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__opus-4.6-test:
+  version: reapo__opus-4.6-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__opus-4.6/summarize1.md
+      summarize2: core::prompts/reapo__opus-4.6/summarize2.md
+      create_query_hop2: core::prompts/reapo__opus-4.6/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__opus-4.6/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+gepa__qwen3.5-122b-test:
+  version: gepa__qwen3.5-122b-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/gepa__qwen3.5-122b/summarize1.md
+      summarize2: core::prompts/gepa__qwen3.5-122b/summarize2.md
+      create_query_hop2: core::prompts/gepa__qwen3.5-122b/create_query_hop2.md
+      create_query_hop3: core::prompts/gepa__qwen3.5-122b/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__qwen3.5-122b-test:
+  version: reapo__qwen3.5-122b-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__qwen3.5-122b/summarize1.md
+      summarize2: core::prompts/reapo__qwen3.5-122b/summarize2.md
+      create_query_hop2: core::prompts/reapo__qwen3.5-122b/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__qwen3.5-122b/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+reapo__qwen3.5-9b-test:
+  version: reapo__qwen3.5-9b-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/reapo__qwen3.5-9b/summarize1.md
+      summarize2: core::prompts/reapo__qwen3.5-9b/summarize2.md
+      create_query_hop2: core::prompts/reapo__qwen3.5-9b/create_query_hop2.md
+      create_query_hop3: core::prompts/reapo__qwen3.5-9b/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json
+gepa__qwen3.5-9b-test:
+  version: gepa__qwen3.5-9b-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      summarize1: core::prompts/gepa__qwen3.5-9b/summarize1.md
+      summarize2: core::prompts/gepa__qwen3.5-9b/summarize2.md
+      create_query_hop2: core::prompts/gepa__qwen3.5-9b/create_query_hop2.md
+      create_query_hop3: core::prompts/gepa__qwen3.5-9b/create_query_hop3.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hover_test.json

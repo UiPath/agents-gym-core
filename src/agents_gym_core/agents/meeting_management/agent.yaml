@@ -1,0 +1,56 @@
+version: base
+
+
+metadata:
+  name: "Meeting Management"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  input_schema:
+    fields:
+      meeting_details:
+        type: "str"
+        description: "Details about the meeting"
+      participants:
+        type: "list"
+        description: "Participants in the meeting"
+      date:
+        type: "str"
+        description: "Date of the meeting"
+
+  output_schema:
+    fields:
+      Description:
+        type: "str"
+        description: "Body of the created meeting"
+      Subject:
+        type: "str"
+        description: "Subject of the created meeting"
+      StartTime:
+        type: "str"
+        description: "Start time of the meeting in string format"
+      EndTime:
+        type: "str"
+        description: "End time of the meeting in string format"
+      Confidence:
+        type: "float"
+        description: "Score from 0 to 1 resulted from execution confidence"
+      Observations:
+        type: "str"
+        description: "Execution observation such as errors"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-meeting_management_train.json
+
+  evaluator_weights:
+    meeting_management_LLMJudgePlatformFactualityEvaluator: 0.0
+
+  tools:
+    - _target_: agents_gym_core.agents.meeting_management.tools.GetOutlookEvents
+    - _target_: agents_gym_core.agents.meeting_management.tools.AFE_ScheduleZoomWrapper

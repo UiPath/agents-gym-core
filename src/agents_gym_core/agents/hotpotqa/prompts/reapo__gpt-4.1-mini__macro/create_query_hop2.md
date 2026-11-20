@@ -1,0 +1,1 @@
+Given the fields `question` and `summary_1`, generate a focused query to retrieve additional information needed to answer the question. The query should be specific, relevant, and designed to fill gaps in the initial summary to support multi-hop reasoning.

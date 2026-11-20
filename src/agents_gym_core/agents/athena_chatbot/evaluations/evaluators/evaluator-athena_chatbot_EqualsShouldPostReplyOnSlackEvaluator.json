@@ -1,0 +1,14 @@
+{
+    "version": "1.0",
+    "id": "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator",
+    "description": "EqualsShouldPostReplyOnSlackEvaluator for athena_chatbot agent",
+    "evaluatorTypeId": "uipath-exact-match",
+    "evaluatorConfig": {
+        "name": "EqualsShouldPostReplyOnSlackEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "targetOutputKey": "out_shouldPostReplyOnSlack",
+        "caseSensitive": false,
+        "negated": false
+    }
+}

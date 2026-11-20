@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "servicenow_work_order_accelerator_ToolCallOrderEvaluator",
+    "description": "ToolCallOrderEvaluator for servicenow_work_order_accelerator agent",
+    "evaluatorTypeId": "uipath-tool-call-order",
+    "evaluatorConfig": {
+        "name": "ToolCallOrderEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

@@ -1,0 +1,43 @@
+name: salesforce_agent
+version: base
+
+metadata:
+  name: "Salesforce Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      email_body:
+        type: str
+        description: The email body containing the request
+  output_schema:
+    fields:
+      action_center_task_created:
+        type: bool
+        description: Whether an Action Center task was created
+  tools:
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.create_account
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.remove_account
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.update_account
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.create_contact
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.remove_contact
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.update_contact
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.create_opportunity
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.remove_opportunity
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.update_opportunity
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.create_lead
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.remove_lead
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.update_lead
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.retrieve_accounts
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.retrieve_contacts
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.retrieve_opportunities
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.retrieve_leads
+  - _target_: agents_gym_core.agents.salesforce_agent.tools.perform_escalation
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-default.json
+

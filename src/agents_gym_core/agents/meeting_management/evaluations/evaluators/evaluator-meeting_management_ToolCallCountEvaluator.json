@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "id": "meeting_management_ToolCallCountEvaluator",
+  "description": "ToolCallCountEvaluator for meeting_management agent",
+  "evaluatorTypeId": "uipath-tool-call-count",
+  "evaluatorConfig": {
+    "name": "ToolCallCountEvaluator",
+    "description": "",
+    "defaultEvaluationCriteria": null,
+    "strict": false
+  }
+}

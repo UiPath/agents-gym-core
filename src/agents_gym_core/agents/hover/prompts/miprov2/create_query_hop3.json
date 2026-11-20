@@ -1,0 +1,66 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "claim": "The brother of Freddie Sessler, was the restaurateur whose club was frequented by Ruth Elizabeth \"Bette\" Davis, an actress with Welsh ancestry.",
+      "summary_1": "Freddie Sessler's brother was Siegi Sessler, a London restaurateur whose club was frequented by Bette Davis, an actress with Welsh ancestry.",
+      "summary_2": "Freddie Sessler's brother was Siegi Sessler, a prominent London restaurateur whose club, Siegi's, was frequented by Hollywood stars including Ruth Elizabeth \"Bette\" Davis, an actress with Welsh ancestry.",
+      "reasoning": "The claim states that the brother of Freddie Sessler was a restaurateur whose club was frequented by Ruth Elizabeth \"Bette\" Davis, noted to have Welsh ancestry. Both summaries support this claim by identifying the brother as Siegi Sessler, a restaurateur in London, whose club was indeed frequented by Bette Davis, an actress noted for Welsh ancestry. Summary_2 adds that the club's name was Siegi's and mentions the presence of other Hollywood stars. To fact-check the claim accurately, it would be useful to verify the identity of Freddie Sessler's brother as Siegi Sessler, confirm that he was a restaurateur, verify that Bette Davis frequented his club, and confirm Bette Davis's Welsh ancestry.",
+      "query": "Who was Siegi Sessler, and was he the brother of Freddie Sessler? Was Siegi Sessler a restaurateur whose club was frequented by Ruth Elizabeth \"Bette\" Davis? Did Bette Davis have Welsh ancestry?"
+    },
+    {
+      "claim": "69 Love Songs are American. The singer who helped form Flare Acoustic Arts League is also American.",
+      "supporting_facts": [
+        {
+          "key": "LD Beghtol",
+          "value": 0
+        },
+        {
+          "key": "69 Love Songs",
+          "value": 0
+        },
+        {
+          "key": "Flare Acoustic Arts League",
+          "value": 0
+        }
+      ],
+      "label": 1
+    },
+    {
+      "claim": "Isabella (Belle) Isabella was the birth name of the ex-slave abolitionist featured in the art installation that also memorialized Barbe de Verrue.",
+      "supporting_facts": [
+        {
+          "key": "The Dinner Party",
+          "value": 3
+        },
+        {
+          "key": "Sojourner Truth",
+          "value": 0
+        },
+        {
+          "key": "Barbe de Verrue",
+          "value": 4
+        }
+      ],
+      "label": 1
+    },
+    {
+      "claim": "Bruce Geller died in December 1978. He developed the American television detective show that Gail Fisher plays the role of Peggy Fair in.",
+      "supporting_facts": [
+        {
+          "key": "Mannix",
+          "value": 1
+        },
+        {
+          "key": "Bruce Geller",
+          "value": 0
+        },
+        {
+          "key": "Gail Fisher",
+          "value": 1
+        }
+      ],
+      "label": 0
+    }
+  ]
+}

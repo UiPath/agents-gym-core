@@ -1,0 +1,153 @@
+# @package _global_
+#
+# AIME eval-set splits:
+#   aime_2025       : 30 problems (AIME 2025, the main test set)
+#   aime_2022_2024  : 90 problems (historical AIME problems)
+#   aime_train      : 45 problems (seed=0 split from 2022-2024)
+#   aime_val        : 45 problems (seed=0 split from 2022-2024)
+#
+# The base version (agent.yaml) loads aime_train, aime_val and aime_2025.
+
+train:
+  version: train
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_train.json
+
+val:
+  version: val
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_val.json
+
+test:
+  version: test
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+baseline:
+  version: baseline
+  agent:
+    system_prompt: "core::prompts/baseline/system_prompt.md"
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+
+baseline-train:
+  version: baseline-train
+  agent:
+    system_prompt: "core::prompts/baseline/system_prompt.md"
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_train.json
+
+baseline-test:
+  version: baseline-test
+  agent:
+    system_prompt: "core::prompts/baseline/system_prompt.md"
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+gepa__gpt-4.1-mini:
+  version: gepa__gpt-4.1-mini
+  agent:
+    system_prompt: "core::prompts/gepa__gpt-4.1-mini/system_prompt.md"
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+
+gepa__gpt-4.1-mini-test:
+  version: gepa__gpt-4.1-mini-test
+  agent:
+    system_prompt: "core::prompts/gepa__gpt-4.1-mini/system_prompt.md"
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+miprov2-nd:
+  version: miprov2-nd
+  agent:
+    system_prompt: "core::prompts/miprov2-nd/system_prompt.md"
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+
+miprov2-nd-test:
+  version: miprov2-nd-test
+  agent:
+    system_prompt: "core::prompts/miprov2-nd/system_prompt.md"
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+miprov2-test:
+  version: miprov2-test
+  agent:
+    system_prompt: "core::prompts/miprov2-nd/system_prompt.md"
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_demos:
+      predict: "core::prompts/miprov2/predict.json"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+# Per-optimizer prompt sets: one <dir>-test version per prompts/<dir> (scripts/add_optimizer_versions.py)
+gepa__gpt-5-test:
+  version: gepa__gpt-5-test
+  agent:
+    system_prompt: core::prompts/gepa__gpt-5/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+reapo__gpt-4.1-mini-test:
+  version: reapo__gpt-4.1-mini-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-4.1-mini/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+reapo__gpt-5-test:
+  version: reapo__gpt-5-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+reapo__opus-4.6-test:
+  version: reapo__opus-4.6-test
+  agent:
+    system_prompt: core::prompts/reapo__opus-4.6/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+gepa__qwen3.5-122b-test:
+  version: gepa__qwen3.5-122b-test
+  agent:
+    system_prompt: core::prompts/gepa__qwen3.5-122b/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+reapo__qwen3.5-122b-test:
+  version: reapo__qwen3.5-122b-test
+  agent:
+    system_prompt: core::prompts/reapo__qwen3.5-122b/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+reapo__qwen3.5-9b-test:
+  version: reapo__qwen3.5-9b-test
+  agent:
+    system_prompt: core::prompts/reapo__qwen3.5-9b/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+gepa__qwen3.5-9b-test:
+  version: gepa__qwen3.5-9b-test
+  agent:
+    system_prompt: core::prompts/gepa__qwen3.5-9b/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json
+
+reapo__gpt-5__skill-trimmed-test:
+  version: reapo__gpt-5__skill-trimmed-test
+  agent:
+    system_prompt: core::prompts/reapo__gpt-5__skill-trimmed/predict.md
+    user_prompt: core::prompts/baseline/user_prompt.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-aime_2025.json

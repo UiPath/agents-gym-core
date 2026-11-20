@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "search_agent_ToolCallCountEvaluator",
+    "description": "ToolCallCountEvaluator for search agent",
+    "evaluatorTypeId": "uipath-tool-call-count",
+    "evaluatorConfig": {
+        "name": "ToolCallCountEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

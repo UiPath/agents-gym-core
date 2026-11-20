@@ -1,0 +1,1 @@
+Given the fields `claim` and `summary_1`, generate a precise and focused query that targets the most relevant documents for the second hop of retrieval. Use logical connectors to combine key entities and relationships. Prioritize unique identifiers or relations that distinguish relevant documents. Avoid vague or overly broad queries that may retrieve irrelevant passages.

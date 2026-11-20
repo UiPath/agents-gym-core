@@ -1,0 +1,592 @@
+{
+  "version": "1.0",
+  "id": "902444ea-6c6d-528c-9b79-d9deae874207",
+  "name": "evaluation-set-claim_history_train",
+  "evaluatorRefs": [
+    "claim_history_LLMJudgeOutputEvaluator",
+    "claim_history_ClaimHistoryLookupSuccessEvaluator",
+    "claim_history_ClaimHistoryLookupErrorEvaluator",
+    "claim_history_ToolCallCountEvaluator",
+    "claim_history_ToolCallArgsEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "test-7-claimhistorylookuptest-co-19-m5b",
+      "name": "ClaimHistoryLookupTest-CO-19-M5B",
+      "inputs": {
+        "DenialCode": "CO-19",
+        "RemittanceCode": "M5B"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [],
+            "ErrorMessage": "No historical matches exist for Denial Code CO-19 and Remittance Code M5B. It is recommended to seek additional guidance from the claims department. Additionally, document this new case for future reference."
+          }
+        },
+        "claim_history_ClaimHistoryLookupErrorEvaluator": {
+          "expectedOutput": "Error case: ErrorMessage should not be empty and AppealTips should be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-19",
+                "RemittanceCode": "M5B"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-8-claimhistorylookuptest-co-16-m56",
+      "name": "ClaimHistoryLookupTest-CO-16-M56",
+      "inputs": {
+        "DenialCode": "CO-16",
+        "RemittanceCode": "M56"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [],
+            "ErrorMessage": "No historical matches exist for Denial Code CO-16 and Remittance Code M56. It is recommended to seek additional guidance from the claims department. Additionally, document this new case for future reference."
+          }
+        },
+        "claim_history_ClaimHistoryLookupErrorEvaluator": {
+          "expectedOutput": "Error case: ErrorMessage should not be empty and AppealTips should be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-16",
+                "RemittanceCode": "M56"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-9-claimhistorylookuptest-to-19-m51",
+      "name": "ClaimHistoryLookupTest-TO-19-M51",
+      "inputs": {
+        "DenialCode": "TO-19",
+        "RemittanceCode": "M51"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [],
+            "ErrorMessage": "No historical matches exist for Denial Code TO-19 and Remittance Code M51. It is recommended to seek additional guidance from the claims department. Additionally, document this new case for future reference."
+          }
+        },
+        "claim_history_ClaimHistoryLookupErrorEvaluator": {
+          "expectedOutput": "Error case: ErrorMessage should not be empty and AppealTips should be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "TO-19",
+                "RemittanceCode": "M51"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-12-claimhistorylookuptest-co-69-m51",
+      "name": "ClaimHistoryLookupTest-CO-69-M51",
+      "inputs": {
+        "DenialCode": "CO-69",
+        "RemittanceCode": "M51"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [],
+            "ErrorMessage": "No historical matches exist for Denial Code CO-69 and Remittance Code M51. It is recommended to seek additional guidance from the claims department. Additionally, document this new case for future reference."
+          }
+        },
+        "claim_history_ClaimHistoryLookupErrorEvaluator": {
+          "expectedOutput": "Error case: ErrorMessage should not be empty and AppealTips should be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-69",
+                "RemittanceCode": "M51"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-13-claimhistorylookuptest-cp-19-n51",
+      "name": "ClaimHistoryLookupTest-CP-19-N51",
+      "inputs": {
+        "DenialCode": "CP-19",
+        "RemittanceCode": "N51"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [],
+            "ErrorMessage": "No historical matches exist for Denial Code CP-19 and Remittance Code M51. It is recommended to seek additional guidance from the claims department. Additionally, document this new case for future reference."
+          }
+        },
+        "claim_history_ClaimHistoryLookupErrorEvaluator": {
+          "expectedOutput": "Error case: ErrorMessage should not be empty and AppealTips should be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CP-19",
+                "RemittanceCode": "N51"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-15-claimhistorylookuptest-co-252-n26",
+      "name": "ClaimHistoryLookupTest-CO-252-N26",
+      "inputs": {
+        "DenialCode": "CO-252",
+        "RemittanceCode": "N26"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [
+              "Common successful appeal strategies include providing the additional documentation requested and ensuring an itemized bill is included.",
+              "Effective documentation in similar cases included detailed itemized bills and any additional supporting documents requested by the payer.",
+              "Key arguments that led to successful appeals emphasized the completeness and accuracy of the provided documentation, addressing the specific reasons for the denial.",
+              "Payer responses often required the resubmission of claims with the requested documentation, and timely follow-up was crucial.",
+              "Step-by-step guidance: 1. Gather all requested additional documentation. 2. Ensure the itemized bill is complete and accurate. 3. Resubmit the claim with the new documentation. 4. Follow up with the payer to confirm receipt and review. 5. Document all communications and responses for future reference."
+            ],
+            "ErrorMessage": ""
+          }
+        },
+        "claim_history_ClaimHistoryLookupSuccessEvaluator": {
+          "expectedOutput": "Success case: ErrorMessage should be empty and AppealTips should not be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-252",
+                "RemittanceCode": "N26"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-16-claimhistorylookuptest-co-97-n95",
+      "name": "ClaimHistoryLookupTest-CO-97-N95",
+      "inputs": {
+        "DenialCode": "CO-97",
+        "RemittanceCode": "N95"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [
+              "Common successful appeal strategies include clarifying benefit inclusion and coverage details with the payer.",
+              "Effective documentation includes detailed benefit explanations, coverage policies, and any prior authorization or correspondence with the payer.",
+              "Key arguments that led to successful appeals often focused on demonstrating that the denied service was indeed covered under the patient's plan and providing evidence of prior authorization if applicable.",
+              "Payer responses typically required clear and detailed explanations of the benefit coverage and how the service in question fits within those benefits.",
+              "Step-by-step guidance for preparing the appeal: 1. Gather all relevant documentation including benefit explanations, coverage policies, and prior authorizations. 2. Contact the payer to clarify the benefit inclusion and coverage details. 3. Prepare a detailed appeal letter outlining the reasons why the service should be covered, referencing the gathered documentation. 4. Submit the appeal along with all supporting documents to the payer. 5. Follow up with the payer to ensure the appeal is being reviewed and to provide any additional information if requested."
+            ],
+            "ErrorMessage": ""
+          }
+        },
+        "claim_history_ClaimHistoryLookupSuccessEvaluator": {
+          "expectedOutput": "Success case: ErrorMessage should be empty and AppealTips should not be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-97",
+                "RemittanceCode": "N95"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-17-claimhistorylookuptest-co-50-m54",
+      "name": "ClaimHistoryLookupTest-CO-50-M54",
+      "inputs": {
+        "DenialCode": "CO-50",
+        "RemittanceCode": "M54"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [
+              "1. Common successful appeal strategies include providing detailed medical necessity documentation and correcting the place of service information.",
+              "2. Effective documentation in similar cases included comprehensive medical records, physician's notes, and any relevant test results that support the medical necessity of the services provided.",
+              "3. Key arguments that led to successful appeals emphasized the critical nature of the services for the patient's health and well-being, supported by the provided medical documentation.",
+              "4. Payer responses often required a clear and corrected place of service, along with thorough medical necessity documentation to reconsider the claim.",
+              "5. Step-by-step guidance for preparing the appeal: (a) Gather all relevant medical records and physician's notes. (b) Correct any errors in the place of service information. (c) Write a detailed appeal letter explaining the medical necessity of the services. (d) Attach all supporting documentation. (e) Submit the appeal to the payer and follow up as necessary."
+            ],
+            "ErrorMessage": ""
+          }
+        },
+        "claim_history_ClaimHistoryLookupSuccessEvaluator": {
+          "expectedOutput": "Success case: ErrorMessage should be empty and AppealTips should not be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-50",
+                "RemittanceCode": "M54"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-18-claimhistorylookuptest-co-22-n30",
+      "name": "ClaimHistoryLookupTest-CO-22-N30",
+      "inputs": {
+        "DenialCode": "CO-22",
+        "RemittanceCode": "N30"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [
+              "Common successful appeal strategies include verifying patient eligibility and coordination of benefits.",
+              "Effective documentation includes proof of patient eligibility, coordination of benefits information, and any relevant communication with other payers.",
+              "Key arguments that led to successful appeals were centered around confirming the patient's eligibility for the service and ensuring that the coordination of benefits was correctly applied.",
+              "Payer responses often required detailed verification of eligibility and coordination of benefits before overturning the denial.",
+              "Step-by-step guidance for preparing the appeal: 1. Gather documentation proving patient eligibility. 2. Collect coordination of benefits information. 3. Include any communication with other payers regarding the patient's coverage. 4. Submit the appeal with a detailed explanation of the patient's eligibility and coordination of benefits."
+            ],
+            "ErrorMessage": ""
+          }
+        },
+        "claim_history_ClaimHistoryLookupSuccessEvaluator": {
+          "expectedOutput": "Success case: ErrorMessage should be empty and AppealTips should not be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-22",
+                "RemittanceCode": "N30"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-19-claimhistorylookuptest-co-29-m52",
+      "name": "ClaimHistoryLookupTest-CO-29-M52",
+      "inputs": {
+        "DenialCode": "CO-29",
+        "RemittanceCode": "M52"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [
+              "Common successful appeal strategies include providing a valid patient identifier and appealing the time limit expiration.",
+              "Effective documentation includes a corrected patient identifier, proof of timely filing, and any correspondence with the payer regarding the claim.",
+              "Key arguments that led to successful appeals were demonstrating that the patient identifier was corrected and that the claim was originally filed within the allowable time frame.",
+              "Payer responses often required clear evidence of the corrected patient identifier and proof of timely filing.",
+              "Step-by-step guidance: 1. Gather all relevant documentation including the corrected patient identifier and proof of timely filing. 2. Draft a clear and concise appeal letter explaining the corrections made and the original filing date. 3. Submit the appeal along with the supporting documents to the payer. 4. Follow up with the payer to ensure the appeal is being processed. 5. Document all communications and responses for future reference."
+            ],
+            "ErrorMessage": ""
+          }
+        },
+        "claim_history_ClaimHistoryLookupSuccessEvaluator": {
+          "expectedOutput": "Success case: ErrorMessage should be empty and AppealTips should not be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "CO-29",
+                "RemittanceCode": "M52"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "test-20-claimhistorylookuptest-pr-96-n130",
+      "name": "ClaimHistoryLookupTest-PR-96-N130",
+      "inputs": {
+        "DenialCode": "PR-96",
+        "RemittanceCode": "N130"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-claim-history",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "claim_history_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "AppealTips": [
+              "Common successful appeal strategies include consulting the plan benefit documents and guidelines to identify any restrictions or coverage details that may have been overlooked.",
+              "Effective documentation in similar cases included copies of the plan benefit documents, guidelines, and any relevant correspondence with the payer.",
+              "Key arguments that led to successful appeals often highlighted discrepancies between the denial reason and the actual plan coverage details, emphasizing that the service should be covered based on the provided documentation.",
+              "Payer responses typically required detailed explanations and supporting documents that clearly demonstrated the service's coverage under the plan guidelines.",
+              "Step-by-step guidance for preparing the appeal: 1. Gather all relevant plan benefit documents and guidelines. 2. Review the denial reason and compare it with the plan coverage details. 3. Prepare a detailed explanation highlighting any discrepancies. 4. Include copies of all supporting documents. 5. Submit the appeal with a clear and concise argument for coverage."
+            ],
+            "ErrorMessage": ""
+          }
+        },
+        "claim_history_ClaimHistoryLookupSuccessEvaluator": {
+          "expectedOutput": "Success case: ErrorMessage should be empty and AppealTips should not be empty"
+        },
+        "claim_history_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "claim_history_lookup": [
+              "=",
+              1
+            ]
+          }
+        },
+        "claim_history_ToolCallArgsEvaluator": {
+          "toolCalls": [
+            {
+              "name": "claim_history_lookup",
+              "args": {
+                "DenialCode": "PR-96",
+                "RemittanceCode": "N130"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

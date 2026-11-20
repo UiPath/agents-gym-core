@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "search_agent_SearchContainsEvaluator",
+    "description": "Custom contains evaluator for search agent - checks fraction of expected keywords found in result",
+    "evaluatorTypeId": "SearchContainsEvaluator",
+    "evaluatorSchema": "file://search_evaluators.py:SearchContainsEvaluator",
+    "evaluatorConfig": {
+        "name": "SearchContainsEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null
+    }
+}

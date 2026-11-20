@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "id": "hts_classifier_agent_HTSCodeMatchEvaluator",
+  "description": "Checks that Top_HTS_code has the expected 10 digits, ignoring separators",
+  "evaluatorTypeId": "HTSCodeMatchEvaluator",
+  "evaluatorSchema": "file://hts_classifier_agent_evaluators.py:HTSCodeMatchEvaluator",
+  "evaluatorConfig": {
+    "name": "HTSCodeMatchEvaluator",
+    "description": "Checks that Top_HTS_code has the expected 10 digits, ignoring separators",
+    "defaultEvaluationCriteria": null,
+    "target_output_key": "Top_HTS_code"
+  }
+}

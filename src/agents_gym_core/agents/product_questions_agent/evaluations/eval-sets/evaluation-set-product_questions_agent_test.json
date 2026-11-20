@@ -1,0 +1,542 @@
+{
+  "version": "1.0",
+  "id": "583f57bb-4c19-5718-84fc-e68e3e3a2853",
+  "name": "evaluation-set-product_questions_agent_test",
+  "evaluatorRefs": [
+    "product_questions_agent_ContainsProductEvaluator",
+    "product_questions_agent_EqualsEscalationEvaluator",
+    "product_questions_agent_LLMJudgeFinalResponseEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "DeterministicTest2",
+      "name": "Galaxy Tab S9 Price",
+      "inputs": {
+        "CustomerQuery": "How much does the Samsung Galaxy Tab S9 cost?",
+        "ProductName": "Galaxy Tab S9",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "799.99"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest3",
+      "name": "MacBook Pro RAM",
+      "inputs": {
+        "CustomerQuery": "How much RAM does the Apple MacBook Pro 16-inch have?",
+        "ProductName": "MacBook Pro 16-inch",
+        "ProductManufacturer": "Apple"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "16GB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest4",
+      "name": "Dell XPS 13 Display",
+      "inputs": {
+        "CustomerQuery": "What is the display size in inches of the Dell XPS 13?",
+        "ProductName": "XPS 13",
+        "ProductManufacturer": "Dell"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "13.4"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest6",
+      "name": "Sony WH-1000XM5 Battery",
+      "inputs": {
+        "CustomerQuery": "What is the battery life of the Sony WH-1000XM5?",
+        "ProductName": "WH-1000XM5",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "30 hours"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest7",
+      "name": "Dell XPS 13 RAM",
+      "inputs": {
+        "CustomerQuery": "What is the RAM size for the Dell XPS 13?",
+        "ProductName": "XPS 13 laptop",
+        "ProductManufacturer": "Dell"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "16GB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest9",
+      "name": "Sony Alpha A7 IV Resolution",
+      "inputs": {
+        "CustomerQuery": "What is the resolution of the Sony Alpha A7 IV camera?",
+        "ProductName": "Alpha A7 IV",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "33MP"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_DellXPS_Storage",
+      "name": "Dell XPS 13 Storage",
+      "inputs": {
+        "CustomerQuery": "What is the storage capacity of the Dell XPS 13?",
+        "ProductName": "XPS 13",
+        "ProductManufacturer": "Dell"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "1TB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_GalaxyTabS9_Processor",
+      "name": "Galaxy Tab S9 Processor",
+      "inputs": {
+        "CustomerQuery": "What processor does the Samsung Galaxy Tab S9 use?",
+        "ProductName": "Galaxy Tab S9",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Snapdragon 8 Gen 2"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SonyWH1000XM5_Battery",
+      "name": "Sony WH-1000XM5 Battery Hours (Deterministic)",
+      "inputs": {
+        "CustomerQuery": "What is the battery life of the Sony WH-1000XM5, in hours?",
+        "ProductName": "WH-1000XM5",
+        "ProductManufacturer": "Sony"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "30"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SpectreX360_Display",
+      "name": "HP Spectre x360 14 Display Type",
+      "inputs": {
+        "CustomerQuery": "What display type does the HP Spectre x360 14 have?",
+        "ProductName": "Spectre x360 14",
+        "ProductManufacturer": "HP"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Convertible Touchscreen"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_DJIMini4Pro_Range",
+      "name": "DJI Mini 4 Pro Transmission Range",
+      "inputs": {
+        "CustomerQuery": "What is the transmission range of the DJI Mini 4 Pro?",
+        "ProductName": "Mini 4 Pro",
+        "ProductManufacturer": "DJI"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "12km"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_AnkerPowerCore_Ports",
+      "name": "Anker PowerCore 26800 USB Ports",
+      "inputs": {
+        "CustomerQuery": "How many USB ports does the Anker PowerCore 26800 have?",
+        "ProductName": "PowerCore 26800",
+        "ProductManufacturer": "Anker"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "3"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_GalaxyS21Ultra_Camera",
+      "name": "Galaxy S21 Ultra Camera Resolution",
+      "inputs": {
+        "CustomerQuery": "What is the camera resolution of the Samsung Galaxy S21 Ultra?",
+        "ProductName": "Galaxy S21 Ultra",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "108MP"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_XboxSeriesX_Storage",
+      "name": "Xbox Series X Storage",
+      "inputs": {
+        "CustomerQuery": "What is the storage capacity of the Xbox Series X?",
+        "ProductName": "Xbox Series X",
+        "ProductManufacturer": "Microsoft"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "1TB"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_NestHubMax_Display",
+      "name": "Google Nest Hub Max Screen Size",
+      "inputs": {
+        "CustomerQuery": "What is the screen size of the Google Nest Hub Max, in inches?",
+        "ProductName": "Nest Hub Max",
+        "ProductManufacturer": "Google"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "10"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_Legion7i_Processor",
+      "name": "Lenovo Legion 7i Processor",
+      "inputs": {
+        "CustomerQuery": "What processor does the Lenovo Legion 7i use?",
+        "ProductName": "Legion 7i",
+        "ProductManufacturer": "Lenovo"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "Intel Core i7"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_ROGStrixG17_Processor",
+      "name": "ASUS ROG Strix G17 Processor",
+      "inputs": {
+        "CustomerQuery": "What processor does the Asus ROG Strix G17 use?",
+        "ProductName": "ROG Strix G17",
+        "ProductManufacturer": "ASUS"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "AMD Ryzen 9"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "DeterministicTest_SamsungT7_WriteSpeed",
+      "name": "Samsung T7 Portable SSD Write Speed",
+      "inputs": {
+        "CustomerQuery": "What is the write speed of the Samsung T7 Portable SSD, in MB/s?",
+        "ProductName": "T7 Portable SSD",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_ContainsProductEvaluator": {
+          "searchText": "1000"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "ScreenSizeCannotBeFound",
+      "name": "Escalation - Pixel 8 Pro RAM Not Found",
+      "inputs": {
+        "CustomerQuery": "How much RAM does Google Pixel 8 Pro have?",
+        "ProductName": "Google Pixel 8 Pro",
+        "ProductManufacturer": "Google"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_EqualsEscalationEvaluator": {
+          "expectedQuestion": "How much RAM does Google Pixel 8 Pro have?"
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "MissingAllDetails",
+      "name": "Escalation - Missing All Details",
+      "inputs": {
+        "CustomerQuery": "",
+        "ProductName": "",
+        "ProductManufacturer": ""
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_EqualsEscalationEvaluator": {
+          "expectedQuestion": ""
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test3",
+      "name": "Galaxy Tab S9 Price (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "How much does the Samsung Galaxy Tab S9 cost?",
+        "ProductName": "Galaxy Tab S9",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Final Response says that the product has 799.99 as price tag. Score should be 100."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test7",
+      "name": "Odyssey Neo G9 Display Type (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What display type does the Samsung Odyssey Neo G9 use?",
+        "ProductName": "Odyssey Neo G9 Monitor",
+        "ProductManufacturer": "Samsung"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product has obstacle avoidance capabilities."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test8",
+      "name": "DJI Mini 4 Pro Obstacle Avoidance (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Does the DJI Mini 4 Pro have obstacle avoidance?",
+        "ProductName": "Mini 4 Pro drone",
+        "ProductManufacturer": "DJI"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product has obstacle avoidance capabilities."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test12",
+      "name": "Surface Laptop Studio Price (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What is the price of the Microsoft Surface Laptop Studio?",
+        "ProductName": "Surface Laptop Studio",
+        "ProductManufacturer": "Microsoft"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "The product price is 1599.99."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test14",
+      "name": "Bose QuietComfort Noise Cancellation (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Do the Bose QuietComfort Earbuds II support noise cancellation?",
+        "ProductName": "QuietComfort Earbuds II",
+        "ProductManufacturer": "Bose"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Yes, the Bose QuietComfort Earbuds II feature advanced noise cancellation technology."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test16",
+      "name": "Logitech MX Master 3S Ergonomic (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "Is the Logitech MX Master 3S an ergonomic mouse?",
+        "ProductName": "MX Master 3S mouse",
+        "ProductManufacturer": "Logitech"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Yes, the Logitech MX Master 3S is designed with ergonomics in mind."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "Test18",
+      "name": "Canon EOS R6 Sensor (LLM Judge)",
+      "inputs": {
+        "CustomerQuery": "What type of sensor does the Canon EOS R6 have?",
+        "ProductName": "EOS R6 camera",
+        "ProductManufacturer": "Canon"
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_questions_agent_LLMJudgeFinalResponseEvaluator": {
+          "expectedOutput": {
+            "FinalResponse": "Final Response says that the product has 20MP Full-Frame Sensor."
+          }
+        }
+      },
+      "evalSetId": "product_questions_agent_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-15T00:00:00.000Z",
+  "updatedAt": "2025-01-15T00:00:00.000Z"
+}

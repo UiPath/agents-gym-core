@@ -1,0 +1,300 @@
+{
+  "accounts": [
+    {
+      "id": "0015f00000WEF7AAAX",
+      "account_name": "ClearWater",
+      "account_rating": "Hot",
+      "account_type": "Customer - Direct",
+      "account_description": "Leading water treatment solutions provider",
+      "annual_revenue": 5000000.0,
+      "employee_count": 150,
+      "industry_name": "Technology"
+    },
+    {
+      "id": "0015f00000WEF7BAAX",
+      "account_name": "TechEd Solutions",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Educational technology solutions provider",
+      "annual_revenue": 3000000.0,
+      "employee_count": 75,
+      "industry_name": "Education"
+    },
+    {
+      "id": "0015f00000WEF7CAAX",
+      "account_name": "EcoVolt",
+      "account_rating": "Hot",
+      "account_type": "Customer - Direct",
+      "account_description": "Renewable energy solutions company",
+      "annual_revenue": 10000000.0,
+      "employee_count": 200,
+      "industry_name": "Energy"
+    },
+    {
+      "id": "0015f00000WEF7DAAX",
+      "account_name": "FusionHealth",
+      "account_rating": "Hot",
+      "account_type": "Prospect",
+      "account_description": "Healthcare technology innovator",
+      "annual_revenue": null,
+      "employee_count": null,
+      "industry_name": "Healthcare"
+    },
+    {
+      "id": "0015f00000WEF7EAAX",
+      "account_name": "Greenfield Technologies",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Technology solutions provider",
+      "annual_revenue": 8000000.0,
+      "employee_count": 180,
+      "industry_name": "Technology"
+    },
+    {
+      "id": "0015f00000WEF7FAAX",
+      "account_name": "BioPulse Solutions",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Supplements manufacturer",
+      "annual_revenue": 9273053.0,
+      "employee_count": 48,
+      "industry_name": "Nutrition"
+    },
+    {
+      "id": "0015f00000WEF7GAAX",
+      "account_name": "BioPulse Solutions",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Supplements manufacturer",
+      "annual_revenue": 7895035.0,
+      "employee_count": 43,
+      "industry_name": "Nutrition"
+    },
+    {
+      "id": "0015f00000WEF7HAAX",
+      "account_name": "XYZ Solutions",
+      "account_rating": "Hot",
+      "account_type": "Customer - Channel",
+      "account_description": "Social media",
+      "annual_revenue": 589076250.0,
+      "employee_count": 3975,
+      "industry_name": "Technology"
+    },
+    {
+      "id": "0015f00000WEF7IAAX",
+      "account_name": "PseudoTech",
+      "account_rating": "Hot",
+      "account_type": "Customer - Channel",
+      "account_description": "Solar panels",
+      "annual_revenue": 10234.0,
+      "employee_count": 8,
+      "industry_name": "Energy"
+    },
+    {
+      "id": "0015f00000WEF7JAAX",
+      "account_name": "Acme Corporation",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Provider of software and IT solutions",
+      "annual_revenue": 5000000.0,
+      "employee_count": 150,
+      "industry_name": "Software"
+    },
+    {
+      "id": "0015f00000WEF7KAAX",
+      "account_name": "GlobalDigitech Limited",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Dvelopment and consultancy of digital technologies",
+      "annual_revenue": 2000000.75,
+      "employee_count": 80,
+      "industry_name": "Information Technology"
+    },
+    {
+      "id": "0015f00000WEF7LAAX",
+      "account_name": "GreenFarms LLC",
+      "account_rating": "Warm",
+      "account_type": "Customer - Direct",
+      "account_description": "Organic farming and agriculture enterprise",
+      "annual_revenue": 1000000.5,
+      "employee_count": 60,
+      "industry_name": "Agriculture"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "0035f00000q8YZBAAY",
+      "first_name": "John",
+      "last_name": "Turner",
+      "email_address": "john.turner@clearwater.example",
+      "contact_title": "Head of Operations",
+      "phone_number": "+1-555-0123",
+      "account_name": "ClearWater",
+      "contact_description": "Primary operations contact"
+    },
+    {
+      "id": "0035f00000q8YZBBBX",
+      "first_name": "John",
+      "last_name": "Turner",
+      "email_address": "j.turner@clearwater.example",
+      "contact_title": "Head of Operations",
+      "phone_number": "+1-555-0124",
+      "account_name": "ClearWater",
+      "contact_description": "Duplicate record - needs review"
+    },
+    {
+      "id": "0035f00000q8YZCAAY",
+      "first_name": "Matthew",
+      "last_name": "Baker",
+      "email_address": "matthew.baker@teched.example",
+      "contact_title": "Head of Operations",
+      "phone_number": "+1-555-0124",
+      "account_name": "TechEd Solutions",
+      "contact_description": "Primary decision maker"
+    },
+    {
+      "id": "0035f00000q8YZDAAY",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email_address": "jane@pseudotech.example",
+      "contact_title": "Head of Operations",
+      "phone_number": "+1-555-0124",
+      "account_name": "PseudoTech",
+      "contact_description": "Primary decision maker"
+    },
+    {
+      "id": "0035f00000q8YZEAAY",
+      "first_name": "Dave",
+      "last_name": "Peterson",
+      "email_address": "peterson@globaldigitech.example",
+      "contact_title": "Head of Operations",
+      "phone_number": "+1-555-0124",
+      "account_name": "GlobalDigitech Limited",
+      "contact_description": "Primary decision maker"
+    },
+    {
+      "id": "0035f00000q8YZFAAY",
+      "first_name": "Chris",
+      "last_name": "Davids",
+      "email_address": "c.davids@greenfarms.example",
+      "contact_title": "Head of Vegetables",
+      "phone_number": "+1-555-0124",
+      "account_name": "GreenFarms LLC",
+      "contact_description": "Primary decision maker"
+    },
+    {
+      "id": "0035f00000q8YZGAAY",
+      "first_name": "Paul",
+      "last_name": "Young",
+      "email_address": "p.young@greenfarms.example",
+      "contact_title": "Head of Tractors",
+      "phone_number": "+1-555-0124",
+      "account_name": "GreenFarms LLC",
+      "contact_description": "Secondary decision maker"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "0065f00000WEF7FAAX",
+      "opportunity_name": "Greenfield Tech Automation Project",
+      "opportunity_stage": "Proposal",
+      "opportunity_close_date": "2024-06-30T00:00:00.000Z",
+      "opportunity_amount": 150000.0,
+      "opportunity_probability": null,
+      "opportunity_description": "Automation project opportunity",
+      "account_name": "Greenfield Technologies"
+    },
+    {
+      "id": "0065f00000WEF7GAAX",
+      "opportunity_name": "FusionHealth Patient Scheduling Automation",
+      "opportunity_stage": "Prospecting",
+      "opportunity_close_date": "2024-09-30T00:00:00.000Z",
+      "opportunity_amount": 180000.0,
+      "opportunity_probability": 80,
+      "opportunity_description": "Patient scheduling workflow automation implementation",
+      "account_name": "FusionHealth"
+    },
+    {
+      "id": "0065f00000WEF7HAAX",
+      "opportunity_name": "XYZ Customer Support Automation",
+      "opportunity_stage": "Prospecting",
+      "opportunity_close_date": "2024-11-17T00:00:00.000Z",
+      "opportunity_amount": 200000.0,
+      "opportunity_probability": 60,
+      "opportunity_description": "Automating customer support",
+      "account_name": "XYZ Solutions"
+    },
+    {
+      "id": "0065f00000WEF7IAAX",
+      "opportunity_name": "XYZ Marketing Automation",
+      "opportunity_stage": "Prospecting",
+      "opportunity_close_date": "2024-12-04T00:00:00.000Z",
+      "opportunity_amount": 300000.0,
+      "opportunity_probability": 40,
+      "opportunity_description": "Automating marketing",
+      "account_name": "XYZ Solutions"
+    },
+    {
+      "id": "0065f00000WEF7NAAX",
+      "opportunity_name": "PseudoTech Customer Support Automation",
+      "opportunity_stage": "Prospecting",
+      "opportunity_close_date": "2024-11-17T00:00:00.000Z",
+      "opportunity_amount": 200000.0,
+      "opportunity_probability": 60,
+      "opportunity_description": "Automating customer support",
+      "account_name": "PseudoTech"
+    },
+    {
+      "id": "0065f00000WEF7PAAX",
+      "opportunity_name": "PseudoTech Marketing Automation",
+      "opportunity_stage": "Prospecting",
+      "opportunity_close_date": "2024-12-04T00:00:00.000Z",
+      "opportunity_amount": 300000.0,
+      "opportunity_probability": 40,
+      "opportunity_description": "Automating marketing",
+      "account_name": "PseudoTech"
+    }
+  ],
+  "leads": [
+    {
+      "id": "00Q5f00000q8YZDAAY",
+      "first_name": "Sam",
+      "last_name": "Harper",
+      "company_name": "HarvestCo",
+      "lead_title": null,
+      "lead_status": null,
+      "lead_email_address": "sam.harper@harvestco.example",
+      "lead_country": null
+    },
+    {
+      "id": "00Q5f00000q8YZEAAY",
+      "first_name": "Sarah",
+      "last_name": "Johnson",
+      "company_name": "ClearWater",
+      "lead_title": "IT Director",
+      "lead_status": "Closed - Not Converted",
+      "lead_email_address": "sarah.j@clearwater.example",
+      "lead_country": "United States"
+    },
+    {
+      "id": "00Q5f00000q8YZFAAY",
+      "first_name": "Michael",
+      "last_name": "Chen",
+      "company_name": "ClearWater",
+      "lead_title": "Project Manager",
+      "lead_status": "Closed - Converted",
+      "lead_email_address": "m.chen@clearwater.example",
+      "lead_country": "United States"
+    },
+    {
+      "id": "00Q5f00000q8YZGAAY",
+      "first_name": "David",
+      "last_name": "Wilson",
+      "company_name": "ClearWater",
+      "lead_title": "Innovation Lead",
+      "lead_status": "Open",
+      "lead_email_address": "d.wilson@clearwater.example",
+      "lead_country": "United States"
+    }
+  ]
+}

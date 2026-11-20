@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "for_loop_agent_ToolCallOrderEvaluator",
+    "description": "ToolCallOrderEvaluator for the For Loop Agent",
+    "evaluatorTypeId": "uipath-tool-call-order",
+    "evaluatorConfig": {
+        "name": "ToolCallOrderEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

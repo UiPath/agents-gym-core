@@ -1,0 +1,4 @@
+[submodule "gepa-artifact"]
+	path = gepa-artifact
+	url = https://github.com/gepa-ai/gepa-artifact.git
+	ignore = untracked

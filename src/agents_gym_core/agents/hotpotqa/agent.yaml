@@ -1,0 +1,48 @@
+# @package _global_
+
+version: base
+
+metadata:
+  name: "HotpotQA Multi-Hop QA"
+  tags:
+    - full-benchmark
+
+# init.py builds GEPA's train/val/test splits from the Hugging Face dataset.
+init:
+  script: core::init.py
+  data_dirs:
+    - evaluations/eval-sets
+    - evaluations/evaluators
+  params:
+    seed: 0
+
+loop: dspy-program:gepa_artifact.benchmarks.hotpotQA.hotpot_program.HotpotMultiHop
+
+agent:
+  user_prompt: "core::prompts/user_prompt.md"
+
+  signature_prompts:
+    summarize1: "core::prompts/summarize1.md"
+    summarize2: "core::prompts/summarize2.md"
+    create_query_hop2: "core::prompts/create_query_hop2.md"
+    final_answer: "core::prompts/final_answer.md"
+
+  input_schema:
+    fields:
+      question:
+        type: "str"
+        description: "A multi-hop question requiring retrieval of multiple Wikipedia passages"
+
+  output_schema:
+    fields:
+      answer:
+        type: "str"
+        description: "The concise answer to the multi-hop question"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-hotpotqa_train.json
+    - core::evaluations/eval-sets/evaluation-set-hotpotqa_val.json
+    - core::evaluations/eval-sets/evaluation-set-hotpotqa_test.json
+
+  evaluator_weights:
+    hotpotqa_AnswerExactMatchEvaluator: 1

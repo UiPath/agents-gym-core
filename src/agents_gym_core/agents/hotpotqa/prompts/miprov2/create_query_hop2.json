@@ -1,0 +1,209 @@
+{
+  "demos": [
+    {
+      "augmented": true,
+      "question": "Simone Benedetti plays for a team that currently competes in which Serie?",
+      "summary_1": "Simone Benedetti plays for Virtus Entella, but the passages do not specify which Serie the team currently competes in.",
+      "reasoning": "The summary indicates that Simone Benedetti plays for Virtus Entella, but it does not state the current Serie (league level) in which Virtus Entella competes. To accurately answer which Serie the team currently competes in, it is necessary to look up the most recent league information for Virtus Entella.",
+      "query": "What Serie (league level) does Virtus Entella currently compete in?"
+    },
+    {
+      "augmented": true,
+      "question": "What singer born in London in 1988 joined The Voice as a new judge in 2015?",
+      "summary_1": "Jessie J, a singer born in London in 1988, joined The Voice as a new judge in 2015.",
+      "reasoning": "The question asks for the name of a singer who was born in London in 1988 and joined The Voice as a new judge in 2015. The summary clearly states that Jessie J is a singer born in London in 1988 and joined The Voice as a new judge in 2015. Therefore, the answer must be Jessie J.",
+      "query": "Who is the singer born in London in 1988 that joined The Voice as a new judge in 2015?"
+    },
+    {
+      "id": "5a8741545542994846c1cd39",
+      "question": "A New Life is the second album by The Marshall Tucker Band, an American Southern rock/country rock band originally from Spartanburg, in which US state?",
+      "answer": "South Carolina",
+      "type": "bridge",
+      "level": "easy",
+      "supporting_facts": {
+        "title": [
+          "A New Life (album)",
+          "The Marshall Tucker Band"
+        ],
+        "sent_id": [
+          0,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "The Marshall Tucker Band (album)",
+          "The Marshall Tucker Band",
+          "Alabama Live",
+          "Grinderswitch",
+          "Playin' to Win",
+          "Toy Caldwell",
+          "Southern Rock Allstars",
+          "A New Life (album)",
+          "Can't You See (The Marshall Tucker Band song)",
+          "Cactus and a Rose"
+        ],
+        "sentences": [
+          [
+            "The Marshall Tucker Band is the self-titled debut album by The Marshall Tucker Band, a country rock-oriented Southern rock band.",
+            " It was recorded in 1973 in Macon, Georgia, at Capricorn Studios."
+          ],
+          [
+            "The Marshall Tucker Band is an American Southern rock/country rock band originally from Spartanburg, South Carolina.",
+            " The band's blend of rock, rhythm and blues, jazz, country, and gospel helped establish the Southern rock genre in the early 1970s.",
+            " While the band had reached the height of its commercial success by the end of the decade, the band has recorded and performed continuously under various lineups for 45 years."
+          ],
+          [
+            "Alabama Live is the first live album by the American band Alabama.",
+            " Their first live compilation, it was released in 1988 and was a Number One album on Top Country Albums.",
+            " The album includes live renditions of various singles from the band's career, as well as the album tracks \"Red River\", \"Fireworks\" and \"Gonna Have a Party\".",
+            " Also included is a cover of the Marshall Tucker Band's \"Can't You See\", which Alabama had never included on any of their studio albums."
+          ],
+          [
+            "Grinderswitch was an American southern rock band.",
+            " They recorded a number of albums for Capricorn Records in the 1970s, but never achieved the same widespread recognition enjoyed by some of the label's other artists, such as The Allman Brothers Band and Marshall Tucker Band.",
+            " They also recorded for Atlantic.",
+            " In the UK they are perhaps best known for their recording \"Pickin' the Blues\", which was used for many years by the disc jockey John Peel as the theme tune for his BBC radio shows."
+          ],
+          [
+            "Playin' to Win is the fourth album by American southern rock band Outlaws, released in 1978.",
+            " (See 1978 in music).",
+            " The album is their first without guitarist and singer/songwriter Henry Paul, who had acted as the second frontman behind Hughie Thomasson.",
+            " The album was not as well received as the band's previous three albums, even though it still featured most of the original lineup, which would remain until the departure of guitarist Billy Jones.",
+            " The album was more straight southern rock than the country rock sound of their previous three, especially the last two."
+          ],
+          [
+            "Toy Talmadge Caldwell Jr. (November 13, 1947 \u2013 February 25, 1993) was the lead guitarist, main songwriter and a founding member of the 1970s Southern Rock group The Marshall Tucker Band.",
+            " He was a member of the band from its formation up until 1983.",
+            " In addition to his guitarist role, he occasionally performed lead vocals for Marshall Tucker Band, including on one of the band's best-known hits, \"Can't You See.\""
+          ],
+          [
+            "The Southern Rock Allstars are a band that got its name from the history/lineage of its former members all of whom were connected with Southern rock.",
+            " Its current lineup consists of former members of The Rossington Band and sidemen of Lynyrd Skynyrd, Marshall Tucker and Jimmy Farrar."
+          ],
+          [
+            "A New Life is the second album by The Marshall Tucker Band.",
+            " It was recorded in Macon, Georgia at Capricorn Studios.",
+            " Guest musicians include Charlie Daniels and Jaimoe from The Allman Brothers Band."
+          ],
+          [
+            "\"Can't You See\" is a song written by Toy Caldwell of The Marshall Tucker Band.",
+            " The song was originally recorded by the band on their 1973 debut album, \"The Marshall Tucker Band\", and released as the album's first single.",
+            " It was re-released in 1977 and peaked at number 75 on the \"Billboard\" Hot 100.",
+            " Cover versions of \"Can't You See\" have charted for Waylon Jennings (in 1976) and the Zac\u00a0Brown\u00a0Band\u00a0with\u00a0Kid\u00a0Rock (2010)."
+          ],
+          [
+            "Cactus and a Rose is a 1980 honky tonk/Southern rock album by Country music singer Gary Stewart.",
+            " The singer's seventh studio album, it only reached #49 on \"Billboard's\" \"Country Albums\" chart, spawning two low-charting singles: \"Cactus and a Rose\" (#48) and \"Are We Dreamin' the Same Dream\" (#66).",
+            " Produced by Chips Moman, it was a departure from his standard honky-tonk fare, as it features Southern rockers Gregg Allman, Dickey Betts, Mike Lawler, Bonnie Bramlett (from Delaney, Bonnie & Friends), and Randy Scruggs.",
+            " According to Allmusic the album proves that \"Stewart could have easily fronted the Allman Brothers or Marshall Tucker or, vocally kicked Charlie Daniels' southern rock butt from here to Pascagoula as a great honky tonk singer.\""
+          ]
+        ]
+      }
+    },
+    {
+      "id": "5a760d99554299109176e639",
+      "question": "What pair of American dicephalic parapagus twins has a show that was brodcasted on BBC Three in April and May 2013?",
+      "answer": "Abby and Brittany Hensel",
+      "type": "bridge",
+      "level": "medium",
+      "supporting_facts": {
+        "title": [
+          "Abby &amp; Brittany",
+          "Abby &amp; Brittany",
+          "Abby and Brittany Hensel"
+        ],
+        "sent_id": [
+          0,
+          2,
+          0
+        ]
+      },
+      "context": {
+        "title": [
+          "Horne &amp; Corden",
+          "Coming of Age (2008 TV series)",
+          "List of Horne &amp; Corden episodes",
+          "Abby and Brittany Hensel",
+          "Russell Howard's Good News",
+          "How Not to Live Your Life",
+          "Joe Wade (filmmaker)",
+          "In the Flesh (TV series)",
+          "Abby &amp; Brittany",
+          "Lip Service (TV series)"
+        ],
+        "sentences": [
+          [
+            "Horne & Corden is a British sketch show written by Jon Brown, Steve Dawson, Andrew Dawson, Tim Inman and the cast, script edited by Sam Ward, and starring Mathew Horne and James Corden.",
+            " It aired on BBC television in 2009.",
+            " The first episode was broadcast on 10 March 2009 on BBC Three.",
+            " It is presented by and stars Mathew Horne and James Corden in front of a live audience, featuring pre-recorded sketches (often on location) and vignettes filmed in a studio with an audience.",
+            " Several episodes featured a song and dance routine as their finale.",
+            " The first episode attracted the highest ratings for a comedy show debut on BBC Three.",
+            " However, ratings quickly dropped throughout the show's run."
+          ],
+          [
+            "Coming of Age was a British situation comedy, written by Tim Dawson, produced in house by BBC Productions, and broadcast on the former channel BBC Three.",
+            " The show took a direct look at five sixth form students, Jas, Ollie, Matt, Chloe and DK, as well as, from series three, new character Robyn Crisp, who are living in Abingdon.",
+            " Their lives rotate around the fictional Wooton College, their bedrooms, and Ollie's garden shed.",
+            " A pilot originally aired in 2007, followed by the first series in 2008, a second series in 2010, and a third beginning in January 2011.",
+            " In 2011, the show was cancelled along with other long running BBC Three programmes including \"Ideal\", \"Two Pints of Lager and a Packet of Crisps\", \"Hotter Than My Daughter\", and \"Doctor Who Confidential\".",
+            " The first series was released on DVD on 26 October 2009, however, no further series have been released on DVD."
+          ],
+          [
+            "\"Horne & Corden\" is a British sketch show written by, and starring, Mathew Horne and James Corden (Gavin and Stacey) and aired on BBC television.",
+            " The first episode was broadcast on 10 March 2009 on BBC Three.",
+            " It is presented by Mathew Horne and James Corden in front of a live audience, in a style reminiscent of \"Morecambe and Wise\", featuring pre-recorded sketches (often on location) and vignettes filmed in a studio with an audience.",
+            " The first episode even had a song and dance routine as the final piece of the episode, still in keeping with a \"Morecambe and Wise\" tradition of variety/comedy show.",
+            " The first episode attracted the highest ratings for a comedy show debut on BBC Three."
+          ],
+          [
+            "Abigail Loraine \"Abby\" Hensel and Brittany Lee Hensel (born March 7, 1990) are American dicephalic parapagus twins; in other words, they are conjoined twins, each of whom has a separate head, but whose bodies are joined.",
+            " They are highly symmetric for conjoined twins, giving the appearance of having a single body without marked variation from normal proportions.",
+            " In fact, several vital organs are doubled; each twin has a separate heart, stomach, spine, pair of lungs, and spinal cord."
+          ],
+          [
+            "Russell Howard's Good News is a British comedy and topical news show which was broadcast on BBC Three between 2009 and 2014, and on BBC Two between 2014 and 2015.",
+            " Hosted by comedian Russell Howard, it offered his commentary on the news of the week through mostly stand-up, along with sketches and humorous video clips, whilst also having guest appearances from people who have been featured in the media recently.",
+            " It was made by independent production company Avalon Television and produced by Mark Iddon, Robyn O'Brien and David Howarth.",
+            " Repeats of earlier episodes are also broadcast on Comedy Central, Dave and W.",
+            " The show also made an appearance on \"Children in Need 2011\" and \"Red Nose Day 2013\", featuring a number of sketches from recent episodes, as well as a new segment of \"It's Not All Doom and Gloom\".",
+            " In February 2013, users of Digital Spy voted \"Good News\" as the Best Show Ever on BBC Three in the run up to the channel's tenth anniversary."
+          ],
+          [
+            "How Not to Live Your Life (styled in the opening credits as \"how NOT to live your life\") is a British sitcom, written by and starring Dan Clark that aired between 27 September 2007 and 22 December 2011 on BBC Three, about a pessimistic twenty-nine-year-old man who is trying to navigate his way through life but is not helped by his bad instincts.",
+            " After a pilot, the show debuted in 2008 with moderate ratings but grew over the course of the three series, doubling its ratings each series because of its cult following.",
+            " The third series got viewing figures of 1.5 million across the week and was the second most watched show on BBC iPlayer.",
+            " When BBC Three controller Danny Cohen left the channel, new controller Zai Bennett cancelled several comedies, including \"How Not to Live Your Life\"."
+          ],
+          [
+            "Joe Wade is a British filmmaker, TV writer and producer.",
+            " He is CEO and co-founder of \"Don't Panic\", a media agency based in Shoreditch.",
+            " Wade has been making videos for YouTube to stir controversy on numerous human rights and social issues since 2009.",
+            " In 2012 he co-created a BBC Three show, alongside Heydon Prowse, titled The Revolution Will Be Televised, consequently winning a BAFTA for it in May 2013.",
+            " The show was nominated for second TV BAFTA in 2014 and lost to James Corden.",
+            " In \"The Revolution\" stars Jolyon Rubinstein and Prowse hold politicians and businessmen to account for wrongdoings and corruption, in a satirical manner."
+          ],
+          [
+            "In the Flesh is a BAFTA award-winning BBC Three supernatural drama series starring Luke Newberry.",
+            " Written and created by Dominic Mitchell, the show began airing on BBC Three on 17 March 2013 with the first series consisting of three one-hour-long episodes.",
+            " Set after \"The Rising\", which is the show's take on a zombie apocalypse, the drama focuses throughout on reanimated teenager Kieren Walker and his return to his local community."
+          ],
+          [
+            "Abby & Brittany was an American reality show on TLC starring 22-year-old conjoined twins Abby and Brittany Hensel that premiered on August 28, 2012.",
+            " The show features their graduation from Bethel University, subsequent job search, and their travels in Europe.",
+            " It was broadcast on BBC Three in the UK in April and May 2013, as three 60-minute episodes."
+          ],
+          [
+            "Lip Service is a British television serial drama portraying the lives of a group of lesbians living in Glasgow, Scotland.",
+            " Production on the show, which stars Laura Fraser, Ruta Gedmintas and Fiona Button, began in summer 2009 in Glasgow.",
+            " The show debuted on BBC Three on 12 October 2010.",
+            " Filming on a second series was confirmed in late 2010, with filming beginning on 30 May 2011.",
+            " The second series aired on BBC Three from 20 April 2012.",
+            " In January 2013, show's creator, Harriet Braun, announced that BBC Three cancelled the series without explanation."
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+name: product_questions_agent
+version: base
+
+
+metadata:
+  name: "Product Questions Agent"
+  version: "1.0.0"
+  tags:
+    - fast-benchmark
+    - full-benchmark
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      CustomerQuery:
+        type: str
+        description: This can be an email body or a plain question about a product
+      ProductName:
+        type: str
+        description: Product name
+      ProductManufacturer:
+        type: str
+        description: Product manufacturer
+  output_schema:
+    fields:
+      Confidence:
+        type: float
+        description: Confidence of the answer from 0 to 1. Where 1 means all questions
+          were answered with high accuracy.
+      QuestionsAnswered:
+        type: str
+        description: JSON array of questions answered by the agent, each with Question
+          and Answer fields
+      QuestionsToBeEscalated:
+        type: str
+        description: JSON array of questions that the agent cannot answer, each with
+          Question and Answer fields
+      FinalResponse:
+        type: str
+        description: Final response from the agent
+  tools:
+  - _target_: agents_gym_core.common_tools.CoreVectorDatabaseTool
+    name: "ProductDatabase"
+    description: "Search for products in the database. Returns matching product information including name, description, price, features, and brand."
+    file_paths: ["product_questions_agent/documents/products.json"]
+    max_items: 3
+    persist_directory: "db_cache/product_questions_agent"
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-product_questions_agent_train.json
+

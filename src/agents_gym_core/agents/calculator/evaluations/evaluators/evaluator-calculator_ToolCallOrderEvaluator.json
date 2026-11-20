@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "calculator_ToolCallOrderEvaluator",
+    "description": "ToolCallOrderEvaluator for calculator agent",
+    "evaluatorTypeId": "uipath-tool-call-order",
+    "evaluatorConfig": {
+        "name": "ToolCallOrderEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

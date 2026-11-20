@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "customer_support_triage_agent_LLMJudgeResponseEvaluator",
+  "description": "LLM Judge evaluator for Response field factuality in customer_support_triage_agent",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "LLMJudgeResponseEvaluator",
+    "description": "Evaluates the semantic similarity of the Response field to the expected response",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert evaluator, analyze the semantic similarity of the Response content to determine a score from 0-100. Focus on comparing the meaning and contextual equivalence, accounting for alternative valid expressions, synonyms, and reasonable variations in language while maintaining high standards for accuracy and completeness. Provide your score with a justification, explaining briefly and concisely why you gave that score.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "Response"
+  }
+}

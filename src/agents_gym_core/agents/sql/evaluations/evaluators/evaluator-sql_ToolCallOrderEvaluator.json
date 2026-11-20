@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "id": "sql_ToolCallOrderEvaluator",
+  "description": "Tool call order evaluator for SQL agent",
+  "evaluatorTypeId": "uipath-tool-call-order",
+  "evaluatorConfig": {
+    "name": "ToolCallOrderEvaluator",
+    "description": "Checks if tools are called in the expected order",
+    "defaultEvaluationCriteria": {
+      "tool_calls_order": [
+        "sql_db_list_tables",
+        "sql_db_schema",
+        "sql_db_query_checker",
+        "sql_db_query",
+        "check_result_tool"
+      ]
+    },
+    "strict": false
+  }
+}

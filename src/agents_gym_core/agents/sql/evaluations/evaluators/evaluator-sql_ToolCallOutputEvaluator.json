@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "id": "sql_ToolCallOutputEvaluator",
+  "description": "Tool call output evaluator for SQL agent",
+  "evaluatorTypeId": "uipath-tool-call-output",
+  "evaluatorConfig": {
+    "name": "ToolCallOutputEvaluator",
+    "description": "Checks if tool outputs match expected values",
+    "defaultEvaluationCriteria": null,
+    "strict": false
+  }
+}

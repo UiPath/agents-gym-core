@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "id": "meeting_management_MeetingManagementEqualsEvaluator",
+  "description": "MeetingManagementEqualsEvaluator for meeting_management agent",
+  "evaluatorTypeId": "MeetingManagementEqualsEvaluator",
+  "evaluatorConfig": {
+    "name": "MeetingManagementEqualsEvaluator",
+    "description": "",
+    "defaultEvaluationCriteria": null
+  },
+  "evaluatorSchema": "file://meeting_management_evaluators.py:MeetingManagementEqualsEvaluator"
+}

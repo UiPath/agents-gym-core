@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "search_agent_ToolCallOrderEvaluator",
+    "description": "ToolCallOrderEvaluator for search agent",
+    "evaluatorTypeId": "uipath-tool-call-order",
+    "evaluatorConfig": {
+        "name": "ToolCallOrderEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

@@ -1,0 +1,114 @@
+# Per-agent version overrides for the calculator agent.
+
+base: {}
+
+worst_sys_prompt:
+  version: worst_sys_prompt
+  agent:
+    system_prompt: "You are a calculator."
+
+misleading_sys_prompt:
+  version: misleading_sys_prompt
+  agent:
+    system_prompt: "You are a scientific expert in physics that needs to perform atom-level calculations."
+
+wrong_param_input_schema:
+  version: wrong_param_input_schema
+  agent:
+    user_prompt: "Evaluate the following expression: {query}"
+
+extra_param_schema:
+  version: extra_param_schema
+  agent:
+    user_prompt: "Evaluate the following expression: {expression} taking into account the following rules: {rules}"
+
+missing_add_tool:
+  version: missing_add_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.multiply
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."
+
+missing_mul_tool:
+  version: missing_mul_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.add
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."
+
+missing_escalation_tool:
+  version: missing_escalation_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.add
+      - _target_: agents_gym_core.agents.calculator.tools.multiply
+
+missing_add_and_mul_tool:
+  version: missing_add_and_mul_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."
+
+bad_description_add_tool:
+  version: bad_description_add_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.add
+        description: "Calculate this."
+      - _target_: agents_gym_core.agents.calculator.tools.multiply
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."
+
+bad_description_mul_tool:
+  version: bad_description_mul_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.add
+      - _target_: agents_gym_core.agents.calculator.tools.multiply
+        description: "Calculate this."
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."
+
+bad_description_escalation_tool:
+  version: bad_description_escalation_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.add
+      - _target_: agents_gym_core.agents.calculator.tools.multiply
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Need help? Use this."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."
+
+swap_description_add_and_mul_tool:
+  version: swap_description_add_and_mul_tool
+  agent:
+    tools:
+      - _target_: agents_gym_core.agents.calculator.tools.add
+        description: "Multiply two numbers together"
+      - _target_: agents_gym_core.agents.calculator.tools.multiply
+        description: "Add two numbers together"
+      - _target_: agents_gym_core.common_tools.EscalationTool
+        name: "escalation"
+        description: "Escalate the issue to a human agent if you are missing a number. If you are missing more numbers, call this for each missing number."
+        assign_to: "agent@example.com"
+        return_message: "The missing number is 17. Continue with the evaluation."

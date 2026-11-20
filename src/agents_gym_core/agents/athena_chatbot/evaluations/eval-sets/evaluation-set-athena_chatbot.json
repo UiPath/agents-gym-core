@@ -1,0 +1,1521 @@
+{
+  "version": "1.0",
+  "id": "evaluation-set-athena-chatbot",
+  "name": "Athena Chatbot Eval Set",
+  "evaluatorRefs": [
+    "athena_chatbot_LLMJudgeOutputEvaluator",
+    "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator",
+    "athena_chatbot_ExpectedMentorCheckEvaluator",
+    "athena_chatbot_ToolCallCountEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "test-2-test-1-extract-mentor-from-database",
+      "name": "Test 1 - Extract mentor from database",
+      "inputs": {
+        "USER_MESSAGE": "User(U0MENTEE001 - John Doe) said at 1739954469.128249:hello.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, John! How can I help you with your mentorship needs today?\nUser(U0MENTEE001 - John Doe) said at 1739954488.128249:i'd like to find a mentor.\nAssistant(U0ATHENABOT) said at 1739954489.128249: John, I see that you are a Senior Automation Developer specializing in RPA and located in Romania (GMT+2). Could you please specify the topic you are interested in for mentorship? This will help me find the most suitable mentor for you.?\nUser(U0MENTEE001 - John Doe) said at 1739954491.128249:i'm interested in leadership. and yes, that is my timezone."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available for you: Raj Patel. Would you like me to reach out to Raj Patel for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-3-test-1-send-mentorship-confirmation",
+      "name": "Test 1 - Send mentorship confirmation",
+      "inputs": {
+        "USER_MESSAGE": "User(U0MENTEE001 - John Doe) said at 1739954469.128249:hello.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, John! How can I help you with your mentorship needs today?\nUser(U0MENTEE001 - John Doe) said at 1739954488.128249:i'd like to find a mentor.\nAssistant(U0ATHENABOT) said at 1739954489.128249: John, I see that you are a Senior Automation Developer specializing in RPA and located in Romania (GMT+2). Could you please specify the topic you are interested in for mentorship? This will help me find the most suitable mentor for you.?\nUser(U0MENTEE001 - John Doe) said at 1739954491.128249:i'm interested in leadership. and yes, that is my timezone.\nAssistant(U0ATHENABOT) said at  1739954491.128249: Here are the mentors available who specialize in leadership and are within an acceptable timezone range for you:\\n\\n- **Raj Patel**\\n  - **Role:** Project Manager\\n  - **Location:** India\\n  - **Time zone:** GMT+5:30\\n  - **Specialization Topic:** Leadership\\n\\nWould you like me to reach out to Raj Patel for mentorship?\nUser(U0MENTEE001 - John Doe) said at 1739954492.128249:yes, please."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Hey John, I have reached out to Raj Patel. Once the match is confirmed, you will receive a calendar invite for a first session with your mentor.",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "tool_send_mentorship_confirmation": [
+              "=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-4-test-1-refuse-mentor",
+      "name": "Test 1 - Refuse mentor",
+      "inputs": {
+        "USER_MESSAGE": "User(U0MENTEE001 - John Doe) said at 1739954469.128249:hello.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, John! How can I help you with your mentorship needs today?\nUser(U0MENTEE001 - John Doe) said at 1739954488.128249:i'd like to find a mentor.\nAssistant(U0ATHENABOT) said at 1739954489.128249: John, I see that you are a Senior Automation Developer specializing in RPA and located in Romania (GMT+2). Could you please specify the topic you are interested in for mentorship? This will help me find the most suitable mentor for you.?\nUser(U0MENTEE001 - John Doe) said at 1739954491.128249:i'm interested in leadership. and yes, that is my timezone.\nAssistant(U0ATHENABOT) said at  1739954491.128249: Here are the mentors available who specialize in leadership and are within an acceptable timezone range for you:\\n\\n- **Raj Patel**\\n  - **Role:** Project Manager\\n  - **Location:** India\\n  - **Time zone:** GMT+5:30\\n  - **Specialization Topic:** Leadership\\n\\nWould you like me to reach out to Raj Patel for mentorship?\nUser(U0MENTEE001 - John Doe) said at 1739954492.128249:no, please search for other mentors."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Sorry, there are no other leadership mentors in an acceptable timezone for you: James Wilson is in GMT-8, too far from GMT+2.",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-5-test-2-extract-mentor-from-database",
+      "name": "Test 2 - Extract mentor from database",
+      "inputs": {
+        "USER_MESSAGE": "User(U0MENTEE001 - John Doe) said at 1739954469.128249:Hello.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, John! How can I help you with your mentorship needs today?\nUser(U0MENTEE001 - John Doe) said at 1739954488.128249:I'd like to find a mentor.\nAssistant(U0ATHENABOT) said at 1739954489.128249: John, I see that you are a Senior Automation Developer specializing in RPA and located in Romania (GMT+2). Could you please specify the topic you are interested in for mentorship? This will help me find the most suitable mentor for you.?\nUser(U0MENTEE001 - John Doe) said at 1739954491.128249:I'm interested either in Leadership or RPA and yes, that is my timezone."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Raj Patel, Natasha Kim. Would you like me to reach out to Raj Patel or Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel,Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-6-test-2-extract-second-mentor-from-database",
+      "name": "Test 2 - Extract second mentor from database",
+      "inputs": {
+        "USER_MESSAGE": "User(U0MENTEE001 - John Doe) said at 1739954469.128249:Hello.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, John! How can I help you with your mentorship needs today?\nUser(U0MENTEE001 - John Doe) said at 1739954488.128249:I'd like to find a mentor.\nAssistant(U0ATHENABOT) said at 1739954489.128249: John, I see that you are a Senior Automation Developer specializing in RPA and located in Romania (GMT+2). Could you please specify the topic you are interested in for mentorship? This will help me find the most suitable mentor for you.?\nUser(U0MENTEE001 - John Doe) said at 1739954491.128249:I'm interested either in Leadership or RPA and yes, that is my timezone.\nAssistant(U0ATHENABOT) said at 1739954492.128249: \"Here is a mentor option that matches your interest and timezone criteria:\\n\\n- *Raj Patel*\\n  - *Role:* Project Manager\\n  - *Location:* India (GMT+5:30)\\n  - *Specialization Topic:* Leadership\\n  - *Topic Description:* Insights and techniques for effective leadership, focusing on inspiring and guiding teams, decision-making, and fostering a positive work environment.\\n\\nWould you like me to reach out to Raj Patel for mentorship?\",\nUser(U0MENTEE001 - John Doe) said at 1739954493.128249:no, please search for other mentors. Check till you find one that is available."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Natasha Kim. Would you like me to reach out to Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-7-generated-test-1-team-management-as-leadership",
+      "name": "Generated Test 1 - Team Management as Leadership",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Alice Smith) said at 1739954469.128249:I need a mentor for my team management skills\nAssistant(U0ATHENABOT) said at 1739954470.128249: I'd be happy to help you find a mentor for team management skills. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Alice Smith) said at 1739954471.128249:GMT+2"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Raj Patel. Would you like me to reach out to Raj Patel for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-8-generated-test-2-process-automation-as-rpa-with-gm",
+      "name": "Generated Test 2 - Process Automation as RPA with GMT+1",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Raj Patel) said at 1739954469.128249:I'm in GMT+1 and need help with improving my process automation skills"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Natasha Kim. Would you like me to reach out to Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-9-generated-test-3-effective-feedback-as-performance",
+      "name": "Generated Test 3 - Effective Feedback as Performance Conversations",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Maria Rodriguez) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Maria! How can I help you with your mentorship needs today?\nUser(U9876543210 - Maria Rodriguez) said at 1739954488.128249:I need help from a mentor with giving effective feedback to my team members\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for giving effective feedback. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Maria Rodriguez) said at 1739954491.128249:GMT+2"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Sophia Chen or Olivia Taylor. Would you like me to reach out to Sophia Chen or Olivia Taylor for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Sophia Chen,Olivia Taylor"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-10-generated-test-4-specific-mentor-request-for-olivi",
+      "name": "Generated Test 4 - Specific Mentor Request for Olivia",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Chen Wei) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Chen! How can I help you with your mentorship needs today?\nUser(U9876543210 - Chen Wei) said at 1739954488.128249:I'm looking specifically for Olivia Taylor to be my mentor. Is she available?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Olivia Taylor. Would you like me to reach out to Olivia Taylor for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Olivia Taylor"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-11-generated-test-5-mentor-topics-for-specific-mentor",
+      "name": "Generated Test 5 - Mentor Topics for Specific Mentor",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Jamal Washington) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Jamal! How can I help you with your mentorship needs today?\nUser(U9876543210 - Jamal Washington) said at 1739954488.128249:I want to learn about all topics Marcus Schmidt can mentor me on"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Marcus Schmidt. Would you like me to reach out to Marcus Schmidt for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Marcus Schmidt"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-12-generated-test-6-alternative-timezone-format",
+      "name": "Generated Test 6 - Alternative Timezone Format",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Sofia Nguyen) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Sofia! How can I help you with your mentorship needs today?\nUser(U9876543210 - Sofia Nguyen) said at 1739954488.128249:I'd like to find a mentor for improving employee reviews\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for improving employee reviews. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Sofia Nguyen) said at 1739954491.128249:Eastern Europe, +2"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Sophia Chen or Olivia Taylor. Would you like me to reach out to Sophia Chen or Olivia Taylor for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Sophia Chen,Olivia Taylor"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-13-generated-test-7-multiple-topics-with-emphasis",
+      "name": "Generated Test 7 - Multiple Topics with Emphasis",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Amir Khan) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Amir! How can I help you with your mentorship needs today?\nUser(U9876543210 - Amir Khan) said at 1739954488.128249:I need a mentor on BOTH career advancement AND leadership development\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find mentors for both career advancement and leadership development. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Amir Khan) said at 1739954491.128249:GMT+2, Romania"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Elena Morgan or Raj Patel. Would you like me to reach out to Elena Morgan or Raj Patel for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Elena Morgan,Raj Patel"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-14-generated-test-8-named-timezone-instead-of-gmt",
+      "name": "Generated Test 8 - Named Timezone Instead of GMT",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Fatima Okoye) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Fatima! How can I help you with your mentorship needs today?\nUser(U9876543210 - Fatima Okoye) said at 1739954488.128249:I need a mentor right away for RPA\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for RPA. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Fatima Okoye) said at 1739954491.128249:Central European Time"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Natasha Kim. Would you like me to reach out to Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-15-generated-test-9-availability-priority",
+      "name": "Generated Test 9 - Availability Priority",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Sanjay Gupta) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Sanjay! How can I help you with your mentorship needs today?\nUser(U9876543210 - Sanjay Gupta) said at 1739954488.128249:I'm looking for anyone who can mentor me on project management or leadership, whoever is available soonest\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for project management or leadership. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Sanjay Gupta) said at 1739954491.128249:GMT+2"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Marcus Schmidt or Raj Patel. Would you like me to reach out to Marcus Schmidt or Raj Patel for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel,Marcus Schmidt"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-16-generated-test-10-all-lowercase-input",
+      "name": "Generated Test 10 - All Lowercase Input",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Leila Ahmadi) said at 1739954469.128249:hello.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Leila! How can I help you with your mentorship needs today?\nUser(U9876543210 - Leila Ahmadi) said at 1739954488.128249:i'd like to find a mentor.\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor. Could you please let me know what topic or skill you're interested in being mentored on?\nUser(U9876543210 - Leila Ahmadi) said at 1739954491.128249:leadership and rpa\nAssistant(U0ATHENABOT) said at 1739954492.128249: Great, I can help you find mentors for both leadership and RPA. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Leila Ahmadi) said at 1739954493.128249:gmt+2"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Raj Patel or Natasha Kim. Would you like me to reach out to Raj Patel or Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel,Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-17-generated-test-11-all-caps-topic",
+      "name": "Generated Test 11 - All Caps Topic",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Miguel Santos) said at 1739954469.128249:I need a PERFORMANCE CONVERSATIONS mentor in GMT+2"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Sophia Chen or Olivia Taylor. Would you like me to reach out to Sophia Chen or Olivia Taylor for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Sophia Chen,Olivia Taylor"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-18-generated-test-12-relative-timezone-description",
+      "name": "Generated Test 12 - Relative Timezone Description",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Priya Sharma) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Priya! How can I help you with your mentorship needs today?\nUser(U9876543210 - Priya Sharma) said at 1739954488.128249:I'd like to find a mentor for leadership.\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for leadership. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Priya Sharma) said at 1739954491.128249:I'm 13 hours ahead of Pacific Time"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Raj Patel. Would you like me to reach out to Raj Patel for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-19-generated-test-13-question-about-mentor-quality",
+      "name": "Generated Test 13 - Question About Mentor Quality",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Kwame Osei) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Kwame! How can I help you with your mentorship needs today?\nUser(U9876543210 - Kwame Osei) said at 1739954488.128249:Is James Wilson a good mentor for leadership?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: James Wilson. Would you like me to reach out to James Wilson for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "James Wilson"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-20-generated-test-14-specific-location-with-no-match",
+      "name": "Generated Test 14 - Specific Location With No Match",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Elena Popescu) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Elena! How can I help you with your mentorship needs today?\nUser(U9876543210 - Elena Popescu) said at 1739954488.128249:Can you match me with a mentor for leadership in Romania?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "There is no mentor available for leadership in Romania.",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-21-generated-test-15-career-growth-from-us-timezone",
+      "name": "Generated Test 15 - Career Growth from US Timezone",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - David Kim) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, David! How can I help you with your mentorship needs today?\nUser(U9876543210 - David Kim) said at 1739954488.128249:I'd like to find a mentor for career growth.\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for career growth. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - David Kim) said at 1739954491.128249:GMT-8"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Elena Morgan. Would you like me to reach out to Elena Morgan for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Elena Morgan"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-22-generated-test-16-uipath-expertise-as-rpa",
+      "name": "Generated Test 16 - UiPath Expertise as RPA",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Anya Ivanova) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Anya! How can I help you with your mentorship needs today?\nUser(U9876543210 - Anya Ivanova) said at 1739954488.128249:I want someone who can help me understand how to use UiPath better. I am currently working from Bucharest."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Natasha Kim. Would you like me to reach out to Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-23-generated-test-17-combined-question-with-topics-an",
+      "name": "Generated Test 17 - Combined Question with Topics and Timezone",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Hiroshi Tanaka) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Hiroshi! How can I help you with your mentorship needs today?\nUser(U9876543210 - Hiroshi Tanaka) said at 1739954488.128249:Are there any mentors for performance conversations OR leadership available in GMT+2?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Raj Patel, Sophia Chen or Olivia Taylor. Would you like me to reach out to Raj Patel, Sophia Chen or Olivia Taylor for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel,Sophia Chen,Olivia Taylor"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-24-generated-test-18-direct-response-to-previous-sugg",
+      "name": "Generated Test 18 - Direct Response to Previous Suggestion",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Isabella Martinez) said at 1739954469.128249:I need a mentor to improve my career. I'm in GMT+2 timezone.\nAssistant(U0ATHENABOT) said at 1739954470.128249: Based on your interest in career improvement and your timezone (GMT+2), I've found a suitable mentor for you:\n\n- *Elena Morgan*\n  - *Role:* Talent Acquisition Partner\n  - *Location:* Romania (GMT+2)\n  - *Specialization Topic:* Career Growth\n\nWould you like me to reach out to Elena Morgan for mentorship?\nUser(U9876543210 - Isabella Martinez) said at 1739954488.128249:yes please."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Sent mentorship confirmation to Elena Morgan",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "tool_send_mentorship_confirmation": [
+              "=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-25-generated-test-19-team-management-from-us-timezone",
+      "name": "Generated Test 19 - Team Management from US Timezone",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Ahmed Hassan) said at 1739954469.128249:I'd like a mentor for managing teams. I'm in GMT-8."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: James Wilson. Would you like me to reach out to James Wilson for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "James Wilson"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-26-generated-test-20-career-path-planning",
+      "name": "Generated Test 20 - Career Path Planning",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Olga Petrov) said at 1739954469.128249:I'd like a mentor for planning my career path in GMT+2 timezone"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Elena Morgan. Would you like me to reach out to Elena Morgan for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Elena Morgan"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-27-generated-test-21-one-on-ones-as-performance-conve",
+      "name": "Generated Test 21 - One-on-Ones as Performance Conversations",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Carlos Mendoza) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Carlos! How can I help you with your mentorship needs today?\nUser(U9876543210 - Carlos Mendoza) said at 1739954488.128249:I need to learn how to conduct better one-on-ones with my team. I'm in Bulgaria."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Sophia Chen or Olivia Taylor. Would you like me to reach out to Sophia Chen or Olivia Taylor for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Sophia Chen,Olivia Taylor"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-28-generated-test-22-completely-unrelated-topic",
+      "name": "Generated Test 22 - Completely Unrelated Topic",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Nadia Abramova) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Nadia! How can I help you with your mentorship needs today?\nUser(U9876543210 - Nadia Abramova) said at 1739954488.128249:Is there a mentor for cryptocurrency for GMT+2?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "There is no mentor available for cryptocurrency for GMT+2.",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-29-generated-test-23-exact-timezone-match-request",
+      "name": "Generated Test 23 - Exact Timezone Match Request",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Thomas Mueller) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Thomas! How can I help you with your mentorship needs today?\nUser(U9876543210 - Thomas Mueller) said at 1739954488.128249:Can you find me a project management mentor who is in exactly my timezone? I'm in GMT+1."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Marcus Schmidt. Would you like me to reach out to Marcus Schmidt for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Marcus Schmidt"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-30-generated-test-24-request-for-closer-timezone-afte",
+      "name": "Generated Test 24 - Request for Closer Timezone After Suggestions",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Mei Lin) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Mei! How can I help you with your mentorship needs today?\nUser(U9876543210 - Mei Lin) said at 1739954488.128249:I need performance review mentoring\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for performance reviews. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Mei Lin) said at 1739954491.128249:GMT+2\nAssistant(U0ATHENABOT) said at 1739954492.128249: Based on your interest in performance reviews and your timezone (GMT+2), I've found the following mentors:\n\n- *Sophia Chen*\n  - *Role:* Senior Software Engineer\n  - *Location:* Japan (GMT+9)\n  - *Specialization Topic:* Performance Conversations\n\n- *Olivia Taylor*\n  - *Role:* Manager, Talent Development\n  - *Location:* Australia (GMT+11)\n  - *Specialization Topic:* Performance Conversations\n\nWould you like me to reach out to either of these mentors?\nUser(U9876543210 - Mei Lin) said at 1739954493.128249:Both seem quite far away. Do you have anyone closer to my timezone?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "No mentors other mentors are available for performance review.",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-31-generated-test-25-direct-connection-request",
+      "name": "Generated Test 25 - Direct Connection Request",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Victor Novak) said at 1739954469.128249:Can I talk to James Wilson about leadership?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Yes, I can connect you with James Wilson. Would you like me to reach out to James Wilson for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "James Wilson"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-32-generated-test-26-specific-country-and-topic-reque",
+      "name": "Generated Test 26 - Specific Country and Topic Request",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Zara Malik) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Zara! How can I help you with your mentorship needs today?\nUser(U9876543210 - Zara Malik) said at 1739954488.128249:Can you match me with someone in India for RPA mentoring?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Natasha Kim. Would you like me to reach out to Natasha Kim for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Natasha Kim"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-33-generated-test-27-topic-change-after-initial-sugge",
+      "name": "Generated Test 27 - Topic Change After Initial Suggestion",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Gabriel Costa) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Gabriel! How can I help you with your mentorship needs today?\nUser(U9876543210 - Gabriel Costa) said at 1739954488.128249:I'd like to find a mentor for leadership.\nAssistant(U0ATHENABOT) said at 1739954489.128249: I'd be happy to help you find a mentor for leadership. Could you please confirm your timezone so I can find mentors with compatible availability?\nUser(U9876543210 - Gabriel Costa) said at 1739954491.128249:GMT+2\nAssistant(U0ATHENABOT) said at 1739954492.128249: Based on your interest in leadership and your timezone (GMT+2), I've found a suitable mentor for you:\n\n- *Raj Patel*\n  - *Role:* Project Manager\n  - *Location:* India (GMT+5:30)\n  - *Specialization Topic:* Leadership\n\nWould you like me to reach out to Raj Patel for mentorship?\nUser(U9876543210 - Gabriel Costa) said at 1739954493.128249:No, actually I changed my mind. I'd rather focus on Project Management instead."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Marcus Schmidt. Would you like me to reach out to Marcus Schmidt for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Marcus Schmidt"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-34-generated-test-28-specific-topic-and-location-with",
+      "name": "Generated Test 28 - Specific Topic and Location with No Match",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Yuki Nakamura) said at 1739954469.128249:Athena, is there a career growth mentor in the India timezone?"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "There is no mentor available for career growth in India.",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-35-generated-test-29-shadowing-request",
+      "name": "Generated Test 29 - Shadowing Request",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Liam O'Connor) said at 1739954469.128249:I want to shadow Marcus on a project management engagement"
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Marcus Schmidt. Would you like me to reach out to Marcus Schmidt about shadowing him on a project management engagement?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Marcus Schmidt"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    },
+    {
+      "id": "test-36-generated-test-30-gender-preference-mentioning",
+      "name": "Generated Test 30 - Gender Preference Mentioning",
+      "inputs": {
+        "USER_MESSAGE": "User(U9876543210 - Amina Diallo) said at 1739954469.128249:Hello\nAssistant(U0ATHENABOT) said at 1739954470.128249: Hello, Amina! How can I help you with your mentorship needs today?\nUser(U9876543210 - Amina Diallo) said at 1739954488.128249:I'm looking for a mentor who is female and in leadership. I am living in Romania."
+      },
+      "expectedOutput": {},
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "toolsToSimulate": [],
+      "evalSetId": "evaluation-set-athena-chatbot",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z",
+      "source": "manual",
+      "evaluationCriterias": {
+        "athena_chatbot_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Here are the mentors available: Raj Patel. Would you like me to reach out to Raj Patel for mentorship?",
+            "out_shouldPostReplyOnSlack": true
+          }
+        },
+        "athena_chatbot_ExpectedMentorCheckEvaluator": {
+          "expectedOutput": {
+            "out_agentReply": "Raj Patel"
+          }
+        },
+        "athena_chatbot_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "Athena_Mentors_VectorDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "athena_chatbot_EqualsShouldPostReplyOnSlackEvaluator": {
+          "expectedOutput": {
+            "out_shouldPostReplyOnSlack": true
+          }
+        }
+      }
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

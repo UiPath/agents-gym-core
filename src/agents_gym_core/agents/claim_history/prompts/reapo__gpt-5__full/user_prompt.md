@@ -1,0 +1,2 @@
+DenialCode: {DenialCode}
+RemittanceCode: {RemittanceCode}

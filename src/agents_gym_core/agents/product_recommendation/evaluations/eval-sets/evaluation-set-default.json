@@ -1,0 +1,979 @@
+{
+  "version": "1.0",
+  "id": "product_recommendation_eval_set",
+  "name": "Product Recommendation Evaluation Set",
+  "evaluatorRefs": [
+    "product_recommendation_LLMJudgeOutputEvaluator",
+    "product_recommendation_ToolCallCountEvaluator",
+    "product_recommendation_ProductMatchEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "test_affordable_monitor",
+      "name": "Recommend Affordable Monitor",
+      "inputs": {
+        "CustomPreferences": "I need an affordable monitor under $500.",
+        "ProductContext": "Available products: 1) LG UltraGear 27GL850: A monitor."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "The price of all products with a perfect or strong match is under $500 and LG UltraGear 27GL850 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "LG UltraGear 27GL850",
+              "Brand": "LG",
+              "Price": 399.99,
+              "Features": [
+                "27-inch QHD Display",
+                "Nano IPS Technology",
+                "144Hz Refresh Rate"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Dell UltraSharp U2723QE",
+              "Brand": "Dell",
+              "Price": 599.99,
+              "Features": [
+                "27-inch 4K Display",
+                "USB-C Connectivity",
+                "99% sRGB",
+                "60Hz Refresh Rate"
+              ],
+              "Match": "Close Alternative"
+            },
+            {
+              "Name": "ASUS ROG Swift PG259QN",
+              "Brand": "ASUS",
+              "Price": 999.99,
+              "Features": [
+                "24.5-inch FHD Display",
+                "360Hz Refresh Rate",
+                "NVIDIA G-Sync"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_affordable_monitor_good_and_bad",
+      "name": "Recommend Affordable Monitor with Good and Bad Product Context",
+      "inputs": {
+        "CustomPreferences": "I need an affordable monitor under $500.",
+        "ProductContext": "Available products: 1) LG UltraGear 27GL850: A monitor. 2) ASUS ROG Swift PG259QN: A high-end monitor."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "The price of all products with a perfect or strong match is under $500 and ASUS ROG Swift PG259QN is not a perfect or strong match and LG UltraGear 27GL850 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "LG UltraGear 27GL850",
+              "Brand": "LG",
+              "Price": 399.99,
+              "Features": [
+                "27-inch QHD Display",
+                "Nano IPS Technology",
+                "144Hz Refresh Rate"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Dell UltraSharp U2723QE",
+              "Brand": "Dell",
+              "Price": 599.99,
+              "Features": [
+                "27-inch 4K Display",
+                "USB-C Connectivity",
+                "99% sRGB",
+                "60Hz Refresh Rate"
+              ],
+              "Match": "Close Alternative"
+            },
+            {
+              "Name": "ASUS ROG Swift PG259QN",
+              "Brand": "ASUS",
+              "Price": 999.99,
+              "Features": [
+                "24.5-inch FHD Display",
+                "360Hz Refresh Rate",
+                "NVIDIA G-Sync"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_affordable_monitor_bad",
+      "name": "Recommend Affordable Monitor with Bad Product Context",
+      "inputs": {
+        "CustomPreferences": "I need an affordable monitor under $500.",
+        "ProductContext": "Available products: 1) ASUS ROG Swift PG259QN: A high-end monitor."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "The price of all products with a perfect or strong match is under $500 and ASUS ROG Swift PG259QN is not a perfect or strong match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "LG UltraGear 27GL850",
+              "Brand": "LG",
+              "Price": 399.99,
+              "Features": [
+                "27-inch QHD Display",
+                "Nano IPS Technology",
+                "144Hz Refresh Rate"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Dell UltraSharp U2723QE",
+              "Brand": "Dell",
+              "Price": 599.99,
+              "Features": [
+                "27-inch 4K Display",
+                "USB-C Connectivity",
+                "99% sRGB",
+                "60Hz Refresh Rate"
+              ],
+              "Match": "Close Alternative"
+            },
+            {
+              "Name": "ASUS ROG Swift PG259QN",
+              "Brand": "ASUS",
+              "Price": 999.99,
+              "Features": [
+                "24.5-inch FHD Display",
+                "360Hz Refresh Rate",
+                "NVIDIA G-Sync"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_tablet_not_in_database",
+      "name": "Recommend Tablet for Students with Product Not in Database",
+      "inputs": {
+        "CustomPreferences": "I need an affordable tablet for students.",
+        "ProductContext": "Available products: 1) Apple iPad Air: A high-performance tablet."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Apple iPad Air is not in the output."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Samsung Galaxy Tab S9",
+              "Brand": "Samsung",
+              "Price": 799.99,
+              "Features": [
+                "12.4-inch AMOLED Display",
+                "Snapdragon 8 Gen 2",
+                "256GB Storage",
+                "S Pen Included"
+              ],
+              "Match": "Strong Match"
+            },
+            {
+              "Name": "Apple iPad Pro 12.9-inch",
+              "Brand": "Apple",
+              "Price": 1099.99,
+              "Features": [
+                "M2 Chip",
+                "Liquid Retina XDR Display",
+                "128GB Storage"
+              ],
+              "Match": "Close Alternative"
+            },
+            {
+              "Name": "Microsoft Surface Laptop Studio",
+              "Brand": "Microsoft",
+              "Price": 1599.99,
+              "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "512GB SSD",
+                "14.4-inch Touch Display"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_tablet_no_tablet_context",
+      "name": "Recommend Tablet for Students with Product No Tablet Context",
+      "inputs": {
+        "CustomPreferences": "I need an affordable tablet for students.",
+        "ProductContext": "Available products: 1) Logitech MX Master 3S: Ergonmic and customizable mouse."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "All products that with a perfect or strong match are a tablet and Logitech MX Master 3S is not in the output."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Samsung Galaxy Tab S9",
+              "Brand": "Samsung",
+              "Price": 799.99,
+              "Features": [
+                "12.4-inch AMOLED Display",
+                "Snapdragon 8 Gen 2",
+                "256GB Storage",
+                "S Pen Included"
+              ],
+              "Match": "Strong Match"
+            },
+            {
+              "Name": "Apple iPad Pro 12.9-inch",
+              "Brand": "Apple",
+              "Price": 1099.99,
+              "Features": [
+                "M2 Chip",
+                "Liquid Retina XDR Display",
+                "128GB Storage"
+              ],
+              "Match": "Close Alternative"
+            },
+            {
+              "Name": "Microsoft Surface Laptop Studio",
+              "Brand": "Microsoft",
+              "Price": 1599.99,
+              "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "512GB SSD",
+                "14.4-inch Touch Display"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_tablet_for_students",
+      "name": "Recommend Tablet for Students with Not Affordable Context",
+      "inputs": {
+        "CustomPreferences": "I need an affordable tablet for students under $500.",
+        "ProductContext": "Available products: 1) Apple iPad Pro 12.9-inch: Powerful tablet for professionals and creatives. 2) Microsoft Surface Go 3: A lightweight, student-friendly, 2-in-1 laptop."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "The price of all products with a perfect or strong match is under $500 and Apple iPad Pro 12.9-inch is not a perfect or strong match and Microsoft Surface Go 3 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Microsoft Surface Go 3",
+              "Brand": "Microsoft",
+              "Price": 399.99,
+              "Features": [
+                "Intel Pentium Gold",
+                "8GB RAM",
+                "64GB eMMC",
+                "10.5-inch Touch Display"
+              ],
+              "Match": "Perfect Match"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_budget_noise_cancelling",
+      "name": "Recommend Budget Noise-Cancelling Option",
+      "inputs": {
+        "CustomPreferences": "I need noise-cancelling headphones with a budget under $300.",
+        "ProductContext": "Available products: 1) Sony WH-1000XM5: Premium noise-cancelling headphones. 2) Bose QuietComfort Earbuds II: Premium noise-cancelling earbuds."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "The price of all products with a perfect or strong match is under $300 and Sony WH-1000XM5 is not a perfect or strong match and Bose QuietComfort Earbuds II is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Bose QuietComfort Earbuds II",
+              "Brand": "Bose",
+              "Price": 299.99,
+              "Features": [
+                "Noise Cancelling",
+                "Bluetooth 5.3",
+                "6 Hours Battery Life"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Sony WH-1000XM4",
+              "Brand": "Sony",
+              "Price": 349.99,
+              "Features": [
+                "Noise-canceling",
+                "30 hours battery life",
+                "Multi-device pairing"
+              ],
+              "Match": "Close Alternative"
+            },
+            {
+              "Name": "Sony WH-1000XM5",
+              "Brand": "Sony",
+              "Price": 399.99,
+              "Features": [
+                "Active Noise Cancellation",
+                "Bluetooth 5.2",
+                "30 Hours Battery Life"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_premium_headphones",
+      "name": "Recommend Premium Noise-Cancelling Headphones",
+      "inputs": {
+        "CustomPreferences": "I need premium over-ear noise-cancelling headphones.",
+        "ProductContext": "Available products: 1) Sony WH-1000XM5: Industry-leading noise-cancelling headphones with 30 hours of battery life. 2) Bose QuietComfort Earbuds II: Premium noise-cancelling earbuds with 6 hours of battery life."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Sony WH-1000XM5 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Sony WH-1000XM5",
+              "Brand": "Sony",
+              "Price": 399.99,
+              "Features": [
+                "Active Noise Cancellation",
+                "Bluetooth 5.2",
+                "30 Hours Battery Life"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Sony WH-1000XM4",
+              "Brand": "Sony",
+              "Price": 349.99,
+              "Features": [
+                "Noise-canceling",
+                "30 hours battery life",
+                "Multi-device pairing"
+              ],
+              "Match": "Strong Match"
+            },
+            {
+              "Name": "Bose QuietComfort Earbuds II",
+              "Brand": "Bose",
+              "Price": 299.99,
+              "Features": [
+                "Noise Cancelling",
+                "Bluetooth 5.3",
+                "6 Hours Battery Life"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_convertible_laptop",
+      "name": "Recommend Convertible Laptop for Flexibility",
+      "inputs": {
+        "CustomPreferences": "I need a convertible laptop for flexible work.",
+        "ProductContext": "Available products: 1) HP Spectre x360 14: A convertible laptop with a 2-in-1 design. 2) Dell XPS 13: A powerful ultrabook, not convertible."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Dell XPS 13 is not a perfect or strong match and HP Spectre x360 14 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "HP Spectre x360 14",
+              "Brand": "HP",
+              "Price": 1699.99,
+              "Features": [
+                "Intel Evo i7",
+                "16GB RAM",
+                "1TB SSD",
+                "Convertible Touchscreen"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Microsoft Surface Laptop Studio",
+              "Brand": "Microsoft",
+              "Price": 1599.99,
+              "Features": [
+                "Intel Core i7",
+                "16GB RAM",
+                "512GB SSD",
+                "14.4-inch Touch Display"
+              ],
+              "Match": "Strong Match"
+            },
+            {
+              "Name": "LG Gram 17",
+              "Brand": "LG",
+              "Price": 1799.99,
+              "Features": [
+                "Intel Evo i7",
+                "16GB RAM",
+                "1TB SSD",
+                "17-inch Display"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_tablet_creativity",
+      "name": "Recommend Tablet for Creativity",
+      "inputs": {
+        "CustomPreferences": "I need a tablet for creative work, and a stylus is a must.",
+        "ProductContext": "Available products: 1) Samsung Galaxy Tab S9: A premium tablet with an AMOLED display and S Pen included. 2) Apple iPad Pro 12.9-inch: A powerful tablet with the M2 chip and Liquid Retina XDR display. 3) Nokia No-Stylus Tablet: A budget-friendly tablet incompatible a stylus."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Nokia No-Stylus Tablet is not a perfect or strong match and Samsung Galaxy Tab S9 is a perfect match and Apple iPad Pro 12.9-inch is a strong match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Samsung Galaxy Tab S9",
+              "Brand": "Samsung",
+              "Price": 799.99,
+              "Features": [
+                "12.4-inch AMOLED Display",
+                "Snapdragon 8 Gen 2",
+                "256GB Storage",
+                "S Pen Included"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Apple iPad Pro 12.9-inch",
+              "Brand": "Apple",
+              "Price": 1099.99,
+              "Features": [
+                "M2 Chip",
+                "Liquid Retina XDR Display",
+                "128GB Storage"
+              ],
+              "Match": "Strong Match"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_top3_laptops_performance",
+      "name": "Recommend Top 3 Laptops for performance",
+      "inputs": {
+        "CustomPreferences": "I need a high-performance laptop for video editing.",
+        "ProductContext": "Available products: 1) Apple MacBook Pro 16-inch: High-performance laptop designed for professionals. 2) HP Spectre x360 14: Convertible laptop with a 2-in-1 design for creatives and professionals. 3) Microsoft Surface Go 3: A lightweight, student-friendly, 2-in-1 laptop. 4) ASUS ROG Zephyrus G15: A powerful yet slim gaming laptop."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Microsoft Surface Go 3 is not a perfect or strong match and ASUS ROG Zephyrus G15 is a perfect match and Apple MacBook Pro 16-inch is a strong match and HP Spectre x360 14 is a close alternative."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Apple MacBook Pro 16-inch",
+              "Brand": "Apple",
+              "Price": 2499.99,
+              "Features": [
+                "M1 Pro Chip",
+                "16GB RAM",
+                "512GB SSD",
+                "16-inch Retina Display"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "ASUS ROG Zephyrus G15",
+              "Brand": "ASUS",
+              "Price": 2499.99,
+              "Features": [
+                "AMD Ryzen 9",
+                "NVIDIA RTX 3080",
+                "1TB SSD",
+                "15.6-inch 300Hz Display"
+              ],
+              "Match": "Strong Match"
+            },
+            {
+              "Name": "Razer Blade 15 Advanced",
+              "Brand": "Razer",
+              "Price": 2599.99,
+              "Features": [
+                "Intel Core i9",
+                "32GB RAM",
+                "1TB SSD",
+                "15.6-inch QHD 240Hz Display"
+              ],
+              "Match": "Strong Match"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_phone_best_camera",
+      "name": "Recommend Phone with Best Camera with Minimum 100MP",
+      "inputs": {
+        "CustomPreferences": "I need a phone with the best camera with at least 100MP for photography.",
+        "ProductContext": "Available products: 1) Google Pixel 8 Pro: A smartphone with a camera and AI enhancements. 2) Samsung Galaxy S23 Ultra: A flagship phone with a camera and advanced features."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Google Pixel 8 Pro is not a perfect or strong match and Samsung Galaxy S23 Ultra is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Samsung Galaxy S23 Ultra",
+              "Brand": "Samsung",
+              "Price": 1199.99,
+              "Features": [
+                "Dynamic AMOLED 2X",
+                "200MP Camera",
+                "5G Capable",
+                "128GB Storage"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Samsung Galaxy S21 Ultra",
+              "Brand": "Samsung",
+              "Price": 800.99,
+              "Features": [
+                "Dynamic AMOLED 2X",
+                "100MP Camera",
+                "5G Capable",
+                "128GB Storage"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Google Pixel 8 Pro",
+              "Brand": "Google",
+              "Price": 999.99,
+              "Features": [
+                "6.7-inch OLED Display",
+                "Tensor G3 Processor",
+                "256GB Storage",
+                "50MP Camera"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_high_refresh_monitor",
+      "name": "Recommend High-Refresh-Rate Monitor with Minimum 120Hz",
+      "inputs": {
+        "CustomPreferences": "I need a monitor with a minimum refresh rate of 120Hz.",
+        "ProductContext": "Available products: 1) Samsung Odyssey Neo G9: An ultra-wide gaming monitor. 2) Dell UltraSharp U2723QE: A professional monitor."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Dell UltraSharp U2723QE is not a perfect or strong match and Samsung Odyssey Neo G9 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "ASUS ROG Swift PG259QN",
+              "Brand": "ASUS",
+              "Price": 999.99,
+              "Features": [
+                "24.5-inch FHD Display",
+                "360Hz Refresh Rate",
+                "NVIDIA G-Sync"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Samsung Odyssey Neo G9",
+              "Brand": "Samsung",
+              "Price": 2299.99,
+              "Features": [
+                "49-inch Curved Display",
+                "Quantum Mini LED",
+                "240Hz Refresh Rate"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "LG UltraGear 27GL850",
+              "Brand": "LG",
+              "Price": 399.99,
+              "Features": [
+                "27-inch QHD Display",
+                "Nano IPS Technology",
+                "144Hz Refresh Rate"
+              ],
+              "Match": "Perfect Match"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_high_storage_gpu",
+      "name": "Recommend High Storage GPU with Minimum 16GB of Memory",
+      "inputs": {
+        "CustomPreferences": "I need a GPU with at least 16GB of memory for 3D rendering.",
+        "ProductContext": "Available products: 1) NVIDIA GeForce RTX 4090: A powerfule GPU. 2) NVIDIA GeForce RTX 4060: A budget friendly GPU."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "NVIDIA GeForce RTX 4060 is not a perfect or strong match and NVIDIA GeForce RTX 4090 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "NVIDIA GeForce RTX 4090",
+              "Brand": "NVIDIA",
+              "Price": 1599.99,
+              "Features": [
+                "24GB GDDR6X",
+                "Ray Tracing",
+                "DLSS 3.0"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "NVIDIA GeForce RTX 4060",
+              "Brand": "NVIDIA",
+              "Price": 499.99,
+              "Features": [
+                "8GB GDDR6",
+                "Ray Tracing",
+                "DLSS 2.0"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    },
+    {
+      "id": "test_camera_professional_video",
+      "name": "Recommend Camera for Professional Video with All Perfect Match",
+      "inputs": {
+        "CustomPreferences": "I need a professional camera with 4K video capability.",
+        "ProductContext": "Available products: 1) Sony Alpha A7 IV: A full-frame camera with 4K video support. 2) Canon EOS R6: A mirrorless camera with 4K video support."
+      },
+      "expectedOutput": {},
+      "evaluationCriterias": {
+        "product_recommendation_LLMJudgeOutputEvaluator": {
+          "expectedOutput": {
+            "expectation": "Sony Alpha A7 IV is a perfect match and Canon EOS R6 is a perfect match."
+          },
+          "expectedAgentBehavior": ""
+        },
+        "product_recommendation_ToolCallCountEvaluator": {
+          "toolCallsCount": {
+            "ProductDatabase": [
+              ">=",
+              1
+            ]
+          }
+        },
+        "product_recommendation_ProductMatchEvaluator": {
+          "expectedProducts": [
+            {
+              "Name": "Sony Alpha A7 IV",
+              "Brand": "Sony",
+              "Price": 2499.99,
+              "Features": [
+                "33MP Full-Frame Sensor",
+                "4K Video",
+                "5-Axis Stabilization"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "Canon EOS R6",
+              "Brand": "Canon",
+              "Price": 2499.99,
+              "Features": [
+                "20MP Full-Frame Sensor",
+                "4K Video",
+                "Wi-Fi & Bluetooth"
+              ],
+              "Match": "Perfect Match"
+            },
+            {
+              "Name": "GoPro Hero10 Black",
+              "Brand": "GoPro",
+              "Price": 499.99,
+              "Features": [
+                "5.3K Video",
+                "23MP Photos",
+                "Hypersmooth 4.0"
+              ],
+              "Match": "Close Alternative"
+            }
+          ]
+        }
+      },
+      "evalSetId": "product_recommendation_eval_set",
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "source": "design_time_eval_data"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2025-01-15T00:00:00.000Z",
+  "updatedAt": "2025-01-15T00:00:00.000Z"
+}

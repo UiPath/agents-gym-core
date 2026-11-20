@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "id": "sql_ToolCallCountEvaluator",
+  "description": "Tool call count evaluator for SQL agent",
+  "evaluatorTypeId": "uipath-tool-call-count",
+  "evaluatorConfig": {
+    "name": "ToolCallCountEvaluator",
+    "description": "Checks if tool call counts match expected values",
+    "defaultEvaluationCriteria": {
+      "tool_calls_count": {
+        "sql_db_list_tables": [
+          "==",
+          1
+        ],
+        "sql_db_schema": [
+          "==",
+          1
+        ],
+        "sql_db_query_checker": [
+          "==",
+          1
+        ],
+        "sql_db_query": [
+          "==",
+          1
+        ],
+        "check_result_tool": [
+          "==",
+          1
+        ]
+      }
+    },
+    "strict": false
+  }
+}

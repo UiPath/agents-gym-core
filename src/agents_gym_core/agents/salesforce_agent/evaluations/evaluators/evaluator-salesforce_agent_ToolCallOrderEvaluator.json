@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "id": "salesforce_agent_ToolCallOrderEvaluator",
+    "description": "ToolCallOrderEvaluator for salesforce_agent",
+    "evaluatorTypeId": "uipath-tool-call-order",
+    "evaluatorConfig": {
+        "name": "ToolCallOrderEvaluator",
+        "description": "",
+        "defaultEvaluationCriteria": null,
+        "strict": false
+    }
+}

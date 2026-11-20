@@ -1,0 +1,1 @@
+Given the fields `question` and `passages`, produce a concise summary that extracts the key facts relevant to answering the question. Focus on identifying entities, relationships, and facts that will help in multi-hop reasoning. Avoid irrelevant details and keep the summary factual and precise.

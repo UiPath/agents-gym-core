@@ -1,0 +1,45 @@
+version: base
+
+metadata:
+  name: "LiveBench-Math"
+  tags:
+    - benchmark
+    - full-benchmark
+
+init:
+  script: core::init.py
+  params:
+    seed: 0
+    # MIPROv2 demos whose benchmark text init fills in (utils/benchmark_demos.py)
+    demo_refs:
+      - prompts/miprov2/predict.refs.json
+
+loop: dspy-program:gepa_artifact.benchmarks.livebench_math.livebenchmath_program.program_cot
+
+agent:
+  system_prompt: "core::prompts/system_prompt.md"
+  user_prompt: "core::prompts/user_prompt.md"
+
+  # Names only: the dspy-program loop reads no field descriptions from here and keeps the
+  # program's own signature fields, those of GEPA's `GenerateResponse`:
+  #     class GenerateResponse(dspy.Signature):
+  #         """Solve the question and provide the answer in the correct format."""
+  #         question = dspy.InputField()   # -> desc='${question}'
+  #         answer = dspy.OutputField()    # -> desc='${answer}'
+  input_schema:
+    fields:
+      question:
+        type: "str"
+
+  output_schema:
+    fields:
+      answer:
+        type: "str"
+
+  evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-livebench-math.json
+
+  evaluator_weights:
+    livebench_math_LiveBenchMathEvaluator: 1
+
+  tools: []

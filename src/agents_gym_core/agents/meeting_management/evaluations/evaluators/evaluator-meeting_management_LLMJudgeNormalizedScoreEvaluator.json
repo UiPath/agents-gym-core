@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "meeting_management_LLMJudgeNormalizedScoreEvaluator",
+  "description": "LLM judge normalized score evaluator for meeting_management agent",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "MeetingManagementLLMJudgeNormalizedScore",
+    "description": "",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert evaluator, compare the expected summary text to the actual Observations in the agent output. Focus on semantic equivalence and correctness of the outcome. Provide a score from 0-100 with a brief justification.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "*"
+  }
+}

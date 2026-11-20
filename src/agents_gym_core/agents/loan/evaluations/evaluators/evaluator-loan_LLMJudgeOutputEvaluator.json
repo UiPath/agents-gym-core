@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "id": "loan_LLMJudgeOutputEvaluator",
+  "description": "LLMJudgeOutputEvaluator for loan agent",
+  "evaluatorTypeId": "uipath-llm-judge-output-semantic-similarity",
+  "evaluatorConfig": {
+    "name": "LLMJudgeOutputEvaluator",
+    "description": "",
+    "defaultEvaluationCriteria": null,
+    "prompt": "As an expert evaluator for a loan processing agent, compare the ExpectedOutput and ActualOutput to determine a score from 0-100.\n\nScoring guidelines:\n- Focus on whether the SAME workflow steps and outcome are described, not on exact wording or format.\n- A numbered step-by-step summary and a prose paragraph describing the same actions should score equally high.\n- Extra details in the actual output (e.g., specific tool responses, URLs, amounts repeated) should NOT lower the score as long as the core steps match.\n- Minor phrasing differences, synonyms, and reordering of equivalent information should score 90-100.\n- Only penalize if the actual output describes fundamentally DIFFERENT actions, missing key steps, or an incorrect outcome.\n\nFor successful loan scenarios, check that the output mentions: loan application, interest rate comparison, contract modification, and document sending.\nFor escalation scenarios, check that the output mentions: the reason for escalation and that an Action Center task was created.\n\nProvide your score with a brief justification.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}",
+    "model": "gpt-4o-2024-11-20",
+    "temperature": 0.0,
+    "maxTokens": null,
+    "targetOutputKey": "ExecutionDetails"
+  }
+}

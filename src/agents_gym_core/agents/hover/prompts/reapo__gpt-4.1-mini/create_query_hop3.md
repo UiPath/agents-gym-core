@@ -1,0 +1,1 @@
+Given the fields `claim`, `summary_1`, and `summary_2`, produce a highly focused `query` that aims to retrieve the essential supporting documents named in the claim, including relevant synonyms, aliases, or closely related entities. Balance precision and recall to avoid missing relevant documents while minimizing extraneous retrievals.

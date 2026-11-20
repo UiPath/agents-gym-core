@@ -1,0 +1,163 @@
+train:
+  version: train
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon-train.json
+
+val:
+  version: val
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon-dev.json
+
+dev:
+  version: dev
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon-dev.json
+
+test:
+  version: test
+  agent:
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+gepa__gpt-4.1-mini:
+  version: gepa__gpt-4.1-mini
+  agent:
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/gepa__gpt-4.1-mini/craft_redacted_request.md"
+      respond_to_query: "core::prompts/gepa__gpt-4.1-mini/respond_to_query.md"
+
+gepa__gpt-4.1-mini-test:
+  version: gepa__gpt-4.1-mini-test
+  agent:
+    user_prompt: "core::prompts/gepa__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/gepa__gpt-4.1-mini/craft_redacted_request.md"
+      respond_to_query: "core::prompts/gepa__gpt-4.1-mini/respond_to_query.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+gepa-merge__gpt-4.1-mini:
+  version: gepa-merge__gpt-4.1-mini
+  agent:
+    user_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/gepa-merge__gpt-4.1-mini/craft_redacted_request.md"
+      respond_to_query: "core::prompts/gepa-merge__gpt-4.1-mini/respond_to_query.md"
+
+gepa-merge__gpt-4.1-mini-test:
+  version: gepa-merge__gpt-4.1-mini-test
+  agent:
+    user_prompt: "core::prompts/gepa-merge__gpt-4.1-mini/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/gepa-merge__gpt-4.1-mini/craft_redacted_request.md"
+      respond_to_query: "core::prompts/gepa-merge__gpt-4.1-mini/respond_to_query.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+baseline:
+  version: baseline
+  agent:
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/baseline/craft_redacted_request.md"
+      respond_to_query: "core::prompts/baseline/respond_to_query.md"
+
+baseline-test:
+  version: baseline-test
+  agent:
+    user_prompt: "core::prompts/baseline/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/baseline/craft_redacted_request.md"
+      respond_to_query: "core::prompts/baseline/respond_to_query.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+miprov2-nd:
+  version: miprov2-nd
+  agent:
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/miprov2-nd/craft_redacted_request.md"
+      respond_to_query: "core::prompts/miprov2-nd/respond_to_query.md"
+
+miprov2-nd-test:
+  version: miprov2-nd-test
+  agent:
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/miprov2-nd/craft_redacted_request.md"
+      respond_to_query: "core::prompts/miprov2-nd/respond_to_query.md"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+miprov2-test:
+  version: miprov2-test
+  agent:
+    user_prompt: "core::prompts/miprov2-nd/user_prompt.md"
+    signature_prompts:
+      craft_redacted_request: "core::prompts/miprov2-nd/craft_redacted_request.md"
+      respond_to_query: "core::prompts/miprov2-nd/respond_to_query.md"
+    signature_demos:
+      craft_redacted_request: "core::prompts/miprov2/craft_redacted_request.json"
+    evaluation_sets:
+      - core::evaluations/eval-sets/evaluation-set-papillon.json
+
+# Per-optimizer prompt sets: one <dir>-test version per prompts/<dir> (scripts/add_optimizer_versions.py)
+gepa__gpt-5-test:
+  version: gepa__gpt-5-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      craft_redacted_request: core::prompts/gepa__gpt-5/craft_redacted_request_predict.md
+      respond_to_query: core::prompts/gepa__gpt-5/respond_to_query.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json
+reapo__gpt-4.1-mini-test:
+  version: reapo__gpt-4.1-mini-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      craft_redacted_request: core::prompts/reapo__gpt-4.1-mini/craft_redacted_request.md
+      respond_to_query: core::prompts/reapo__gpt-4.1-mini/respond_to_query.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json
+reapo__gpt-5-test:
+  version: reapo__gpt-5-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      craft_redacted_request: core::prompts/reapo__gpt-5/craft_redacted_request.md
+      respond_to_query: core::prompts/reapo__gpt-5/respond_to_query.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json
+reapo__opus-4.6-test:
+  version: reapo__opus-4.6-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      craft_redacted_request: core::prompts/reapo__opus-4.6/craft_redacted_request.md
+      respond_to_query: core::prompts/reapo__opus-4.6/respond_to_query.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json
+reapo__gpt-4.1-mini__aggregate-only-test:
+  version: reapo__gpt-4.1-mini__aggregate-only-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      craft_redacted_request: core::prompts/reapo__gpt-4.1-mini__aggregate-only/craft_redacted_request.md
+      respond_to_query: core::prompts/reapo__gpt-4.1-mini__aggregate-only/respond_to_query.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json
+reapo__gpt-5__aggregate-only-test:
+  version: reapo__gpt-5__aggregate-only-test
+  agent:
+    user_prompt: core::prompts/baseline/user_prompt.md
+    signature_prompts:
+      craft_redacted_request: core::prompts/reapo__gpt-5__aggregate-only/craft_redacted_request.md
+      respond_to_query: core::prompts/reapo__gpt-5__aggregate-only/respond_to_query.md
+    evaluation_sets:
+    - core::evaluations/eval-sets/evaluation-set-papillon.json

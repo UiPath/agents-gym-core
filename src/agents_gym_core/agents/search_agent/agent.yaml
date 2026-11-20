@@ -1,0 +1,29 @@
+name: search_agent
+version: base
+metadata:
+  name: Search Agent
+  version: "1.0.0"
+  tags:
+  - full-benchmark
+agent:
+  system_prompt: core::prompts/system_prompt.md
+  user_prompt: core::prompts/user_prompt.md
+  input_schema:
+    fields:
+      query:
+        type: str
+        description: The search query to find information about
+  output_schema:
+    fields:
+      result:
+        type: str
+        description: The answer text only. Do not include URLs in this field.
+      sources:
+        type: list
+        description: List of source URLs used. Always provide this field, use empty list if no sources available.
+  tools:
+  - _target_: agents_gym_core.agents.search_agent.tools.escalation_tool
+  - _target_: agents_gym_core.agents.search_agent.tools.search_engine_tool
+  evaluation_sets:
+  - core::evaluations/eval-sets/evaluation-set-default.json
+

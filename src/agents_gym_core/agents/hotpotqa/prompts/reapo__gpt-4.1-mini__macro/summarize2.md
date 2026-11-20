@@ -1,0 +1,1 @@
+Given the fields `question`, `context`, and `passages`, produce a concise summary that integrates additional relevant facts not covered in the first summary. Focus on supporting multi-hop reasoning by connecting entities and facts. Ensure the summary is factual, relevant, and avoids extraneous information.
